@@ -12,6 +12,8 @@ const TestimonialSection: React.FC = () => {
         // width: "1515px",
         height: "95vh",
         gap: "8px",
+        position: "relative",
+        zIndex: "-50",
         paddingTop: "200px",
         paddingRight: "128px",
         // paddingBottom: "9px",
