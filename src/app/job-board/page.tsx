@@ -5,9 +5,10 @@ import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import HeroSection from "@/Components/Hero/Hero";
 import SearchBar from "@/Components/SearchBar";
 import FilterSidebar from "@/Components/Job/FilterSidebar";
-import JobList, { Job } from "@/Components/Job/JobList";
+import JobList from "@/Components/Job/JobList";
 import { FilterOption } from "@/Components/Job/FilterSection";
 import Footer from "@/Components/Footer/Footer";
+import { Job } from "@/Components/Job/JobCard";
 
 // Sample data (you can lift these into a separate `/data` file or fetch from an API)
 const jobData: Job[] = [
@@ -78,16 +79,31 @@ export default function JobBoardPage() {
         description="Find roles that match your skills, values and career goals."
       />
 
-      <Box sx={{
-        px: { xs: 2, md: 10 },
-        py: { xs: 4, md: 8 },
-        background: "linear-gradient(0deg, #EEEEF2 0%, #132D46 46.76%)",
-        color: "white",
-      }}>
+      <Box
+        sx={{
+          px: { xs: 2, md: 10 },
+          py: { xs: 4, md: 8 },
+          background: "linear-gradient(0deg, #EEEEF2 0%, #132D46 46.76%)",
+          color: "white",
+        }}
+      >
         {/* header + search */}
-        <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, justifyContent: "space-between", mb: 4 }}>
-          <Typography variant="h5" fontWeight="bold" gutterBottom flexBasis="30%">
-            Search Jobs.<br />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: { xs: "column", md: "row" },
+            justifyContent: "space-between",
+            mb: 4,
+          }}
+        >
+          <Typography
+            variant="h5"
+            fontWeight="bold"
+            gutterBottom
+            flexBasis="30%"
+          >
+            Search Jobs.
+            <br />
             Build Your Future.
           </Typography>
           <Box flexBasis="100%">
@@ -112,7 +128,7 @@ export default function JobBoardPage() {
           </Grid>
         </Grid>
       </Box>
-      <Footer/>
+      <Footer />
     </>
   );
 }
