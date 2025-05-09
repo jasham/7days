@@ -5,8 +5,24 @@ import React from "react";
 import PartnerCard from "../Card/index";
 
 import CustomButton from "../Button";
+interface CardItem {
+  score: string;
+  title: string;
+  description?: string;
+}
+interface CardProps {
+  cardDetails: CardItem[];
+}
 
-const ResultsSection: React.FC = () => {
+interface ResultProps {
+  background: string;
+  CardProps: CardProps;
+}
+const ResultsSection: React.FC<ResultProps> = ({
+  background,
+  CardProps,
+}: ResultProps) => {
+  console.log(CardProps);
   return (
     <Box px={4} py={8} maxWidth="lg" mx="auto" sx={{ color: "#132D46" }}>
       <Typography variant="overline" color="textSecondary" gutterBottom>
@@ -17,7 +33,7 @@ const ResultsSection: React.FC = () => {
         sx={{
           // width: "80vw",
           height: "95vh",
-          backgroundColor: " #132D46",
+          backgroundColor: { background },
           color: "white",
           display: "flex",
           flexDirection: "column",
@@ -47,9 +63,9 @@ const ResultsSection: React.FC = () => {
           {/* First Card */}
           <Grid item xs={12} md={4}>
             <PartnerCard
-              icon={"20+"}
-              title="Years of Industry Expertise"
-              description="Backed by over two decades of recruitment and consulting experience across Property, Construction, Engineering, and Corporate sectors."
+              icon={CardProps.cardDetails[0].score}
+              title={CardProps.cardDetails[0].title}
+              description={CardProps.cardDetails[0].description ?? ""}
               color="#ffffff"
             />
           </Grid>
@@ -57,9 +73,9 @@ const ResultsSection: React.FC = () => {
           {/* Second Card */}
           <Grid item xs={12} md={4}>
             <PartnerCard
-              icon={"95%"}
-              title="Client Retention Rate"
-              description="Our clients trust us to deliver — and 95% return to partner with Henton again for future recruitment and strategic needs."
+              icon={CardProps.cardDetails[1].score}
+              title={CardProps.cardDetails[1].title}
+              description={CardProps.cardDetails[1].description ?? ""}
               color="#ffffff"
             />
           </Grid>
@@ -67,9 +83,9 @@ const ResultsSection: React.FC = () => {
           {/* Third Card */}
           <Grid item xs={12} md={4}>
             <PartnerCard
-              icon={"98%"}
-              title="of Roles Filled Within 30 Days"
-              description="Our efficient, targeted recruitment process ensures critical roles are placed faster — without compromising on quality."
+              icon={CardProps.cardDetails[2].score}
+              title={CardProps.cardDetails[2].title}
+              description={CardProps.cardDetails[2].description ?? ""}
               color="#ffffff"
             />
           </Grid>
