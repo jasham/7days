@@ -25,7 +25,7 @@ interface CardItem {
   description?: string;
 }
 interface CardProps {
-  cardDetails: CardItem[];
+  cardDetails?: CardItem[];
 }
 //why experts interface
 interface CardData {
@@ -33,9 +33,9 @@ interface CardData {
   description: string;
   icon: string;
 }
-interface CardList {
-  myCards: CardData[];
-}
+// interface CardList {
+//   myCards: CardData[];
+// }
 
 //hero section data
 const heroDetails: HeroProps = {
@@ -74,7 +74,8 @@ const partnerCards: CardData[] = [
   {
     icon: "/Expert.svg",
     title: "Expertise that Delivers",
-    description: "Our team brings industry-specific knowledge and hands-on experience.",
+    description:
+      "Our team brings industry-specific knowledge and hands-on experience.",
   },
   {
     icon: "/StretegyIcon.svg",
@@ -84,7 +85,8 @@ const partnerCards: CardData[] = [
   {
     icon: "/PartnerShip.svg",
     title: "True Partnership",
-    description: "Long-term relationships built on trust, impact, and delivery.",
+    description:
+      "Long-term relationships built on trust, impact, and delivery.",
   },
 ];
 
@@ -107,18 +109,23 @@ export default function Home() {
       <ServicesSection />
       <StrategicPartnerships />
       <WhyPartnerSection
-      headingText="WORK WITH THE EXPERTS"
-      headingColor="#132D46"
-      dividerColor="#132D46"
-      dividerHeight="1px"
-      title="Why Leading Companies Choose Us"
-      subTitle="We bring deep expertise, strategic insight, and flawless execution to every engagement."
-      cards={partnerCards}
-      buttonText="Ready to Build What’s Next?"
-      buttonColor="#132D46"
-    />
+        headingText="WORK WITH THE EXPERTS"
+        headingColor="#132D46"
+        dividerColor="#132D46"
+        dividerHeight="1px"
+        title="Why Leading Companies Choose Us"
+        subTitle="We bring deep expertise, strategic insight, and flawless execution to every engagement."
+        cards={partnerCards}
+        buttonText="Ready to Build What’s Next?"
+        buttonColor="#132D46"
+      />
       <TestimonialSection />
-      <ResultsSection CardProps={resultDetails} background=" #132D46" />
+      <ResultsSection
+        CardProps={resultDetails}
+        background=" #132D46"
+        topHeading="Measured by Results. Chosen for Impact."
+        bottomHeading="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
+      />
       <ExpertiseSection />
       <CaseStudyHighlight
         heading="Case Studies"

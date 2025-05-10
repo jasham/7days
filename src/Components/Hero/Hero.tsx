@@ -1,9 +1,9 @@
 // components/HeroSection.tsx
-'use client';
-import { Box, Stack, Typography } from "@mui/material";
-import { useRouter } from "next/navigation";
+"use client";
 import CustomButton from "@/Components/Button";
 import Navbar from "@/Components/Header";
+import { Box, Stack, Typography } from "@mui/material";
+import { useRouter } from "next/navigation";
 
 export type HeroSectionProps = {
   imageUrl: string;
@@ -39,7 +39,7 @@ export default function HeroSection({
         sx={{
           position: "relative",
           height: "100vh",
-          width: "100vw",
+          width: "98.9vw",
           backgroundImage: `linear-gradient(303.06deg, rgba(19, 45, 70, 0) 10.58%, #132D46 69.71%), url('${imageUrl}')`,
           backgroundSize: "cover",
           backgroundPosition: "top",
