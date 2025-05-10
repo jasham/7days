@@ -2,6 +2,7 @@
 'use client';
 import { Box, Divider, Grid, Typography } from "@mui/material";
 import ImageCard from "../ImageCard/index";
+import Heading from "../Heading/Heading";
 
 interface Service {
   title: string;
@@ -35,10 +36,13 @@ const newsList: Service[] = [
 export default function Insights() {
   return (
     <Box py={10} px={4} maxWidth="lg" mx="auto">
-      <Typography variant="overline" color="textSecondary" gutterBottom>
-        Insights
-      </Typography>
-      <Divider sx={{ mb: 4 }} />
+      <Heading
+        text="Insights"
+        textColor="#132D46"
+        dividerColor="#132D46"
+        dividerHeight="1px"
+        marginBottom="16px"
+      />
       <Typography variant="h4" gutterBottom color="#132D46">
         News & Resources
       </Typography>

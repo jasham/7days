@@ -17,9 +17,10 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
   company,
 }) => {
   return (
-    <Box color="white">
+    <Box color="white" sx={{ display: "flex", mb: 4 }}>
+      <FormatQuoteIcon fontSize="large" sx={{ mr: 1 }} />
+      <Box>
       <Box display="flex" alignItems="center" mb={2}>
-        <FormatQuoteIcon fontSize="large" sx={{ mr: 1 }} />
         <Typography
           variant="h5"
           fontWeight="bold"
@@ -42,6 +43,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
       <Typography variant="body1" fontStyle="italic">
         {author}, <strong>{company}</strong>
       </Typography>
+      </Box>
     </Box>
   );
 };

@@ -56,7 +56,6 @@ export default function JobApplicationPage() {
           </Grid>
         </Grid>
       </Box>
-      <Footer/>
     </>
   );
 }

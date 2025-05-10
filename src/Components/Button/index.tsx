@@ -24,6 +24,7 @@ export default function CustomButton({
   sx = {},
   variant = "outlined",
   color = "white",
+  fontSize = "1rem",
   ...props
 }: CustomButtonProps) {
   return (
@@ -35,13 +36,12 @@ export default function CustomButton({
         color: { color },
         borderColor: { color },
         borderRadius: "4px",
-        px: 3,
-        py: 1.5,
         textTransform: "none",
         fontWeight: 400,
-        fontSize: "1rem",
+        fontSize: {fontSize},
         ...sx,
         width: "fit-content",
+        height: "fit-content",
         "&:hover": {
           backgroundColor: "rgba(255, 255, 255, 0.1)",
           borderColor: "white",

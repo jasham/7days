@@ -6,10 +6,10 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
-  Divider,
   Typography,
 } from "@mui/material";
 import React from "react";
+import Heading from "../Heading/Heading";
 
 const faqData = [
   "What Makes Your Recruitment Different From Other Agencies?",
@@ -21,21 +21,33 @@ const faqData = [
 const FaqSection: React.FC = () => {
   return (
     <Box px={4} py={8} maxWidth="lg" mx="auto">
-      <Typography variant="overline" color="textSecondary">
-        FAQ
-      </Typography>
-      <Divider sx={{ mb: 4 }} />
+      <Heading
+        text="FAQ"
+        textColor="#132D46"
+        dividerColor="#132D46"
+        dividerHeight="1px"
+        marginBottom="16px"
+      />
       {faqData.map((question, index) => (
         <Accordion
           key={index}
           elevation={0}
-          sx={{ borderBottom: "1px solid #ccc" }}
+          sx={{
+            "&:before": {
+              display: "none", // Removes the default border bottom or divider
+            },
+          }}
         >
           <AccordionSummary
             expandIcon={<AddIcon />}
             aria-controls={`faq-${index}`}
           >
-            <Typography>{question}</Typography>
+            <Typography
+              variant="h6"
+              sx={{ borderBottom: "1px solid #132D46", width: "100%" }}
+            >
+              {question}
+            </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body2" color="textSecondary">

@@ -75,12 +75,11 @@ export default function ImageCard({
                 zIndex: 1,
               }}
             />
-
+            <Typography variant="h6" fontWeight="bold" gutterBottom>
+              {service.title}
+            </Typography>
             {/* Text Overlay */}
-            <Box sx={{ position: "relative", zIndex: 2, width: "100%", p: 3 }}>
-              <Typography variant="h6" fontWeight="bold" gutterBottom>
-                {service.title}
-              </Typography>
+            <Box sx={{ display: "flex", width: "100%", p: 3 }}>
               <Typography variant="body2" color="inherit" paragraph>
                 {service.description}
               </Typography>
@@ -122,7 +121,8 @@ export default function ImageCard({
             >
               {service.title}
             </Typography>
-            <Typography variant="body2" paragraph sx={{ color: "#ffffff" }}>
+            <Box sx={{ display: "flex", width: "100%" , gap:4 , alignItems:"center"}}>
+            <Typography variant="body2" paragraph sx={{ color: "#ffffff" , width: "50%" }}>
               {service.description}
             </Typography>
             <CustomButton
@@ -130,8 +130,10 @@ export default function ImageCard({
               onClick={() => alert("beginning")}
               variant="outlined"
               color={"#ffffff"}
-              sx={{ BorderColor: "##ffffff" }}
+              sx={{ BorderColor: "##ffffff" , width: "50%" , height:"fit-content"}}
+              fontSize={"10px"}
             />
+            </Box>
           </Box>
         )}
       </Card>

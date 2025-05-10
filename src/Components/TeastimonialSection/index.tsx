@@ -1,36 +1,25 @@
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import TestimonialCard from "../TestimonialCard/index";
+import Heading from "../Heading/Heading";
 
 const TestimonialSection: React.FC = () => {
   return (
     <Box
       sx={{
-        // py: 10,
-        // px: 4,
-        background: "linear-gradient(180deg, #FFFFFF 33.59%, #132D46 73.18%)",
-
-        // width: "1515px",
-        height: "95vh",
+        background: "linear-gradient(180deg, #132d4668 0%, #132D46 73.18%)",
         gap: "8px",
         position: "relative",
-        zIndex: "-50",
-        paddingTop: "200px",
         paddingRight: "128px",
-        // paddingBottom: "9px",
         paddingLeft: "128px",
-        marginTop: "-200px",
-        // color: "black",
+        paddingTop: "64px",
+        paddingBottom: "64px",
       }}
     >
-      <Typography variant="overline" color="#ffffff">
-        What our clients say
-      </Typography>
-      <Divider
-        sx={{
-          mb: 4,
-          backgroundColor: "white",
-          height: "1px",
-        }}
+      <Heading
+        text="What Our Clients Say"
+        dividerColor="#ffffff"
+        dividerHeight="1px"
+        marginBottom="16px"
       />
       <Grid
         container
@@ -39,7 +28,7 @@ const TestimonialSection: React.FC = () => {
         maxWidth="lg"
         mx="auto"
       >
-        <Grid item xs={12} md={5}>
+        <Grid xs={12} md={5} sx={{ paddingTop: 4 }}>
           <Typography
             variant="h5"
             fontWeight="bold"

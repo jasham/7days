@@ -103,7 +103,6 @@ export default function Home() {
       <TestimonialSection />
       <FaqSection />
       <Insights />
-      <Footer />
     </div>
   );
 }

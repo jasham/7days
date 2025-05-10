@@ -128,7 +128,6 @@ export default function JobBoardPage() {
           </Grid>
         </Grid>
       </Box>
-      <Footer />
     </>
   );
 }
