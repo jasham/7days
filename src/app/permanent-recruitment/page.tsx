@@ -32,7 +32,6 @@ interface CardProps {
 // interface CardList {
 //   myCards: CardData[];
 // }
-
 //hero section data
 const heroDetails: HeroProps = {
   title: "Permanent Recruitment Built for Long-Term Success",
@@ -116,7 +115,11 @@ export default function permanentRecruitmentPage() {
         subDescription="Our expertise covers a wide range of skill sets and leadership levels:"
       />
       <SpecialistExpertise />
-      <OurNetworkSection />
+
+      <OurNetworkSection
+        heading="Our Network Advantage"
+        description="Unlike generalist recruiters, Henton operates inside industry ecosystems. We maintain deep sector connections across:"
+      />
       <HowWeDeliverPermanentRecruitment />
       <ResultsSection
         CardProps={resultDetails}
