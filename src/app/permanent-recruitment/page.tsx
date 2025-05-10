@@ -18,7 +18,21 @@ interface CardItem {
 interface CardProps {
   cardDetails: CardItem[];
 }
-
+//why experts interface
+// interface CardData {
+//   title: string;
+//   description: string;
+// }
+// interface CardList {
+//   myCards: CardData[];
+// }
+// interface Experts {
+//   CardList: CardList;
+//   title: string;
+//   subTitle: string;
+// }
+//hero section data
+//result section data
 const resultDetails: CardProps = {
   cardDetails: [
     {
