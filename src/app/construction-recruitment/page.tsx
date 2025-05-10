@@ -32,7 +32,6 @@ interface CardData {
 interface CardList {
   myCards: CardData[];
 }
-
 //hero section data
 const heroDetails: HeroProps = {
   title: "Construction Recruitment That Builds Certainty",

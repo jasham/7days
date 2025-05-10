@@ -2,11 +2,7 @@
 
 // prettier-ignore
 'use client';
-import {
-  Box,
-  Divider,
-  Typography,
-} from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import CustomButton from "../Button";
 import PartnerCard from "../Card/index";
