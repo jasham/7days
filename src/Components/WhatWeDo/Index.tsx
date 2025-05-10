@@ -15,6 +15,7 @@ import CustomButton from "../Button";
 import Heading from "../Heading/Heading";
 interface WhatWeDoProps {
   cards?: boolean;
+  construction?: boolean;
   heading?: string;
   description?: string;
   subHeading?: string;
@@ -40,12 +41,17 @@ const expertiseList = [
   "Middle management to C-suite executives",
   "Confidential and strategic appointments",
 ];
+// const constructionExpertList = [
+//   "Head Contractors, Subcontractors across keys sectors including Health, Education, Industrial",
+//   "Specialist subcontractors and client side consultancies",
+//   "Fitout and refurbishment firms",
+//   "Client-side project and development managers",
+//   "Government and private developers",
+// ];
 const WhatWeDo: React.FC<WhatWeDoProps> = ({
   cards = true,
   heading,
   description,
-  subHeading,
-  subDescription,
 }) => {
   return (
     <Box
@@ -83,9 +89,9 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
               {heading}
             </Typography>
             <Typography variant="body2" color="white" sx={{ mb: 4 }}>
-              {description?.split("#")[0]}
+              {description?.split("/")[0]}
               <br />
-              {description?.split("#")[1]}
+              {description?.split("/")[1]}
             </Typography>
           </Box>
 
@@ -117,41 +123,40 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
               </List>
             )}
           </Box>
+          {cards && (
+            <Grid container spacing={3} mb={4}>
+              {roleCards.map((role, index) => (
+                <Grid
+                  item
+                  xs={12}
+                  md={4}
+                  sx={{
+                    width: "360px",
+                    borderRadius: "16px",
+                    padding: "24px",
+                    gap: "24px",
+                    textAlign: "center",
+                  }}
+                  key={index}
+                >
+                  <Paper elevation={2} sx={{ p: 3, height: "100%" }}>
+                    <Typography
+                      variant="subtitle1"
+                      fontWeight="bold"
+                      gutterBottom
+                      color="#014225"
+                    >
+                      {role.title}
+                    </Typography>
+                    <Typography variant="body2" sx={{ color: " #132D46" }}>
+                      {role.description}
+                    </Typography>
+                  </Paper>
+                </Grid>
+              ))}
+            </Grid>
+          )}
         </Box>
-        {cards && (
-          <Grid container spacing={3} mb={4}>
-            {roleCards.map((role, index) => (
-              <Grid
-                item
-                xs={12}
-                md={4}
-                sx={{
-                  width: "360px",
-                  borderRadius: "16px",
-                  padding: "24px",
-                  gap: "24px",
-                  textAlign: "center",
-                }}
-                key={index}
-              >
-                <Paper elevation={2} sx={{ p: 3, height: "100%" }}>
-                  <Typography
-                    variant="subtitle1"
-                    fontWeight="bold"
-                    gutterBottom
-                    color="#014225"
-                  >
-                    {role.title}
-                  </Typography>
-                  <Typography variant="body2" sx={{ color: " #132D46" }}>
-                    {role.description}
-                  </Typography>
-                </Paper>
-              </Grid>
-            ))}
-          </Grid>
-        )}
-
         <Grid container spacing={3} mb={4}>
           {roleCards.map((role, index) => (
             <Grid

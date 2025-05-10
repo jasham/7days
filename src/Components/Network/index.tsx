@@ -8,8 +8,12 @@ import {
   Typography,
 } from "@mui/material";
 import Heading from "../Heading/Heading";
-
-const OurNetworkSection = () => {
+interface NetworProps {
+  image?: string;
+  heading?: string;
+  description?: string;
+}
+const OurNetworkSection = ({ image }: NetworProps) => {
   return (
     <Box px={4} py={10} maxWidth="lg" mx="auto">
       <Heading
@@ -25,7 +29,7 @@ const OurNetworkSection = () => {
         <Grid item xs={12} md={6}>
           <Box
             component="img"
-            src="/your-map-image.png"
+            src={image}
             alt="Map of Australia"
             sx={{ width: "100%", maxWidth: 400 }}
           />
