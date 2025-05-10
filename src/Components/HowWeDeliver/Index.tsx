@@ -1,4 +1,5 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
+import Heading from "../Heading/Heading";
 
 const features = [
   {
@@ -30,128 +31,125 @@ const features = [
 
 const HowWeDeliverPermanentRecruitment = () => {
   return (
-    <Box sx={{ px: 4, py: 6 }}>
-      <Typography
-        sx={{
-          fontFamily: "Helvetica Neue",
-          fontWeight: 400,
-          fontSize: "12px",
-          color: "#2E2C38",
-          mb: 1,
-          textTransform: "uppercase",
-        }}
-      >
-        Permanent Recruitment Services
-      </Typography>
+    <Box sx={{ background: "#D4E1EF66" }}>
+      <Box px={4} py={10} maxWidth="lg" mx="auto">
+        <Heading
+          text="Permanent Recruitment Services"
+          textColor="#132D46"
+          dividerColor="#132D46"
+          dividerHeight="1px"
+          marginBottom="16px"
+        />
+        <Grid container spacing={4}>
+          {/* Left Side */}
+          <Grid item xs={12} md={5}>
+            <Typography
+              sx={{
+                fontFamily: "Helvetica Neue",
+                fontWeight: 700,
+                fontSize: "48px",
+                color: "#2E2C38",
+                lineHeight: "100%",
+                mb: 2,
+              }}
+            >
+              How we deliver permanent recruitment
+            </Typography>
 
-      <Grid container spacing={4}>
-        {/* Left Side */}
-        <Grid item xs={12} md={5}>
-          <Typography
-            sx={{
-              fontFamily: "Helvetica Neue",
-              fontWeight: 700,
-              fontSize: "48px",
-              color: "#2E2C38",
-              lineHeight: "100%",
-              mb: 2,
-            }}
-          >
-            How we deliver permanent recruitment
-          </Typography>
+            <Typography
+              sx={{
+                fontFamily: "Helvetica Neue",
+                fontWeight: 500,
+                fontSize: "24px",
+                lineHeight: "100%",
+                color: "#2E2C38",
+                mb: 2,
+              }}
+            >
+              Permanent hiring demands precision and our system delivers it.
+            </Typography>
 
-          <Typography
-            sx={{
-              fontFamily: "Helvetica Neue",
-              fontWeight: 500,
-              fontSize: "24px",
-              lineHeight: "100%",
-              color: "#2E2C38",
-              mb: 2,
-            }}
-          >
-            Permanent hiring demands precision and our system delivers it.
-          </Typography>
+            <Typography
+              sx={{
+                fontFamily: "Helvetica Neue",
+                fontWeight: 400,
+                fontSize: "16px",
+                lineHeight: "24px",
+                color: "#2E2C38",
+                mb: 3,
+              }}
+            >
+              Every search includes:
+            </Typography>
 
-          <Typography
-            sx={{
-              fontFamily: "Helvetica Neue",
-              fontWeight: 400,
-              fontSize: "16px",
-              lineHeight: "24px",
-              color: "#2E2C38",
-              mb: 3,
-            }}
-          >
-            Every search includes:
-          </Typography>
+            <Box
+              sx={{
+                width: "100%",
+                height: "300px", // adjust as needed
+                borderRadius: "10px",
+                mb: 3,
+                backgroundImage: `linear-gradient(180deg, rgba(19, 45, 70, 0.48) 0%, rgba(19, 45, 70, 0.6) 100%), url('/womenPresenting.jpg')`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+              }}
+            />
 
-          <Box
-            component="img"
-            src="/womenPresenting.jpg" // Replace with actual image path
-            alt="Recruitment Meeting"
-            sx={{
-              width: "100%",
-              borderRadius: "10px",
-              mb: 3,
-            }}
-          />
-
-          <Button
-            variant="outlined"
-            endIcon={<span style={{ fontSize: "18px" }}>→</span>}
-            sx={{
-              fontFamily: "Helvetica Neue",
-              fontWeight: 500,
-              fontSize: "16px",
-              textTransform: "none",
-              px: 2.5,
-              py: 1,
-              borderColor: "#2E2C38",
-              color: "#2E2C38",
-              "&:hover": {
+            <Button
+              variant="outlined"
+              endIcon={<span style={{ fontSize: "18px" }}>→</span>}
+              sx={{
+                fontFamily: "Helvetica Neue",
+                fontWeight: 500,
+                fontSize: "16px",
+                textTransform: "none",
+                px: 2.5,
+                py: 1,
                 borderColor: "#2E2C38",
-                backgroundColor: "#f5f5f5",
-              },
-            }}
-          >
-            Build Your Team
-          </Button>
-        </Grid>
+                color: "#2E2C38",
+                "&:hover": {
+                  borderColor: "#2E2C38",
+                  backgroundColor: "#f5f5f5",
+                },
+              }}
+            >
+              Build Your Team
+            </Button>
+          </Grid>
 
-        {/* Right Side */}
-        <Grid item xs={12} md={7}>
-          <Grid container spacing={3}>
-            {features.map((item, index) => (
-              <Grid item xs={12} key={index}>
-                <Typography
-                  sx={{
-                    fontFamily: "Helvetica Neue",
-                    fontWeight: 700,
-                    fontSize: "36px",
-                    lineHeight: "100%",
-                    color: "#2E2C38",
-                    mb: 1,
-                  }}
-                >
-                  {item.title}
-                </Typography>
-                <Typography
-                  sx={{
-                    fontFamily: "Helvetica Neue",
-                    fontWeight: 400,
-                    fontSize: "16px",
-                    lineHeight: "24px",
-                    color: "#2E2C38",
-                  }}
-                >
-                  {item.description}
-                </Typography>
-              </Grid>
-            ))}
+          {/* Right Side */}
+          <Grid item xs={12} md={7}>
+            <Grid container spacing={3}>
+              {features.map((item, index) => (
+                <Grid item xs={12} key={index}>
+                  <Typography
+                    sx={{
+                      fontFamily: "Helvetica Neue",
+                      fontWeight: 700,
+                      fontSize: "36px",
+                      lineHeight: "100%",
+                      color: "#2E2C38",
+                      mb: 1,
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontFamily: "Helvetica Neue",
+                      fontWeight: 400,
+                      fontSize: "16px",
+                      lineHeight: "24px",
+                      color: "#2E2C38",
+                    }}
+                  >
+                    {item.description}
+                  </Typography>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
-      </Grid>
+      </Box>
     </Box>
   );
 };

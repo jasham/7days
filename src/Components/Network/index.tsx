@@ -7,22 +7,18 @@ import {
   ListItemText,
   Typography,
 } from "@mui/material";
+import Heading from "../Heading/Heading";
 
 const OurNetworkSection = () => {
   return (
-    <Box sx={{ px: 4, py: 6, border: "1px solid #C2C2C2" }}>
-      <Typography
-        variant="overline"
-        sx={{
-          color: "#132D46",
-          fontFamily: "Helvetica Neue",
-          fontWeight: 500,
-          fontSize: "12px",
-          letterSpacing: "1px",
-        }}
-      >
-        WORK WITH THE EXPERTS
-      </Typography>
+    <Box px={4} py={10} maxWidth="lg" mx="auto">
+      <Heading
+        text="Work With Our Experts "
+        textColor="#132D46"
+        dividerColor="#132D46"
+        dividerHeight="1px"
+        marginBottom="16px"
+      />
 
       <Grid container spacing={4} alignItems="center" mt={2}>
         {/* Left: Image */}
@@ -63,7 +59,7 @@ const OurNetworkSection = () => {
             ecosystems. We maintain deep sector connections across:
           </Typography>
 
-          <List dense sx={{ pl: 2, mb: 2 }}>
+          <List dense sx={{ pl: 2, mb: 2, borderLeft: "1px solid grey" }}>
             {[
               "Construction Project Directors and Managers",
               "Property Development Executives",
