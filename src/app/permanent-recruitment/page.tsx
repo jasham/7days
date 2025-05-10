@@ -1,6 +1,5 @@
 "use client";
 import FaqSection from "@/Components/Faq";
-import Footer from "@/Components/Footer/Footer";
 import HeroSection from "@/Components/Hero/Hero";
 import HowWeDeliverPermanentRecruitment from "@/Components/HowWeDeliver/Index";
 import Insights from "@/Components/Insights/index";
@@ -128,7 +127,6 @@ export default function permanentRecruitmentPage() {
       <TestimonialSection />
       <FaqSection faqData={faqData} />
       <Insights />
-      <Footer />
     </div>
   );
 }
