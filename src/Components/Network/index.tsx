@@ -126,6 +126,20 @@ const OurNetworkSection = ({
         {/* Right: Text Content */}
         <Grid item xs={12} md={6}>
           <Typography
+            variant="h5"
+            sx={{
+              color: "#132D46",
+              fontFamily: "Helvetica Neue",
+              fontWeight: 700,
+              fontSize: "28px",
+              lineHeight: "110%",
+              mb: 2,
+            }}
+          >
+            Our Network Advantage
+          </Typography>
+
+          <Typography
             sx={{
               color: "#132D46",
               fontWeight: 500,
