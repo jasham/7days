@@ -60,6 +60,8 @@ const resultDetails: CardProps = {
     },
   ],
 };
+//faq data
+
 //why expert data
 // const ExpertList: CardList = {
 //   myCards: [
@@ -109,20 +111,25 @@ export default function permanentRecruitmentPage() {
       <HeroSection {...heroDetails} />
       <WhatWeDo
         cards={false}
+        permanentRecruitment={true}
         heading="Permanent recruitment isn’t about CVs — it’s about capability."
         description="At Henton Consulting, permanent recruitment is about more than filling vacancies. It’s about building capability — securing the professionals and leaders who will shape your organisation’s future.Our approach ensures every permanent hire strengthens your team, culture, and competitive position."
         subHeading="We Recruit For"
-        subDescription="Our expertise covers a wide range of skill sets and leadership levels:"
+        description2="Our expertise covers a wide range of skill sets and leadership levels:"
       />
-      <SpecialistExpertise />
+      <SpecialistExpertise
+        title="Sector-Specific Recruitment. Permanent Impact."
+        description="Deep industry knowledge, precise candidate alignment - built for long-term success in your sector."
+      />
 
       <OurNetworkSection
+        permanentRecruitment={true}
         heading="Our Network Advantage"
         description="Unlike generalist recruiters, Henton operates inside industry ecosystems. We maintain deep sector connections across:"
       />
       <HowWeDeliverPermanentRecruitment />
       <ResultsSection
-        CardProps={resultDetails}
+        cardProps={resultDetails}
         background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/results-bg.jpg')"
         topHeading="Where Strategy Demands Action"
         bottomHeading="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
