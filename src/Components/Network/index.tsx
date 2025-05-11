@@ -12,6 +12,8 @@ import CustomButton from "../Button";
 import Heading from "../Heading/Heading";
 interface NetworProps {
   construction?: boolean;
+  engineeringPage?: boolean;
+  permanentRecruitment?: boolean;
   image?: string;
   heading?: string;
   description?: string;
@@ -34,11 +36,21 @@ const deepExpertList = [
   "Commercial ManagementContract, cost and commercial professionals who forecast, report and manage risk in alignment with delivery targets.",
 ];
 
+const engineeringExpertList = [
+  "Civil & Structural Engineering:-Engineers with a deep understanding of compliance, constructability and stakeholder alignment, from concept to certification.",
+  "Mechanical, Electrical & Building Services:-MEP professionals who design, coordinate and troubleshoot integrated systems, in buildings, transport hubs and essential infrastructure.",
+  "Infrastructure & Asset Engineering:-Experts in long-life asset planning and delivery across roads, rail, water and utilities, often within tiered government and multi-agency frameworks.",
+  "Project Delivery & Engineering Leads:-Professionals who manage delivery across disciplines, aligning scope, consultants and cost plans to project expectations.",
+  "Superintendents & Site Engineers:-Engineers who keep boots on the ground aligned to schedule, subcontractor performance, and quality benchmarks.",
+  "Safety, Quality & Risk Engineering:-People who protect lives, reputations and long-term outcomes, from safety-in-design through to on-site delivery and asset transition.",
+];
 const OurNetworkSection = ({
   image,
   heading,
   description,
   construction = false,
+  engineeringPage = false,
+  permanentRecruitment = false,
 }: NetworProps) => {
   return (
     <Box px={4} py={10} maxWidth="lg" mx="auto">
@@ -110,7 +122,7 @@ const OurNetworkSection = ({
           </Typography>
 
           <List dense sx={{ pl: 2, mb: 2, borderLeft: "1px solid grey" }}>
-            {!construction &&
+            {permanentRecruitment &&
               networkList.map((text, idx) => (
                 <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
                   <ListItemIcon>
@@ -142,6 +154,34 @@ const OurNetworkSection = ({
                       lineHeight: "120%",
                     }}
                   />
+                </ListItem>
+              ))}
+            {engineeringPage &&
+              engineeringExpertList.map((text, idx) => (
+                <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
+                  <ListItemIcon>
+                    <FiberManualRecordIcon sx={{ fontSize: "8px" }} />
+                  </ListItemIcon>
+                  <Box sx={{}}>
+                    <ListItemText
+                      primary={text.split(":-")[0]}
+                      primaryTypographyProps={{
+                        fontFamily: "Helvetica Neue",
+                        fontWeight: 500,
+                        fontSize: "18px",
+                        lineHeight: "100%",
+                      }}
+                    />
+                    <ListItemText
+                      primary={text.split(":-")[1]}
+                      primaryTypographyProps={{
+                        fontFamily: "Helvetica Neue",
+                        fontWeight: 400,
+                        fontSize: "18px",
+                        lineHeight: "100%",
+                      }}
+                    />
+                  </Box>
                 </ListItem>
               ))}
           </List>

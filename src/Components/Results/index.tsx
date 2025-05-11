@@ -59,6 +59,7 @@ const ResultsSection: React.FC<ResultProps> = ({
           textAlign: "center",
           display: "flex",
           alignItems: "center",
+          justifyContent: "center",
           flexDirection: "column",
           gap: 4,
           px: { xs: 3, md: 8 },

@@ -35,29 +35,29 @@ interface CardList {
 
 //hero section data
 const heroDetails: HeroProps = {
-  title: "Construction Recruitment That Builds Certainty",
+  title: "Engineering Recruitment That Keeps Projects Moving",
   description:
-    "From boots-on-the-ground hires to strategic delivery roles,we find the people who get it built.",
+    "From concept design to site delivery,we find engineers who make the work possible.",
   buttonText: "Begin your success story",
-  imageUrl: "/ConstructionHero.jpg",
+  imageUrl: "/engineering-hero.jpg",
 };
 //result section data
 const resultDetails: CardProps = {
   cardDetails: [
     {
-      score: "91%",
+      score: "98%",
       title: "",
-      description: "of permanent placements retained 12+ months",
+      description: "of hires are still with the business after 18 months",
     },
     {
       score: "100%",
       title: "",
-      description: "of retained assignments completed within timeframe",
+      description: "of retained searches have been completed successfully",
     },
     {
-      score: "83%",
+      score: "85%",
       title: "",
-      description: "of roles filled from the first candidate presented",
+      description: "of roles are filled from the first candidate presented",
     },
   ],
 };
@@ -98,67 +98,62 @@ const ExpertList: CardList = {
     },
   ],
 };
-
-//faq data
+// faq data
 const faqData = [
   {
+    question: "Do you recruit across all engineering disciplines?",
+    answer:
+      "Yes. We cover civil, structural, mechanical, electrical and building services roles nationally.",
+  },
+  {
     question:
-      "Do You Recruit For Both Site And Office-Based Construction Roles?",
+      "Can you fill multiple roles at once or support long-term programs?",
     answer:
-      "Yes — From Site Managers And Engineers To Project Directors, Commercial Leads And HSE Professionals.",
+      "Absolutely. We run parallel or phased searches aligned to your project timeline, budget and technical mix.",
   },
   {
-    question: "Can You Help With Contract-Based Or Temporary Hires?",
+    question: "Do you cover regional and remote projects?",
     answer:
-      "Absolutely. We Place Both Permanent And Contract Professionals Aligned To Project Scope, Stage And Delivery Risk.",
+      "Yes. We’ve delivered talent for infrastructure projects in regional hubs, remote sites and FIFO environments.",
   },
   {
-    question: "Do You Work Nationally?",
+    question: "Can you manage confidential or business-critical searches?",
     answer:
-      "Yes — We Recruit Across Australia Including Urban Infill, Regional Builds And Remote Infrastructure Projects.",
+      "Yes — including replacements, backfills and restructuring-sensitive roles.",
   },
   {
-    question: "Can You Manage Sensitive Or Confidential Assignments?",
+    question: "Do you assess technical ability or just CVs?",
     answer:
-      "Yes — We Handle Confidential Search Assignments With Discretion, Urgency And Total Alignment To Risk Controls.",
-  },
-  {
-    question: "How Do You Test Delivery Competence, Not Just Qualifications?",
-    answer:
-      "We Interview Based On Real Project Performance, Safety Records, And Leadership Behaviours — Not Just CVs.",
+      "We assess based on delivery outcomes, stakeholder feedback, and project performance — not just credentials.",
   },
 ];
-
 export default function constructionRecruitmentPage() {
   return (
     <div>
       <HeroSection {...heroDetails} />
       <WhatWeDo
         cards={false}
-        construction={true}
-        heading="Great builds don’t stay on track by accident, it starts with who you hire."
-        description="We recruit across the full construction lifecycle — from early-stage planning and estimating through to site delivery, handover and asset performance./ Whether you're managing a multi-site pipeline, resourcing for a live project, or replacing a critical delivery lead — we act fast to secure professionals who keep schedules, margins and safety on track."
-        subHeading="Trusted by Australia's Builders:"
+        engineeringPage={true}
+        heading="Designs win tenders. Engineers deliver outcomes. It starts with who you hire."
+        description="We recruit high-performing engineering professionals across civil, structural, mechanical, electrical and building services disciplines./ Whether you’re designing critical infrastructure, resourcing for a live build, or replacing a technical lead mid-project, we deliver people who know how to deliver under pressure. Our candidates don’t just meet specs. They solve problems others can’t."
+        subHeading="Trusted by Australia’s Engineering-Led Organisations:"
         subDescription="We work with builders who can't afford delays — and developers who need certainty from day one. Our clients include:"
       />
       <SpecialistExpertise
-        title="Built for Construction. Proven in Delivery."
-        description="Permanent, contract and executive recruitment that reduces risk, unlocks productivity, and drives your projects forward."
+        title="Engineered for Results. Backed by Performance."
+        description="Specialist recruitment across civil, structural, and services roles, aligned to project scope, stakeholder pressure, and delivery outcomes."
       />
       <OurNetworkSection
-        image="/expertImage.jpg"
-        construction={true}
-        heading="Deep expertise./ Built for site realities."
-        description="We don’t chase resumes, we chase results. Our construction networks are built project by project, site by site, with live intel on who’s performing, where, and why it matters."
+        image="/engineering.jpg"
+        engineeringPage={true}
+        heading="Built for complexity./ Hired for performance."
+        description="We don’t source from job boards We find professionals trusted to deliver under pressure, on real projects, with real consequences."
       />
       <HowWeRecruit
-        construction={true}
+        engineering={true}
         title="How we recruit and/ why it works."
-        subTitle="Great construction hiring is about more than experience, it’s
-                about risk, trust and delivery under pressure."
-        description="We don’t advertise and hope. We actively map the market, vet
-                delivery history, and approach proven performers — even when
-                they’re not actively looking. Every engagement includes."
+        subTitle="Great engineering hires don’t just reduce workload — they reduce risk."
+        description="We don’t wait for applications. We go straight to the engineers already solving technical problems under pressure, many of whom aren’t looking, but will move for the right opportunity./We map the market, trace delivery outcomes, and approach with purpose. Every search includes:"
       />
       <WhyPartnerSection
         CardList={ExpertList}
@@ -168,9 +163,9 @@ export default function constructionRecruitmentPage() {
       />
       <ResultsSection
         CardProps={resultDetails}
-        background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/results-bg.jpg')"
-        topHeading="Where Strategy Demands Action"
-        bottomHeading="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
+        background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/engineering-results-bg.jpg')"
+        topHeading="Measurable outcomes"
+        bottomHeading="Technical recruitment isn’t about filling a role,it’s about delivering a result. That’s what we do."
       />
       <TestimonialSection />
       <FaqSection faqData={faqData} />

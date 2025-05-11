@@ -1,5 +1,9 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
+interface specialExpertiseProps {
+  title?: string;
+  description?: string;
+}
 
 const sectors = [
   "Property & Development",
@@ -13,7 +17,10 @@ const sectors = [
   "Government",
 ];
 
-const SpecialistExpertise = () => {
+const SpecialistExpertise: React.FC<specialExpertiseProps> = ({
+  title,
+  description,
+}) => {
   return (
     <Box px={4} py={6} maxWidth={"lg"} mx={"auto"}>
       <Heading
@@ -35,7 +42,8 @@ const SpecialistExpertise = () => {
             mb: 2,
           }}
         >
-          Sector-Specific Recruitment. Permanent Impact.
+          {/* Sector-Specific Recruitment. Permanent Impact. */}
+          {title}
         </Typography>
 
         {/* Subheading */}
@@ -49,8 +57,9 @@ const SpecialistExpertise = () => {
             mb: 4,
           }}
         >
-          Deep industry knowledge, precise candidate alignment – built for
-          long-term success in your sector.
+          {/* Deep industry knowledge, precise candidate alignment – built for
+          long-term success in your sector. */}
+          {description}
         </Typography>
 
         {/* Sector Buttons */}

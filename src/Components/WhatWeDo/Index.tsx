@@ -20,6 +20,8 @@ interface WhatWeDoProps {
   description?: string;
   subHeading?: string;
   subDescription?: string;
+  engineeringPage?: boolean;
+  permanentRecruitment?: boolean;
 }
 const roleCards = [
   {
@@ -41,17 +43,30 @@ const expertiseList = [
   "Middle management to C-suite executives",
   "Confidential and strategic appointments",
 ];
-// const constructionExpertList = [
-//   "Head Contractors, Subcontractors across keys sectors including Health, Education, Industrial",
-//   "Specialist subcontractors and client side consultancies",
-//   "Fitout and refurbishment firms",
-//   "Client-side project and development managers",
-//   "Government and private developers",
-// ];
+const constructionExpertList = [
+  "Head Contractors, Subcontractors across keys sectors including Health, Education, Industrial",
+  "Specialist subcontractors and client side consultancies",
+  "Fitout and refurbishment firms",
+  "Client-side project and development managers",
+  "Government and private developers",
+];
+const engineeringExpertList = [
+  "National and multidisciplinary design consultancies",
+  "Specialist civil, structural and MEP firms",
+  "Tier 1 and mid-tier head contractors",
+  "Client-side PM and commercial advisory groups",
+  "Government and infrastructure delivery agencies",
+  "Asset owners and operators in transport, utilities and energy",
+];
 const WhatWeDo: React.FC<WhatWeDoProps> = ({
   cards = true,
   heading,
   description,
+  subHeading,
+  subDescription,
+  construction,
+  engineeringPage = false,
+  permanentRecruitment = false,
 }) => {
   return (
     <Box
@@ -69,59 +84,196 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
         <Box
           sx={{
             display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
             gap: "20px",
-            justifyContent: "space-between",
-            width: "100%",
           }}
         >
-          <Box sx={{ width: "40%" }}>
-            <Typography
-              variant="h4"
-              fontWeight="bold"
-              color="white"
-              gutterBottom
+          <Box
+            sx={{ display: "flex", justifyContent: "space-between" }}
+            gap={20}
+          >
+            <Box
+              flexBasis={"50%"}
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                gap: "84px",
+                justifyContent: "center",
+              }}
             >
-              {/* We help businesses <br />
+              <Typography
+                variant="h4"
+                sx={{
+                  fontFamily: "Helvetica Neue",
+                  fontEeight: "700",
+                  fontSize: "48px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#ffffff",
+                }}
+                gutterBottom
+              >
+                {/* We help businesses <br />
               recruit with purpose — <br />
               aligning people <br />
               strategy to commercial <br />
               outcomes. */}
-              {heading}
-            </Typography>
-            <Typography variant="body2" color="white" sx={{ mb: 4 }}>
-              {description?.split("/")[0]}
-              <br />
-              {description?.split("/")[1]}
-            </Typography>
-          </Box>
+                {heading}
+              </Typography>
+              <Box
+                sx={{ display: "flex", flexDirection: "column", gap: "8px" }}
+              >
+                <Box>
+                  <Typography
+                    variant="body2"
+                    color="white"
+                    sx={{
+                      mb: 4,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}
+                  >
+                    {description?.split("/")[0]}
+                  </Typography>
+                </Box>
+                <Box>
+                  <Typography
+                    variant="body2"
+                    color="white"
+                    sx={{
+                      mb: 4,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}
+                  >
+                    {description?.split("/")[0]}
+                  </Typography>
+                </Box>
+              </Box>
+            </Box>
 
-          <Box flexBasis={"50%"}>
-            <Typography
-              variant="body1"
-              color="white"
-              sx={{ mt: 3, maxWidth: 500 }}
-            >
-              At Hinton, recruitment isn&apos;t transactional. It&apos;s
-              strategic. Every hire should improve capability, deliver outcomes,
-              and move your business forward.
-            </Typography>
+            <Box flexBasis={"50%"}>
+              <Typography
+                variant="body1"
+                color="white"
+                sx={{ mt: 3, maxWidth: 500 }}
+              >
+                At Hinton, recruitment isn&apos;t transactional. It&apos;s
+                strategic. Every hire should improve capability, deliver
+                outcomes, and move your business forward.
+              </Typography>
 
-            <Typography variant="h4" fontWeight="bold" color="white" mt={5}>
-              Who We Recruit
-            </Typography>
-            <Typography variant="body2" color="white" sx={{ mb: 4 }}>
-              Our expertise covers a wide range of skill sets and leadership
-              levels.
-            </Typography>
-            {!cards && (
-              <List>
-                {expertiseList.map((item, index) => (
-                  <ListItem key={index} sx={{ color: "#fff", pl: 2 }}>
-                    <ListItemText primary={`• ${item}`} />
-                  </ListItem>
-                ))}
-              </List>
-            )}
+              <Typography
+                sx={{
+                  fontFamily: "Helvetica Neue",
+                  fontWeight: "700",
+                  fontSize: "40px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                }}
+                color="white"
+                mt={5}
+              >
+                {cards && "Who We Recruit"}
+                {!cards && subHeading}
+              </Typography>
+              <Typography
+                variant="body2"
+                color="white"
+                sx={{
+                  fontFamily: "Helvetica Neue",
+                  fontWeight: " 500",
+                  fontSize: "20px",
+                  lineHeight: "100%",
+                  letterSpacing: "0%",
+                  color: "#ffffff",
+                  padding: "10px",
+                }}
+              >
+                {cards &&
+                  "Our expertise covers a wide range of skill sets and leadership levels."}
+                {!cards && subDescription}
+              </Typography>
+              {permanentRecruitment && (
+                <List>
+                  {expertiseList.map((item, index) => (
+                    <ListItem
+                      key={index}
+                      sx={{
+                        fontFamily: "Helvetica Neue",
+                        fontWeight: " 500",
+                        fontSize: "20px",
+                        lineHeight: "100%",
+                        letterSpacing: "0%",
+                        color: "#ffffff",
+                        padding: "10px",
+                      }}
+                    >
+                      <ListItemText primary={`• ${item}`} />
+                    </ListItem>
+                  ))}
+                </List>
+              )}
+              {construction && (
+                <List>
+                  {constructionExpertList.map((item, index) => (
+                    <ListItem
+                      key={index}
+                      sx={{
+                        fontFamily: "Helvetica Neue",
+                        fontWeight: " 500",
+                        fontSize: "20px",
+                        lineHeight: "100%",
+                        letterSpacing: "0%",
+                        color: "#ffffff",
+                        padding: "10px",
+                      }}
+                    >
+                      <ListItemText primary={`• ${item}`} />
+                    </ListItem>
+                  ))}
+                </List>
+              )}
+              {engineeringPage && (
+                <List>
+                  {engineeringExpertList.map((item, index) => (
+                    <ListItem
+                      key={index}
+                      sx={{
+                        fontFamily: "Helvetica Neue",
+                        fontWeight: " 500",
+                        fontSize: "20px",
+                        lineHeight: "100%",
+                        letterSpacing: "0%",
+                        color: "#ffffff",
+                        padding: "10px",
+                      }}
+                    >
+                      <ListItemText primary={`• ${item}`} />
+                    </ListItem>
+                  ))}
+                </List>
+              )}
+              {engineeringPage && (
+                <Typography
+                  sx={{
+                    fontFamily: "Helvetica Neue",
+                    fontWeight: " 500",
+                    fontSize: "20px",
+                    lineHeight: "100%",
+                    letterSpacing: "0%",
+                    color: "#ffffff",
+                    padding: "10px",
+                  }}
+                >
+                  Whether your project is in a major city, regional hub or
+                  remote site, we find the technical talent to match.
+                </Typography>
+              )}
+            </Box>
           </Box>
           {cards && (
             <Grid container spacing={3} mb={4}>
@@ -195,7 +347,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
             text=" Start the conversation"
             onClick={() => alert("beginning")}
             variant="outlined"
-            sx={{ color: "#fff", borderColor: "#fff" }}
+            sx={{ color: "#132D46", borderColor: "#132D46" }}
           />
         </Box>
       </Container>
