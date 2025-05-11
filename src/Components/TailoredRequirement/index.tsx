@@ -1,22 +1,23 @@
 // src/Components/TailoredRequirement.tsx
 "use client";
 
-import React, { ReactNode } from "react";
+import React from "react";
 import { Box, Button, Stack, Typography } from "@mui/material";
-import { CheckCircleOutline } from "@mui/icons-material";
 import PartnerCard from "../Card";
+import Image from "next/image";
 
 export interface Step {
-  icon: ReactNode;
+  icon: string;
   title: string;
   description: string;
   isHeadingLeft?: boolean;
-  deliverables?: string[];
+  deliverables?: Item[];
 }
 
 export interface Item {
   title?: string;
   description: string;
+  icon?: string;
 }
 
 interface SectionProps {
@@ -28,7 +29,7 @@ interface SectionProps {
   items: Item[];
   ctaText?: string;
   isHeadingLeft?: boolean;
-  deliverables?: string[];
+  deliverables?: Item[];
 }
 
 export default function GenericProcessSection({
@@ -132,6 +133,7 @@ export default function GenericProcessSection({
                 title={step.title}
                 description={step.description}
                 color="#ffffff"
+                isInverted={true}
               />
               {i < steps.length - 1 && (
                 <Box
@@ -174,8 +176,14 @@ export default function GenericProcessSection({
                 alignItems="center"
                 key={index}
               >
-                <CheckCircleOutline sx={{ fontSize: 20, color: "#00FFB2" }} />
-                <Typography variant="body2">{point}</Typography>
+                <Image
+                  src={point?.icon}
+                  alt={""}
+                  width={24}
+                  height={24}
+                  style={{ objectFit: "contain" }}                         
+                  />
+                <Typography variant="body2">{point?.title}</Typography>
               </Stack>
             ))}
           </Stack>

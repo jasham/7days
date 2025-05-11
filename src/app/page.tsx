@@ -1,6 +1,7 @@
+"use client";
+
 import CaseStudyHighlight from "@/Components/CaseStudy";
 import ExpertiseSection from "@/Components/Expertise/Index";
-import Footer from "@/Components/Footer/Footer";
 import HeroSection from "@/Components/Hero/Hero";
 import JobSearch from "@/Components/JobSearch";
 import StrategicPartnerships from "@/Components/Partnership";
@@ -30,15 +31,12 @@ interface CardProps {
 interface CardData {
   title: string;
   description: string;
+  icon: string;
 }
 interface CardList {
   myCards: CardData[];
 }
-interface Experts {
-  CardList: CardList;
-  title: string;
-  subTitle: string;
-}
+
 //hero section data
 const heroDetails: HeroProps = {
   title: "Where Vision Meets Execution",
@@ -71,44 +69,69 @@ const resultDetails: CardProps = {
   ],
 };
 //why expert data
-const ExpertList: CardList = {
-  myCards: [
-    {
-      title: "Precision Systems",
-      description:
-        "Every recruitment campaign follows a structured, proven methodology. From role briefing to shortlist delivery, we align talent acquisition tightly to your business outcomes, timelines and team dynamics.",
-    },
-    {
-      title: "Deep Market Networks",
-      description:
-        "We actively maintain relationships across technical, operational and executive talent pools — not just databases. Our networks give you access to passive candidates and industry leaders who aren’t available on the open market.",
-    },
-    {
-      title: "Precision Systems",
-      description:
-        "Every assignment is led by a senior advisor who understands your industry and growth stage. We don’t just fill vacancies — we build capability aligned to your future plans.",
-    },
-  ],
-};
+
+const partnerCards: CardData[] = [
+  {
+    icon: "/Expert.svg",
+    title: "Expertise that Delivers",
+    description: "Our team brings industry-specific knowledge and hands-on experience.",
+  },
+  {
+    icon: "/StretegyIcon.svg",
+    title: "Strategy Meets Execution",
+    description: "We align business goals with actionable recruitment plans.",
+  },
+  {
+    icon: "/PartnerShip.svg",
+    title: "True Partnership",
+    description: "Long-term relationships built on trust, impact, and delivery.",
+  },
+];
+
 export default function Home() {
   return (
     <div>
       <HeroSection {...heroDetails} />
       <JobSearch />
       <TrustedBySection />
-      <CaseStudyHighlight />
+      <CaseStudyHighlight
+        imageSrc="/caseStudy.jpg"
+        imageAlt="Construction worker"
+        title="How Strategic Recruitment & Consulting led to 34% Growth in 6 months"
+        description="Our approach improved operational efficiency by 30% for a leading head contractor."
+        ctaText="See how we deliver results"
+        onClick={() => console.log("Clicked")}
+        isReverse={false}
+      />
+
       <ServicesSection />
       <StrategicPartnerships />
       <WhyPartnerSection
-        CardList={ExpertList}
-        title="How Henton Consulting Delivers Results"
-        subTitle="At Henton, our recruitment success is built on three core foundations:"
-      />
+      headingText="WORK WITH THE EXPERTS"
+      headingColor="#132D46"
+      dividerColor="#132D46"
+      dividerHeight="1px"
+      title="Why Leading Companies Choose Us"
+      subTitle="We bring deep expertise, strategic insight, and flawless execution to every engagement."
+      cards={partnerCards}
+      buttonText="Ready to Build What’s Next?"
+      buttonColor="#132D46"
+    />
       <TestimonialSection />
       <ResultsSection CardProps={resultDetails} background=" #132D46" />
       <ExpertiseSection />
+      <CaseStudyHighlight
+        heading="Case Studies"
+        imageSrc="/caseStudy2.jpg"
+        imageAlt="Construction worker"
+        title="Setting a New Benchmark for Talent Acquisition"
+        description="When Transdev NSW needed to fill critical roles, they chose Henton Consulting for our reputation in delivering exceptional candidates and a seamless recruitment process."
+        ctaText="See How We Deliver Results"
+        onClick={() => console.log("Clicked")}
+        isReverse={true}
+        isBackground={true}
+      />
       <Insights />
-      <Footer />
     </div>
   );
 }

@@ -2,19 +2,20 @@
 'use client';
 import { Box, Card, Grid, Typography } from "@mui/material";
 import CustomButton from "../Button";
-// Define the type for the service prop
+
 interface Service {
   title: string;
   description: string;
   action: string;
   image: string;
 }
-// Accept service as a prop with correct typing
+
 interface ImageCardProps {
   service: Service;
   background: string;
   imageCard?: boolean;
   md?: number;
+  isLeft?: boolean;
 }
 
 export default function ImageCard({
@@ -22,9 +23,8 @@ export default function ImageCard({
   background,
   imageCard = true,
   md = 4,
+  isLeft = false,
 }: ImageCardProps) {
-  // console.log(service); // You might want to remove this log in production
-
   return (
     <Grid item xs={12} md={md}>
       <Card
@@ -44,6 +44,7 @@ export default function ImageCard({
               width: "100%",
               display: "flex",
               alignItems: "flex-end",
+              justifyContent: "flex-start",
               color: "#fff",
             }}
           >
@@ -63,7 +64,7 @@ export default function ImageCard({
               }}
             />
 
-            {/* Gradient */}
+            {/* Gradient Overlay */}
             <Box
               sx={{
                 position: "absolute",
@@ -75,19 +76,34 @@ export default function ImageCard({
                 zIndex: 1,
               }}
             />
-            <Typography variant="h6" fontWeight="bold" gutterBottom>
-              {service.title}
-            </Typography>
-            {/* Text Overlay */}
-            <Box sx={{ display: "flex", width: "100%", p: 3 }}>
-              <Typography variant="body2" color="inherit" paragraph>
+
+            {/* Text & Button Overlay */}
+            <Box
+              sx={{
+                position: "relative",
+                zIndex: 2,
+                width: "100%",
+                p: 3,
+                display: "flex",
+                flexDirection: "column",
+                gap: 2,
+                height: "100%",
+                justifyContent: isLeft ? "flex-end" : "center",
+                alignItems: isLeft ? "left" : "center",
+              }}
+            >
+              <Typography variant="h4" fontWeight="bold" sx={{ color: "#ffffff" }}>
+                {service.title}
+              </Typography>
+              <Typography variant="body1" sx={{ color: "#ffffff" }}>
                 {service.description}
               </Typography>
               <CustomButton
                 text={service.action}
                 onClick={() => alert("beginning")}
                 variant="outlined"
-                sx={{ color: "#fff", borderColor: "#fff" }}
+                sx={{ color: "#fff", borderColor: "#fff", width: "fit-content" }}
+                isBorder={false}
               />
             </Box>
           </Box>
@@ -96,8 +112,7 @@ export default function ImageCard({
           <Box
             sx={{
               p: 3,
-              backgroundColor: " #132D46",
-              height: "524",
+              backgroundColor: "#132D46",
               width: "fit-content",
             }}
           >
@@ -121,18 +136,22 @@ export default function ImageCard({
             >
               {service.title}
             </Typography>
-            <Box sx={{ display: "flex", width: "100%" , gap:4 , alignItems:"center"}}>
-            <Typography variant="body2" paragraph sx={{ color: "#ffffff" , width: "50%" }}>
-              {service.description}
-            </Typography>
-            <CustomButton
-              text={service.action}
-              onClick={() => alert("beginning")}
-              variant="outlined"
-              color={"#ffffff"}
-              sx={{ BorderColor: "##ffffff" , width: "50%" , height:"fit-content"}}
-              fontSize={"10px"}
-            />
+            <Box sx={{ display: "flex", width: "100%", gap: 4, alignItems: "center" }}>
+              <Typography variant="body2" paragraph sx={{ color: "#ffffff", width: "50%" }}>
+                {service.description}
+              </Typography>
+              <CustomButton
+                text={service.action}
+                onClick={() => alert("beginning")}
+                variant="outlined"
+                color={"#ffffff"}
+                sx={{
+                  borderColor: "#ffffff",
+                  width: "50%",
+                  height: "fit-content",
+                  fontSize: "10px",
+                }}
+              />
             </Box>
           </Box>
         )}

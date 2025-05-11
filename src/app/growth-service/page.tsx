@@ -46,6 +46,7 @@ export default function HomePage() {
 
       <SolutionsSection />
       <GrowthService
+        heading1="GROWTH SERVICES"
         heading="Strategic Growth. Commercial Focus."
         subheading="Specialist services tailored to your sector, size and stage — with execution built in."
         paragraph="We deliver:"

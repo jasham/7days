@@ -7,7 +7,6 @@ import SearchBar from "@/Components/SearchBar";
 import FilterSidebar from "@/Components/Job/FilterSidebar";
 import JobList from "@/Components/Job/JobList";
 import { FilterOption } from "@/Components/Job/FilterSection";
-import Footer from "@/Components/Footer/Footer";
 import { Job } from "@/Components/Job/JobCard";
 
 // Sample data (you can lift these into a separate `/data` file or fetch from an API)

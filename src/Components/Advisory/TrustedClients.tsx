@@ -8,6 +8,7 @@ export interface TrustedClientsProps {
   sectionBg: string;
   bgImage?: string; // for background image if any
   headingText: string;
+  titleText2?: string;
   headingColor: string;
   headingDividerColor: string;
   dividerHeight: string;
@@ -43,6 +44,7 @@ const TrustedClients: React.FC<TrustedClientsProps> = ({
   closingText,
   ctaText,
   ctaColor,
+  titleText2,
 }) => {
   const hasContent = descriptionText || listItems.length > 0 || closingText;
 
@@ -73,17 +75,40 @@ const TrustedClients: React.FC<TrustedClientsProps> = ({
         }}
       >
         <Box sx={{ maxWidth: 1200, mx: "auto", px: 2 }}>
-          <Typography
-            variant="h4"
+          <Box
             sx={{
-              fontWeight: "bold",
-              color: titleColor,
-              mb: 4,
-              textAlign: layoutVariant === "imageCenter" ? "center" : "left",
+              display: "flex",
+              justifyContent: "space-between",
+              width: "100%",
             }}
           >
-            {titleText}
-          </Typography>
+            <Typography
+              variant="h4"
+              sx={{
+                fontWeight: "bold",
+                color: titleColor,
+                mb: 4,
+                textAlign: layoutVariant === "imageCenter" ? "center" : "left",
+                width: "50%",
+              }}
+            >
+              {titleText}
+            </Typography>
+            {titleText2 && (
+              <Typography
+                variant="body1"
+                sx={{
+                  color: titleColor,
+                  mb: 4,
+                  textAlign:
+                    layoutVariant === "imageCenter" ? "center" : "left",
+                  width: "50%",
+                }}
+              >
+                {titleText2}
+              </Typography>
+            )}
+          </Box>
           <Grid container spacing={4} alignItems="center">
             <Grid item xs={12} md={6}>
               <Box

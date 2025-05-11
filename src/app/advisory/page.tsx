@@ -1,9 +1,5 @@
 import HeroSection from "@/Components/Hero/Hero";
 import React from "react";
-import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
-import ScienceOutlinedIcon from "@mui/icons-material/ScienceOutlined";
-import SupportAgentOutlinedIcon from "@mui/icons-material/SupportAgentOutlined";
-import LocalShippingOutlinedIcon from "@mui/icons-material/LocalShippingOutlined";
 import GenericProcessSection, {
   Item,
   Step,
@@ -17,35 +13,47 @@ import StrategicAdvice from "@/Components/Advisory/StrategicAdvice";
 
 const approachSteps: Step[] = [
   {
-    icon: <SearchOutlinedIcon fontSize="inherit" />,
+    icon: "/Precision.svg",
     title: "Discovery",
     description:
       "We immerse in your business context, growth plans and known risks.",
   },
   {
-    icon: <ScienceOutlinedIcon fontSize="inherit" />,
+    icon: "/Network.svg",
     title: "Diagnosis",
     description:
       "We assess your structure, leadership layers, roles, accountability and workforce alignment.",
   },
   {
-    icon: <SupportAgentOutlinedIcon fontSize="inherit" />,
+    icon: "/Speicific.svg",
     title: "Advisory",
     description:
       "We provide clear, commercial guidance that addresses gaps, not just symptoms.",
   },
   {
-    icon: <LocalShippingOutlinedIcon fontSize="inherit" />,
+    icon: "/Speicific.svg",
     title: "Delivery",
     description:
       "We help you act, via instant teams or seamless handover to Henton.",
   },
 ];
 
-const deliverables: string[] = [
-  "Shortlists delivered with pace – never at the expense of quality",
-  "Market insights and real-time availability",
-  "Confidence in every hire",
+const deliverables: Item[] = [
+  {
+    title: "Shortlists delivered with pace – never at the expense of quality",
+    description: "",
+    icon: "/sortlist.svg",
+  },
+  {
+    title: "Market insights and real-time availability",
+    description: "",
+    icon: "/marketing.svg",
+  },
+  {
+    title: "Confidence in every hire",
+    description: "",
+    icon: "/confidence.svg",
+  },
 ];
 
 const workPoints: Item[] = [

@@ -2,6 +2,7 @@
 'use client';
 import { Box, Divider, Grid, Typography } from "@mui/material";
 import ImageCard from "../ImageCard/index"; // Assuming it's in the same folder or update path accordingly
+import Heading from "../Heading/Heading";
 
 interface services {
   title: string;
@@ -69,10 +70,12 @@ const expertiseList: services[] = [
 const ExpertiseSection: React.FC = () => {
   return (
     <Box py={10} px={4} maxWidth="lg" mx="auto">
-      <Typography variant="overline" color="textSecondary" gutterBottom>
-        Specialist Expertise
-      </Typography>
-      <Divider sx={{ mb: 4 }} />
+      <Heading
+          text="Specialist Expertise"
+          textColor="#132D46"
+          dividerColor="#132D46"
+          dividerHeight="1px"
+        />
       <Typography
         variant="h4"
         fontWeight="bold"
@@ -97,6 +100,7 @@ const ExpertiseSection: React.FC = () => {
             service={service}
             background=" linear-gradient(180deg, rgba(1, 66, 37, 0) 47.02%, rgba(1, 66, 37, 0.8) 100%)"
             key={idx}
+            isLeft={true}
           />
         ))}
       </Grid>

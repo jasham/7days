@@ -56,17 +56,15 @@ export default function JobSearch() {
         </Box>
       </Box>
       {/* Headline */}
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Box mt={6} flexBasis={"50%"}>
+      <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" , mt: 6 }}>
+        <Box sx={{width: "30%"}}>
           <Typography variant="h4" fontWeight="bold" gutterBottom>
-            Built on Expertise. <br />
-            Driven by Results. <br />
-            Trusted by Industry.
+          Built on Expertise. Driven by Results. Trusted by Industry.
           </Typography>
         </Box>
-        <Box flexBasis={"50%"}>
+        <Box sx={{width: "45%"}}>
           {/* Description */}
-          <Box mt={3} maxWidth="md">
+          <Box maxWidth="md">
             <Typography variant="body1" paragraph>
               Henton Consulting is a specialist recruitment and advisory firm
               helping businesses across Property, Construction, Engineering,

@@ -11,13 +11,13 @@ const companyLogos = [
   { alt: "KGroup", src: "/kgroup.png" },
   { alt: "FKG Group", src: "/fkg.png" },
   { alt: "ADCO", src: "/adco.png" },
-  { alt: "Grocon", src: "/con.jpg" },
+  { alt: "Grocon", src: "/grocon.jpg" },
 ];
 
 export default function TrustedBySection() {
   return (
     <Box textAlign="center" py={5} px={2} bgcolor="#fff">
-      <Typography variant="h5" fontWeight="bold" gutterBottom>
+      <Typography variant="h4" fontWeight="bold" gutterBottom>
         Trusted by industry leaders
       </Typography>
       <Typography
@@ -59,8 +59,8 @@ export default function TrustedBySection() {
                 src={logo.src}
                 alt={logo.alt}
                 sx={{
-                  maxWidth: "90%",
-                  maxHeight: 40,
+                  width: "100%",
+                  height: 50,
                   objectFit: "contain",
                   mx: "auto",
                 }}

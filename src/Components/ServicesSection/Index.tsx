@@ -3,6 +3,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 import CustomButton from "../Button";
 import ImageCard from "../ImageCard";
+import Heading from "../Heading/Heading";
 
 const services = [
   {
@@ -30,11 +31,13 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <Box sx={{ py: 8, px: 2, background: "#D4E1EF66" }}>
-      <Typography variant="overline" color="text.secondary">
-        Solutions That Build Businesses
-      </Typography>
-      <hr></hr>
+    <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }, background: "#D4E1EF66" }}>
+      <Heading
+          text="Solutions That Build Businesses"
+          textColor="#132D46"
+          dividerColor="#132D46"
+          dividerHeight="1px"
+        />
       <Box sx={{ textAlign: "center" }}>
         <Typography
           variant="h4"
@@ -83,7 +86,7 @@ export default function ServicesSection() {
           ))}
         </Grid>
 
-        <Box mt={6}>
+        <Box mt={6} width={{ xs: "100%", md: "40%" }} mx={"auto"} sx={{ display: "flex", flexDirection: "column", gap: 2 , alignItems: "center"}}>
           <Typography
             variant="h6"
             fontWeight="bold"
@@ -96,9 +99,7 @@ export default function ServicesSection() {
               textAlign: "center",
             }}
           >
-            Individually strong.
-            <br />
-            Unstoppable together.
+            Individually strong. Unstoppable together.
           </Typography>
 
           <Typography

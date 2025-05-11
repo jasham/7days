@@ -10,6 +10,7 @@ type CustomButtonProps = {
   onClick?: () => void; // <- make it optional
   icon?: boolean;
   sx?: object;
+  isBorder?: boolean;
   variant?: OverridableStringUnion<
     "text" | "outlined" | "contained",
     ButtonPropsVariantOverrides
@@ -25,6 +26,7 @@ export default function CustomButton({
   variant = "outlined",
   color = "white",
   fontSize = "1rem",
+  isBorder = true,
   ...props
 }: CustomButtonProps) {
   return (
@@ -33,12 +35,14 @@ export default function CustomButton({
       endIcon={icon && <ArrowForwardIcon />}
       onClick={onClick}
       sx={{
-        color: { color },
-        borderColor: { color },
+        color: color,
+        border: isBorder ? "1px solid white" : "none",
+        borderColor: color,
         borderRadius: "4px",
         textTransform: "none",
         fontWeight: 400,
         fontSize: {fontSize},
+        padding: isBorder ? "8px 16px" : "0",
         ...sx,
         width: "fit-content",
         height: "fit-content",

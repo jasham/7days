@@ -50,6 +50,7 @@ export default function HeroSection({
         <Navbar />
         <Box
           sx={{
+            width: "70%",
             display: "flex",
             height: "70vh",
             marginTop: "40px",
@@ -75,6 +76,7 @@ export default function HeroSection({
               fontWeight: 100,
               fontSize: "30px",
               color: "#FFFFFF",
+              width: "65%",
             }}
           >
             {description}

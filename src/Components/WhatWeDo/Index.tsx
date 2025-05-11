@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import CustomButton from "../Button";
+import Heading from "../Heading/Heading";
 const roleCards = [
   {
     title: "Technical Roles",
@@ -33,44 +34,36 @@ const WhatWeDo: React.FC = () => {
       sx={{ background: "linear-gradient(0deg, #FFFFFF 0%, #132D46 46.76%)" }}
     >
       <Container maxWidth="lg">
-        <Typography
-          variant="overline"
-          color="white"
-          sx={{ display: "block", mb: 2 }}
-        >
-          WHAT WE DO
-        </Typography>
-        <Divider sx={{ mb: 4, backgroundColor: "white" }} />
+        <Heading
+          text="WHAT WE DO"
+          textColor="#ffffff"
+          dividerColor="#ffffff"
+          dividerHeight="1px"
+        />
         <Box
-          sx={{ display: "flex", gap: "20px", justifyContent: "space-between" }}
+          sx={{ display: "flex", gap: "20px", justifyContent: "space-between" , width: "100%"}}
         >
-          <Box>
+          <Box sx={{ width: "40%" }}>
             <Typography
               variant="h4"
               fontWeight="bold"
               color="white"
               gutterBottom
             >
-              We help businesses <br />
-              recruit with purpose — <br />
-              aligning people <br />
-              strategy to commercial <br />
-              outcomes.
+              We help businesses recruit with purpose — aligning people strategy to commercial outcomes.
             </Typography>
           </Box>
 
-          <Box>
+          <Box sx={{ width: "50%" }}>
             <Typography
               variant="body1"
               color="white"
               sx={{ mt: 3, maxWidth: 500 }}
             >
-              At Hinton, recruitment isn't transactional. It’s strategic. Every
-              hire should improve capability, deliver outcomes, and move your
-              business forward.
+              At Hinton, recruitment isn&apos;t transactional. It&apos;s strategic. Every hire should improve capability, deliver outcomes, and move your business forward.
             </Typography>
 
-            <Typography variant="h6" fontWeight="bold" color="white" mt={5}>
+            <Typography variant="h4" fontWeight="bold" color="white" mt={5}>
               Who We Recruit
             </Typography>
             <Typography variant="body2" color="white" sx={{ mb: 4 }}>
@@ -87,17 +80,16 @@ const WhatWeDo: React.FC = () => {
               xs={12}
               md={4}
               sx={{
-                width: "360px",
-                borderRadius: "16px",
+                borderRadius: "24px",
                 padding: "24px",
                 gap: "24px",
                 textAlign: "center",
               }}
               key={index}
             >
-              <Paper elevation={2} sx={{ p: 3, height: "100%" }}>
+              <Paper elevation={2} sx={{ p: 4, height: "100%" , borderRadius:"16px" }}>
                 <Typography
-                  variant="subtitle1"
+                  variant="h5"
                   fontWeight="bold"
                   gutterBottom
                   color="#014225"
@@ -111,12 +103,14 @@ const WhatWeDo: React.FC = () => {
             </Grid>
           ))}
         </Grid>
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
         <CustomButton
           text=" Start the conversation"
           onClick={() => alert("beginning")}
           variant="outlined"
           sx={{ color: "#fff", borderColor: "#fff" }}
         />
+        </Box>
       </Container>
     </Box>
   );

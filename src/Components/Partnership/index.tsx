@@ -1,4 +1,3 @@
-// prettier-ignore
 'use client';
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
@@ -18,37 +17,51 @@ const partners: Partner[] = [
 
 const StrategicPartnerships: React.FC = () => {
   return (
-    <section className="flex justify-evenly py-8 text-center">
+    <Box component="section" sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }, display: "flex", flexDirection: { xs: "column", md: "row" }, alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 4 }}>
+      {/* Heading */}
       <Typography
         sx={{
           fontFamily: "Helvetica Neue",
-          fontWeight: "700",
-          fontSize: "48px",
+          fontWeight: 700,
+          fontSize: { xs: "32px", md: "48px" },
           lineHeight: "100%",
-          letteSrpacing: "0%",
+          textAlign: { xs: "center", md: "left" },
+          width: { xs: "100%", md: "30%" },
         }}
       >
-        Strategic <br></br> Partnerships
+        Strategic Partnerships
       </Typography>
-      <div className="flex flex-wrap justify-between gap-8">
+
+      {/* Partner Logos */}
+      <Box
+        sx={{
+          display: "flex",
+          flexWrap: "wrap",
+          gap: 4,
+          justifyContent: "center",
+          width: { xs: "100%", md: "65%" },
+        }}
+      >
         {partners.map((partner, index) => (
           <Box
             key={index}
-            className="w-32 md:w-40 lg:w-48"
-            sx={{ width: "59px", height: "59px" }}
+            sx={{
+              width: "100px",
+              height: "60px",
+              position: "relative",
+              flexShrink: 0,
+            }}
           >
             <Image
               src={partner.src}
               alt={partner.alt}
-              style={{ width: "100%", height: "100%" }}
-              width={59}
-              height={60}
-              className="object-contain w-full h-auto"
+              fill
+              style={{ objectFit: "contain" }}
             />
           </Box>
         ))}
-      </div>
-    </section>
+      </Box>
+    </Box>
   );
 };
 
