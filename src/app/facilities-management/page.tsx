@@ -35,11 +35,11 @@ interface CardList {
 
 //hero section data
 const heroDetails: HeroProps = {
-  title: "Engineering Recruitment That Keeps Projects Moving",
+  title: "Facilities Management Recruitment That Delivers",
   description:
-    "From concept design to site delivery,we find engineers who make the work possible.",
+    "From single assets to national portfolios, we place the professionals who keep buildings safe, compliant and running smoothly.",
   buttonText: "Begin your success story",
-  imageUrl: "/engineering-hero.jpg",
+  imageUrl: "/management-hero.jpg",
 };
 //result section data
 const resultDetails: CardProps = {
@@ -101,61 +101,63 @@ const ExpertList: CardList = {
 // faq data
 const faqData = [
   {
-    question: "Do you recruit across all engineering disciplines?",
+    question: "Do You Recruit For Both Hard And Soft FM Roles?",
     answer:
-      "Yes. We cover civil, structural, mechanical, electrical and building services roles nationally.",
+      "Yes — we cover operations, essential services, compliance, contractor management and tenant-facing roles.",
+  },
+  {
+    question: "Can You Help With Multi-Site Or Regional FM Needs?",
+    answer:
+      "Absolutely. We’ve placed FM talent in national portfolios, precinct developments and remote infrastructure sites.",
   },
   {
     question:
-      "Can you fill multiple roles at once or support long-term programs?",
+      "We’ve Been Burnt By Generalist Recruiters Who Didn’t Understand Our Sites. How Is Henton Different?",
     answer:
-      "Absolutely. We run parallel or phased searches aligned to your project timeline, budget and technical mix.",
+      "Our team includes FM recruitment specialists who understand the difference between managing a retail centre versus a healthcare facility. We tailor our approach based on your environment, compliance needs and service expectations, and we only put forward candidates who are ready to step in and deliver.",
   },
   {
-    question: "Do you cover regional and remote projects?",
+    question: "Do You Recruit In Highly Regulated Environments?",
     answer:
-      "Yes. We’ve delivered talent for infrastructure projects in regional hubs, remote sites and FIFO environments.",
+      "Yes. We work extensively across healthcare, aged care, public sector and critical infrastructure.",
   },
   {
-    question: "Can you manage confidential or business-critical searches?",
+    question:
+      "How Do You Assess Stakeholder Skills Alongside Compliance Capability?",
     answer:
-      "Yes — including replacements, backfills and restructuring-sensitive roles.",
-  },
-  {
-    question: "Do you assess technical ability or just CVs?",
-    answer:
-      "We assess based on delivery outcomes, stakeholder feedback, and project performance — not just credentials.",
+      "We assess based on real-world delivery, tenant outcomes and operational complexity — not just job history.",
   },
 ];
+
 export default function constructionRecruitmentPage() {
   return (
     <div>
       <HeroSection {...heroDetails} />
       <WhatWeDo
         cards={false}
-        engineeringPage={true}
-        heading="Designs win tenders. Engineers deliver outcomes. It starts with who you hire."
-        description="We recruit high-performing engineering professionals across civil, structural, mechanical, electrical and building services disciplines./ Whether you’re designing critical infrastructure, resourcing for a live build, or replacing a technical lead mid-project, we deliver people who know how to deliver under pressure. Our candidates don’t just meet specs. They solve problems others can’t."
-        subHeading="Trusted by Australia’s Engineering-Led Organisations:"
-        description2="We work with builders who can't afford delays — and developers who need certainty from day one. Our clients include:"
-        description3=" Whether your project is in a major city, regional hub or remote site, we find the technical talent to match."
+        managementPage={true}
+        heading="Well-run facilities don’t manage themselves, it starts with who you hire."
+        description="We recruit across every layer of Facilities Management, from essential services compliance through to multi-site operational leadership./ Whether you need a hands-on Facilities Manager, a compliance lead, or a national portfolio head, we find people who protect your asset value, reduce risk and improve tenant experience./ Our candidates don’t just manage buildings. They manage pressure."
+        subHeading="Trusted by Facility Owners, Operators and Advisors"
+        description2="We work with organisations where facilities performance directly affects reputation, cost and continuity. We recruit FM professionals for: Whether you're managing a flagship site, a compliance-heavy portfolio or a network of ageing assets, we’ll find the right fit, fast."
+        description3="Whether you're managing a flagship site, a compliance-heavy portfolio or a network of ageing assets, we’ll find the right fit, fast."
       />
       <SpecialistExpertise
         title="Engineered for Results. Backed by Performance."
         description="Specialist recruitment across civil, structural, and services roles, aligned to project scope, stakeholder pressure, and delivery outcomes."
       />
       <OurNetworkSection
-        image="/engineering.jpg"
-        engineeringPage={true}
-        heading="Built for complexity./ Hired for performance."
-        description="We don’t source from job boards We find professionals trusted to deliver under pressure, on real projects, with real consequences."
+        image="/facilities-management.jpg"
+        managementPage={true}
+        heading="Operational control./ Compliance built in."
+        description="We don’t source from job boards. We chase performance across real buildings, budgets and audit frameworks. We recruit across:"
       />
       <HowWeRecruit
-        engineering={true}
+        managementPage={true}
         title="How we recruit and/ why it works."
-        subTitle="Great engineering hires don’t just reduce workload — they reduce risk."
-        description="We don’t wait for applications. We go straight to the engineers already solving technical problems under pressure, many of whom aren’t looking, but will move for the right opportunity./We map the market, trace delivery outcomes, and approach with purpose. Every search includes:"
-        description2="We act quickly and decisively because delays cost money — and bad hires cost more"
+        subTitle="Great Facilities Management hires don’t just maintain standards, they hold everything together."
+        description="We go beyond titles and tenure. We track performance in live environments, where every system fault, tenant complaint or failed audit matters. Every search includes:"
+        description2="When tenant satisfaction, cost control and contractor risk are all in play, you don’t have time to onboard the wrong person."
       />
       <WhyPartnerSection
         CardList={ExpertList}
@@ -165,9 +167,9 @@ export default function constructionRecruitmentPage() {
       />
       <ResultsSection
         CardProps={resultDetails}
-        background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/engineering-results-bg.jpg')"
+        background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/management-result.jpg')"
         topHeading="Measurable outcomes"
-        bottomHeading="Technical recruitment isn’t about filling a role,it’s about delivering a result. That’s what we do."
+        bottomHeading="Facilities don’t fall apart overnight, but they do without the right people holding it all together."
       />
       <TestimonialSection />
       <FaqSection faqData={faqData} />

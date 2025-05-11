@@ -15,7 +15,7 @@ interface CardItem {
 }
 
 interface CardProps {
-  cardDetails: CardItem[];
+  cardDetails?: CardItem;
 }
 
 interface ResultProps {

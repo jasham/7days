@@ -87,6 +87,14 @@ const PermanentRecruitmentPage: React.FC = () => {
         description="Hire talent who strengthen your team, align to your strategy, and stay the course."
         buttonText="Begin your success story"
       />
+      <WhatWeDo
+        cards={false}
+        permanentRecruitment={true}
+        heading="Permanent recruitment isn’t about CVs — it’s about capability."
+        description="At Henton Consulting, permanent recruitment is about more than filling vacancies. It’s about building capability — securing the professionals and leaders who will shape your organisation’s future.Our approach ensures every permanent hire strengthens your team, culture, and competitive position."
+        subHeading="We Recruit For"
+        description2="Our expertise covers a wide range of skill sets and leadership levels:"
+      />
       <WhatWeDo />
       <SpecialistExpertise />
       <TrustedClients

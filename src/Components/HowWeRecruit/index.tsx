@@ -2,14 +2,17 @@ import AssignmentTurnedInIcon from "@mui/icons-material/AssignmentTurnedIn";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import EmojiPeopleIcon from "@mui/icons-material/EmojiPeople";
 import GroupIcon from "@mui/icons-material/Group"; // Replace with actual icons
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
+import CustomButton from "../Button";
 import Heading from "../Heading/Heading";
 interface HowWeRecruitProps {
   construction?: boolean;
   engineering?: boolean;
+  managementPage?: boolean;
   title?: string;
   subTitle?: string;
   description?: string;
+  description2?: string;
 }
 const constructionList = [
   {
@@ -48,11 +51,32 @@ const engineeringList = [
     text: "Structured interviews focused on delivery, not just degrees",
   },
 ];
+const managementList = [
+  {
+    icon: <GroupIcon />,
+    text: "Mapping of talent by asset class, contract structure and reporting lines",
+  },
+  {
+    icon: <EmojiPeopleIcon />,
+    text: "Outreach to FM professionals delivering in aligned environments",
+  },
+  {
+    icon: <AssignmentTurnedInIcon />,
+    text: "Role-specific assessment across compliance, stakeholder and service metrics",
+  },
+  {
+    icon: <CheckCircleIcon />,
+    text: "One appointment, who can step in and deliver",
+  },
+];
 const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
   construction = false,
+  managementPage = false,
+  engineering = false,
   title,
   subTitle,
   description,
+  description2,
 }) => {
   return (
     <Box sx={{ backgroundColor: "#D4E1EF66" }}>
@@ -109,8 +133,8 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
                 {description?.split("/")[1]}
               </Typography>
 
-              <Button
-                variant="outlined"
+              <CustomButton
+                text="Build Your Team"
                 sx={{
                   borderColor: "#2E2C38",
                   color: "#2E2C38",
@@ -118,15 +142,13 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
                   textTransform: "none",
                   fontWeight: 500,
                 }}
-              >
-                Build Your Team →
-              </Button>
+              />
             </Grid>
 
             {/* Right Side */}
             <Grid item xs={12} md={6}>
-              {(construction ? constructionList : engineeringList).map(
-                (item, index) => (
+              {engineering &&
+                engineeringList.map((item, index) => (
                   <Box
                     key={index}
                     sx={{
@@ -149,9 +171,58 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
                       {item.text}
                     </Typography>
                   </Box>
-                )
-              )}
+                ))}
+              {construction &&
+                constructionList.map((item, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 2,
+                      mb: 2,
+                    }}
+                  >
+                    <Box sx={{ color: "#2E2C38", mt: "4px" }}>{item.icon}</Box>
+                    <Typography
+                      sx={{
+                        fontFamily: '"Helvetica Neue", sans-serif',
+                        fontWeight: 700,
+                        fontSize: "24px",
+                        lineHeight: "100%",
+                        color: "#2E2C38",
+                      }}
+                    >
+                      {item.text}
+                    </Typography>
+                  </Box>
+                ))}
 
+              {managementPage &&
+                managementList.map((item, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 2,
+                      mb: 2,
+                    }}
+                  >
+                    <Box sx={{ color: "#2E2C38", mt: "4px" }}>{item.icon}</Box>
+                    <Typography
+                      sx={{
+                        fontFamily: '"Helvetica Neue", sans-serif',
+                        fontWeight: 700,
+                        fontSize: "24px",
+                        lineHeight: "100%",
+                        color: "#2E2C38",
+                      }}
+                    >
+                      {item.text}
+                    </Typography>
+                  </Box>
+                ))}
               <Typography
                 sx={{
                   fontFamily: '"Helvetica Neue", sans-serif',
@@ -161,8 +232,7 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
                   mt: 2,
                 }}
               >
-                We act quickly and decisively because delays cost money — and
-                bad hires cost more
+                {description2}
               </Typography>
             </Grid>
           </Grid>

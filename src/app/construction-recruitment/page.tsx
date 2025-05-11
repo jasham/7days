@@ -139,7 +139,7 @@ export default function constructionRecruitmentPage() {
         heading="Great builds don’t stay on track by accident, it starts with who you hire."
         description="We recruit across the full construction lifecycle — from early-stage planning and estimating through to site delivery, handover and asset performance./ Whether you're managing a multi-site pipeline, resourcing for a live project, or replacing a critical delivery lead — we act fast to secure professionals who keep schedules, margins and safety on track."
         subHeading="Trusted by Australia's Builders:"
-        subDescription="We work with builders who can't afford delays — and developers who need certainty from day one. Our clients include:"
+        description2="We work with builders who can't afford delays — and developers who need certainty from day one. Our clients include:"
       />
       <SpecialistExpertise
         title="Built for Construction. Proven in Delivery."

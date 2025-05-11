@@ -18,10 +18,12 @@ interface WhatWeDoProps {
   construction?: boolean;
   heading?: string;
   description?: string;
+  description2?: string;
+  description3?: string;
   subHeading?: string;
-  subDescription?: string;
   engineeringPage?: boolean;
   permanentRecruitment?: boolean;
+  managementPage?: boolean;
 }
 const roleCards = [
   {
@@ -58,15 +60,24 @@ const engineeringExpertList = [
   "Government and infrastructure delivery agencies",
   "Asset owners and operators in transport, utilities and energy",
 ];
+const managementExpertList = [
+  "Commercial property owners and asset managers",
+  "Government departments and infrastructure bodies",
+  "Aged care, healthcare and education providers",
+  "Transport hubs, airports and public precincts",
+  "Private operators and corporate occupiers",
+];
 const WhatWeDo: React.FC<WhatWeDoProps> = ({
   cards = true,
   heading,
   description,
   subHeading,
-  subDescription,
+  description2,
+  description3 = "",
   construction,
   engineeringPage = false,
   permanentRecruitment = false,
+  managementPage = false,
 }) => {
   return (
     <Box
@@ -149,7 +160,21 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
                       gap: "8px",
                     }}
                   >
-                    {description?.split("/")[0]}
+                    {description?.split("/")[1]}
+                  </Typography>
+                </Box>
+                <Box>
+                  <Typography
+                    variant="body2"
+                    color="white"
+                    sx={{
+                      mb: 4,
+                      display: "flex",
+                      flexDirection: "column",
+                      gap: "8px",
+                    }}
+                  >
+                    {description?.split("/")[2]}
                   </Typography>
                 </Box>
               </Box>
@@ -195,7 +220,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
               >
                 {cards &&
                   "Our expertise covers a wide range of skill sets and leadership levels."}
-                {!cards && subDescription}
+                {!cards && description2}
               </Typography>
               {permanentRecruitment && (
                 <List>
@@ -257,7 +282,27 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
                   ))}
                 </List>
               )}
-              {engineeringPage && (
+              {managementPage && (
+                <List>
+                  {managementExpertList.map((item, index) => (
+                    <ListItem
+                      key={index}
+                      sx={{
+                        fontFamily: "Helvetica Neue",
+                        fontWeight: " 500",
+                        fontSize: "20px",
+                        lineHeight: "100%",
+                        letterSpacing: "0%",
+                        color: "#ffffff",
+                        padding: "10px",
+                      }}
+                    >
+                      <ListItemText primary={`• ${item}`} />
+                    </ListItem>
+                  ))}
+                </List>
+              )}
+              {
                 <Typography
                   sx={{
                     fontFamily: "Helvetica Neue",
@@ -269,10 +314,9 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
                     padding: "10px",
                   }}
                 >
-                  Whether your project is in a major city, regional hub or
-                  remote site, we find the technical talent to match.
+                  {description3}
                 </Typography>
-              )}
+              }
             </Box>
           </Box>
           {cards && (

@@ -14,6 +14,7 @@ interface NetworProps {
   construction?: boolean;
   engineeringPage?: boolean;
   permanentRecruitment?: boolean;
+  managementPage?: boolean;
   image?: string;
   heading?: string;
   description?: string;
@@ -44,6 +45,14 @@ const engineeringExpertList = [
   "Superintendents & Site Engineers:-Engineers who keep boots on the ground aligned to schedule, subcontractor performance, and quality benchmarks.",
   "Safety, Quality & Risk Engineering:-People who protect lives, reputations and long-term outcomes, from safety-in-design through to on-site delivery and asset transition.",
 ];
+const managementExpertList = [
+  "Facilities & Property Management:-Facilities Managers, Property Managers, and Precinct Managers who oversee day-to-day building operations, tenant relations, budgets and compliance.",
+  "Asset & Operations Management:-Asset Managers and Operations Managers with responsibility for lifecycle planning, service contracts, and operational performance across complex assets.",
+  "Technical Services & Compliance:-Technical Services Managers and Compliance Leads specialising in HVAC, fire safety, lifts, BMS, and statutory essential services obligations.",
+  "Maintenance & Trades Supervision:-Maintenance Supervisors and Trades Supervisors who manage onsite works, coordinate contractors, and ensure reactive and planned maintenance delivery.",
+  "WHS, Risk & Governance:-WHS Managers, Risk and Compliance Officers who drive audit-readiness, mitigate operational risk and maintain safety across regulated environments.",
+  "Multi-Site & National Operations:-Portfolio Facilities Managers, National Operations Managers and Regional FM Leads who deliver consistency, cost control and risk management across distributed asset bases.",
+];
 const OurNetworkSection = ({
   image,
   heading,
@@ -51,6 +60,7 @@ const OurNetworkSection = ({
   construction = false,
   engineeringPage = false,
   permanentRecruitment = false,
+  managementPage = false,
 }: NetworProps) => {
   return (
     <Box px={4} py={10} maxWidth="lg" mx="auto">
@@ -100,7 +110,15 @@ const OurNetworkSection = ({
               component="img"
               src={image}
               alt="Map of Australia"
-              sx={{ width: "100%", maxWidth: 500, borderRadius: "10px" }}
+              sx={{
+                width: "100%",
+                maxWidth: 637,
+                aspectRatio: "637 / 531.87",
+                borderRadius: "16px",
+                display: "block",
+                objectFit: "cover",
+                mx: "auto", // optional: centers the image horizontally
+              }}
             />
           </Box>
         </Grid>
@@ -158,6 +176,34 @@ const OurNetworkSection = ({
               ))}
             {engineeringPage &&
               engineeringExpertList.map((text, idx) => (
+                <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
+                  <ListItemIcon>
+                    <FiberManualRecordIcon sx={{ fontSize: "8px" }} />
+                  </ListItemIcon>
+                  <Box sx={{}}>
+                    <ListItemText
+                      primary={text.split(":-")[0]}
+                      primaryTypographyProps={{
+                        fontFamily: "Helvetica Neue",
+                        fontWeight: 500,
+                        fontSize: "18px",
+                        lineHeight: "100%",
+                      }}
+                    />
+                    <ListItemText
+                      primary={text.split(":-")[1]}
+                      primaryTypographyProps={{
+                        fontFamily: "Helvetica Neue",
+                        fontWeight: 400,
+                        fontSize: "18px",
+                        lineHeight: "100%",
+                      }}
+                    />
+                  </Box>
+                </ListItem>
+              ))}
+            {managementPage &&
+              managementExpertList.map((text, idx) => (
                 <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
                   <ListItemIcon>
                     <FiberManualRecordIcon sx={{ fontSize: "8px" }} />

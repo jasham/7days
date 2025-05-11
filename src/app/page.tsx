@@ -121,7 +121,7 @@ export default function Home() {
       />
       <TestimonialSection />
       <ResultsSection
-        CardProps={resultDetails}
+        cardProps={resultDetails}
         background=" #132D46"
         topHeading="Measured by Results. Chosen for Impact."
         bottomHeading="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
