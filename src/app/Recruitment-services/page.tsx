@@ -1,15 +1,17 @@
-"use client"
+"use client";
+import GrowthService from "@/Components/Advisory/GrowthService";
 import ExpertiseSection from "@/Components/Expertise/Index";
 import FaqSection from "@/Components/Faq";
 import HeroSection from "@/Components/Hero/Hero";
-import RecruitmentServices from "@/Components/RecruitmentServices";
 import ResultsSection from "@/Components/Results";
+import GenericProcessSection, {
+  Item,
+  Step,
+} from "@/Components/TailoredRequirement";
 import TestimonialSection from "@/Components/TeastimonialSection";
 import WhatWeDo from "@/Components/WhatWeDo/Index";
 import WhyPartnerSection from "@/Components/WhyPartnerSection";
 import Insights from "../../Components/Insights";
-import GrowthService from "@/Components/Advisory/GrowthService";
-import GenericProcessSection, { Item, Step } from "@/Components/TailoredRequirement";
 interface HeroProps {
   title: string;
   description: string;
@@ -55,9 +57,9 @@ const resultDetails: CardProps = {
     },
     {
       score: "98%",
-      title:
-        "",
-      description: "Trusted by CEOs, COOs, GMs and operational leaders across Australia",
+      title: "",
+      description:
+        "Trusted by CEOs, COOs, GMs and operational leaders across Australia",
     },
   ],
 };
@@ -131,13 +133,11 @@ const deliverables: Item[] = [
 const workPoints: Item[] = [
   {
     title: "Shortlists delivered with pace -",
-    description:
-      "never at the expense of quality",
+    description: "never at the expense of quality",
   },
   {
     title: "Market insights and real-time availability",
-    description:
-      "",
+    description: "",
   },
   {
     title: "Confidence in every hire",
@@ -196,12 +196,10 @@ export default function Home() {
         heading="Tailored Recruitment Processes"
         intro={[
           {
-            description:
-              "We combine search precision with business fluency.",
+            description: "We combine search precision with business fluency.",
           },
           {
-            description:
-              "Our process includes:",
+            description: "Our process includes:",
           },
         ]}
         steps={approachSteps}
@@ -217,8 +215,30 @@ export default function Home() {
         footerText="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
         buttonText="Read to Build What’s Next?"
         cardProps={resultDetails}
-        onButtonClick={() => console.log("Redirect to Read to Build What’s Next?")}
+        onButtonClick={() =>
+          console.log("Redirect to Read to Build What’s Next?")
+        }
       />
+      <GenericProcessSection
+        backgroundImage="/advisory.jpg"
+        heading="Our Approach"
+        intro={[
+          {
+            description:
+              "Every engagement is led by a senior advisor with real-world leadership experience — not just a toolkit. We move fast, ask sharper questions, and focus on practical change.",
+          },
+          {
+            description:
+              "We move fast, ask sharper questions, and focus on practical change. ",
+          },
+        ]}
+        steps={approachSteps}
+        itemsHeading="Our work is:"
+        items={workPoints}
+        isHeadingLeft={false}
+        deliverables={deliverables}
+      />
+      {/* <ResultsSection CardProps={resultDetails} background=" #014225" /> */}
       <TestimonialSection />
       <FaqSection />
       <Insights />

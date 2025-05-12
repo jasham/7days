@@ -1,8 +1,11 @@
-"use client";
+// export default ResultsSection;
+
+// prettier-ignore
+'use client';
 import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
-import PartnerCard from "../Card/index";
 import CustomButton from "../Button";
+import PartnerCard from "../Card/index";
 import Heading from "../Heading/Heading";
 
 interface CardItem {
@@ -12,7 +15,7 @@ interface CardItem {
 }
 
 interface CardProps {
-  cardDetails: CardItem[];
+  cardDetails?: CardItem;
 }
 
 interface ResultProps {
@@ -22,7 +25,7 @@ interface ResultProps {
   subheadingText?: string;
   footerText?: string;
   buttonText?: string;
-  cardProps: CardProps;
+  cardProps?: CardProps;
   onButtonClick?: () => void;
 }
 
@@ -37,7 +40,7 @@ const ResultsSection: React.FC<ResultProps> = ({
   onButtonClick = () => alert("clicked"),
 }) => {
   const isImage = Boolean(backgroundImage);
-
+  console.log(cardProps, "cardprops");
   return (
     <Box px={4} py={8} maxWidth="lg" mx="auto" sx={{ color: "#132D46" }}>
       <Heading
@@ -48,21 +51,23 @@ const ResultsSection: React.FC<ResultProps> = ({
       />
 
       <Box
+        textAlign={"center"}
         sx={{
           position: "relative",
           borderRadius: "20px",
           overflow: "hidden",
           textAlign: "center",
           display: "flex",
-          flexDirection: "column",
           alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
           gap: 4,
           px: { xs: 3, md: 8 },
           py: { xs: 6, md: 8 },
           backgroundColor: isImage ? "transparent" : backgroundColor,
           backgroundImage: isImage
-          ? `linear-gradient(180deg, rgba(34, 139, 34, 0.3), rgba(34, 139, 34, 0.3)), url(${backgroundImage})`
-          : undefined,
+            ? `linear-gradient(180deg, rgba(34, 139, 34, 0.3), rgba(34, 139, 34, 0.3)), url(${backgroundImage})`
+            : undefined,
           backgroundSize: "cover",
           backgroundPosition: "center",
           color: "#ffffff",
@@ -84,7 +89,7 @@ const ResultsSection: React.FC<ResultProps> = ({
             height: { md: "13rem" },
           }}
         >
-          {cardProps.cardDetails.map((card, index) => (
+          {cardProps?.cardDetails.map((card, index) => (
             <Box
               key={index}
               sx={{

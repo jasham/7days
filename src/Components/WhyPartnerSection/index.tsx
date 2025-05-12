@@ -19,9 +19,13 @@ interface Experts {
   dividerHeight?: string;
   title: string;
   subTitle: string;
+<<<<<<< HEAD
   cards: CardData[];
   buttonText: string;
   buttonColor: string;
+=======
+  color?: string;
+>>>>>>> 877107a (construction page completed)
 }
 
 const WhyPartnerSection: React.FC<Experts> = ({
@@ -31,9 +35,13 @@ const WhyPartnerSection: React.FC<Experts> = ({
   dividerHeight = "1px",
   title,
   subTitle,
+<<<<<<< HEAD
   cards,
   buttonText,
   buttonColor,
+=======
+  color = "#132D46",
+>>>>>>> 877107a (construction page completed)
 }: Experts) => {
   return (
     <Box sx={{ py: { xs: 6, md: 10 }, bgcolor: "background.paper" }}>
@@ -51,7 +59,11 @@ const WhyPartnerSection: React.FC<Experts> = ({
               variant="h4"
               fontWeight="bold"
               gutterBottom
+<<<<<<< HEAD
               color={headingColor}
+=======
+              color="#132D46"
+>>>>>>> 877107a (construction page completed)
             >
               {title}
             </Typography>
@@ -63,6 +75,7 @@ const WhyPartnerSection: React.FC<Experts> = ({
           </Grid>
         </Grid>
 
+<<<<<<< HEAD
         <Box
           sx={{
             display: "flex",
@@ -89,6 +102,44 @@ const WhyPartnerSection: React.FC<Experts> = ({
                   color={"#014225"}
                 />
               </Box>
+=======
+        <Grid container spacing={4} justifyContent="center">
+          <Grid item xs={12} md={4}>
+            <PartnerCard
+              icon={<ChangeCircleOutlinedIcon fontSize="inherit" />}
+              title={CardList.myCards[0].title}
+              description={CardList.myCards[0].description}
+              color={color}
+            />
+          </Grid>
+          <Divider
+            orientation="vertical"
+            flexItem
+            sx={{ borderColor: "#AABBE1" }}
+          />
+          <Grid item xs={12} md={4}>
+            <PartnerCard
+              icon={<ChangeCircleOutlinedIcon fontSize="inherit" />}
+              title={CardList.myCards[1].title}
+              description={CardList.myCards[1].description}
+              color={color}
+            />
+          </Grid>
+          <Divider
+            orientation="vertical"
+            flexItem
+            sx={{ borderColor: "#AABBE1" }}
+          />
+          <Grid item xs={12} md={3}>
+            <PartnerCard
+              icon={<HandshakeOutlinedIcon fontSize="inherit" />}
+              title={CardList.myCards[2].title}
+              description={CardList.myCards[2].description}
+              color={color}
+            />
+          </Grid>
+        </Grid>
+>>>>>>> 877107a (construction page completed)
 
               {index < cards.length - 1 && (
                 <Divider
