@@ -22,7 +22,7 @@ export default function SearchBar() {
         backgroundColor: "white",
         display: "flex",
         alignItems: "center",
-        borderRadius: 3,
+        borderRadius: 1,
         boxShadow: 1,
         overflow: "hidden",
         width: "100%",

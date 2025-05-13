@@ -18,60 +18,31 @@ export default function JobSearch() {
         color: "white",
       }}
     >
-      {/* Search Bar */}
-      {/* <Grid container spacing={2} alignItems="center">
-        <Grid item xs={12} md={4}>
-          <CustomInput
-            placeholder="Keywords"
-            value={keywords}
-            onChange={setKeywords}
-          />
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <CustomInput
-            placeholder="Location"
-            value={location}
-            onChange={setLocation}
-          />
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <CustomButton
-            label="Search Jobs"
-            onClick={() => console.log({ keywords, location })}
-          />
-        </Grid>
-      </Grid> */}
-      <Box sx={{ display: "flex", justifyContent: "space-between" }}>
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          gutterBottom
-          flexBasis={"30%"}
-        >
-          Search Jobs. <br />
-          Build Your Future. <br />
+      <Box sx={{ display: "flex", justifyContent: "space-between" , gap:8 , width: "100%" }}>
+        <Typography variant="h4" fontWeight={700} width={"25%"}>
+          Search Jobs. Build Your Future.
         </Typography>
-        <Box flexBasis={"70%"}>
+        <Box width={"75%"}>
           <SearchBar />
         </Box>
       </Box>
       {/* Headline */}
       <Box sx={{ display: "flex", justifyContent: "space-between", width: "100%" , mt: 6 }}>
         <Box sx={{width: "30%"}}>
-          <Typography variant="h4" fontWeight="bold" gutterBottom>
+          <Typography variant="h4" fontWeight={700} gutterBottom>
           Built on Expertise. Driven by Results. Trusted by Industry.
           </Typography>
         </Box>
         <Box sx={{width: "45%"}}>
           {/* Description */}
-          <Box maxWidth="md">
-            <Typography variant="body1" paragraph>
+          <Box maxWidth="md" sx={{display: "flex", flexDirection: "column", gap: 3}}>
+            <Typography variant="h5">
               Henton Consulting is a specialist recruitment and advisory firm
               helping businesses across Property, Construction, Engineering,
               Resources, Corporate, Government and Not-for-Profit sectors build
               stronger teams, smarter structures, and sustained growth.
             </Typography>
-            <Typography variant="body1" paragraph>
+            <Typography variant="body1">
               With over 20 years’ experience, we deliver permanent recruitment,
               executive search, strategic workforce consulting, and business
               development services tailored to your industry’s demands.

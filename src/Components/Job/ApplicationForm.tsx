@@ -1,5 +1,5 @@
-'import client';
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 import {
   Paper,
   Typography,
@@ -8,20 +8,16 @@ import {
   TextField,
   FormControlLabel,
   Checkbox,
-  Button,
   Link,
-} from '@mui/material';
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
-import {
-  ArrowRightAlt,
-} from "@mui/icons-material";
+} from "@mui/material";
+import { Button } from "../Button/Button";
 
 export default function ApplicationForm() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    coverLetter: '',
+    name: "",
+    email: "",
+    phone: "",
+    coverLetter: "",
     cv: null as File | null,
     consent: false,
   });
@@ -32,7 +28,7 @@ export default function ApplicationForm() {
     const { name, value, checked, type } = e.target;
     setFormData((fd) => ({
       ...fd,
-      [name]: type === 'checkbox' ? checked : value,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
@@ -48,29 +44,31 @@ export default function ApplicationForm() {
   };
 
   return (
-    <Paper elevation={0}
-    sx={{
-      p: 4,
-      borderRadius: 2,
-    }}>
-      <Typography variant="h5" fontWeight="semibold" gutterBottom>
+    <Paper
+      elevation={0}
+      sx={{
+        p: 4,
+        borderRadius: 2,
+      }}
+    >
+      <Typography variant="h5" gutterBottom>
         Apply for this Job
       </Typography>
 
       <Box component="form" onSubmit={handleSubmit} sx={{ mt: 3 }}>
         <Grid container spacing={2}>
-          {['name', 'email', 'phone'].map((field) => (
+          {["name", "email", "phone"].map((field) => (
             <Grid item xs={12} key={field}>
               <TextField
                 fullWidth
                 name={field}
                 label={field.charAt(0).toUpperCase() + field.slice(1)}
                 variant="filled"
-                value={formData[field as 'name' | 'email' | 'phone']}
+                value={formData[field as "name" | "email" | "phone"]}
                 onChange={handleChange}
                 InputProps={{ disableUnderline: true }}
                 sx={{
-                  bgcolor: '#F3F5F7',
+                  bgcolor: "#F3F5F7",
                   borderRadius: 2,
                 }}
                 required
@@ -90,7 +88,7 @@ export default function ApplicationForm() {
               onChange={handleChange}
               InputProps={{ disableUnderline: true }}
               sx={{
-                bgcolor: '#F3F5F7',
+                bgcolor: "#F3F5F7",
                 borderRadius: 2,
               }}
               required
@@ -98,39 +96,45 @@ export default function ApplicationForm() {
           </Grid>
 
           <Grid item xs={12}>
-            <Typography variant="body2" gutterBottom>
+            <Typography variant="body1" gutterBottom>
               Upload a CV *
             </Typography>
             <Box
               sx={{
-                display: 'flex',
-                alignItems: 'center',
-                bgcolor: '#F3F5F7',
+                display: "flex",
+                alignItems: "center",
+                bgcolor: "#F3F5F7",
                 borderRadius: 2,
                 p: 1,
               }}
             >
-                <Button
+              <Button
                 component="label"
                 variant="outlined"
                 size="small"
                 startIcon={"No File Chosen"}
-                sx={{ textTransform: 'none', textAlign: 'center', color: 'text.secondary', borderColor: 'text.secondary', '& .MuiButton-startIcon': { margin: 0 } }}
-                >
+                sx={{
+                  textTransform: "none",
+                  textAlign: "center",
+                  color: "text.secondary",
+                  borderColor: "text.secondary",
+                  "& .MuiButton-startIcon": { margin: 0 },
+                }}
+              >
                 <input
                   type="file"
                   hidden
                   onChange={handleFile}
                   accept=".pdf,.doc,.docx"
                 />
-                </Button>
-                <Box sx={{ flexGrow: 1, pl: 1 }}>
-                <Typography variant="body2" color="text.secondary">
-                  {formData.cv?.name || 'No File Chosen'}
+              </Button>
+              <Box sx={{ flexGrow: 1, pl: 1 }}>
+                <Typography variant="body1" color="text.secondary">
+                  {formData.cv?.name || "No File Chosen"}
                 </Typography>
               </Box>
             </Box>
-            <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+            <Typography variant="body1" color="text.secondary" sx={{ mt: 1 }}>
               Upload your CV to accompany your application for this job.
             </Typography>
           </Grid>
@@ -146,8 +150,8 @@ export default function ApplicationForm() {
                 />
               }
               label={
-                <Typography variant="body2" color="text.secondary">
-                  Please tick this box to consent to us using your data. See our{' '}
+                <Typography variant="body1" color="text.secondary">
+                  Please tick this box to consent to us using your data. See our{" "}
                   <Link href="#" underline="hover">
                     privacy policy
                   </Link>
@@ -159,22 +163,16 @@ export default function ApplicationForm() {
 
           <Grid item xs={12}>
             <Button
-              type="submit"
-              variant="contained"
-              fullWidth
-              size="large"
-              endIcon={<ArrowRightAlt sx={{ ml: 1 }} />}
-              sx={{
-              bgcolor: '#fff',
-              color: 'text.secondary',
-              border: '1px solid',
-              borderColor: 'text.secondary',
-              boxShadow: 'none',
-              '&:hover': { bgcolor: '#0c4277', color: '#fff' , borderColor: '#0c4277' },
-              textTransform: 'none',
+              variantStyle="main"
+              buttonColor={"#132D46"}
+              buttonBgColor="transparent"
+              buttonBorderColor={"#132D46"}
+              onClick={() => {
+                alert("begining");
               }}
+              sx={{width: "100%"}}
             >
-              APPLY NOW
+              {"APPLY NOW"}
             </Button>
           </Grid>
         </Grid>

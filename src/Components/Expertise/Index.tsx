@@ -69,30 +69,25 @@ const expertiseList: services[] = [
 ];
 const ExpertiseSection: React.FC = () => {
   return (
-    <Box py={10} px={4} maxWidth="lg" mx="auto">
+    <Box
+    sx={{px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }}}
+    >
       <Heading
           text="Specialist Expertise"
           textColor="#132D46"
           dividerColor="#132D46"
           dividerHeight="1px"
         />
-      <Typography
-        variant="h4"
-        fontWeight="bold"
-        gutterBottom
-        sx={{ textAlign: "center", color: "#132D46" }}
-      >
+      <Box sx={{display: "flex", flexDirection: "column", gap: 2, mb: 4 , textAlign: "center"}}>
+      <Typography variant="h2" color="#132D46">
         Broad Expertise, Targeted Solutions
       </Typography>
 
-      <Typography
-        variant="body1"
-        mb={4}
-        sx={{ textAlign: "center", color: "#132D46" }}
-      >
+      <Typography variant="h5" color="#132D46" mb={4}>
         See how we support your industry & find the expertise you need to build
         what’s next.
       </Typography>
+      </Box>
 
       <Grid container spacing={4} justifyContent="center">
         {expertiseList.map((service, idx) => (

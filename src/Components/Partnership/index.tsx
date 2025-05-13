@@ -19,13 +19,8 @@ const StrategicPartnerships: React.FC = () => {
   return (
     <Box component="section" sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }, display: "flex", flexDirection: { xs: "column", md: "row" }, alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 4 }}>
       {/* Heading */}
-      <Typography
+      <Typography variant="h2" color="#132D46"
         sx={{
-          fontFamily: "Helvetica Neue",
-          fontWeight: 700,
-          fontSize: { xs: "32px", md: "48px" },
-          lineHeight: "100%",
-          textAlign: { xs: "center", md: "left" },
           width: { xs: "100%", md: "30%" },
         }}
       >

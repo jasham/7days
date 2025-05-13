@@ -20,7 +20,7 @@ const faqData = [
 
 const FaqSection: React.FC = () => {
   return (
-    <Box px={4} py={8} maxWidth="lg" mx="auto">
+    <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }}}>
       <Heading
         text="FAQ"
         textColor="#132D46"
@@ -43,8 +43,9 @@ const FaqSection: React.FC = () => {
             aria-controls={`faq-${index}`}
           >
             <Typography
-              variant="h6"
-              sx={{ borderBottom: "1px solid #132D46", width: "100%" }}
+              variant="h5"
+              color="#132D46"
+              fontWeight={500}
             >
               {question}
             </Typography>

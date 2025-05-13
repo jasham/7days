@@ -111,14 +111,22 @@ export default function Home() {
       headingColor="#132D46"
       dividerColor="#132D46"
       dividerHeight="1px"
-      title="Why Leading Companies Choose Us"
-      subTitle="We bring deep expertise, strategic insight, and flawless execution to every engagement."
+      title="Why Partner With Henton Consulting?"
+      subTitle="Expertise. Strategy. Results. Helping you build stronger teams and lasting success."
       cards={partnerCards}
       buttonText="Ready to Build What’s Next?"
       buttonColor="#132D46"
     />
       <TestimonialSection />
-      <ResultsSection CardProps={resultDetails} background=" #132D46" />
+      <ResultsSection
+        backgroundColor="#132D46" // fallback if image fails
+        headingText="Result"
+        subheadingText="Measured by Results. Chosen for Impact."
+        footerText="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
+        buttonText="Read to Build What’s Next?"
+        cardProps={resultDetails}
+        onButtonClick={() => console.log("Redirect to Read to Build What’s Next?")}
+      />
       <ExpertiseSection />
       <CaseStudyHighlight
         heading="Case Studies"

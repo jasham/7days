@@ -1,7 +1,8 @@
-import React from 'react';
-import { Box, Grid, Typography } from '@mui/material';
-import CustomButton from '../Button';
-import Heading from '../Heading/Heading';
+"use client"
+import React from "react";
+import { Box, Typography } from "@mui/material";
+import Heading from "../Heading/Heading";
+import { Button } from "../Button/Button";
 
 const StrategicAdvice: React.FC = () => {
   return (
@@ -14,59 +15,60 @@ const StrategicAdvice: React.FC = () => {
         color: "white",
       }}
     >
-      <Box sx={{ maxWidth: 1200, mx: 'auto', px: 2 }}>
-        <Heading
-          text="What we do"
-          textColor="#FFFFFF"
-          dividerColor="#FFFFFF"
-          dividerHeight="1px"
-          marginBottom="16px"
-        />
-        <Grid container spacing={4}>
-          <Grid item xs={12} md={6}>
-            <Typography
-              variant="h2"
-              sx={{
-                fontSize: { xs: '2rem', md: '3rem' },
-                fontWeight: 'bold',
-                color: '#FFFFFF',
-                mb: 2,
-              }}
-            >
-              We Deliver Strategic Advice That Unlocks Business Performance
-            </Typography>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            container
-            direction="column"
-          >
-            <Typography variant="body1" sx={{ mb: 2 }}>
-              We help organisations solve complex business problems — not with theory,
-              but with sharp, commercially grounded advice. Our consulting work is
-              built for businesses facing moments of pressure or transformation:
-              scaling fast, entering new markets, restructuring, or preparing for
-              investment.
-            </Typography>
-            <Typography variant="body1" sx={{ mb: 4 }}>
-              We don&apos;t talk in frameworks. We get to the point — quickly — and help
-              you move forward with confidence.
-            </Typography>
-          </Grid>
-        </Grid>
-        <Box sx={{ display: 'flex', justifyContent: 'center', mt: 4 }}>
-              <CustomButton
-              text="Start the conversation"
-              variant="outlined"
-              color="#132D46"
-              sx={{
-                width: "50%",
-                height: "fit-content",
-              }}
-            />
-            </Box>
+      <Heading
+        text="What we do"
+        textColor="#FFFFFF"
+        dividerColor="#FFFFFF"
+        dividerHeight="1px"
+        marginBottom="16px"
+      />
+      <Box sx={{ display: "flex", justifyContent: "space-between", mb: 4 }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "45%",
+          }}
+        >
+          <Typography variant="h2">
+            We Deliver Strategic Advice That Unlocks Business Performance
+          </Typography>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            flexDirection: "column",
+            width: "50%",
+          }}
+        >
+          <Typography variant="h6" textTransform={"capitalize"} sx={{ mb: 2 }}>
+            We help organisations solve complex business problems — not with
+            theory, but with sharp, commercially grounded advice. Our consulting
+            work is built for businesses facing moments of pressure or
+            transformation: scaling fast, entering new markets, restructuring,
+            or preparing for investment.
+          </Typography>
+          <Typography variant="h6" textTransform={"capitalize"} sx={{ mb: 4 }}>
+            We don&apos;t talk in frameworks. We get to the point — quickly —
+            and help you move forward with confidence.
+          </Typography>
+        </Box>
+      </Box>
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+        <Button
+          variantStyle="main"
+          buttonColor={"#132D46"}
+          buttonBgColor="transparent"
+          buttonBorderColor={"#132D46"}
+          onClick={() => {
+            alert("begining");
+          }}
+        >
+          {"Start the conversation"}
+        </Button>
       </Box>
     </Box>
   );

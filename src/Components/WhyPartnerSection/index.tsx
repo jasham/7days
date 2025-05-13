@@ -1,10 +1,10 @@
 "use client";
 
-import { Box, Container, Divider, Grid, Typography } from "@mui/material";
+import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import PartnerCard from "../Card/index";
-import CustomButton from "../Button";
 import Heading from "../Heading/Heading";
+import { Button } from "../Button/Button";
 
 export interface CardData {
   title: string;
@@ -36,90 +36,92 @@ const WhyPartnerSection: React.FC<Experts> = ({
   buttonColor,
 }: Experts) => {
   return (
-    <Box sx={{ py: { xs: 6, md: 10 }, bgcolor: "background.paper" }}>
-      <Container maxWidth="lg">
-        <Heading
-          text={headingText}
-          textColor={headingColor}
-          dividerColor={dividerColor}
-          dividerHeight={dividerHeight}
-        />
+    <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
+      <Heading
+        text={headingText}
+        textColor={headingColor}
+        dividerColor={dividerColor}
+        dividerHeight={dividerHeight}
+      />
 
-        <Grid container justifyContent="space-between" spacing={2} mb={6}>
-          <Grid item xs={12} md={6}>
-            <Typography
-              variant="h4"
-              fontWeight="bold"
-              gutterBottom
-              color={headingColor}
+      <Box
+        sx={{
+          width: "100%",
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          gap: 8,
+          mb: 6,
+          justifyContent: "space-between",
+        }}
+      >
+        <Typography variant="h3" color={headingColor} width="48%">
+          {title}
+        </Typography>
+        <Typography
+          variant="h4"
+          fontWeight={500}
+          color={headingColor}
+          width="52%"
+        >
+          {subTitle}
+        </Typography>
+      </Box>
+
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: { xs: "column", md: "row" },
+          justifyContent: "space-between",
+          alignItems: "stretch", // force children to same height
+          gap: 2,
+          mb: 6,
+        }}
+      >
+        {cards.map((card, index) => (
+          <Box key={index} sx={{ display: "flex", alignItems: "stretch" }}>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+              }}
             >
-              {title}
-            </Typography>
-          </Grid>
-          <Grid item xs={12} md={6}>
-            <Typography variant="h6" color={headingColor}>
-              {subTitle}
-            </Typography>
-          </Grid>
-        </Grid>
+              <PartnerCard
+                icon={card.icon}
+                title={card.title}
+                description={card.description}
+                color={"#014225"}
+              />
+            </Box>
 
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: { xs: "column", md: "row" },
-            justifyContent: "space-between",
-            alignItems: "stretch", // force children to same height
-            gap: 2,
-            mb: 6,
+            {index < cards.length - 1 && (
+              <Divider
+                orientation="vertical"
+                flexItem
+                sx={{
+                  backgroundColor: "##AABBE1",
+                  width: "1px",
+                  mx: 2,
+                }}
+              />
+            )}
+          </Box>
+        ))}
+      </Box>
+
+      <Box textAlign="center" mt={6}>
+        <Button
+          variantStyle="main"
+          buttonColor={buttonColor}
+          buttonBgColor="transparent"
+          buttonBorderColor={buttonColor}
+          onClick={() => {
+            alert("begining");
           }}
         >
-          {cards.map((card, index) => (
-            <Box key={index} sx={{ display: "flex", alignItems: "stretch" }}>
-              <Box
-                sx={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                }}
-              >
-                <PartnerCard
-                  icon={card.icon}
-                  title={card.title}
-                  description={card.description}
-                  color={"#014225"}
-                />
-              </Box>
-
-              {index < cards.length - 1 && (
-                <Divider
-                  orientation="vertical"
-                  flexItem
-                  sx={{
-                    backgroundColor: "##AABBE1",
-                    width: "1px",
-                    mx: 2,
-                  }}
-                />
-              )}
-            </Box>
-          ))}
-        </Box>
-
-        <Box textAlign="center" mt={6}>
-          <CustomButton
-            text={buttonText}
-            variant="outlined"
-            sx={{
-              color: buttonColor,
-              borderColor: buttonColor,
-              px: 4,
-              py: 1.5,
-              mt: 2,
-              fontWeight: "medium",
-            }}
-          />
-        </Box>
-      </Container>
+          {buttonText}
+        </Button>
+      </Box>
     </Box>
   );
 };

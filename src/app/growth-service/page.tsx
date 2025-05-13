@@ -1,3 +1,4 @@
+"use client";
 import HeroSection from "@/Components/Hero/Hero";
 import React from "react";
 import TestimonialSection from "@/Components/TeastimonialSection";

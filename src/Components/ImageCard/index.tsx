@@ -2,6 +2,7 @@
 'use client';
 import { Box, Card, Grid, Typography } from "@mui/material";
 import CustomButton from "../Button";
+import { Button } from "../Button/Button";
 
 interface Service {
   title: string;
@@ -92,19 +93,20 @@ export default function ImageCard({
                 alignItems: isLeft ? "left" : "center",
               }}
             >
-              <Typography variant="h4" fontWeight="bold" sx={{ color: "#ffffff" }}>
+              <Typography variant="h3" fontWeight="bold" color="#ffffff">
                 {service.title}
               </Typography>
-              <Typography variant="body1" sx={{ color: "#ffffff" }}>
+              <Typography variant="body1" color="#ffffff">
                 {service.description}
               </Typography>
-              <CustomButton
-                text={service.action}
+              <Button
+                variantStyle="text"
+                buttonColor="#FFFFFF"
+                sx={{ typography: "body1" }}
                 onClick={() => alert("beginning")}
-                variant="outlined"
-                sx={{ color: "#fff", borderColor: "#fff", width: "fit-content" }}
-                isBorder={false}
-              />
+              >
+                {service.action}
+              </Button>
             </Box>
           </Box>
         ) : (
@@ -122,36 +124,42 @@ export default function ImageCard({
               alt={service.title}
               sx={{
                 width: "352px",
-                height: "214px",
+                height: "250px",
                 objectFit: "cover",
                 borderRadius: 2,
                 mb: 2,
               }}
             />
-            <Typography
-              variant="h6"
-              fontWeight="bold"
-              gutterBottom
-              sx={{ color: "#ffffff" }}
-            >
+            <Typography variant="h4" fontWeight={700} color="#ffffff" mb={3}>
               {service.title}
             </Typography>
-            <Box sx={{ display: "flex", width: "100%", gap: 4, alignItems: "center" }}>
-              <Typography variant="body2" paragraph sx={{ color: "#ffffff", width: "50%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                width: "100%",
+                gap: 4,
+                alignItems: "center",
+              }}
+            >
+              <Typography
+                variant="body2"
+                sx={{ color: "#ffffff", width: "50%" }}
+              >
                 {service.description}
               </Typography>
-              <CustomButton
-                text={service.action}
+              <Button
+                variantStyle="main"
+                buttonColor="#ffffff"
+                buttonBgColor="transparent"
+                buttonBorderColor="#ffffff"
                 onClick={() => alert("beginning")}
-                variant="outlined"
-                color={"#ffffff"}
                 sx={{
-                  borderColor: "#ffffff",
-                  width: "50%",
                   height: "fit-content",
                   fontSize: "10px",
                 }}
-              />
+              >
+                {service.action}
+              </Button>
             </Box>
           </Box>
         )}

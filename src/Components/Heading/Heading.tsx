@@ -18,7 +18,7 @@ const Heading: React.FC<HeadingProps> = ({
 }) => {
   return (
     <div>
-      <Typography variant="overline" color={textColor}>
+      <Typography variant="h6" color={textColor}>
         {text}
       </Typography>
       <Divider

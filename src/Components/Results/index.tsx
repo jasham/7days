@@ -4,6 +4,7 @@ import React from "react";
 import PartnerCard from "../Card/index";
 import CustomButton from "../Button";
 import Heading from "../Heading/Heading";
+import { Button } from "../Button/Button";
 
 interface CardItem {
   score: string;
@@ -27,7 +28,7 @@ interface ResultProps {
 }
 
 const ResultsSection: React.FC<ResultProps> = ({
-  backgroundColor = "#014225",
+  backgroundColor = "#132D46",
   backgroundImage,
   headingText = "Results",
   subheadingText = "Measured by Results. Chosen for Impact.",
@@ -39,7 +40,7 @@ const ResultsSection: React.FC<ResultProps> = ({
   const isImage = Boolean(backgroundImage);
 
   return (
-    <Box px={4} py={8} maxWidth="lg" mx="auto" sx={{ color: "#132D46" }}>
+    <Box sx={{ color: "#132D46", px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
       <Heading
         text={headingText}
         textColor="#132D46"
@@ -57,21 +58,19 @@ const ResultsSection: React.FC<ResultProps> = ({
           flexDirection: "column",
           alignItems: "center",
           gap: 4,
-          px: { xs: 3, md: 8 },
+          px: { xs: 3, md: 4 },
           py: { xs: 6, md: 8 },
           backgroundColor: isImage ? "transparent" : backgroundColor,
           backgroundImage: isImage
-          ? `linear-gradient(180deg, rgba(34, 139, 34, 0.3), rgba(34, 139, 34, 0.3)), url(${backgroundImage})`
-          : undefined,
+            ? `linear-gradient(180deg, rgba(34, 139, 34, 0.3), rgba(34, 139, 34, 0.3)), url(${backgroundImage})`
+            : undefined,
           backgroundSize: "cover",
           backgroundPosition: "center",
           color: "#ffffff",
         }}
       >
         {/* Subheading */}
-        <Typography variant="h4" fontWeight={600}>
-          {subheadingText}
-        </Typography>
+        <Typography variant="h2">{subheadingText}</Typography>
 
         {/* Cards */}
         <Box
@@ -80,66 +79,68 @@ const ResultsSection: React.FC<ResultProps> = ({
             justifyContent: "center",
             alignItems: "center",
             flexDirection: { xs: "column", md: "row" },
+            height: { xs: "auto", md: 300 },
             gap: { xs: 4, md: 0 },
-            height: { md: "13rem" },
           }}
         >
           {cardProps.cardDetails.map((card, index) => (
-            <Box
-              key={index}
-              sx={{
-                width: "30%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: { xs: "column", md: "row" },
-                gap: { xs: 4, md: 0 },
-              }}
-            >
-              <PartnerCard
-                heading={card.score}
-                title={card.title}
-                description={card.description ?? ""}
-                color="#ffffff"
-              />
+            <React.Fragment key={index}>
+              <Box
+                sx={{
+                  width: { xs: "100%", md: "30%" },
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <PartnerCard
+                  heading={card.score}
+                  title={card.title}
+                  description={card.description ?? ""}
+                  color="#ffffff"
+                  headingVariant="h1"
+                  titleVariant="h6"
+                  descriptionVariant="body1"
+                />
+              </Box>
+
+              {/* Divider only between items */}
               {index < cardProps.cardDetails.length - 1 && (
                 <Divider
                   orientation={
-                    typeof window !== "undefined" && window.innerWidth < 768
-                      ? "horizontal"
-                      : "vertical"
+                    window.innerWidth < 960 ? "horizontal" : "vertical"
                   }
                   flexItem
                   sx={{
                     backgroundColor: "#ffffff",
-                    borderWidth: "1px",
                     borderColor: "#ffffff",
+                    borderWidth: "1px",
                     width: { xs: "60%", md: "1px" },
                     height: { xs: "1px", md: "100%" },
                     my: { xs: 2, md: 0 },
                     mx: { xs: "auto", md: 3 },
-                    borderRadius: "5px",
                   }}
                 />
               )}
-            </Box>
+            </React.Fragment>
           ))}
         </Box>
 
         {/* Footer */}
-        <Typography variant="h6">{footerText}</Typography>
+        <Typography variant="h4" width={"70%"}>
+          {footerText}
+        </Typography>
 
         {/* Button */}
-        <CustomButton
-          text={buttonText}
+        <Button
+          variantStyle="main"
+          buttonColor="#ffffff"
+          buttonBgColor="transparent"
+          buttonBorderColor="#ffffff"
           onClick={onButtonClick}
-          variant="outlined"
-          sx={{
-            color: "#ffffff",
-            borderColor: "#ffffff",
-          }}
-        />
+        >
+          {buttonText}
+        </Button>
       </Box>
     </Box>
   );

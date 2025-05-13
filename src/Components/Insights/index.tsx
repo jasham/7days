@@ -35,7 +35,7 @@ const newsList: Service[] = [
 ];
 export default function Insights() {
   return (
-    <Box py={10} px={4} maxWidth="lg" mx="auto">
+    <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
       <Heading
         text="Insights"
         textColor="#132D46"
@@ -43,7 +43,7 @@ export default function Insights() {
         dividerHeight="1px"
         marginBottom="16px"
       />
-      <Typography variant="h4" gutterBottom color="#132D46">
+      <Typography variant="h2" gutterBottom color="#132D46">
         News & Resources
       </Typography>
       <Grid container spacing={4} justifyContent="center">

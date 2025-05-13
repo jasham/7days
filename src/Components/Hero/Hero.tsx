@@ -1,9 +1,10 @@
 // components/HeroSection.tsx
-'use client';
+"use client";
 import { Box, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import CustomButton from "@/Components/Button";
 import Navbar from "@/Components/Header";
+import { Button } from "../Button/Button";
 
 export type HeroSectionProps = {
   imageUrl: string;
@@ -55,39 +56,28 @@ export default function HeroSection({
             height: "70vh",
             marginTop: "40px",
             flexDirection: "column",
-            padding: "85px",
-            gap: "15px",
+            gap: "30px",
+            justifyContent: "center",
+            px: { xs: 2, md: 10 },
           }}
         >
-          <Typography
-            sx={{
-              fontFamily: "Helvetica Neue",
-              fontWeight: 500,
-              fontSize: "90px",
-              lineHeight: "104px",
-              color: "#FFFFFF",
-            }}
-          >
+          <Typography variant="h1" color="#FFFFFF">
             {title}
           </Typography>
-          <Typography
-            sx={{
-              fontFamily: "Helvetica Neue",
-              fontWeight: 100,
-              fontSize: "30px",
-              color: "#FFFFFF",
-              width: "65%",
-            }}
-          >
+          <Typography variant="h4" color="#FFFFFF">
             {description}
           </Typography>
 
           {buttonText && (
-            <CustomButton
-              text={buttonText}
-              variant="outlined"
+            <Button
+              variantStyle="main"
+              buttonColor="#FFFFFF"
+              buttonBgColor="transparent"
+              buttonBorderColor="#FFFFFF"
               onClick={handleClick}
-            />
+            >
+              {buttonText}
+            </Button>
           )}
         </Box>
       </Box>
