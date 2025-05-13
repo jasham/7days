@@ -69,7 +69,7 @@ const expertiseList: services[] = [
 ];
 const ExpertiseSection: React.FC = () => {
   return (
-    <Box py={10} px={4} maxWidth="lg" mx="auto">
+    <Box py={10} sx={{background: "#ffffff", px: { md: 9.5 },}}>
       <Heading
         text="Specialist Expertise"
         textColor="#132D46"

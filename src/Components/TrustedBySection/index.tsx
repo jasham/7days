@@ -17,7 +17,7 @@ const companyLogos = [
 export default function TrustedBySection() {
   return (
     <Box textAlign="center" py={5} px={2} bgcolor="#fff">
-      <Typography variant="h4" fontWeight="bold" gutterBottom>
+      <Typography variant="h4" fontWeight="bold" gutterBottom color="#132D46">
         Trusted by industry leaders
       </Typography>
       <Typography
@@ -44,7 +44,7 @@ export default function TrustedBySection() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            gap: 3,
+            gap: 7,
             px: 2,
             py: 1,
           }}

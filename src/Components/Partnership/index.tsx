@@ -17,7 +17,7 @@ const partners: Partner[] = [
 
 const StrategicPartnerships: React.FC = () => {
   return (
-    <Box component="section" sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }, display: "flex", flexDirection: { xs: "column", md: "row" }, alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 4 }}>
+    <Box component="section" sx={{ px: { xs: 2, md: 10, background: "#ffffff" }, py: { xs: 4, md: 8 }, display: "flex", flexDirection: { xs: "column", md: "row" }, alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 4 }}>
       {/* Heading */}
       <Typography
         sx={{
@@ -27,6 +27,7 @@ const StrategicPartnerships: React.FC = () => {
           lineHeight: "100%",
           textAlign: { xs: "center", md: "left" },
           width: { xs: "100%", md: "30%" },
+          color: "#132D46",
         }}
       >
         Strategic Partnerships
@@ -37,7 +38,7 @@ const StrategicPartnerships: React.FC = () => {
         sx={{
           display: "flex",
           flexWrap: "wrap",
-          gap: 4,
+          gap: 12,
           justifyContent: "center",
           width: { xs: "100%", md: "65%" },
         }}

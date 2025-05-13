@@ -26,7 +26,14 @@ export default function ImageCard({
   isLeft = false,
 }: ImageCardProps) {
   return (
-    <Grid item xs={12} md={md}>
+    <Grid
+      item
+      xs={12}
+      md={md}
+      sx={{
+        px: { xs: 2, sm: 1 }, // responsive horizontal padding
+      }}
+    >
       <Card
         sx={{
           height: "100%",
@@ -92,7 +99,11 @@ export default function ImageCard({
                 alignItems: isLeft ? "left" : "center",
               }}
             >
-              <Typography variant="h4" fontWeight="bold" sx={{ color: "#ffffff" }}>
+              <Typography
+                variant="h4"
+                fontWeight="bold"
+                sx={{ color: "#ffffff" }}
+              >
                 {service.title}
               </Typography>
               <Typography variant="body1" sx={{ color: "#ffffff" }}>
@@ -102,7 +113,11 @@ export default function ImageCard({
                 text={service.action}
                 onClick={() => alert("beginning")}
                 variant="outlined"
-                sx={{ color: "#fff", borderColor: "#fff", width: "fit-content" }}
+                sx={{
+                  color: "#fff",
+                  borderColor: "#fff",
+                  width: "fit-content",
+                }}
                 isBorder={false}
               />
             </Box>
@@ -113,7 +128,10 @@ export default function ImageCard({
             sx={{
               p: 3,
               backgroundColor: "#132D46",
-              width: "fit-content",
+              width: "100%", // ✅ Fix applied
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center", // Optional: center content
             }}
           >
             <Box
@@ -121,7 +139,7 @@ export default function ImageCard({
               src={service.image}
               alt={service.title}
               sx={{
-                width: "352px",
+                width: "100%",
                 height: "214px",
                 objectFit: "cover",
                 borderRadius: 2,
@@ -136,8 +154,19 @@ export default function ImageCard({
             >
               {service.title}
             </Typography>
-            <Box sx={{ display: "flex", width: "100%", gap: 4, alignItems: "center" }}>
-              <Typography variant="body2" paragraph sx={{ color: "#ffffff", width: "50%" }}>
+            <Box
+              sx={{
+                display: "flex",
+                width: "100%",
+                gap: 4,
+                alignItems: "center",
+              }}
+            >
+              <Typography
+                variant="body2"
+                paragraph
+                sx={{ color: "#ffffff", width: "50%" }}
+              >
                 {service.description}
               </Typography>
               <CustomButton

@@ -97,6 +97,7 @@ export default function ServicesSection() {
               lineHeight: "100%",
               letterSpacing: "0%",
               textAlign: "center",
+              color: "#132D46",
             }}
           >
             Individually strong. Unstoppable together.
@@ -112,6 +113,7 @@ export default function ServicesSection() {
               lineHeight: "100%",
               letterSpacing: "0%",
               textAlign: "center",
+              color: "#132D46",
             }}
           >
             When you combine all three, you don’t just keep up — you lead.

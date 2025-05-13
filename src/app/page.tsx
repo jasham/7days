@@ -99,7 +99,7 @@ export default function Home() {
       <CaseStudyHighlight
         imageSrc="/caseStudy.jpg"
         imageAlt="Construction worker"
-        title="How Strategic Recruitment & Consulting led to 34% Growth in 6 months"
+        title="How Strategic Recruitment & Consulting for a Sydney Head Contractor led to 34%  Growth in 6 months."
         description="Our approach improved operational efficiency by 30% for a leading head contractor."
         ctaText="See how we deliver results"
         onClick={() => console.log("Clicked")}
