@@ -52,7 +52,7 @@ const footerColumns = [
 
 export default function Footer() {
   return (
-    <Box component="footer" sx={{ bgcolor: "#FFFFFF", pt: 6, px: 15 }}>
+    <Box component="footer" sx={{ bgcolor: "#FFFFFF", pt: 6, px: 9.5 }}>
       {/* Top links section */}
       <Typography variant="subtitle1" fontWeight="semibold" gutterBottom sx={{ textTransform: "uppercase" , color: "#0c4277"}}>
         Contact
@@ -80,8 +80,10 @@ export default function Footer() {
             <Grid item xs={6} sm={4} md={1} key={col.title}>
               <Typography
                 variant="subtitle1"
-                fontWeight="semibold"
-                gutterBottom
+                fontWeight="700"
+                color="#132D46"
+                marginBottom="15px"
+                marginTop="45px"
               >
                 {col.title}
               </Typography>

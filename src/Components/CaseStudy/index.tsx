@@ -29,7 +29,7 @@ const CaseStudyHighlight: React.FC<CaseStudyProps> = ({
 }) => {
   return (
     <Box sx={{ py: 6, px: 2, backgroundColor: isBackground ? "#D4E1EF66" : "#ffffff" }}>
-      <Box maxWidth="lg" mx="auto">
+      <Box mx={8}>
         {heading && (
           <Heading
             text={heading}
@@ -70,7 +70,7 @@ const CaseStudyHighlight: React.FC<CaseStudyProps> = ({
               sx={{
                 fontFamily: "Helvetica Neue",
                 fontWeight: 700,
-                width: "85%",
+                width: "100%",
                 color: "#132D46",
               }}
             >
@@ -85,7 +85,7 @@ const CaseStudyHighlight: React.FC<CaseStudyProps> = ({
                 fontWeight: 400,
                 fontSize: "16px",
                 lineHeight: 1.4,
-                width: "85%",
+                width: "100%",
                 color: "#132D46",
                 letterSpacing: 0,
               }}

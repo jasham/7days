@@ -6,11 +6,12 @@ const TestimonialSection: React.FC = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(180deg, #132d4668 0%, #132D46 73.18%)",
+        // background: "linear-gradient(180deg, #EEEEF2 0%, #132D46 54.76%)",
+        background: "linear-gradient(0deg, #132D46 0%, rgba(19, 45, 70, 0.9) 50%, rgba(19, 45, 70, 0.6) 50%, rgba(255, 255, 255, 0.2) 60%, #ffffff 100%)",
         gap: "8px",
         position: "relative",
-        paddingRight: "128px",
-        paddingLeft: "128px",
+        paddingRight: "77px",
+        paddingLeft: "77px",
         paddingTop: "64px",
         paddingBottom: "64px",
       }}
@@ -25,7 +26,6 @@ const TestimonialSection: React.FC = () => {
         container
         spacing={4}
         alignItems="flex-start"
-        maxWidth="lg"
         mx="auto"
       >
         <Grid xs={12} md={5} sx={{ paddingTop: 4 }}>

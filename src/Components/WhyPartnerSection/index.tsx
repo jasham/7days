@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Container, Divider, Grid, Typography } from "@mui/material";
+import { Box, Divider, Grid, Typography } from "@mui/material";
 import React from "react";
 import CustomButton from "../Button";
 import PartnerCard from "../Card/index";
@@ -36,8 +36,14 @@ const WhyPartnerSection: React.FC<Experts> = ({
   buttonColor,
 }: Experts) => {
   return (
-    <Box sx={{ py: { xs: 6, md: 10 }, bgcolor: "background.paper" }}>
-      <Container maxWidth="lg">
+    <Box sx={{ 
+      py: { xs: 6, md: 10 }, 
+      bgcolor: "background.paper",
+    }}>
+      <Box sx={{ 
+        width: '100%',
+        px: { xs: 2, md: 9.5 } 
+      }}>
         <Heading
           text={headingText}
           textColor={headingColor}
@@ -119,7 +125,7 @@ const WhyPartnerSection: React.FC<Experts> = ({
             }}
           />
         </Box>
-      </Container>
+      </Box>
     </Box>
   );
 };
