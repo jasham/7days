@@ -39,7 +39,7 @@ const ResultsSection: React.FC<ResultProps> = ({
   onButtonClick = () => alert("clicked"),
 }) => {
   const isImage = Boolean(backgroundImage);
-  console.log(cardProps, "cardprops");
+  const cards = cardProps?.cardDetails;
   return (
     <Box px={4} py={8} maxWidth="lg" mx="auto" sx={{ color: "#132D46" }}>
       <Heading
@@ -88,47 +88,48 @@ const ResultsSection: React.FC<ResultProps> = ({
             height: { md: "13rem" },
           }}
         >
-          {cardProps?.cardDetails.map((card, index) => (
-            <Box
-              key={index}
-              sx={{
-                width: "30%",
-                height: "100%",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                flexDirection: { xs: "column", md: "row" },
-                gap: { xs: 4, md: 0 },
-              }}
-            >
-              <PartnerCard
-                heading={card.score}
-                title={card.title}
-                description={card.description ?? ""}
-                color="#ffffff"
-              />
-              {index < cardProps.cardDetails.length - 1 && (
-                <Divider
-                  orientation={
-                    typeof window !== "undefined" && window.innerWidth < 768
-                      ? "horizontal"
-                      : "vertical"
-                  }
-                  flexItem
-                  sx={{
-                    backgroundColor: "#ffffff",
-                    borderWidth: "1px",
-                    borderColor: "#ffffff",
-                    width: { xs: "60%", md: "1px" },
-                    height: { xs: "1px", md: "100%" },
-                    my: { xs: 2, md: 0 },
-                    mx: { xs: "auto", md: 3 },
-                    borderRadius: "5px",
-                  }}
+          {Array.isArray(cards) &&
+            cards.map((card, index) => (
+              <Box
+                key={index}
+                sx={{
+                  width: "30%",
+                  height: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  flexDirection: { xs: "column", md: "row" },
+                  gap: { xs: 4, md: 0 },
+                }}
+              >
+                <PartnerCard
+                  heading={card.score}
+                  title={card.title}
+                  description={card.description ?? ""}
+                  color="#ffffff"
                 />
-              )}
-            </Box>
-          ))}
+                {index < cards.length - 1 && (
+                  <Divider
+                    orientation={
+                      typeof window !== "undefined" && window.innerWidth < 768
+                        ? "horizontal"
+                        : "vertical"
+                    }
+                    flexItem
+                    sx={{
+                      backgroundColor: "#ffffff",
+                      borderWidth: "1px",
+                      borderColor: "#ffffff",
+                      width: { xs: "60%", md: "1px" },
+                      height: { xs: "1px", md: "100%" },
+                      my: { xs: 2, md: 0 },
+                      mx: { xs: "auto", md: 3 },
+                      borderRadius: "5px",
+                    }}
+                  />
+                )}
+              </Box>
+            ))}
         </Box>
 
         {/* Footer */}

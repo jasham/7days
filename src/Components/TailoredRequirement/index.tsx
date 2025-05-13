@@ -177,12 +177,12 @@ export default function GenericProcessSection({
                 key={index}
               >
                 <Image
-                  src={point?.icon}
+                  src={point?.icon ?? "/default-icon.png"}
                   alt={""}
                   width={24}
                   height={24}
-                  style={{ objectFit: "contain" }}                         
-                  />
+                  style={{ objectFit: "contain" }}
+                />
                 <Typography variant="body2">{point?.title}</Typography>
               </Stack>
             ))}

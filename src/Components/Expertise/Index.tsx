@@ -1,6 +1,6 @@
 // prettier-ignore
 'use client';
-import { Box, Divider, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import ImageCard from "../ImageCard/index"; // Assuming it's in the same folder or update path accordingly
 import Heading from "../Heading/Heading";
 
@@ -71,11 +71,11 @@ const ExpertiseSection: React.FC = () => {
   return (
     <Box py={10} px={4} maxWidth="lg" mx="auto">
       <Heading
-          text="Specialist Expertise"
-          textColor="#132D46"
-          dividerColor="#132D46"
-          dividerHeight="1px"
-        />
+        text="Specialist Expertise"
+        textColor="#132D46"
+        dividerColor="#132D46"
+        dividerHeight="1px"
+      />
       <Typography
         variant="h4"
         fontWeight="bold"
