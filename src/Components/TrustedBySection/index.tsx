@@ -17,16 +17,10 @@ const companyLogos = [
 export default function TrustedBySection() {
   return (
     <Box textAlign="center" py={5} px={2} bgcolor="#fff">
-      <Typography variant="h4" fontWeight="bold" gutterBottom color="#132D46">
+      <Typography variant="h2">
         Trusted by industry leaders
       </Typography>
-      <Typography
-        variant="body2"
-        maxWidth="600px"
-        mx="auto"
-        color="text.secondary"
-        mb={4}
-      >
+      <Typography variant="h6" textTransform={"capitalize"} sx={{width:"60%", mx:"auto", my:2}}>
         Henton Consulting is the preferred partner for companies seeking
         unparalleled expertise in the Property, Construction, Engineering, and
         Resources sectors.

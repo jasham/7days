@@ -25,23 +25,18 @@ export default function JobDetails({
         borderRadius: 2,
       }}
     >
-      <Typography variant="h5" fontWeight="semibold" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         {title}
       </Typography>
 
-      <Typography
-        variant="subtitle1"
-        fontWeight="semibold"
-        gutterBottom
-        sx={{ mt: 3 }}
-      >
+      <Typography variant="body1" fontWeight={600} gutterBottom sx={{ mt: 3 }}>
         The Company
       </Typography>
-      <Typography variant="body2" paragraph>
+      <Typography variant="body1" fontWeight={500}>
         {companyInfo}
       </Typography>
 
-      <Typography variant="subtitle1" fontWeight="semibold" gutterBottom>
+      <Typography variant="body1" fontWeight={600} gutterBottom>
         The Role
       </Typography>
       <Box component="ul" sx={{ pl: 4 }}>
@@ -49,34 +44,28 @@ export default function JobDetails({
           <Typography
             key={i}
             component="li"
-            variant="body2"
+            variant="body1"
+            fontWeight={500}
             sx={{ listStyleType: "disc", pl: 1 }}
           >
             {resp}
           </Typography>
         ))}
       </Box>
-
-      <Typography
-        variant="subtitle1"
-        fontWeight="semibold"
-        gutterBottom
-        sx={{ mt: 3 }}
-      >
+      <Typography variant="body1" fontWeight={600} gutterBottom sx={{ mt: 3 }}>
         The Rewards
       </Typography>
-      <Typography variant="body2" paragraph>
+      <Typography variant="body1" fontWeight={500} gutterBottom>
         {rewards}
       </Typography>
 
-      <Typography variant="subtitle1" fontWeight="semibold" gutterBottom>
+      <Typography variant="body1" fontWeight={600} gutterBottom>
         The Application
       </Typography>
-      <Typography variant="body2" paragraph>
+      <Typography variant="body1" fontWeight={500} gutterBottom>
         {contactInfo}
       </Typography>
-
-      <Typography variant="body2" paragraph>
+      <Typography variant="body2" fontWeight={500}>
         All applications are treated in the strictest of confidence
       </Typography>
     </Paper>

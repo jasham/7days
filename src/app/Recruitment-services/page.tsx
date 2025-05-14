@@ -1,5 +1,4 @@
 "use client";
-import GrowthService from "@/Components/Advisory/GrowthService";
 import ExpertiseSection from "@/Components/Expertise/Index";
 import FaqSection from "@/Components/Faq";
 import HeroSection from "@/Components/Hero/Hero";
@@ -12,6 +11,11 @@ import TestimonialSection from "@/Components/TeastimonialSection";
 import WhatWeDo from "@/Components/WhatWeDo/Index";
 import WhyPartnerSection from "@/Components/WhyPartnerSection";
 import Insights from "../../Components/Insights";
+import GrowthService from "@/Components/Advisory/GrowthService";
+import GenericProcessSection, {
+  Item,
+  Step,
+} from "@/Components/TailoredRequirement";
 interface HeroProps {
   title: string;
   description: string;
@@ -240,25 +244,6 @@ export default function Home() {
         onButtonClick={() =>
           console.log("Redirect to Read to Build What’s Next?")
         }
-      />
-      <GenericProcessSection
-        backgroundImage="/advisory.jpg"
-        heading="Our Approach"
-        intro={[
-          {
-            description:
-              "Every engagement is led by a senior advisor with real-world leadership experience — not just a toolkit. We move fast, ask sharper questions, and focus on practical change.",
-          },
-          {
-            description:
-              "We move fast, ask sharper questions, and focus on practical change. ",
-          },
-        ]}
-        steps={approachSteps}
-        itemsHeading="Our work is:"
-        items={workPoints}
-        isHeadingLeft={false}
-        deliverables={deliverables}
       />
       {/* <ResultsSection CardProps={resultDetails} background=" #014225" /> */}
       <TestimonialSection />

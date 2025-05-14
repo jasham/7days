@@ -14,7 +14,7 @@ export default function FilterSidebar({
 }) {
   return (
     <Paper elevation={0} sx={{ p: 2, bgcolor: "white", borderRadius: 2 }}>
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         Refine Search
       </Typography>
 

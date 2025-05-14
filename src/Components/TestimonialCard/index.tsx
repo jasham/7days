@@ -1,7 +1,7 @@
 // prettier-ignore
 'use client';
-import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import { Box, Typography } from "@mui/material";
+import Image from "next/image";
 
 interface TestimonialCardProps {
   quote: string;
@@ -18,31 +18,25 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 }) => {
   return (
     <Box color="white" sx={{ display: "flex", mb: 4 }}>
-      <FormatQuoteIcon fontSize="large" sx={{ mr: 1 }} />
-      <Box>
-      <Box display="flex" alignItems="center" mb={2}>
-        <Typography
-          variant="h5"
-          fontWeight="bold"
-          sx={{
-            fontFamily: "Helvetica Neue",
-            fontWeight: "500",
-            fontSize: "48px",
-            lineHeight: "100%",
-            letteSrpacing: "0%",
-          }}
-        >
-          {quote}
-        </Typography>
+      <Box
+        sx={{ display: "flex", alignItems: "start", mr: 2 }}
+        width={100}
+        height={40}
+      >
+        <Image src={"/comma.svg"} alt="Client Logo" width={40} height={40} />
       </Box>
+      <Box>
+        <Box display="flex" alignItems="center" mb={2}>
+          <Typography variant="h2">{quote}</Typography>
+        </Box>
 
-      <Typography variant="body1" mb={2}>
-        {detail}
-      </Typography>
+        <Typography variant="h6" textTransform={"capitalize"} mb={2}>
+          {detail}
+        </Typography>
 
-      <Typography variant="body1" fontStyle="italic">
-        {author}, <strong>{company}</strong>
-      </Typography>
+        <Typography variant="h5" fontStyle="italic">
+          {author}, <strong>{company}</strong>
+        </Typography>
       </Box>
     </Box>
   );

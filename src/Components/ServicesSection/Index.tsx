@@ -1,9 +1,9 @@
 // prettier-ignore
 'use client';
 import { Box, Grid, Typography } from "@mui/material";
-import CustomButton from "../Button";
 import ImageCard from "../ImageCard";
 import Heading from "../Heading/Heading";
+import { Button } from "../Button/Button";
 
 const services = [
   {
@@ -31,47 +31,33 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }, background: "#D4E1EF66" }}>
+    <Box
+      sx={{
+        px: { xs: 2, md: 10 },
+        py: { xs: 4, md: 8 },
+        background: "#D4E1EF66",
+      }}
+    >
       <Heading
-          text="Solutions That Build Businesses"
-          textColor="#132D46"
-          dividerColor="#132D46"
-          dividerHeight="1px"
-        />
-      <Box sx={{ textAlign: "center" }}>
-        <Typography
-          variant="h4"
-          fontWeight="bold"
-          //   color="green"
-          my={2}
-          sx={{
-            fontFamily: "Helvetica Neue",
-            fontWeight: 700,
-            fontSize: "48px",
-            lineHeight: 1,
-            color: "#014225",
-            letterSpacing: 0,
-            textAlign: "center",
-          }}
-        >
+        text="Solutions That Build Businesses"
+        textColor="#132D46"
+        dividerColor="#132D46"
+        dividerHeight="1px"
+      />
+      <Box
+        sx={{
+          display: "flex",
+          flexDirection: "column",
+          alignItems: "center",
+          gap: 2,
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="h2" color="#014225">
           Recruitment. Consulting. Growth.
         </Typography>
 
-        <Typography
-          variant="body1"
-          maxWidth="md"
-          margin="auto"
-          mb={4}
-          sx={{
-            fontFamily: '"Helvetica Neue", sans-serif',
-            fontWeight: 400,
-            fontSize: "24px",
-            lineHeight: 1,
-            letterSpacing: "0",
-            textAlign: "center",
-            color: "#014225",
-          }}
-        >
+        <Typography variant="h5" color="#014225" width="90%">
           From building your team to designing your strategy and driving growth,
           we deliver the expertise to take your business further — faster.
         </Typography>
@@ -85,48 +71,36 @@ export default function ServicesSection() {
             />
           ))}
         </Grid>
-
-        <Box mt={6} width={{ xs: "100%", md: "40%" }} mx={"auto"} sx={{ display: "flex", flexDirection: "column", gap: 2 , alignItems: "center"}}>
-          <Typography
-            variant="h6"
-            fontWeight="bold"
-            sx={{
-              fontFamily: "Helvetica Neue",
-              fontWeight: 700,
-              fontSize: "40px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              textAlign: "center",
-              color: "#132D46",
-            }}
-          >
+        <Box
+          mt={6}
+          width={{ xs: "100%", md: "40%" }}
+          mx={"auto"}
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            gap: 4,
+            alignItems: "center",
+          }}
+        >
+          <Typography variant="h3">
             Individually strong. Unstoppable together.
           </Typography>
 
-          <Typography
-            variant="body1"
-            my={2}
-            sx={{
-              fontFamily: "Helvetica Neue",
-              fontWeight: 500,
-              fontSize: "32px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-              textAlign: "center",
-              color: "#132D46",
-            }}
-          >
+          <Typography variant="h4">
             When you combine all three, you don’t just keep up — you lead.
           </Typography>
 
-          <CustomButton
-            text="Begin your success story"
-            color="#132D46"
+          <Button
+            variantStyle="main"
+            buttonColor="#132D46"
+            buttonBgColor="transparent"
+            buttonBorderColor="#132D46"
             onClick={() => {
               alert("begining");
             }}
-            variant="outlined"
-          />
+          >
+            Begin your success story
+          </Button>
         </Box>
       </Box>
     </Box>

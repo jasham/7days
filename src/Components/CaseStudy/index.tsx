@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { Box, Grid, Typography } from "@mui/material";
-import CustomButton from "../Button";
+import { Box, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
+import { Button } from "../Button/Button";
 
 interface CaseStudyProps {
   imageSrc: string;
@@ -28,8 +28,15 @@ const CaseStudyHighlight: React.FC<CaseStudyProps> = ({
   isBackground = false,
 }) => {
   return (
-    <Box sx={{ py: 6, px: 2, backgroundColor: isBackground ? "#D4E1EF66" : "#ffffff" }}>
-      <Box mx={8}>
+    <Box
+      sx={{
+        py: 6,
+        px: { xs: 2, md: 10 },
+        backgroundColor: isBackground ? "#D4E1EF66" : "#ffffff",
+      }}
+    >
+      <Box>
+
         {heading && (
           <Heading
             text={heading}
@@ -39,67 +46,55 @@ const CaseStudyHighlight: React.FC<CaseStudyProps> = ({
           />
         )}
 
-        <Grid
-          container
-          spacing={4}
-          alignItems="center"
-          justifyContent="center"
-          direction={isReverse ? "row-reverse" : "row"}
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            flexDirection: isReverse ? "row-reverse" : "row",
+            alignItems: "center",
+            gap: 2,
+          }}
         >
           {/* Image Section */}
-          <Grid item xs={12} md={6}>
-            <Box
-              component="img"
-              src={imageSrc}
-              alt={imageAlt}
-              sx={{
-                width: "100%",
-                borderRadius: 2,
-                objectFit: "cover",
-                height: "25rem",
-              }}
-            />
-          </Grid>
 
+          <Box
+            component="img"
+            src={imageSrc}
+            alt={imageAlt}
+            sx={{
+              width: "50%",
+              borderRadius: 2,
+              objectFit: "cover",
+              maxHeight: "400px",
+            }}
+          />
           {/* Text Section */}
-          <Grid item xs={12} md={6}>
-            <Typography
-              variant="h4"
-              fontWeight="bold"
-              gutterBottom
-              sx={{
-                fontFamily: "Helvetica Neue",
-                fontWeight: 700,
-                width: "100%",
-                color: "#132D46",
-              }}
-            >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              gap: 2,
+              justifyContent: "center",
+              width: "45%",
+            }}
+          >
+            <Typography variant="h3" color="#132D46" sx={{ fontWeight: 700 }}>
               {title}
             </Typography>
-            <Typography
-              variant="body1"
-              color="text.secondary"
-              paragraph
-              sx={{
-                fontFamily: "Helvetica Neue",
-                fontWeight: 400,
-                fontSize: "16px",
-                lineHeight: 1.4,
-                width: "100%",
-                color: "#132D46",
-                letterSpacing: 0,
-              }}
-            >
+            <Typography variant="body1" color="#132D46">
               {description}
             </Typography>
-            <CustomButton
-              text={ctaText}
+            <Button
+              variantStyle="main"
+              buttonColor="#132D46"
+              buttonBgColor="transparent"
+              buttonBorderColor="#132D46"
               onClick={onClick}
-              variant="outlined"
-              color="#132D46"
-            />
-          </Grid>
-        </Grid>
+            >
+              {ctaText}
+            </Button>
+          </Box>
+        </Box>
       </Box>
     </Box>
   );

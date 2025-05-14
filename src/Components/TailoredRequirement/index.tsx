@@ -2,9 +2,10 @@
 "use client";
 
 import React from "react";
-import { Box, Button, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography } from "@mui/material";
 import PartnerCard from "../Card";
 import Image from "next/image";
+import { Button } from "../Button/Button";
 
 export interface Step {
   icon: string;
@@ -46,13 +47,10 @@ export default function GenericProcessSection({
   return (
     <Box
       sx={{
-        borderRadius: "20px",
         overflow: "hidden",
         color: "#fff",
-        mx: "auto",
         width: "100%",
-        maxWidth: "lg",
-        my: 6,
+        px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }
       }}
     >
       <Box
@@ -60,6 +58,7 @@ export default function GenericProcessSection({
           backgroundImage: `linear-gradient(180deg, rgba(170,187,225,0.7) 0%, rgba(19,45,70,0.7) 56.73%), url('${backgroundImage}')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
+          borderRadius: 4,
           px: { xs: 4, md: 8 },
           py: { xs: 6, md: 10 },
         }}
@@ -73,12 +72,7 @@ export default function GenericProcessSection({
             gap: 12,
           }}
         >
-          <Typography
-            variant="h4"
-            fontWeight={700}
-            gutterBottom
-            sx={{ width: "40%" }}
-          >
+          <Typography variant="h2">
             {heading}
           </Typography>
           <Box
@@ -93,7 +87,7 @@ export default function GenericProcessSection({
               intro.map((line, index) => (
                 <Typography
                   key={index}
-                  variant="body1"
+                  variant="h5"
                   sx={{ maxWidth: 700, mb: 1 }}
                 >
                   {line?.description || ""}
@@ -152,10 +146,10 @@ export default function GenericProcessSection({
         {/* Deliverables */}
         <Box mt={6} mb={4} sx={{ display: "flex", gap: 16 }}>
           <Stack>
-            <Typography variant="h4" fontWeight={600} gutterBottom>
+            <Typography variant="h2" gutterBottom>
               {itemsHeading}
             </Typography>
-            <Typography variant="body2" fontWeight={400} gutterBottom>
+            <Typography variant="body1" gutterBottom>
               {Array.isArray(items) &&
                 items.map((line, index) => (
                   <Typography
@@ -177,13 +171,13 @@ export default function GenericProcessSection({
                 key={index}
               >
                 <Image
-                  src={point?.icon ?? "/default-icon.png"}
+                  src={point?.icon || ""}
                   alt={""}
                   width={24}
                   height={24}
-                  style={{ objectFit: "contain" }}
-                />
-                <Typography variant="body2">{point?.title}</Typography>
+                  style={{ objectFit: "contain" }}                         
+                  />
+                <Typography variant="body1">{point?.title}</Typography>
               </Stack>
             ))}
           </Stack>
@@ -192,18 +186,14 @@ export default function GenericProcessSection({
         {/* CTA */}
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Button
-            variant="outlined"
-            sx={{
-              borderColor: "#fff",
-              color: "#fff",
-              "&:hover": {
-                backgroundColor: "#ffffff22",
-                borderColor: "#fff",
-              },
-            }}
-          >
-            {ctaText}
-          </Button>
+          variantStyle="main"
+          buttonColor="#ffffff"
+          buttonBgColor="transparent"
+          buttonBorderColor="#ffffff"
+          onClick={() => console.log("Redirect to Read to Build What’s Next?")}
+        >
+          {ctaText}
+        </Button>
         </Box>
       </Box>
     </Box>

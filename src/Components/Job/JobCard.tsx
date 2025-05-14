@@ -35,14 +35,14 @@ export default function JobCard({ job }: { job: Job }) {
         borderRadius: 2,
       }}
     >
-      <Typography variant="h6" gutterBottom>
+      <Typography variant="h5" mb={4} color="#3E3D3D">
         {job.title}
       </Typography>
 
-      <Typography variant="subtitle2" color="text.secondary" gutterBottom>
+      <Typography variant="h6" textTransform={"capitalize"} mb={4} color="#6F7A81">
         About the Client:
       </Typography>
-      <Typography variant="body2" paragraph>
+      <Typography variant="h6" textTransform={"capitalize"} mb={4} color="#3E3D3D">
         {job.clientDescription}
       </Typography>
 
@@ -51,19 +51,19 @@ export default function JobCard({ job }: { job: Job }) {
       <Grid container spacing={2} alignItems="center">
         <Grid item xs={12} sm={4} display="flex" alignItems="center">
           <Image src={"/MapPin.svg"} alt="Client Logo" width={32} height={32} style={{ borderRadius: "50%", marginRight: 8 }} />
-          <Typography variant="body1">{job.location}</Typography>
+          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">{job.location}</Typography>
         </Grid>
         <Grid item xs={12} sm={2} display="flex" alignItems="center">
         <Image src={"/Coins.svg"} alt="Client Logo" width={32} height={32} style={{ borderRadius: "50%", marginRight: 8 }} />
-          <Typography variant="body1">{job.salary}</Typography>
+          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">{job.salary}</Typography>
         </Grid>
         <Grid item xs={12} sm={3} display="flex" alignItems="center">
         <Image src={"/Bag.svg"} alt="Client Logo" width={32} height={32} style={{ borderRadius: "50%", marginRight: 8 }} />
-          <Typography variant="body1">{job.contractType}</Typography>
+          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">{job.contractType}</Typography>
         </Grid>
         <Grid item xs={12} sm={3} display="flex" alignItems="center">
         <Image src={"/Calendar.svg"} alt="Client Logo" width={32} height={32} style={{ borderRadius: "50%", marginRight: 8 }} />
-          <Typography variant="body1">{job.date}</Typography>
+          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">{job.date}</Typography>
         </Grid>
       </Grid>
 

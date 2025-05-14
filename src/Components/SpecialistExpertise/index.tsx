@@ -31,10 +31,10 @@ const SpecialistExpertise: React.FC = () => {
   return (
     <>
       <Box
-        px={10}
-        py={10}
         sx={{
           background: "#ffffff",
+          px: { xs: 2, md: 10 },
+          py: { xs: 4, md: 8 },
         }}
       >
         <Heading

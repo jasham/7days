@@ -28,16 +28,16 @@ export default function FilterSection({
       sx={{ mb: 2, "&:before": { display: "none" } }}
     >
       <AccordionSummary expandIcon={<ExpandMore />} sx={{ px: 0, minHeight: 48 }}>
-        <Typography variant="subtitle1">{title}</Typography>
+        <Typography variant="body1">{title}</Typography>
       </AccordionSummary>
       <AccordionDetails sx={{ p: 0 }}>
         {options.map((opt, i) => (
           <Box
             key={i}
-            sx={{ display: "flex", justifyContent: "space-between", py: 0.5 }}
+            sx={{ display: "flex", justifyContent: "start", gap:0.5 ,py: 0.5 }}
           >
-            <Typography variant="body2">{opt.name}</Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body1">{opt.name}</Typography>
+            <Typography variant="body1" color="text.secondary">
               ({opt.count})
             </Typography>
           </Box>

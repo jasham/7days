@@ -6,11 +6,11 @@ import {
   Grid,
   Typography,
   Link,
-  Divider,
   IconButton,
 } from "@mui/material";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Image from "next/image";
+import Heading from "../Heading/Heading";
 
 const footerColumns = [
   {
@@ -52,12 +52,14 @@ const footerColumns = [
 
 export default function Footer() {
   return (
-    <Box component="footer" sx={{ bgcolor: "#FFFFFF", pt: 6, px: 9.5 }}>
+    <Box sx={{px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }}}>
       {/* Top links section */}
-      <Typography variant="subtitle1" fontWeight="semibold" gutterBottom sx={{ textTransform: "uppercase" , color: "#0c4277"}}>
-        Contact
-      </Typography>
-      <Divider sx={{ mb: 4 , bgcolor: "#000" }} />
+      <Heading
+        text="CONTACT"
+        textColor="#132D46"
+        dividerColor="#132D46"
+        dividerHeight="1px"
+      />
       <Box>
         <Box sx={{ paddingTop: "10px" }}>
           <Image
@@ -69,7 +71,7 @@ export default function Footer() {
         </Box>
         <Box
           sx={{
-            mt: 2,
+            mt: 8,
             mb: 4,
             display: "flex",
             flexWrap: "wrap",
@@ -78,20 +80,14 @@ export default function Footer() {
         >
           {footerColumns.map((col) => (
             <Grid item xs={6} sm={4} md={1} key={col.title}>
-              <Typography
-                variant="subtitle1"
-                fontWeight="700"
-                color="#132D46"
-                marginBottom="15px"
-                marginTop="45px"
-              >
+              <Typography variant="h5" fontWeight={600} color="#132D46" sx={{ mb: 2 }}>
                 {col.title}
               </Typography>
               {col.links.map((link) => (
                 <Link
                   href="#"
                   key={link}
-                  variant="body2"
+                  typography="body2"
                   display="block"
                   color="text.secondary"
                   underline="none"

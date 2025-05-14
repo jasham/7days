@@ -1,4 +1,5 @@
-"import client";
+
+"use client";
 import React, { useState } from "react";
 import {
   Paper,
@@ -8,10 +9,9 @@ import {
   TextField,
   FormControlLabel,
   Checkbox,
-  Button,
   Link,
 } from "@mui/material";
-import { ArrowRightAlt } from "@mui/icons-material";
+import { Button } from "../Button/Button";
 
 export default function ApplicationForm() {
   const [formData, setFormData] = useState({
@@ -26,15 +26,17 @@ export default function ApplicationForm() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const target = e.target;
-    const { name, value } = target;
+    const { name, value, type } = e.target;
+
+    // Narrow the type to HTMLInputElement if needed
+    const checked =
+      type === "checkbox" && "checked" in e.target
+        ? (e.target as HTMLInputElement).checked
+        : undefined;
 
     setFormData((fd) => ({
       ...fd,
-      [name]:
-        target.type === "checkbox" && "checked" in target
-          ? (target as HTMLInputElement).checked
-          : value,
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
 
@@ -57,7 +59,7 @@ export default function ApplicationForm() {
         borderRadius: 2,
       }}
     >
-      <Typography variant="h5" fontWeight="semibold" gutterBottom>
+      <Typography variant="h5" gutterBottom>
         Apply for this Job
       </Typography>
 
@@ -102,7 +104,7 @@ export default function ApplicationForm() {
           </Grid>
 
           <Grid item xs={12}>
-            <Typography variant="body2" gutterBottom>
+            <Typography variant="body1" gutterBottom>
               Upload a CV *
             </Typography>
             <Box
@@ -135,12 +137,12 @@ export default function ApplicationForm() {
                 />
               </Button>
               <Box sx={{ flexGrow: 1, pl: 1 }}>
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body1" color="text.secondary">
                   {formData.cv?.name || "No File Chosen"}
                 </Typography>
               </Box>
             </Box>
-            <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
+            <Typography variant="body1" color="text.secondary" sx={{ mt: 1 }}>
               Upload your CV to accompany your application for this job.
             </Typography>
           </Grid>
@@ -156,7 +158,7 @@ export default function ApplicationForm() {
                 />
               }
               label={
-                <Typography variant="body2" color="text.secondary">
+                <Typography variant="body1" color="text.secondary">
                   Please tick this box to consent to us using your data. See our{" "}
                   <Link href="#" underline="hover">
                     privacy policy
@@ -169,26 +171,16 @@ export default function ApplicationForm() {
 
           <Grid item xs={12}>
             <Button
-              type="submit"
-              variant="contained"
-              fullWidth
-              size="large"
-              endIcon={<ArrowRightAlt sx={{ ml: 1 }} />}
-              sx={{
-                bgcolor: "#fff",
-                color: "text.secondary",
-                border: "1px solid",
-                borderColor: "text.secondary",
-                boxShadow: "none",
-                "&:hover": {
-                  bgcolor: "#0c4277",
-                  color: "#fff",
-                  borderColor: "#0c4277",
-                },
-                textTransform: "none",
+              variantStyle="main"
+              buttonColor={"#132D46"}
+              buttonBgColor="transparent"
+              buttonBorderColor={"#132D46"}
+              onClick={() => {
+                alert("begining");
               }}
+              sx={{ width: "100%" }}
             >
-              APPLY NOW
+              {"APPLY NOW"}
             </Button>
           </Grid>
         </Grid>

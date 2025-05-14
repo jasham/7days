@@ -83,32 +83,18 @@ export default function JobBoardPage() {
           px: { xs: 2, md: 10 },
           py: { xs: 4, md: 8 },
           background: "linear-gradient(0deg, #EEEEF2 0%, #132D46 46.76%)",
-          color: "white",
+          color: "#ffffff",
         }}
       >
         {/* header + search */}
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: { xs: "column", md: "row" },
-            justifyContent: "space-between",
-            mb: 4,
-          }}
-        >
-          <Typography
-            variant="h5"
-            fontWeight="bold"
-            gutterBottom
-            flexBasis="30%"
-          >
-            Search Jobs.
-            <br />
-            Build Your Future.
-          </Typography>
-          <Box flexBasis="100%">
-            <SearchBar />
-          </Box>
+      <Box sx={{ display: "flex", justifyContent: "space-between" , gap:8 , width: "100%" , mb: 6 }}>
+        <Typography variant="h4" fontWeight={700} width={"25%"}>
+          Search Jobs. Build Your Future.
+        </Typography>
+        <Box width={"75%"}>
+          <SearchBar />
         </Box>
+      </Box>
 
         {/* filters + listings */}
         <Grid container spacing={3}>
