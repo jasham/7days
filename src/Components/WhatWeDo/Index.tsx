@@ -1,9 +1,19 @@
-// prettier-ignore
-'use client';
+"use client";
+
 import { Box, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
+
+interface WhatWeDoProps {
+  cards?: boolean;
+  permanentRecruitment?: boolean;
+  heading?: string;
+  description?: string;
+  subHeading?: string;
+  description2?: string;
+}
+
 const roleCards = [
   {
     title: "Technical Roles",
@@ -18,45 +28,14 @@ const roleCards = [
     description: "Executive search, senior appointments, succession placements",
   },
 ];
-const expertiseList = [
-  "Specialist technical roles",
-  "Commercial and operational leadership",
-  "Middle management to C-suite executives",
-  "Confidential and strategic appointments",
-];
-const constructionExpertList = [
-  "Head Contractors, Subcontractors across keys sectors including Health, Education, Industrial",
-  "Specialist subcontractors and client side consultancies",
-  "Fitout and refurbishment firms",
-  "Client-side project and development managers",
-  "Government and private developers",
-];
-const engineeringExpertList = [
-  "National and multidisciplinary design consultancies",
-  "Specialist civil, structural and MEP firms",
-  "Tier 1 and mid-tier head contractors",
-  "Client-side PM and commercial advisory groups",
-  "Government and infrastructure delivery agencies",
-  "Asset owners and operators in transport, utilities and energy",
-];
-const managementExpertList = [
-  "Commercial property owners and asset managers",
-  "Government departments and infrastructure bodies",
-  "Aged care, healthcare and education providers",
-  "Transport hubs, airports and public precincts",
-  "Private operators and corporate occupiers",
-];
+
 const WhatWeDo: React.FC<WhatWeDoProps> = ({
   cards = true,
+  permanentRecruitment = false,
   heading,
   description,
   subHeading,
   description2,
-  description3 = "",
-  construction,
-  engineeringPage = false,
-  permanentRecruitment = false,
-  managementPage = false,
 }) => {
   return (
     <Box
@@ -78,16 +57,17 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
           gap: "20px",
           justifyContent: "space-between",
           width: "100%",
+          flexWrap: "wrap", // <- optional: helps on small screens
         }}
       >
-        <Box sx={{ width: "40%" }}>
+        <Box sx={{ width: { xs: "100%", md: "40%" } }}>
           <Typography variant="h3" color="#ffffff" gutterBottom>
             We help businesses recruit with purpose — aligning people strategy
             to commercial outcomes.
           </Typography>
         </Box>
 
-        <Box sx={{ width: "50%" }}>
+        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
           <Typography
             variant="h6"
             color="#ffffff"
@@ -123,7 +103,6 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
             sx={{
               borderRadius: "24px",
               padding: "24px",
-              gap: "24px",
               textAlign: "center",
             }}
             key={index}
@@ -149,7 +128,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
               </Typography>
               <Typography
                 variant="h6"
-                textTransform={"capitalize"}
+                textTransform="capitalize"
                 color="#132D46"
               >
                 {role.description}
@@ -158,15 +137,14 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
           </Grid>
         ))}
       </Grid>
+
       <Box sx={{ display: "flex", justifyContent: "center" }}>
         <Button
           variantStyle="main"
-          buttonColor={"#132D46"}
+          buttonColor="#132D46"
           buttonBgColor="transparent"
-          buttonBorderColor={"#132D46"}
-          onClick={() => {
-            alert("begining");
-          }}
+          buttonBorderColor="#132D46"
+          onClick={() => alert("beginning")}
         >
           Start the conversation
         </Button>

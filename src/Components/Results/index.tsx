@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import PartnerCard from "../Card/index";
@@ -24,6 +24,9 @@ interface ResultProps {
   buttonText?: string;
   cardProps?: CardProps;
   onButtonClick?: () => void;
+  topHeading: string;
+  background: string;
+  bottomHeading: string;
 }
 
 const ResultsSection: React.FC<ResultProps> = ({
@@ -85,7 +88,7 @@ const ResultsSection: React.FC<ResultProps> = ({
             gap: { xs: 4, md: 0 },
           }}
         >
-          {cardProps.cardDetails.map((card, index) => (
+          {cards?.map((card, index) => (
             <React.Fragment key={index}>
               <Box
                 sx={{
@@ -107,7 +110,7 @@ const ResultsSection: React.FC<ResultProps> = ({
               </Box>
 
               {/* Divider only between items */}
-              {index < cardProps.cardDetails.length - 1 && (
+              {index < cards?.length - 1 && (
                 <Divider
                   orientation={
                     window.innerWidth < 960 ? "horizontal" : "vertical"

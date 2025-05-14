@@ -60,28 +60,7 @@ const resultDetails: CardProps = {
     },
   ],
 };
-//faq data
 
-//why expert data
-// const ExpertList: CardList = {
-//   myCards: [
-//     {
-//       title: "Precision Systems",
-//       description:
-//         "Every recruitment campaign follows a structured, proven methodology. From role briefing to shortlist delivery, we align talent acquisition tightly to your business outcomes, timelines and team dynamics.",
-//     },
-//     {
-//       title: "Deep Market Networks",
-//       description:
-//         "We actively maintain relationships across technical, operational and executive talent pools — not just databases. Our networks give you access to passive candidates and industry leaders who aren’t available on the open market.",
-//     },
-//     {
-//       title: "Precision Systems",
-//       description:
-//         "Every assignment is led by a senior advisor who understands your industry and growth stage. We don’t just fill vacancies — we build capability aligned to your future plans.",
-//     },
-//   ],
-// };
 const faqData = [
   {
     question:

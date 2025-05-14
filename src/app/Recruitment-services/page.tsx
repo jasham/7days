@@ -12,10 +12,7 @@ import WhatWeDo from "@/Components/WhatWeDo/Index";
 import WhyPartnerSection from "@/Components/WhyPartnerSection";
 import Insights from "../../Components/Insights";
 import GrowthService from "@/Components/Advisory/GrowthService";
-import GenericProcessSection, {
-  Item,
-  Step,
-} from "@/Components/TailoredRequirement";
+
 interface HeroProps {
   title: string;
   description: string;
@@ -247,7 +244,7 @@ export default function Home() {
       />
       {/* <ResultsSection CardProps={resultDetails} background=" #014225" /> */}
       <TestimonialSection />
-      <FaqSection faqData={faqData}/>
+      <FaqSection faqData={faqData} />
       <Insights />
     </div>
   );
