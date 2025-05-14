@@ -1,7 +1,6 @@
 // prettier-ignore
 'use client';
 import { Box, Card, Grid, Typography } from "@mui/material";
-import CustomButton from "../Button";
 import { Button } from "../Button/Button";
 
 interface Service {

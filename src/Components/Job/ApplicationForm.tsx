@@ -25,7 +25,14 @@ export default function ApplicationForm() {
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value, checked, type } = e.target;
+    const { name, value, type } = e.target;
+
+    // Narrow the type to HTMLInputElement if needed
+    const checked =
+      type === "checkbox" && "checked" in e.target
+        ? (e.target as HTMLInputElement).checked
+        : undefined;
+
     setFormData((fd) => ({
       ...fd,
       [name]: type === "checkbox" ? checked : value,
@@ -170,7 +177,7 @@ export default function ApplicationForm() {
               onClick={() => {
                 alert("begining");
               }}
-              sx={{width: "100%"}}
+              sx={{ width: "100%" }}
             >
               {"APPLY NOW"}
             </Button>

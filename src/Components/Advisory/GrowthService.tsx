@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import CustomButton from "../Button";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
 

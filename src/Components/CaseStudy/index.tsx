@@ -1,7 +1,6 @@
 "use client";
 
-import { Box, Grid, Typography } from "@mui/material";
-import CustomButton from "../Button";
+import { Box, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
 
@@ -46,7 +45,15 @@ const CaseStudyHighlight: React.FC<CaseStudyProps> = ({
           />
         )}
 
-        <Box sx={{ display: "flex", justifyContent: "space-between" , flexDirection: isReverse ? "row-reverse" : "row", alignItems: "center", gap: 2 }}>
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            flexDirection: isReverse ? "row-reverse" : "row",
+            alignItems: "center",
+            gap: 2,
+          }}
+        >
           {/* Image Section */}
 
           <Box

@@ -2,7 +2,6 @@
 import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import PartnerCard from "../Card/index";
-import CustomButton from "../Button";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
 

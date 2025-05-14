@@ -4,7 +4,6 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import Image from "next/image";
 const Navbar = () => {
   return (
@@ -17,7 +16,7 @@ const Navbar = () => {
         marginRight: "0px",
       }}
     >
-      <Toolbar sx={{margin:"auto"}}>
+      <Toolbar sx={{ margin: "auto" }}>
         <Box
           sx={{
             display: "flex",
@@ -26,7 +25,12 @@ const Navbar = () => {
           }}
         >
           <Box sx={{ paddingTop: "10px" }}>
-            <Image src={"/Logo.svg"} alt="Client Logo" width={169} height={60} />
+            <Image
+              src={"/Logo.svg"}
+              alt="Client Logo"
+              width={169}
+              height={60}
+            />
           </Box>
           <Box
             sx={{

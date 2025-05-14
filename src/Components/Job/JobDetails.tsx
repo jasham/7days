@@ -1,6 +1,5 @@
-import React from 'react';
-import { Paper, Typography, Divider, Box, Grid } from '@mui/material';
-import { LocationOn, AttachMoney, Work, CalendarMonth } from '@mui/icons-material';
+import React from "react";
+import { Paper, Typography, Box } from "@mui/material";
 
 export interface JobDetailsProps {
   title: string;
@@ -18,12 +17,14 @@ export default function JobDetails({
   contactInfo,
 }: JobDetailsProps) {
   return (
-    <Paper elevation={0}
-    sx={{
-      p: 4,
-      height: "100%",
-      borderRadius: 2,
-    }}>
+    <Paper
+      elevation={0}
+      sx={{
+        p: 4,
+        height: "100%",
+        borderRadius: 2,
+      }}
+    >
       <Typography variant="h5" gutterBottom>
         {title}
       </Typography>
@@ -45,7 +46,7 @@ export default function JobDetails({
             component="li"
             variant="body1"
             fontWeight={500}
-            sx={{ listStyleType: 'disc', pl: 1 }}
+            sx={{ listStyleType: "disc", pl: 1 }}
           >
             {resp}
           </Typography>
@@ -67,7 +68,7 @@ export default function JobDetails({
       </Typography>
 
       <Typography variant="body2" fontWeight={500}>
-      All applications are treated in the strictest of confidence
+        All applications are treated in the strictest of confidence
       </Typography>
     </Paper>
   );

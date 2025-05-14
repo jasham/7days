@@ -1,6 +1,5 @@
 // prettier-ignore
 'use client';
-import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 
@@ -19,8 +18,12 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
 }) => {
   return (
     <Box color="white" sx={{ display: "flex", mb: 4 }}>
-      <Box sx={{ display: "flex", alignItems: "start" , mr:2 }} width={100} height={40}>
-      <Image src={"/comma.svg"} alt="Client Logo" width={40} height={40}/>
+      <Box
+        sx={{ display: "flex", alignItems: "start", mr: 2 }}
+        width={100}
+        height={40}
+      >
+        <Image src={"/comma.svg"} alt="Client Logo" width={40} height={40} />
       </Box>
       <Box>
         <Box display="flex" alignItems="center" mb={2}>

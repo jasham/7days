@@ -1,15 +1,7 @@
 // prettier-ignore
 'use client';
-import {
-  Box,
-  Container,
-  Divider,
-  Grid,
-  Paper,
-  Typography,
-} from "@mui/material";
+import { Box, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
-import CustomButton from "../Button";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
 const roleCards = [

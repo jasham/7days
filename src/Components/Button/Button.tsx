@@ -19,7 +19,7 @@ export interface CustomButtonProps extends ButtonProps {
 }
 
 const StyledButton = styled(MuiButton, {
-  shouldForwardProp: (prop) =>
+  shouldForwardProp: (prop: string) =>
     ![
       "variantStyle",
       "buttonColor",
@@ -103,7 +103,9 @@ export const Button: React.FC<CustomButtonProps> = ({
   if (variantStyle === "search") {
     iconProps.startIcon = startIcon ?? <SearchIcon />;
   } else {
-    iconProps.endIcon = endIcon ?? <ArrowForwardIcon style={{ fontSize: 16 }} />;
+    iconProps.endIcon = endIcon ?? (
+      <ArrowForwardIcon style={{ fontSize: 16 }} />
+    );
   }
 
   return (
