@@ -41,7 +41,7 @@ export default function Insights() {
         textColor="#132D46"
         dividerColor="#132D46"
         dividerHeight="1px"
-        marginBottom="16px"
+        marginBottom="36px"
       />
       <Typography variant="h2" gutterBottom color="#132D46">
         News & Resources

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import PartnerCard from "../Card/index";
@@ -12,17 +12,17 @@ interface CardItem {
 }
 
 interface CardProps {
-  cardDetails: CardItem[];
+  cardDetails?: CardItem[];
 }
 
 interface ResultProps {
-  backgroundColor?: string; // for solid background color
-  backgroundImage?: string; // for image background
+  backgroundColor?: string;
+  backgroundImage?: string;
   headingText?: string;
   subheadingText?: string;
   footerText?: string;
   buttonText?: string;
-  cardProps: CardProps;
+  cardProps?: CardProps;
   onButtonClick?: () => void;
 }
 
@@ -31,12 +31,13 @@ const ResultsSection: React.FC<ResultProps> = ({
   backgroundImage,
   headingText = "Results",
   subheadingText = "Measured by Results. Chosen for Impact.",
-  footerText = "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
-  buttonText = "Ready to Build What’s Next?",
+  footerText = "When expertise, trust, and speed come together, growth isn't a goal — it's the outcome.",
+  buttonText = "Ready to Build What's Next?",
   cardProps,
   onButtonClick = () => alert("clicked"),
 }) => {
   const isImage = Boolean(backgroundImage);
+  const cards = cardProps?.cardDetails;
 
   return (
     <Box sx={{ color: "#132D46", px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
@@ -71,11 +72,13 @@ const ResultsSection: React.FC<ResultProps> = ({
         {/* Subheading */}
         <Typography variant="h2">{subheadingText}</Typography>
 
-        {/* Cards */}
         <Box
           sx={{
+            position: "relative",
+            borderRadius: "20px",
+            overflow: "hidden",
+            textAlign: "center",
             display: "flex",
-            justifyContent: "center",
             alignItems: "center",
             flexDirection: { xs: "column", md: "row" },
             height: { xs: "auto", md: 300 },

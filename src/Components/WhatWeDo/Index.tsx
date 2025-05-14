@@ -18,8 +18,46 @@ const roleCards = [
     description: "Executive search, senior appointments, succession placements",
   },
 ];
-
-const WhatWeDo: React.FC = () => {
+const expertiseList = [
+  "Specialist technical roles",
+  "Commercial and operational leadership",
+  "Middle management to C-suite executives",
+  "Confidential and strategic appointments",
+];
+const constructionExpertList = [
+  "Head Contractors, Subcontractors across keys sectors including Health, Education, Industrial",
+  "Specialist subcontractors and client side consultancies",
+  "Fitout and refurbishment firms",
+  "Client-side project and development managers",
+  "Government and private developers",
+];
+const engineeringExpertList = [
+  "National and multidisciplinary design consultancies",
+  "Specialist civil, structural and MEP firms",
+  "Tier 1 and mid-tier head contractors",
+  "Client-side PM and commercial advisory groups",
+  "Government and infrastructure delivery agencies",
+  "Asset owners and operators in transport, utilities and energy",
+];
+const managementExpertList = [
+  "Commercial property owners and asset managers",
+  "Government departments and infrastructure bodies",
+  "Aged care, healthcare and education providers",
+  "Transport hubs, airports and public precincts",
+  "Private operators and corporate occupiers",
+];
+const WhatWeDo: React.FC<WhatWeDoProps> = ({
+  cards = true,
+  heading,
+  description,
+  subHeading,
+  description2,
+  description3 = "",
+  construction,
+  engineeringPage = false,
+  permanentRecruitment = false,
+  managementPage = false,
+}) => {
   return (
     <Box
       sx={{

@@ -36,6 +36,7 @@ const CaseStudyHighlight: React.FC<CaseStudyProps> = ({
       }}
     >
       <Box>
+
         {heading && (
           <Heading
             text={heading}

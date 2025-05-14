@@ -71,7 +71,6 @@ export default function ServicesSection() {
             />
           ))}
         </Grid>
-
         <Box
           mt={6}
           width={{ xs: "100%", md: "40%" }}

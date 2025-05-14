@@ -6,7 +6,8 @@ const TestimonialSection: React.FC = () => {
   return (
     <Box
       sx={{
-        background: "linear-gradient(180deg, #132d4668 0%, #132D46 73.18%)",
+        // background: "linear-gradient(180deg, #EEEEF2 0%, #132D46 54.76%)",
+        background: "linear-gradient(0deg, #132D46 0%, rgba(19, 45, 70, 0.9) 50%, rgba(19, 45, 70, 0.6) 50%, rgba(255, 255, 255, 0.2) 60%, #ffffff 100%)",
         gap: "8px",
         position: "relative",
         px: { xs: 2, md: 10 },

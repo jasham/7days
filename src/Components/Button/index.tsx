@@ -41,7 +41,7 @@ export default function CustomButton({
         borderRadius: "4px",
         textTransform: "none",
         fontWeight: 400,
-        fontSize: {fontSize},
+        fontSize: { fontSize },
         padding: isBorder ? "8px 16px" : "0",
         ...sx,
         width: "fit-content",

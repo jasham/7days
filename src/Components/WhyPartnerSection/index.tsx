@@ -1,5 +1,4 @@
 "use client";
-
 import { Box, Divider, Typography } from "@mui/material";
 import React from "react";
 import PartnerCard from "../Card/index";
@@ -93,7 +92,6 @@ const WhyPartnerSection: React.FC<Experts> = ({
                 color={"#014225"}
               />
             </Box>
-
             {index < cards.length - 1 && (
               <Divider
                 orientation="vertical"
@@ -108,7 +106,6 @@ const WhyPartnerSection: React.FC<Experts> = ({
           </Box>
         ))}
       </Box>
-
       <Box textAlign="center" mt={6}>
         <Button
           variantStyle="main"

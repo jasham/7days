@@ -26,7 +26,14 @@ export default function ImageCard({
   isLeft = false,
 }: ImageCardProps) {
   return (
-    <Grid item xs={12} md={md}>
+    <Grid
+      item
+      xs={12}
+      md={md}
+      sx={{
+        px: { xs: 2, sm: 1 }, // responsive horizontal padding
+      }}
+    >
       <Card
         sx={{
           height: "100%",
@@ -114,7 +121,10 @@ export default function ImageCard({
             sx={{
               p: 3,
               backgroundColor: "#132D46",
-              width: "fit-content",
+              width: "100%", // ✅ Fix applied
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center", // Optional: center content
             }}
           >
             <Box

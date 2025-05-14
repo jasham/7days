@@ -25,7 +25,7 @@ interface CardItem {
   description?: string;
 }
 interface CardProps {
-  cardDetails: CardItem[];
+  cardDetails?: CardItem[];
 }
 //why experts interface
 interface CardData {
@@ -33,9 +33,9 @@ interface CardData {
   description: string;
   icon: string;
 }
-interface CardList {
-  myCards: CardData[];
-}
+// interface CardList {
+//   myCards: CardData[];
+// }
 
 //hero section data
 const heroDetails: HeroProps = {
@@ -74,7 +74,8 @@ const partnerCards: CardData[] = [
   {
     icon: "/Expert.svg",
     title: "Expertise that Delivers",
-    description: "Our team brings industry-specific knowledge and hands-on experience.",
+    description:
+      "Our team brings industry-specific knowledge and hands-on experience.",
   },
   {
     icon: "/StretegyIcon.svg",
@@ -84,7 +85,8 @@ const partnerCards: CardData[] = [
   {
     icon: "/PartnerShip.svg",
     title: "True Partnership",
-    description: "Long-term relationships built on trust, impact, and delivery.",
+    description:
+      "Long-term relationships built on trust, impact, and delivery.",
   },
 ];
 
@@ -97,7 +99,7 @@ export default function Home() {
       <CaseStudyHighlight
         imageSrc="/caseStudy.jpg"
         imageAlt="Construction worker"
-        title="How Strategic Recruitment & Consulting led to 34% Growth in 6 months"
+        title="How Strategic Recruitment & Consulting for a Sydney Head Contractor led to 34%  Growth in 6 months."
         description="Our approach improved operational efficiency by 30% for a leading head contractor."
         ctaText="See how we deliver results"
         onClick={() => console.log("Clicked")}

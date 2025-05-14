@@ -38,7 +38,7 @@ export default function TrustedBySection() {
           sx={{
             display: "flex",
             justifyContent: "center",
-            gap: 3,
+            gap: 7,
             px: 2,
             py: 1,
           }}

@@ -10,15 +10,17 @@ import {
 } from "@mui/material";
 import React from "react";
 import Heading from "../Heading/Heading";
+interface FaqItem {
+  question: string;
+  answer: string;
+}
 
-const faqData = [
-  "What Makes Your Recruitment Different From Other Agencies?",
-  "How Do You Assess Long-Term Fit?",
-  "Do You Offer National Or International Coverage?",
-  "What If I Need More Than Just Recruitment?",
-];
+interface FaqProps {
+  faqData: FaqItem[];
+}
 
-const FaqSection: React.FC = () => {
+const FaqSection: React.FC<FaqProps> = ({ faqData }) => {
+  console.log(faqData, "faqData");
   return (
     <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }}}>
       <Heading
@@ -28,7 +30,7 @@ const FaqSection: React.FC = () => {
         dividerHeight="1px"
         marginBottom="16px"
       />
-      {faqData.map((question, index) => (
+      {faqData.map((data, index) => (
         <Accordion
           key={index}
           elevation={0}
@@ -47,14 +49,13 @@ const FaqSection: React.FC = () => {
               color="#132D46"
               fontWeight={500}
             >
-              {question}
+              {data.question}
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography variant="body2" color="textSecondary">
               {/* Placeholder for answer text */}
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex.
+              {data.answer}
             </Typography>
           </AccordionDetails>
         </Accordion>

@@ -52,7 +52,6 @@ export default function JobDetails({
           </Typography>
         ))}
       </Box>
-
       <Typography variant="body1" fontWeight={600} gutterBottom sx={{ mt: 3 }}>
         The Rewards
       </Typography>
@@ -66,7 +65,6 @@ export default function JobDetails({
       <Typography variant="body1" fontWeight={500} gutterBottom>
         {contactInfo}
       </Typography>
-
       <Typography variant="body2" fontWeight={500}>
         All applications are treated in the strictest of confidence
       </Typography>

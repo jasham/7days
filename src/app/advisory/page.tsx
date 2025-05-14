@@ -73,6 +73,29 @@ const workPoints: Item[] = [
   },
 ];
 
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
+const faqData: FaqItem[] = [
+  {
+    question: "What industries do you work with?",
+    answer:
+      "We work across sectors including infrastructure, services, for-purpose, and growth-stage companies.",
+  },
+  {
+    question: "What makes your advisory different?",
+    answer:
+      "Every engagement is led by a senior advisor with real-world leadership experience, focusing on practical change.",
+  },
+  {
+    question: "How fast can you begin?",
+    answer:
+      "We can typically begin within a few days depending on the engagement scope.",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -156,7 +179,7 @@ export default function HomePage() {
         ctaColor="#ffffff"
       />
       <TestimonialSection />
-      <FaqSection />
+      <FaqSection faqData={faqData} />
       <Insights />
     </>
   );

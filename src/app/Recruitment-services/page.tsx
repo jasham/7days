@@ -3,6 +3,10 @@ import ExpertiseSection from "@/Components/Expertise/Index";
 import FaqSection from "@/Components/Faq";
 import HeroSection from "@/Components/Hero/Hero";
 import ResultsSection from "@/Components/Results";
+import GenericProcessSection, {
+  Item,
+  Step,
+} from "@/Components/TailoredRequirement";
 import TestimonialSection from "@/Components/TeastimonialSection";
 import WhatWeDo from "@/Components/WhatWeDo/Index";
 import WhyPartnerSection from "@/Components/WhyPartnerSection";
@@ -144,7 +148,29 @@ const workPoints: Item[] = [
     description: "",
   },
 ];
-
+const faqData = [
+  {
+    question:
+      "What Makes Your Permanent Recruitment Different From Other Agencies?",
+    answer:
+      "We Don’t Rely Just On Job Ads. We Use Direct Search, Tap Into Passive Candidate Networks, And Focus On Long-Term Value — Not Just Short-Term Placement. We Use A 360 Approach To Sourcing.",
+  },
+  {
+    question: "How Do You Ensure The Candidate Is The Right Long-Term Fit?",
+    answer:
+      "We Take Time To Understand Your Team, Culture, Goals And Leadership Style. Our Shortlist Only Includes Candidates Who Match On Values, Capability And Growth Potential.",
+  },
+  {
+    question: "Can You Help Us With Confidential Or Sensitive Roles?",
+    answer:
+      "Absolutely. We’ve Managed Hundreds Of Off-Market Searches For Middle And Senior Leadership, Restructure Scenarios And Board-Level Hires.",
+  },
+  {
+    question: "We’ve Had Problems With Retention. How Can You Help?",
+    answer:
+      "We Design Every Brief To Focus On Fit, Expectations And Growth Alignment — And Support Post-Placement Success Through Regular Check-Ins. We Can Also Help Through Our Consulting And Advisory Services To Work Out Where The Retention Issues Are.",
+  },
+];
 export default function Home() {
   return (
     <div>
@@ -219,8 +245,9 @@ export default function Home() {
           console.log("Redirect to Read to Build What’s Next?")
         }
       />
+      {/* <ResultsSection CardProps={resultDetails} background=" #014225" /> */}
       <TestimonialSection />
-      <FaqSection />
+      <FaqSection faqData={faqData}/>
       <Insights />
     </div>
   );
