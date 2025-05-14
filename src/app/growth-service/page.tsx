@@ -9,6 +9,30 @@ import TrustedClients from "@/Components/Advisory/TrustedClients";
 import StrategicAdvice from "@/Components/Advisory/StrategicAdvice";
 import GrowthService from "@/Components/Advisory/GrowthService";
 
+const faqData = [
+  {
+    question:
+      "What Makes Your Permanent Recruitment Different From Other Agencies?",
+    answer:
+      "We don’t rely just on job ads. We use direct search, tap into passive candidate networks, and focus on long-term value — not just short-term placement. We use a 360 approach to sourcing.",
+  },
+  {
+    question: "How Do You Ensure The Candidate Is The Right Long-Term Fit?",
+    answer:
+      "We take time to understand your team, culture, goals, and leadership style. Our shortlist only includes candidates who match on values, capability, and growth potential.",
+  },
+  {
+    question: "Can You Help Us With Confidential Or Sensitive Roles?",
+    answer:
+      "Absolutely. We’ve managed hundreds of off-market searches for middle and senior leadership, restructure scenarios, and board-level hires.",
+  },
+  {
+    question: "We’ve Had Problems With Retention. How Can You Help?",
+    answer:
+      "We design every brief to focus on fit, expectations, and growth alignment — and support post-placement success through regular check-ins. We can also help through our consulting and advisory services to work out where the retention issues are.",
+  },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -110,7 +134,7 @@ export default function HomePage() {
         ctaColor="#ffffff"
       />
       <TestimonialSection />
-      <FaqSection />
+      <FaqSection faqData={faqData} />
       <Insights />
     </>
   );

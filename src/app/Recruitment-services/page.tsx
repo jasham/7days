@@ -241,6 +241,9 @@ export default function Home() {
         onButtonClick={() =>
           console.log("Redirect to Read to Build What’s Next?")
         }
+        bottomHeading=""
+        topHeading=""
+        background=""
       />
       {/* <ResultsSection CardProps={resultDetails} background=" #014225" /> */}
       <TestimonialSection />

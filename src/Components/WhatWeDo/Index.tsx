@@ -12,6 +12,8 @@ interface WhatWeDoProps {
   description?: string;
   subHeading?: string;
   description2?: string;
+  description3?: string; // Optional description3 property (if you need it)
+  managementPage?: boolean; // Add this line to define managementPage as optional
 }
 
 const roleCards = [
@@ -29,14 +31,7 @@ const roleCards = [
   },
 ];
 
-const WhatWeDo: React.FC<WhatWeDoProps> = ({
-  cards = true,
-  permanentRecruitment = false,
-  heading,
-  description,
-  subHeading,
-  description2,
-}) => {
+const WhatWeDo: React.FC<WhatWeDoProps> = ({}) => {
   return (
     <Box
       sx={{
