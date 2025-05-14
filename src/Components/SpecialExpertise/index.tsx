@@ -22,7 +22,7 @@ const SpecialistExpertise: React.FC<specialExpertiseProps> = ({
   description,
 }) => {
   return (
-    <Box px={4} py={6} maxWidth={"lg"} mx={"auto"}>
+    <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
       <Heading
         text=" Specialist Expertise"
         textColor="#132D46"

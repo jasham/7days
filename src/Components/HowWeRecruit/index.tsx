@@ -80,7 +80,7 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
 }) => {
   return (
     <Box sx={{ backgroundColor: "#D4E1EF66" }}>
-      <Box px={4} py={8} maxWidth={"lg"} mx={"auto"}>
+      <Box sx={{ color: "#132D46", px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
         <Heading
           text="CONSTRUCTION RECRUITMENT"
           textColor="#132D46"

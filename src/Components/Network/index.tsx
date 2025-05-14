@@ -14,10 +14,16 @@ interface NetworProps {
   construction?: boolean;
   engineeringPage?: boolean;
   permanentRecruitment?: boolean;
+  contractRecruitment?: boolean;
+  executiveSearch?: boolean;
+  internationalRecruitment?: boolean;
   managementPage?: boolean;
   image?: string;
   heading?: string;
   description?: string;
+  bottomText?: string;
+  mt?: number;
+  mb?: number;
 }
 const networkList = [
   "Construction Project Directors and Managers",
@@ -27,6 +33,61 @@ const networkList = [
   "Resources Industry Leadership",
   "Renewable Energy Project Teams",
   "NFP and Public Sector Operations Executives",
+];
+const executiveList = [
+  "Board Chairs and Non-Executive Directors",
+  "Industry-leading C-suite operators",
+  "Regional transformation leaders and state-based functional executives",
+  "Line-level managers and operational leaders",
+  "Emerging successors identified through succession mapping",
+];
+const contractList = [
+  {
+    title: "We help you scale with confidence during:",
+    subItems: [
+      "Major project ramp-ups",
+      "Shutdowns, upgrades and expansions",
+      "Unplanned resource gaps or leave coverage",
+      "High-volume regional or time-sensitive mobilisations",
+    ],
+  },
+  {
+    title: "Our networks span:",
+    subItems: [
+      "Site Engineers, Forepersons and WHS Advisors",
+      "Project Managers, Contract Administrators and Estimators",
+      "Technical and specialist operators",
+      "Commercial Managers and interim project leadership",
+      "White-collar project teams mobilised for 3, 6 or 12-month engagements",
+    ],
+  },
+];
+
+const networkListInternational = [
+  {
+    title: "Aged Care & Community Services",
+    body: "Personal Care Workers, Enrolled Nurses, Disability Support Workers and Care Coordinators — sourced at scale for residential, community and home care programs.",
+  },
+  {
+    title: "Engineering & Construction Support",
+    body: "Skilled Trades Assistants, Project Coordinators, Estimators, WHS Administrators and Document Controllers across infrastructure and built environment projects.",
+  },
+  {
+    title: "Property & Facilities",
+    body: "Facilities Coordinators, Asset Support Officers and Maintenance Administrators for aged care, precinct, commercial and government portfolios.",
+  },
+  {
+    title: "Resources & Remote Operations",
+    body: "FIFO Site Admins, Camp Services Staff, Mobilisation Officers and IR Assistants supporting project delivery in mining and oil & gas environments.",
+  },
+  {
+    title: "Corporate & Business Support",
+    body: "Executive Assistants, Payroll Officers, Finance Clerks, Schedulers and Customer Service Representatives placed into high-volume roles across corporate and government clients.",
+  },
+  {
+    title: "Human Resources & Recruitment Support",
+    body: "Talent Acquisition Assistants, Onboarding Coordinators and HR Officers experienced in high-compliance environments, especially health, care and infrastructure.",
+  },
 ];
 const deepExpertList = [
   "Site ManagementForemen and Site Managers who lead crews, control subcontractors, and keep timelines moving in high-pressure environments.",
@@ -57,13 +118,19 @@ const OurNetworkSection = ({
   image,
   heading,
   description,
+  mt,
+  mb,
+  bottomText,
   construction = false,
   engineeringPage = false,
   permanentRecruitment = false,
+  executiveSearch = false,
+  contractRecruitment = false,
+  internationalRecruitment = false,
   managementPage = false,
 }: NetworProps) => {
   return (
-    <Box px={4} py={10} maxWidth="lg" mx="auto">
+    <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
       <Heading
         text="Work With Our Experts "
         textColor="#132D46"
@@ -129,7 +196,8 @@ const OurNetworkSection = ({
             sx={{
               color: "#132D46",
               fontWeight: 500,
-              mb: 2,
+              mb: mb,
+              mt: mt,
               fontFamily: '"Helvetica Neue", sans-serif',
               fontSize: "24px",
               lineHeight: "100%",
@@ -155,6 +223,98 @@ const OurNetworkSection = ({
                       lineHeight: "120%",
                     }}
                   />
+                </ListItem>
+              ))}
+            {executiveSearch &&
+              executiveList.map((text, idx) => (
+                <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
+                  <ListItemIcon>
+                    <FiberManualRecordIcon sx={{ fontSize: "8px" }} />
+                  </ListItemIcon>
+                  <ListItemText
+                    primary={text}
+                    primaryTypographyProps={{
+                      fontFamily: "Helvetica Neue",
+                      fontWeight: 400,
+                      fontSize: "16px",
+                      lineHeight: "120%",
+                    }}
+                  />
+                </ListItem>
+              ))}
+            {contractRecruitment &&
+              contractList.map((item, idx) => (
+                <Box key={idx} sx={{ mb: 2 }}>
+                  <ListItem disableGutters sx={{ py: 0.5 }}>
+                    <ListItemText
+                      primary={item.title}
+                      primaryTypographyProps={{
+                        fontFamily: "Helvetica Neue",
+                        fontWeight: 400,
+                        fontSize: "18px",
+                        lineHeight: "120%",
+                        mb: 0.5,
+                      }}
+                    />
+                  </ListItem>
+
+                  {/* Render sub-items */}
+                  <Box sx={{ pl: 4 }}>
+                    {item.subItems.map((subItem, subIdx) => (
+                      <ListItem key={subIdx} disableGutters sx={{ py: 0.25 }}>
+                        <ListItemIcon>
+                          <FiberManualRecordIcon sx={{ fontSize: "6px" }} />
+                        </ListItemIcon>
+                        <ListItemText
+                          primary={subItem}
+                          primaryTypographyProps={{
+                            fontFamily: "Helvetica Neue",
+                            fontWeight: 400,
+                            fontSize: "18px",
+                            lineHeight: "120%",
+                            mb: 0.5,
+                          }}
+                        />
+                      </ListItem>
+                    ))}
+                  </Box>
+                </Box>
+              ))}
+
+            {internationalRecruitment &&
+              networkListInternational.map((item, idx) => (
+                <ListItem
+                  key={idx}
+                  disableGutters
+                  sx={{
+                    py: 0.5,
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                  }}
+                >
+                  <Typography
+                    component="span"
+                    sx={{
+                      fontFamily: "Helvetica Neue",
+                      fontWeight: 700, // Bold for title
+                      fontSize: "16px",
+                      lineHeight: "120%",
+                      mb: 0.5,
+                    }}
+                  >
+                    {item.title}
+                  </Typography>
+                  <Typography
+                    component="span"
+                    sx={{
+                      fontFamily: "Helvetica Neue",
+                      fontWeight: 400, // Regular for body
+                      fontSize: "16px",
+                      lineHeight: "120%",
+                    }}
+                  >
+                    {item.body}
+                  </Typography>
                 </ListItem>
               ))}
             {construction &&
@@ -243,16 +403,14 @@ const OurNetworkSection = ({
                 mb: 2,
               }}
             >
-              Our ability to activate trusted networks gives you an edge,
-              bringing candidates to the table who would never respond to
-              traditional ads.
+              {bottomText}
             </Typography>
           )}
         </Grid>
         <CustomButton
           text=" Read to Build What’s Next?"
           color="#132D46"
-          sx={{ BorderColor: "#132D46" }}
+          sx={{ BorderColor: "#132D46", mt: "16px" }}
         />
       </Grid>
     </Box>
