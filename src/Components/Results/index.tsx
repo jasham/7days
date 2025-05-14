@@ -33,7 +33,8 @@ const ResultsSection: React.FC<ResultProps> = ({
   backgroundColor = "#132D46",
   backgroundImage,
   headingText = "Results",
-  subheadingText = "Measured by Results. Chosen for Impact.",
+  // subheadingText = "Measured by Results. Chosen for Impact.",
+  topHeading,
   footerText = "When expertise, trust, and speed come together, growth isn't a goal — it's the outcome.",
   buttonText = "Ready to Build What's Next?",
   cardProps,
@@ -73,7 +74,7 @@ const ResultsSection: React.FC<ResultProps> = ({
         }}
       >
         {/* Subheading */}
-        <Typography variant="h2">{subheadingText}</Typography>
+        <Typography variant="h2">{topHeading}</Typography>
 
         <Box
           sx={{

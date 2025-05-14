@@ -4,7 +4,29 @@ import { Box, Typography, Grid } from "@mui/material";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
 
-const WhatWeDo: React.FC = () => {
+interface WhatWeDoProps {
+  title: string;
+  description1: string;
+  description2: string;
+  description3: string;
+  subHeading: string;
+  subDescription: string;
+  listItems: string[];
+  buttonText: string;
+  onButtonClick?: () => void;
+}
+
+const WhatWeDo: React.FC<WhatWeDoProps> = ({
+  title,
+  description1,
+  description2,
+  description3,
+  subHeading,
+  subDescription,
+  listItems,
+  buttonText,
+  onButtonClick,
+}) => {
   return (
     <Box
       sx={{
@@ -23,8 +45,7 @@ const WhatWeDo: React.FC = () => {
       <Grid container spacing={4}>
         <Grid item xs={12} md={6}>
           <Typography variant="h3" color="#ffffff">
-            Permanent recruitment isn&apos;t about CVs — it&apos;s about
-            capability.
+            {title}
           </Typography>
 
           <Typography
@@ -33,10 +54,7 @@ const WhatWeDo: React.FC = () => {
             textTransform="capitalize"
             sx={{ mt: 3, maxWidth: 500 }}
           >
-            At Henton Consulting, permanent recruitment is about more than
-            filling vacancies. It&apos;s about building capability — securing
-            the professionals and leaders who will shape your
-            organization&apos;s future.
+            {description1}
           </Typography>
 
           <Typography
@@ -45,8 +63,16 @@ const WhatWeDo: React.FC = () => {
             textTransform="capitalize"
             sx={{ mt: 3, maxWidth: 500 }}
           >
-            Our approach ensures every permanent hire strengthens your team,
-            culture, and competitive position.
+            {description2}
+          </Typography>
+
+          <Typography
+            variant="h6"
+            color="#ffffff"
+            textTransform="capitalize"
+            sx={{ mt: 3, maxWidth: 500 }}
+          >
+            {description3}
           </Typography>
         </Grid>
 
@@ -71,52 +97,30 @@ const WhatWeDo: React.FC = () => {
                 fontSize: "1.5rem",
               }}
             >
-              We recruit for:
+              {subHeading}
             </Typography>
 
             <Typography
               variant="h6"
               color="#ffffff"
               textTransform="capitalize"
-              sx={{ mt: 3, maxWidth: 500 }}
+              sx={{ mt: 3, mb: 3, maxWidth: 500 }}
             >
-              Our expertise covers a wide range of skill sets and leadership
-              levels:
+              {subDescription}
             </Typography>
 
             <Box component="ul" sx={{ color: "white", pl: 2 }}>
-              <Typography
-                component="li"
-                variant="h6"
-                textTransform={"capitalize"}
-                sx={{ mb: 1, listStyleType: "disc" }}
-              >
-                Specialist technical roles
-              </Typography>
-              <Typography
-                component="li"
-                variant="h6"
-                textTransform={"capitalize"}
-                sx={{ mb: 1, listStyleType: "disc" }}
-              >
-                Commercial and operational leadership
-              </Typography>
-              <Typography
-                component="li"
-                variant="h6"
-                textTransform={"capitalize"}
-                sx={{ mb: 1, listStyleType: "disc" }}
-              >
-                Middle management to C-suite executives
-              </Typography>
-              <Typography
-                component="li"
-                variant="h6"
-                textTransform={"capitalize"}
-                sx={{ mb: 1, listStyleType: "disc" }}
-              >
-                Confidential and strategic appointments
-              </Typography>
+              {listItems.map((item, index) => (
+                <Typography
+                  key={index}
+                  component="li"
+                  variant="h6"
+                  textTransform={"capitalize"}
+                  sx={{ mb: 2, listStyleType: "disc" }}
+                >
+                  {item}
+                </Typography>
+              ))}
             </Box>
           </Box>
         </Grid>
@@ -124,14 +128,12 @@ const WhatWeDo: React.FC = () => {
       <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
         <Button
           variantStyle="main"
-          buttonColor={"#ffffff"}
+          buttonColor={"#132D46"}
           buttonBgColor="transparent"
-          buttonBorderColor={"#ffffff"}
-          onClick={() => {
-            alert("begining");
-          }}
+          buttonBorderColor={"#132D46"}
+          onClick={onButtonClick}
         >
-          Start the conversation
+          {buttonText}
         </Button>
       </Box>
     </Box>

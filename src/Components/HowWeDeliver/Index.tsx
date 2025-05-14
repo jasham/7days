@@ -1,60 +1,57 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
 
-const features = [
-  {
-    title: "Strategic Role Alignment",
-    description:
-      "We lead detailed calibration sessions with hiring managers and operational leaders to align the role to your growth strategy, not just a position description.",
-  },
-  {
-    title: "Market Mapping and Talent Intelligence",
-    description:
-      "We map the active and passive market, leveraging proprietary databases, headhunting techniques, and industry networks across Australia’s major and regional markets.",
-  },
-  {
-    title: "Direct Search and Talent Activation",
-    description:
-      "We target high-performing passive candidates and present opportunities that align to their personal growth and professional goals.",
-  },
-  {
-    title: "Values-Based Assessment",
-    description:
-      "We assess candidates against behavioural, cultural and leadership alignment metrics — not just skills and experience.",
-  },
-  {
-    title: "Focused Delivery",
-    description:
-      "We don’t create shortlists, we present only the best candidate in 7–10 business days, complete with summary profile, capability analysis and leadership fit scoring.",
-  },
-];
+interface FeatureItem {
+  title: string;
+  description: string;
+}
 
-const HowWeDeliverPermanentRecruitment = () => {
+interface HowWeDeliverRecruitmentProps {
+  headingText: string;
+  mainTitle: string;
+  subTitle: string;
+  image: string;
+  buttonText: string;
+  features: FeatureItem[];
+}
+
+// ✅ Use the interface in your component
+const HowWeDeliverRecruitment = ({
+  headingText,
+  mainTitle,
+  subTitle,
+  image,
+  buttonText,
+  features,
+}: HowWeDeliverRecruitmentProps) => {
   return (
     <Box sx={{ background: "#D4E1EF66" }}>
-      <Box px={4} py={10} maxWidth="lg" mx="auto">
+      <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
         <Heading
-          text="Permanent Recruitment Services"
+          text={headingText}
           textColor="#132D46"
           dividerColor="#132D46"
           dividerHeight="1px"
           marginBottom="16px"
         />
         <Grid container spacing={4}>
-          {/* Left Side */}
           <Grid item xs={12} md={5}>
-            <Typography
-              sx={{
-                fontFamily: "Helvetica Neue",
-                fontWeight: 700,
-                fontSize: "48px",
-                color: "#2E2C38",
-                lineHeight: "100%",
-                mb: 2,
-              }}
-            >
-              How we deliver permanent recruitment
-            </Typography>
+            {mainTitle.split(".").map((part: string, index: number) => (
+              <Typography
+                key={index}
+                sx={{
+                  fontFamily: "Helvetica Neue",
+                  fontWeight: 700,
+                  fontSize: "48px",
+                  color: "#2E2C38",
+                  lineHeight: "100%",
+                  mb: index === 0 ? 0 : 2,
+                }}
+              >
+                {part.trim()}
+                {index !== mainTitle.split(".").length - 1 && "."}
+              </Typography>
+            ))}
 
             <Typography
               sx={{
@@ -64,31 +61,19 @@ const HowWeDeliverPermanentRecruitment = () => {
                 lineHeight: "100%",
                 color: "#2E2C38",
                 mb: 2,
+                mt: 2,
               }}
             >
-              Permanent hiring demands precision and our system delivers it.
-            </Typography>
-
-            <Typography
-              sx={{
-                fontFamily: "Helvetica Neue",
-                fontWeight: 400,
-                fontSize: "16px",
-                lineHeight: "24px",
-                color: "#2E2C38",
-                mb: 3,
-              }}
-            >
-              Every search includes:
+              {subTitle}
             </Typography>
 
             <Box
               sx={{
                 width: "100%",
-                height: "300px", // adjust as needed
+                height: "300px",
                 borderRadius: "10px",
                 mb: 3,
-                backgroundImage: `linear-gradient(180deg, rgba(19, 45, 70, 0.48) 0%, rgba(19, 45, 70, 0.6) 100%), url('/womenPresenting.jpg')`,
+                backgroundImage: `linear-gradient(180deg, rgba(19, 45, 70, 0.48) 0%, rgba(19, 45, 70, 0.6) 100%), url(${image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
               }}
@@ -112,11 +97,10 @@ const HowWeDeliverPermanentRecruitment = () => {
                 },
               }}
             >
-              Build Your Team
+              {buttonText}
             </Button>
           </Grid>
 
-          {/* Right Side */}
           <Grid item xs={12} md={7}>
             <Grid container spacing={3}>
               {features.map((item, index) => (
@@ -154,4 +138,4 @@ const HowWeDeliverPermanentRecruitment = () => {
   );
 };
 
-export default HowWeDeliverPermanentRecruitment;
+export default HowWeDeliverRecruitment;

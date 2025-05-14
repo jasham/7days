@@ -147,6 +147,8 @@ export default function constructionRecruitmentPage() {
       <OurNetworkSection
         image="/expertImage.jpg"
         construction={true}
+        mt={-10}
+        mb={20}
         heading="Deep expertise./ Built for site realities."
         description="We don’t chase resumes, we chase results. Our construction networks are built project by project, site by site, with live intel on who’s performing, where, and why it matters."
       />
@@ -160,13 +162,14 @@ export default function constructionRecruitmentPage() {
                 they’re not actively looking. Every engagement includes."
       />
       <WhyPartnerSection
-        CardList={ExpertList}
+        cards={ExpertList.myCards}
         title="Why employers trust us."
         subTitle=""
         color="rgba(1, 66, 37, 0.8)"
       />
       <ResultsSection
-        CardProps={resultDetails}
+        cardProps={resultDetails}
+        backgroundImage="/constructionResult.jpg"
         background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/results-bg.jpg')"
         topHeading="Where Strategy Demands Action"
         bottomHeading="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."

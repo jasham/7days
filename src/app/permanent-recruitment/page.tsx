@@ -1,7 +1,7 @@
 "use client";
 import FaqSection from "@/Components/Faq";
 import HeroSection from "@/Components/Hero/Hero";
-import HowWeDeliverPermanentRecruitment from "@/Components/HowWeDeliver/Index";
+import HowWeDeliverRecruitment from "@/Components/HowWeDeliver/Index";
 import Insights from "@/Components/Insights/index";
 import OurNetworkSection from "@/Components/Network";
 import ResultsSection from "@/Components/Results";
@@ -84,6 +84,35 @@ const faqData = [
       "We Design Every Brief To Focus On Fit, Expectations And Growth Alignment — And Support Post-Placement Success Through Regular Check-Ins. We Can Also Help Through Our Consulting And Advisory Services To Work Out Where The Retention Issues Are.",
   },
 ];
+
+const permanentFeatures = [
+  {
+    title: "Strategic Role Alignment",
+    description:
+      "We lead detailed calibration sessions with hiring managers and operational leaders to align the role to your growth strategy, not just a position description.",
+  },
+  {
+    title: "Market Mapping and Talent Intelligence",
+    description:
+      "We map the active and passive market, leveraging proprietary databases, headhunting techniques, and industry networks across Australia’s major and regional markets.",
+  },
+  {
+    title: "Direct Search and Talent Activation",
+    description:
+      "We target high-performing passive candidates and present opportunities that align to their personal growth and professional goals.",
+  },
+  {
+    title: "Values-Based Assessment",
+    description:
+      "We assess candidates against behavioural, cultural and leadership alignment metrics — not just skills and experience.",
+  },
+  {
+    title: "Focused Delivery",
+    description:
+      "We don’t create shortlists, we present only the best candidate in 7–10 business days, complete with summary profile, capability analysis and leadership fit scoring.",
+  },
+];
+
 export default function permanentRecruitmentPage() {
   return (
     <div>
@@ -103,10 +132,21 @@ export default function permanentRecruitmentPage() {
 
       <OurNetworkSection
         permanentRecruitment={true}
+        mt={-15}
+        mb={20}
         heading="Our Network Advantage"
+        bottomText="Our ability to activate trusted networks gives you an edge, bringing candidates to the table who would never respond to traditional ads."
         description="Unlike generalist recruiters, Henton operates inside industry ecosystems. We maintain deep sector connections across:"
+        image="/Network2.svg"
       />
-      <HowWeDeliverPermanentRecruitment />
+      <HowWeDeliverRecruitment
+        headingText="Permanent Recruitment Services"
+        mainTitle="How we deliver permanent recruitment"
+        subTitle="Permanent hiring demands precision and our system delivers it."
+        image="/womenPresenting.jpg"
+        buttonText="Build Your Team"
+        features={permanentFeatures}
+      />
       <ResultsSection
         cardProps={resultDetails}
         background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/results-bg.jpg')"
