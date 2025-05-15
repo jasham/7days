@@ -1,64 +1,19 @@
 'use client';
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
+import { StrategicPartnershipsProps } from "@/types/homeInterfaces";
 
-type Partner = {
-  src: string;
-  alt: string;
-};
-
-const partners: Partner[] = [
-  { src: "/partners/partner1.jpg", alt: "Master Builders Australia" },
-  { src: "/partners/partner2.jpg", alt: "Australian Constructors Association" },
-  { src: "/partners/partner3.jpg", alt: "Housing Industry Association" },
-  { src: "/partners/partner4.jpg", alt: "RCSA" },
-  { src: "/partners/partner5.png", alt: "APSCo Australia" },
-];
-
-const StrategicPartnerships: React.FC = () => {
+export default function StrategicPartnerships({ title, partners }: StrategicPartnershipsProps) {
   return (
-    <Box component="section" sx={{ px: { xs: 2, md: 10, background: "#ffffff" }, py: { xs: 4, md: 8 }, display: "flex", flexDirection: { xs: "column", md: "row" }, alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 4 }}>
-      {/* Heading */}
-      <Typography variant="h2" color="#132D46"
-        sx={{
-          width: { xs: "100%", md: "30%" },
-          color: "#132D46",
-        }}
-      >
-        Strategic Partnerships
-      </Typography>
-
-      {/* Partner Logos */}
-      <Box
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: 12,
-          justifyContent: "center",
-          width: { xs: "100%", md: "65%" },
-        }}
-      >
-        {partners.map((partner, index) => (
-          <Box
-            key={index}
-            sx={{
-              width: "100px",
-              height: "60px",
-              position: "relative",
-              flexShrink: 0,
-            }}
-          >
-            <Image
-              src={partner.src}
-              alt={partner.alt}
-              fill
-              style={{ objectFit: "contain" }}
-            />
+    <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }, display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 4 }}>
+      <Typography variant="h2" sx={{ width: { md: "30%" } }}>{title}</Typography>
+      <Box sx={{ display: "flex", flexWrap: "wrap", gap: 10, justifyContent: "center", width: { md: "65%" } }}>
+        {partners.map((partner, idx) => (
+          <Box key={idx} sx={{ width: 100, height: 60, position: "relative" }}>
+            <Image src={partner.src} alt={partner.alt} fill style={{ objectFit: "contain" }} />
           </Box>
         ))}
       </Box>
     </Box>
   );
-};
-
-export default StrategicPartnerships;
+}

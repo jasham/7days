@@ -10,7 +10,16 @@ import {
 } from "@mui/material";
 import CustomButton from "../Button";
 import Heading from "../Heading/Heading";
-interface NetworProps {
+import React from "react";
+
+interface NetworkProps {
+  image?: string;
+  heading?: string;
+  description?: string;
+  bottomText?: string;
+  mt?: number;
+  mb?: number;
+  // section flags
   construction?: boolean;
   engineeringPage?: boolean;
   permanentRecruitment?: boolean;
@@ -18,13 +27,16 @@ interface NetworProps {
   executiveSearch?: boolean;
   internationalRecruitment?: boolean;
   managementPage?: boolean;
-  image?: string;
-  heading?: string;
-  description?: string;
-  bottomText?: string;
-  mt?: number;
-  mb?: number;
+  propertyRecruitmentPage?: boolean;
 }
+
+const Bullet = ({ size = 8 }: { size?: number }) => (
+  <ListItemIcon sx={{ minWidth: size + 4 }}>
+    <FiberManualRecordIcon sx={{ fontSize: size }} />
+  </ListItemIcon>
+);
+
+// Your raw data arrays (unchanged)
 const networkList = [
   "Construction Project Directors and Managers",
   "Property Development Executives",
@@ -89,6 +101,34 @@ const networkListInternational = [
     body: "Talent Acquisition Assistants, Onboarding Coordinators and HR Officers experienced in high-compliance environments, especially health, care and infrastructure.",
   },
 ];
+
+const propertyListRecruitment = [
+  {
+    title: "Acquisitions & Development Management",
+    body: "Commercially minded talent who unlock value, shape feasibility, and align with investor goals.",
+  },
+  {
+    title: "Project & Construction Management",
+    body: "Proven operators who keep delivery on track — managing timeline pressure and contractor risk.",
+  },
+  {
+    title: "Asset Management",
+    body: "Specialists focused on NOI, tenant performance, and asset yield.",
+  },
+  {
+    title: "Town Planning & Urban Design",
+    body: "Strategic thinkers who balance community needs with commercial realities.",
+  },
+  {
+    title: "Leasing, Property & Facilities Management",
+    body: "From leasing leads to FM experts, we place those who protect asset value and drive retention.",
+  },
+  {
+    title: "Real Estate Investment & Funds Management",
+    body: "Analysts, asset managers, and fund executives aligned to IRR targets and investor mandates.",
+  },
+];
+
 const deepExpertList = [
   "Site ManagementForemen and Site Managers who lead crews, control subcontractors, and keep timelines moving in high-pressure environments.",
   "Contract Administration & EstimatingProfessionals who scope risk, protect margins and keep costs under control across commercial and civil projects.",
@@ -114,48 +154,56 @@ const managementExpertList = [
   "WHS, Risk & Governance:-WHS Managers, Risk and Compliance Officers who drive audit-readiness, mitigate operational risk and maintain safety across regulated environments.",
   "Multi-Site & National Operations:-Portfolio Facilities Managers, National Operations Managers and Regional FM Leads who deliver consistency, cost control and risk management across distributed asset bases.",
 ];
-const OurNetworkSection = ({
-  image,
-  heading,
-  description,
-  mt,
-  mb,
-  bottomText,
-  construction = false,
-  engineeringPage = false,
-  permanentRecruitment = false,
-  executiveSearch = false,
-  contractRecruitment = false,
-  internationalRecruitment = false,
-  managementPage = false,
-}: NetworProps) => {
+
+
+export default function OurNetworkSection(props: NetworkProps) {
+  const {
+    image,
+    heading = "",
+    description,
+    bottomText,
+    mt,
+    mb,
+    construction,
+    engineeringPage,
+    permanentRecruitment,
+    contractRecruitment,
+    executiveSearch,
+    internationalRecruitment,
+    managementPage,
+    propertyRecruitmentPage,
+  } = props;
+
+  // one place to declare all your conditional lists
+  const sections: Array<{
+    active: boolean | undefined;
+    type: "plain" | "split" | "contract" | "intl";
+    data: any;
+  }> = [
+    { active: permanentRecruitment, type: "plain", data: networkList },
+    { active: executiveSearch,     type: "plain", data: executiveList },
+    { active: contractRecruitment, type: "contract", data: contractList },
+    { active: internationalRecruitment, type: "intl", data: networkListInternational },
+    { active: construction,        type: "plain", data: deepExpertList },
+    { active: engineeringPage,     type: "split", data: engineeringExpertList },
+    { active: managementPage,      type: "split", data: managementExpertList },
+    { active: propertyRecruitmentPage, type: "intl", data: propertyListRecruitment },
+  ];
+
   return (
     <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
       <Heading
-        text="Work With Our Experts "
+        text="Work With Our Experts"
         textColor="#132D46"
         dividerColor="#132D46"
         dividerHeight="1px"
         marginBottom="16px"
       />
 
-      <Grid
-        container
-        spacing={4}
-        alignItems="center"
-        justifyContent={"center"}
-        mt={2}
-      >
-        {/* Left: Image */}
+      <Grid container spacing={4} alignItems="center" justifyContent="center" mt={2}>
+        {/* Left: Heading + Image */}
         <Grid item xs={12} md={6}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "60px",
-              marginTop: "0",
-            }}
-          >
+          <Box sx={{ display: "flex", flexDirection: "column", gap: 6 }}>
             <Typography
               variant="h5"
               sx={{
@@ -164,235 +212,184 @@ const OurNetworkSection = ({
                 fontWeight: 700,
                 fontSize: "40px",
                 lineHeight: "110%",
-                mb: 2,
               }}
             >
-              {/* Our Network Advantage */}
-              {heading?.split("/")[0]}
-              <br />
-              {heading?.split("/")[1]}
+              {heading.split("/").map((line, i) => (
+                <span key={i}>
+                  {line}
+                  <br />
+                </span>
+              ))}
             </Typography>
-
-            <Box
-              component="img"
-              src={image}
-              alt="Map of Australia"
-              sx={{
-                width: "100%",
-                maxWidth: 637,
-                aspectRatio: "637 / 531.87",
-                borderRadius: "16px",
-                display: "block",
-                objectFit: "cover",
-                mx: "auto", // optional: centers the image horizontally
-              }}
-            />
+            {image && (
+              <Box
+                component="img"
+                src={image}
+                alt=""
+                sx={{
+                  width: "100%",
+                  borderRadius: 2,
+                  objectFit: "cover",
+                  mx: "auto",
+                }}
+              />
+            )}
           </Box>
         </Grid>
 
-        {/* Right: Text Content */}
+        {/* Right: Description + Lists */}
         <Grid item xs={12} md={6}>
-          <Typography
-            sx={{
-              color: "#132D46",
-              fontWeight: 500,
-              mb: mb,
-              mt: mt,
-              fontFamily: '"Helvetica Neue", sans-serif',
-              fontSize: "24px",
-              lineHeight: "100%",
-              letterSpacing: "0%",
-            }}
-          >
-            {description}
-          </Typography>
+          {description && (
+            <Typography
+              sx={{
+                color: "#132D46",
+                fontWeight: 500,
+                mb,
+                mt,
+                fontFamily: '"Helvetica Neue", sans-serif',
+                fontSize: "24px",
+                lineHeight: "100%",
+              }}
+            >
+              {description}
+            </Typography>
+          )}
 
           <List dense sx={{ pl: 2, mb: 2, borderLeft: "1px solid grey" }}>
-            {permanentRecruitment &&
-              networkList.map((text, idx) => (
-                <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
-                  <ListItemIcon>
-                    <FiberManualRecordIcon sx={{ fontSize: "8px" }} />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={text}
-                    primaryTypographyProps={{
-                      fontFamily: "Helvetica Neue",
-                      fontWeight: 400,
-                      fontSize: "16px",
-                      lineHeight: "120%",
-                    }}
-                  />
-                </ListItem>
-              ))}
-            {executiveSearch &&
-              executiveList.map((text, idx) => (
-                <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
-                  <ListItemIcon>
-                    <FiberManualRecordIcon sx={{ fontSize: "8px" }} />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={text}
-                    primaryTypographyProps={{
-                      fontFamily: "Helvetica Neue",
-                      fontWeight: 400,
-                      fontSize: "16px",
-                      lineHeight: "120%",
-                    }}
-                  />
-                </ListItem>
-              ))}
-            {contractRecruitment &&
-              contractList.map((item, idx) => (
-                <Box key={idx} sx={{ mb: 2 }}>
-                  <ListItem disableGutters sx={{ py: 0.5 }}>
-                    <ListItemText
-                      primary={item.title}
-                      primaryTypographyProps={{
-                        fontFamily: "Helvetica Neue",
-                        fontWeight: 400,
-                        fontSize: "18px",
-                        lineHeight: "120%",
-                        mb: 0.5,
-                      }}
-                    />
-                  </ListItem>
+            {sections
+              .filter((sec) => sec.active)
+              .map((sec, idx) => {
+                switch (sec.type) {
+                  case "plain":
+                    return (
+                      <React.Fragment key={idx}>
+                        {sec.data.map((text: string, i: number) => (
+                          <ListItem key={i} disableGutters sx={{ py: 0.5 }}>
+                            <Bullet size={8} />
+                            <ListItemText
+                              primary={text}
+                              primaryTypographyProps={{
+                                fontFamily: "Helvetica Neue",
+                                fontWeight: 400,
+                                fontSize: "16px",
+                                lineHeight: "120%",
+                              }}
+                            />
+                          </ListItem>
+                        ))}
+                      </React.Fragment>
+                    );
 
-                  {/* Render sub-items */}
-                  <Box sx={{ pl: 4 }}>
-                    {item.subItems.map((subItem, subIdx) => (
-                      <ListItem key={subIdx} disableGutters sx={{ py: 0.25 }}>
-                        <ListItemIcon>
-                          <FiberManualRecordIcon sx={{ fontSize: "6px" }} />
-                        </ListItemIcon>
-                        <ListItemText
-                          primary={subItem}
-                          primaryTypographyProps={{
-                            fontFamily: "Helvetica Neue",
-                            fontWeight: 400,
-                            fontSize: "18px",
-                            lineHeight: "120%",
-                            mb: 0.5,
-                          }}
-                        />
-                      </ListItem>
-                    ))}
-                  </Box>
-                </Box>
-              ))}
+                  case "split":
+                    return (
+                      <React.Fragment key={idx}>
+                        {sec.data.map((entry: string, i: number) => {
+                          const [title, body] = entry.split(":-");
+                          return (
+                            <ListItem key={i} disableGutters sx={{ py: 0.5 }}>
+                              <Bullet size={8} />
+                              <Box>
+                                <ListItemText
+                                  primary={title}
+                                  primaryTypographyProps={{
+                                    fontFamily: "Helvetica Neue",
+                                    fontWeight: 500,
+                                    fontSize: "18px",
+                                    lineHeight: "100%",
+                                  }}
+                                />
+                                <ListItemText
+                                  primary={body}
+                                  primaryTypographyProps={{
+                                    fontFamily: "Helvetica Neue",
+                                    fontWeight: 400,
+                                    fontSize: "18px",
+                                    lineHeight: "100%",
+                                  }}
+                                />
+                              </Box>
+                            </ListItem>
+                          );
+                        })}
+                      </React.Fragment>
+                    );
 
-            {internationalRecruitment &&
-              networkListInternational.map((item, idx) => (
-                <ListItem
-                  key={idx}
-                  disableGutters
-                  sx={{
-                    py: 0.5,
-                    flexDirection: "column",
-                    alignItems: "flex-start",
-                  }}
-                >
-                  <Typography
-                    component="span"
-                    sx={{
-                      fontFamily: "Helvetica Neue",
-                      fontWeight: 700, // Bold for title
-                      fontSize: "16px",
-                      lineHeight: "120%",
-                      mb: 0.5,
-                    }}
-                  >
-                    {item.title}
-                  </Typography>
-                  <Typography
-                    component="span"
-                    sx={{
-                      fontFamily: "Helvetica Neue",
-                      fontWeight: 400, // Regular for body
-                      fontSize: "16px",
-                      lineHeight: "120%",
-                    }}
-                  >
-                    {item.body}
-                  </Typography>
-                </ListItem>
-              ))}
-            {construction &&
-              deepExpertList.map((text, idx) => (
-                <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
-                  <ListItemIcon>
-                    <FiberManualRecordIcon sx={{ fontSize: "8px" }} />
-                  </ListItemIcon>
-                  <ListItemText
-                    primary={text}
-                    primaryTypographyProps={{
-                      fontFamily: "Helvetica Neue",
-                      fontWeight: 400,
-                      fontSize: "16px",
-                      lineHeight: "120%",
-                    }}
-                  />
-                </ListItem>
-              ))}
-            {engineeringPage &&
-              engineeringExpertList.map((text, idx) => (
-                <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
-                  <ListItemIcon>
-                    <FiberManualRecordIcon sx={{ fontSize: "8px" }} />
-                  </ListItemIcon>
-                  <Box sx={{}}>
-                    <ListItemText
-                      primary={text.split(":-")[0]}
-                      primaryTypographyProps={{
-                        fontFamily: "Helvetica Neue",
-                        fontWeight: 500,
-                        fontSize: "18px",
-                        lineHeight: "100%",
-                      }}
-                    />
-                    <ListItemText
-                      primary={text.split(":-")[1]}
-                      primaryTypographyProps={{
-                        fontFamily: "Helvetica Neue",
-                        fontWeight: 400,
-                        fontSize: "18px",
-                        lineHeight: "100%",
-                      }}
-                    />
-                  </Box>
-                </ListItem>
-              ))}
-            {managementPage &&
-              managementExpertList.map((text, idx) => (
-                <ListItem key={idx} disableGutters sx={{ py: 0.5 }}>
-                  <ListItemIcon>
-                    <FiberManualRecordIcon sx={{ fontSize: "8px" }} />
-                  </ListItemIcon>
-                  <Box sx={{}}>
-                    <ListItemText
-                      primary={text.split(":-")[0]}
-                      primaryTypographyProps={{
-                        fontFamily: "Helvetica Neue",
-                        fontWeight: 500,
-                        fontSize: "18px",
-                        lineHeight: "100%",
-                      }}
-                    />
-                    <ListItemText
-                      primary={text.split(":-")[1]}
-                      primaryTypographyProps={{
-                        fontFamily: "Helvetica Neue",
-                        fontWeight: 400,
-                        fontSize: "18px",
-                        lineHeight: "100%",
-                      }}
-                    />
-                  </Box>
-                </ListItem>
-              ))}
+                  case "contract":
+                    return (
+                      <React.Fragment key={idx}>
+                        {sec.data.map((block: any, i: number) => (
+                          <Box key={i} sx={{ mb: 2 }}>
+                            <ListItem disableGutters sx={{ py: 0.5 }}>
+                              <ListItemText
+                                primary={block.title}
+                                primaryTypographyProps={{
+                                  fontFamily: "Helvetica Neue",
+                                  fontWeight: 400,
+                                  fontSize: "18px",
+                                  mb: 0.5,
+                                }}
+                              />
+                            </ListItem>
+                            <Box sx={{ pl: 4 }}>
+                              {block.subItems.map((si: string, j: number) => (
+                                <ListItem key={j} disableGutters sx={{ py: 0.25 }}>
+                                  <Bullet size={6} />
+                                  <ListItemText
+                                    primary={si}
+                                    primaryTypographyProps={{
+                                      fontFamily: "Helvetica Neue",
+                                      fontWeight: 400,
+                                      fontSize: "18px",
+                                    }}
+                                  />
+                                </ListItem>
+                              ))}
+                            </Box>
+                          </Box>
+                        ))}
+                      </React.Fragment>
+                    );
+
+                  case "intl":
+                    return (
+                      <React.Fragment key={idx}>
+                        {sec.data.map((item: any, i: number) => (
+                          <ListItem
+                            key={i}
+                            disableGutters
+                            sx={{ py: 0.5, flexDirection: "column", alignItems: "flex-start" }}
+                          >
+                            <Typography
+                              sx={{
+                                fontFamily: "Helvetica Neue",
+                                fontWeight: 700,
+                                fontSize: "16px",
+                                mb: 0.5,
+                              }}
+                            >
+                              {item.title}
+                            </Typography>
+                            <Typography
+                              sx={{
+                                fontFamily: "Helvetica Neue",
+                                fontWeight: 400,
+                                fontSize: "16px",
+                              }}
+                            >
+                              {item.body}
+                            </Typography>
+                          </ListItem>
+                        ))}
+                      </React.Fragment>
+                    );
+
+                  default:
+                    return null;
+                }
+              })}
           </List>
 
-          {!construction && (
+          {!construction && bottomText && (
             <Typography
               sx={{
                 fontFamily: "Helvetica Neue",
@@ -407,14 +404,15 @@ const OurNetworkSection = ({
             </Typography>
           )}
         </Grid>
-        <CustomButton
-          text=" Read to Build What’s Next?"
-          color="#132D46"
-          sx={{ BorderColor: "#132D46", mt: "16px" }}
-        />
+
+        <Grid item xs={12} textAlign="center">
+          <CustomButton
+            text="Ready to Build What’s Next?"
+            color="#132D46"
+            sx={{ borderColor: "#132D46", mt: 2 }}
+          />
+        </Grid>
       </Grid>
     </Box>
   );
-};
-
-export default OurNetworkSection;
+}

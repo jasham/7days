@@ -97,6 +97,7 @@ export default function ImageCard({
                 height: "100%",
                 justifyContent: isLeft ? "flex-end" : "center",
                 alignItems: isLeft ? "left" : "center",
+                textAlign: isLeft ? "left" : "center",
               }}
             >
               <Typography variant="h3" fontWeight="bold" color="#ffffff">

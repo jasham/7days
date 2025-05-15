@@ -24,9 +24,9 @@ interface ResultProps {
   buttonText?: string;
   cardProps?: CardProps;
   onButtonClick?: () => void;
-  topHeading: string;
-  background: string;
-  bottomHeading: string;
+  topHeading?: string;
+  background?: string;
+  bottomHeading?: string;
 }
 
 const ResultsSection: React.FC<ResultProps> = ({
