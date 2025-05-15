@@ -44,7 +44,7 @@ const StrategicAdvice: React.FC = () => {
             width: "50%",
           }}
         >
-          <Typography variant="h6" textTransform={"capitalize"} sx={{ mb: 2 }}>
+          <Typography variant="h6" textTransform={"capitalize"} sx={{ mb: 2, mt: 4 }}>
             We help organisations solve complex business problems — not with
             theory, but with sharp, commercially grounded advice. Our consulting
             work is built for businesses facing moments of pressure or

@@ -1,4 +1,3 @@
-
 "use client";
 import FaqSection from "@/Components/Faq";
 import HeroSection from "@/Components/Hero/Hero";
@@ -23,7 +22,7 @@ const heroDetails: HeroProps = {
   description:
     "Flexible recruitment that’s fast, reliable and built to perform.",
   buttonText: "Begin your success story",
-  imageUrl: "/Hero3.jpg",
+  imageUrl: "/contractHero.jpg",
 };
 
 interface CardItem {
@@ -39,19 +38,19 @@ interface CardProps {
 const resultDetails: CardProps = {
   cardDetails: [
     {
-      score: "91%",
+      score: "89%",
       title: "",
-      description: "of permanent placements retained 12+ months",
+      description: "of contractors are extended beyond their initial engagement",
     },
     {
       score: "100%",
       title: "",
-      description: "of retained assignments completed within timeframe",
+      description: "audit pass rate across all managed contractor placements",
     },
     {
-      score: "83%",
+      score: "85%",
       title: "",
-      description: "of roles filled from the first candidate presented",
+      description: "of contract clients return for additional placements",
     },
   ],
 };
@@ -68,7 +67,8 @@ const faqData = [
       "Yes. We handle all core contractor administration — including contracts, payroll, insurances and super — so you can focus on delivery, not paperwork.",
   },
   {
-    question: "What if a role requires specific software or project experience?",
+    question:
+      "What if a role requires specific software or project experience?",
     answer:
       "We assess candidate relevance based on your brief, including past exposure to systems like Procore or Aconex. We don’t verify licences or inductions — but we flag known experience early.",
   },
@@ -155,7 +155,15 @@ export default function permanentRecruitmentPage() {
         topHeading="Results that matter"
         bottomHeading="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
       />
-      <TestimonialSection />
+      <TestimonialSection
+        heading="What our clients say"
+        title="Reviews"
+        description="Here’s what our clients have to say about working with us. Real experiences, real feedback."
+        quote="“Henton Consulting always provide quality candidates”"
+        detail="They are extremely efficient with communication. I would highly recommend their services."
+        author="Alicia Lawrence, HR Business Partner"
+        company="Pomeroy Pacific"
+      />
       <FaqSection faqData={faqData} />
       <Insights />
     </div>

@@ -53,7 +53,7 @@ const WhyPartnerSection: React.FC<Experts> = ({
           justifyContent: "space-between",
         }}
       >
-        <Typography variant="h3" color={headingColor} width="48%">
+        <Typography variant="h3" color={headingColor}>
           {title}
         </Typography>
         <Typography

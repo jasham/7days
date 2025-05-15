@@ -16,7 +16,7 @@ import {
     description:
       "Find and secure the right talent with recruitment services built around your business goals.",
     action: "Begin your success story",
-    imageUrl: "/Hero.jpg",
+    imageUrl: "/recruitmentHero.jpg",
     buttonText: "Begin your success story",
   };
   
@@ -24,22 +24,22 @@ import {
     export const resultDetails: CardProps = {
       cardDetails: [
         {
-          score: "20+",
-          title: "Years of Industry Expertise",
+          score: "98%",
+          title: "Consistent outcomes on retained roles",
           description:
-            "Backed by over two decades of recruitment and consulting experience across Property, Construction, Engineering, and Corporate sectors.",
+            "",
         },
         {
-          score: "95%",
+          score: "500+",
           title: "Client Retention Rate",
           description:
-            "Our clients trust us to deliver — and 95% return to partner with Henton again for future recruitment and strategic needs.",
+            "",
         },
         {
           score: "98%",
-          title: "of Roles Filled Within 30 Days",
+          title: "Trusted by CEOs, COOs, GMs and operational leaders across Australia",
           description:
-            "Our efficient, targeted recruitment process ensures critical roles are placed faster — without compromising on quality.",
+            "",
         },
       ],
     };
@@ -91,7 +91,7 @@ import {
   
   // --- GenericProcessSection
   export const genericProcessData: GenericProcessSectionProps = {
-    backgroundImage: "/advisory.jpg",
+    backgroundImage: "/recruitmentAdvisory.jpg",
     heading: "Tailored Recruitment Processes",
     intro: [
       { description: "We combine search precision with business fluency." },
@@ -149,10 +149,10 @@ import {
     description:
       "Here is what our clients have to say about working with us. Real experiences, real feedback.",
     quote:
-      "The calibre of candidates has always exceeded what others have put forward.",
+      "I’ve had the pleasure of working with Guy Ingleby for 10 years.",
     detail:
-      "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-    author: "Stephen Kerfoot, Director",
+      "I can confidently say they are one of the most effective and professional recruiters I’ve partnered with. Their deep understanding of our business, industry and commitment to finding the right cultural and technical fit have made a real impact on our team.",
+    author: "Chris Elliott, Director",
     company: "Kerfoot Electrics",
   };
   
@@ -188,7 +188,7 @@ import {
     subheading:
       "At Henton, we deliver three core recruitment solutions — each aligned to your operational needs, timelines and long-term growth.",
     paragraph: "We deliver:",
-    imageSrc: "/womenPresenting.jpg",
+    imageSrc: "/recruitmentService.jpg",
     imageAlt: "Planning Meeting",
     leftButtonText: "Build Your Team",
     services: [

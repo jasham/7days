@@ -13,6 +13,7 @@ interface WhatWeDoProps {
   subDescription: string;
   listItems: string[];
   buttonText: string;
+  subListBottom: string,
   onButtonClick?: () => void;
 }
 
@@ -26,6 +27,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
   listItems,
   buttonText,
   onButtonClick,
+  subListBottom
 }) => {
   return (
     <Box
@@ -122,6 +124,15 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
                 </Typography>
               ))}
             </Box>
+
+            <Typography
+              variant="h6"
+              color="#ffffff"
+              textTransform="capitalize"
+              sx={{ mt: 3, mb: 3, maxWidth: 500 }}
+            >
+              {subListBottom}
+            </Typography>
           </Box>
         </Grid>
       </Grid>

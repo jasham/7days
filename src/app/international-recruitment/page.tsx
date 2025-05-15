@@ -21,7 +21,7 @@ const heroDetails: HeroProps = {
   description:
     "We help Australian organisations find skilled talent where local supply can’t keep up.",
   buttonText: "Begin your success story",
-  imageUrl: "/Hero3.jpg",
+  imageUrl: "/internationalHero.jpg",
 };
 const faqData = [
   {
@@ -101,7 +101,7 @@ export default function permanentRecruitmentPage() {
         description="Targeted international recruitment aligned to workforce shortages, sector needs and long-term success in the Australian market."
       />
       <OurNetworkSection
-        mt={-8}
+        mt={-4}
         mb={2}
         internationalRecruitment={true}
         heading="Our Global Network. Your Advantage."
@@ -117,7 +117,15 @@ export default function permanentRecruitmentPage() {
         buttonText="Build Your Team"
         features={internationalFeatures}
       />
-      <TestimonialSection />
+      <TestimonialSection
+        heading="What our clients say"
+        title="Reviews"
+        description="Here’s what our clients have to say about working with us. Real experiences, real feedback."
+        quote="“Henton Consulting always provide quality candidates”"
+        detail="They are extremely efficient with communication. I would highly recommend their services."
+        author="Alicia Lawrence, HR Business Partner"
+        company="Pomeroy Pacific"
+      />
       <FaqSection faqData={faqData} />
       <Insights />
     </div>

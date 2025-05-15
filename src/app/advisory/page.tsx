@@ -80,19 +80,24 @@ interface FaqItem {
 
 const faqData: FaqItem[] = [
   {
-    question: "What industries do you work with?",
+    question: "What types of organisations do you consult to?",
     answer:
-      "We work across sectors including infrastructure, services, for-purpose, and growth-stage companies.",
+      "We work with privately owned, PE-backed and mid-sized listed businesses across construction, property, services, industrials and for-purpose sectors. Our core focus is businesses between 50–2000 employees.",
   },
   {
-    question: "What makes your advisory different?",
+    question: "How is this different from traditional HR consulting?",
     answer:
-      "Every engagement is led by a senior advisor with real-world leadership experience, focusing on practical change.",
+      "We don’t offer generic policy or process support. We focus on structure, leadership, commercial alignment and talent strategy — the issues that directly impact performance and growth.",
   },
   {
-    question: "How fast can you begin?",
+    question: "Can you help us execute on your recommendations?",
     answer:
-      "We can typically begin within a few days depending on the engagement scope.",
+      "Yes. We offer seamless handover to Henton’s Recruitment and Growth Services teams, or support your internal team with practical guidance and project management.",
+  },
+  {
+    question: "Do you work on short-term or project-based advisory?",
+    answer:
+      "Yes. We offer standalone advisory sessions, workshop facilitation and deep-dive strategic engagements, depending on what your business needs.",
   },
 ];
 
@@ -100,7 +105,7 @@ export default function HomePage() {
   return (
     <>
       <HeroSection
-        imageUrl="/Hero2.png"
+        imageUrl="/advisoryHero.jpg"
         title="Business Advisory for Growth, Change and Clarity"
         description="Commercial, action-oriented consulting when the next move matters most."
         buttonText="Begin your success story"
@@ -135,6 +140,7 @@ export default function HomePage() {
       <SolutionsSection />
       <GenericProcessSection
         backgroundImage="/advisory.jpg"
+        mainHeading="Advisory & Consulting SERVICES"
         heading="Our Approach"
         intro={[
           {
@@ -156,11 +162,11 @@ export default function HomePage() {
         layoutVariant="imageCenter"
         sectionBg="#D4E1EF66"
         bgImage="/strategy.jpg"
-        headingText="Where Strategy Demands Action"
+        headingText="RESULTS"
         headingColor="#132D46"
         headingDividerColor="#132D46"
         dividerHeight="1px"
-        titleText="We’re typically engaged when:"
+        titleText="Where Strategy Demands Action"
         titleColor="#ffffff"
         imageSrc="/explaningProjectPoint.jpg"
         imageAlt="Business Discussion"
@@ -178,7 +184,15 @@ export default function HomePage() {
         ctaText="Ready to Build What’s Next?"
         ctaColor="#ffffff"
       />
-      <TestimonialSection />
+      <TestimonialSection
+        heading="What our clients say"
+        title="Reviews"
+        description="Here’s what our clients have to say about working with us. Real experiences, real feedback."
+        quote="I’ve had the pleasure of working with Guy Ingleby for 10 years."
+        detail="I can confidently say they are one of the most effective and professional recruiters I’ve partnered with. Their deep understanding of our business, industry and commitment to finding the right cultural and technical fit have made a real impact on our team."
+        author="Chris Elliott, Director"
+        company="Kerfoot Electrics"
+      />
       <FaqSection faqData={faqData} />
       <Insights />
     </>
