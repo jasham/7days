@@ -114,7 +114,7 @@ const listItems = [
   "Board Directors and Governance appointments",
 ];
 
-export default function permanentRecruitmentPage() {
+export default function execuitiveSearchPage() {
   return (
     <div>
       <HeroSection {...heroDetails} />
