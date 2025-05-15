@@ -9,10 +9,14 @@ interface HowWeRecruitProps {
   construction?: boolean;
   engineering?: boolean;
   managementPage?: boolean;
+  property?: boolean;
+  resources?: boolean;
   title?: string;
+  heading?: string;
   subTitle?: string;
   description?: string;
   description2?: string;
+  description3?: string;
 }
 const constructionList = [
   {
@@ -30,6 +34,42 @@ const constructionList = [
   {
     icon: <CheckCircleIcon />,
     text: "One appointment, not a shortlist, ready to deliver now",
+  },
+];
+const propertyList = [
+  {
+    icon: <GroupIcon />,
+    text: "Dedicated research & market mapping",
+  },
+  {
+    icon: <EmojiPeopleIcon />,
+    text: "Direct outreach to passive talent",
+  },
+  {
+    icon: <AssignmentTurnedInIcon />,
+    text: "Structured assessments focused on cultural and technical alignment",
+  },
+  {
+    icon: <CheckCircleIcon />,
+    text: "No shortlists. Just the right person, first time.",
+  },
+];
+const resourceList = [
+  {
+    icon: <GroupIcon />,
+    text: "Market mapping based on location, project type and competitor activity",
+  },
+  {
+    icon: <EmojiPeopleIcon />,
+    text: "Direct engagement with proven performers in aligned conditions",
+  },
+  {
+    icon: <AssignmentTurnedInIcon />,
+    text: "Screening based on site-readiness, constructability insight and delivery outcomes",
+  },
+  {
+    icon: <CheckCircleIcon />,
+    text: "The best candidate with the capability to lead or lift the project",
   },
 ];
 
@@ -73,16 +113,20 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
   construction = false,
   managementPage = false,
   engineering = false,
+  property = false,
+  resources = false,
+  heading,
   title,
   subTitle,
   description,
   description2,
+  description3,
 }) => {
   return (
     <Box sx={{ backgroundColor: "#D4E1EF66" }}>
       <Box sx={{ color: "#132D46", px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
         <Heading
-          text="CONSTRUCTION RECRUITMENT"
+          text={heading}
           textColor="#132D46"
           dividerColor="#132D46"
         />
@@ -197,6 +241,56 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
                     </Typography>
                   </Box>
                 ))}
+              {property &&
+                propertyList.map((item, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 2,
+                      mb: 2,
+                    }}
+                  >
+                    <Box sx={{ color: "#2E2C38", mt: "4px" }}>{item.icon}</Box>
+                    <Typography
+                      sx={{
+                        fontFamily: '"Helvetica Neue", sans-serif',
+                        fontWeight: 700,
+                        fontSize: "24px",
+                        lineHeight: "100%",
+                        color: "#2E2C38",
+                      }}
+                    >
+                      {item.text}
+                    </Typography>
+                  </Box>
+                ))}
+              {resources &&
+                resourceList.map((item, index) => (
+                  <Box
+                    key={index}
+                    sx={{
+                      display: "flex",
+                      alignItems: "flex-start",
+                      gap: 2,
+                      mb: 2,
+                    }}
+                  >
+                    <Box sx={{ color: "#2E2C38", mt: "4px" }}>{item.icon}</Box>
+                    <Typography
+                      sx={{
+                        fontFamily: '"Helvetica Neue", sans-serif',
+                        fontWeight: 700,
+                        fontSize: "24px",
+                        lineHeight: "100%",
+                        color: "#2E2C38",
+                      }}
+                    >
+                      {item.text}
+                    </Typography>
+                  </Box>
+                ))}
 
               {managementPage &&
                 managementList.map((item, index) => (
@@ -233,6 +327,17 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
                 }}
               >
                 {description2}
+              </Typography>
+              <Typography
+                sx={{
+                  fontFamily: '"Helvetica Neue", sans-serif',
+                  fontWeight: 500,
+                  fontSize: "16px",
+                  color: "#2E2C38",
+                  mt: 2,
+                }}
+              >
+                {description3}
               </Typography>
             </Grid>
           </Grid>

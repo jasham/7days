@@ -6,7 +6,7 @@ import OurNetworkSection from "@/Components/Network";
 import ResultsSection from "@/Components/Results";
 import SpecialistExpertise from "@/Components/SpecialExpertise";
 import TestimonialSection from "@/Components/TeastimonialSection";
-import WhatWeDo from "@/Components/WhatWeDo/Index";
+import WhatWeDo from "@/Components/WhatWeDo/index2";
 import WhyPartnerSection from "@/Components/WhyPartnerSection";
 // herosection interface
 interface HeroProps {
@@ -87,14 +87,17 @@ const ExpertList: CardList = {
       title:
         "We don’t send options, we send the one candidate who can do the job.",
       description: "",
+      icon: "/sortlist1.png",
     },
     {
       title: "We understand what’s commercially at stake in every hire.",
       description: "",
+      icon: "/marketing1.png",
     },
     {
       title: "We show up with honesty, urgency, and results.",
       description: "",
+      icon: "/confidence1.png",
     },
   ],
 };
@@ -129,18 +132,28 @@ const faqData = [
   },
 ];
 
+const listItems = [
+  "Commercial property owners and asset managers",
+  "Government departments and infrastructure bodies",
+  "Aged care, healthcare and education providers",
+  "Transport hubs, airports and public precincts",
+  "Private operators and corporate occupiers",
+];
+
 export default function constructionRecruitmentPage() {
   return (
     <div>
       <HeroSection {...heroDetails} />
       <WhatWeDo
-        cards={false}
-        managementPage={true}
-        heading="Well-run facilities don’t manage themselves, it starts with who you hire."
-        description="We recruit across every layer of Facilities Management, from essential services compliance through to multi-site operational leadership./ Whether you need a hands-on Facilities Manager, a compliance lead, or a national portfolio head, we find people who protect your asset value, reduce risk and improve tenant experience./ Our candidates don’t just manage buildings. They manage pressure."
+        title="Well-run facilities don’t manage themselves, it starts with who you hire."
+        description1="We recruit across every layer of Facilities Management, from essential services compliance through to multi-site operational leadership."
+        description2="Whether you need a hands-on Facilities Manager, a compliance lead, or a national portfolio head, we find people who protect your asset value, reduce risk and improve tenant experience."
+        description3="Our candidates don’t just manage buildings. They manage pressure."
         subHeading="Trusted by Facility Owners, Operators and Advisors"
-        description2="We work with organisations where facilities performance directly affects reputation, cost and continuity. We recruit FM professionals for: Whether you're managing a flagship site, a compliance-heavy portfolio or a network of ageing assets, we’ll find the right fit, fast."
-        description3="Whether you're managing a flagship site, a compliance-heavy portfolio or a network of ageing assets, we’ll find the right fit, fast."
+        listItems={listItems}
+        subDescription="We work with organisations where facilities performance directly affects reputation, cost and continuity. We recruit FM professionals for:"
+        subListBottom="Whether you're managing a flagship site, a compliance-heavy portfolio or a network of ageing assets, we’ll find the right fit, fast."
+        buttonText="Start the conversation"
       />
       <SpecialistExpertise
         title="Engineered for Results. Backed by Performance."
@@ -154,24 +167,34 @@ export default function constructionRecruitmentPage() {
       />
       <HowWeRecruit
         managementPage={true}
+        heading="Facilities Management recruitment"
         title="How we recruit and/ why it works."
         subTitle="Great Facilities Management hires don’t just maintain standards, they hold everything together."
         description="We go beyond titles and tenure. We track performance in live environments, where every system fault, tenant complaint or failed audit matters. Every search includes:"
         description2="When tenant satisfaction, cost control and contractor risk are all in play, you don’t have time to onboard the wrong person."
       />
       <WhyPartnerSection
-        CardList={ExpertList}
+        cards={ExpertList.myCards}
         title="Why employers trust us."
         subTitle=""
         color="rgba(1, 66, 37, 0.8)"
       />
       <ResultsSection
-        CardProps={resultDetails}
+        cardProps={resultDetails}
         background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/management-result.jpg')"
         topHeading="Measurable outcomes"
-        bottomHeading="Facilities don’t fall apart overnight, but they do without the right people holding it all together."
+        footerText="Facilities don’t fall apart overnight, but they do without the right people holding it all together."
+        backgroundImage="/facilityResult.jpg"
       />
-      <TestimonialSection />
+      <TestimonialSection
+        heading="What our clients say"
+        title="Reviews"
+        description="Here’s what our clients have to say about working with us. Real experiences, real feedback."
+        quote="“The process for us and the candidates presented were exceptionally strong across all our needs.”"
+        detail="Their screening process is thorough but always considerate. Their communication protocols, including feedback and de-briefing, are industry best-practice"
+        author="Emma Clements, GM People & Culture"
+        company="Transdev NSW"
+      />
       <FaqSection faqData={faqData} />
       <Insights />
     </div>

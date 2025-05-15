@@ -7,7 +7,7 @@ import OurNetworkSection from "@/Components/Network";
 import ResultsSection from "@/Components/Results";
 import SpecialistExpertise from "@/Components/SpecialExpertise";
 import TestimonialSection from "@/Components/TeastimonialSection";
-import WhatWeDo from "@/Components/WhatWeDo/Index";
+import WhatWeDo from "@/Components/WhatWeDo/index2";
 // herosection interface
 interface HeroProps {
   title: string;
@@ -113,17 +113,26 @@ const permanentFeatures = [
   },
 ];
 
+const listItems = [
+  "Specialist technical roles",
+  "Commercial and operational leadership",
+  "Middle management to C-suite executives",
+  "Confidential and strategic appointments",
+];
+
 export default function permanentRecruitmentPage() {
   return (
     <div>
       <HeroSection {...heroDetails} />
       <WhatWeDo
-        cards={false}
-        permanentRecruitment={true}
-        heading="Permanent recruitment isn’t about CVs — it’s about capability."
-        description="At Henton Consulting, permanent recruitment is about more than filling vacancies. It’s about building capability — securing the professionals and leaders who will shape your organisation’s future.Our approach ensures every permanent hire strengthens your team, culture, and competitive position."
+        title="Permanent recruitment isn’t about CVs — it’s about capability."
+        description1="At Henton Consulting, permanent recruitment is about more than filling vacancies. It’s about building capability — securing the professionals and leaders who will shape your organisation’s future."
+        description2="Our approach ensures every permanent hire strengthens your team, culture, and competitive position."
+        description3=""
         subHeading="We Recruit For"
-        description2="Our expertise covers a wide range of skill sets and leadership levels:"
+        listItems={listItems}
+        subDescription="Our expertise covers a wide range of skill sets and leadership levels:"
+        buttonText="Start the conversation"
       />
       <SpecialistExpertise
         title="Sector-Specific Recruitment. Permanent Impact."
@@ -150,10 +159,19 @@ export default function permanentRecruitmentPage() {
       <ResultsSection
         cardProps={resultDetails}
         background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/results-bg.jpg')"
-        topHeading="Where Strategy Demands Action"
+        topHeading="Result that matter"
         bottomHeading="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
+        backgroundImage="/permanantResult.jpg"
       />
-      <TestimonialSection />
+      <TestimonialSection
+        heading="What our clients say"
+        title="Reviews"
+        description="Here’s what our clients have to say about working with us. Real experiences, real feedback."
+        quote="“Henton Consulting always provide quality candidates”"
+        detail="They are extremely efficient with communication. I would highly recommend their services."
+        author="Alicia Lawrence, HR Business Partner"
+        company="Pomeroy Pacific"
+      />
       <FaqSection faqData={faqData} />
       <Insights />
     </div>

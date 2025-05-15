@@ -28,6 +28,7 @@ interface NetworkProps {
   internationalRecruitment?: boolean;
   managementPage?: boolean;
   propertyRecruitmentPage?: boolean;
+  resourcesRecruitmentPage?: boolean;
 }
 
 const Bullet = ({ size = 8 }: { size?: number }) => (
@@ -128,14 +129,58 @@ const propertyListRecruitment = [
     body: "Analysts, asset managers, and fund executives aligned to IRR targets and investor mandates.",
   },
 ];
+const resourcesListRecruitment = [
+  {
+    title: "Project & Construction Management",
+    body: "Project Managers, Construction Managers and Site Engineers who lead large scopes under remote and high-risk conditions.",
+  },
+  {
+    title: "Shutdowns, Upgrades & Commissioning",
+    body: "Supervisors, Commissioning Engineers and Project Engineers experienced in brownfield upgrades, shutdown programs and staged handovers.",
+  },
+  {
+    title: "HSE, Risk & Compliance",
+    body: "HSE Advisors and Managers who embed safe systems of work, lead incident response, and protect compliance on complex builds.",
+  },
+  {
+    title: "Civil, Mechanical & Structural Engineering",
+    body: "Engineers with hands-on understanding of terrain risk, sequencing, modular builds and structural coordination.",
+  },
+  {
+    title: "Contract & Commercial Management",
+    body: "Contract Administrators and Commercial Managers who manage scope creep, variation risk and subcontractor performance.",
+  },
+  {
+    title: "Workforce, IR & Mobilisation",
+    body: "Site Administrators, Mobilisation Coordinators and IR Leads who keep your workforce compliant, engaged and on schedule.",
+  },
+];
 
 const deepExpertList = [
-  "Site ManagementForemen and Site Managers who lead crews, control subcontractors, and keep timelines moving in high-pressure environments.",
-  "Contract Administration & EstimatingProfessionals who scope risk, protect margins and keep costs under control across commercial and civil projects.",
-  "Construction Directors & Delivery LeadsSenior operators who oversee multi-site programs, manage client expectations and keep delivery teams aligned to outcomes.",
-  "HSE & Quality ManagementSafety and compliance leads who protect lives, reputations and program continuity under regulatory scrutiny.",
-  "Client-Side Project & Development ManagementProject Managers, owner’s reps and consultants who manage stakeholders, delivery risk and feasibility across complex construction programs.",
-  "Commercial ManagementContract, cost and commercial professionals who forecast, report and manage risk in alignment with delivery targets.",
+  {
+    title: "Site Management",
+    body: "Foremen and Site Managers who lead crews, control subcontractors, and keep timelines moving in high-pressure environments.",
+  },
+  {
+    title: "Contract Administration & Estimating",
+    body: "Professionals who scope risk, protect margins and keep costs under control across commercial and civil projects.",
+  },
+  {
+    title: "Construction Directors & Delivery Leads",
+    body: "Senior operators who oversee multi-site programs, manage client expectations and keep delivery teams aligned to outcomes.",
+  },
+  {
+    title: "HSE & Quality Management",
+    body: "Safety and compliance leads who protect lives, reputations and program continuity under regulatory scrutiny.",
+  },
+  {
+    title: "Client-Side Project & Development Management",
+    body: "Project Managers, owner’s reps and consultants who manage stakeholders, delivery risk and feasibility across complex construction programs.",
+  },
+  {
+    title: "Commercial Management",
+    body: "Contract, cost and commercial professionals who forecast, report and manage risk in alignment with delivery targets.",
+  },
 ];
 
 const engineeringExpertList = [
@@ -172,6 +217,7 @@ export default function OurNetworkSection(props: NetworkProps) {
     internationalRecruitment,
     managementPage,
     propertyRecruitmentPage,
+    resourcesRecruitmentPage,
   } = props;
 
   // one place to declare all your conditional lists
@@ -184,10 +230,11 @@ export default function OurNetworkSection(props: NetworkProps) {
     { active: executiveSearch,     type: "plain", data: executiveList },
     { active: contractRecruitment, type: "contract", data: contractList },
     { active: internationalRecruitment, type: "intl", data: networkListInternational },
-    { active: construction,        type: "plain", data: deepExpertList },
+    { active: construction,        type: "intl", data: deepExpertList },
     { active: engineeringPage,     type: "split", data: engineeringExpertList },
     { active: managementPage,      type: "split", data: managementExpertList },
     { active: propertyRecruitmentPage, type: "intl", data: propertyListRecruitment },
+    { active: resourcesRecruitmentPage, type: "intl", data: resourcesListRecruitment },
   ];
 
   return (
