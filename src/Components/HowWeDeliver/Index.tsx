@@ -1,19 +1,6 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
-
-interface FeatureItem {
-  title: string;
-  description: string;
-}
-
-interface HowWeDeliverRecruitmentProps {
-  headingText: string;
-  mainTitle: string;
-  subTitle: string;
-  image: string;
-  buttonText: string;
-  features: FeatureItem[];
-}
+import { HowWeDeliverRecruitmentProps } from "@/types/permanentRecruitmentInterfaces";
 
 // ✅ Use the interface in your component
 const HowWeDeliverRecruitment = ({

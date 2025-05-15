@@ -4,36 +4,12 @@ import React from "react";
 import PartnerCard from "../Card/index";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
+import { ResultSectionProps } from "@/types/homeInterfaces";
 
-interface CardItem {
-  score: string;
-  title: string;
-  description?: string;
-}
-
-interface CardProps {
-  cardDetails?: CardItem[];
-}
-
-interface ResultProps {
-  backgroundColor?: string;
-  backgroundImage?: string;
-  headingText?: string;
-  subheadingText?: string;
-  footerText?: string;
-  buttonText?: string;
-  cardProps?: CardProps;
-  onButtonClick?: () => void;
-  topHeading?: string;
-  background?: string;
-  bottomHeading?: string;
-}
-
-const ResultsSection: React.FC<ResultProps> = ({
+const ResultsSection: React.FC<ResultSectionProps> = ({
   backgroundColor = "#132D46",
   backgroundImage,
   headingText = "Results",
-  // subheadingText = "Measured by Results. Chosen for Impact.",
   topHeading,
   footerText = "When expertise, trust, and speed come together, growth isn't a goal — it's the outcome.",
   buttonText = "Ready to Build What's Next?",

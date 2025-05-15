@@ -1,13 +1,6 @@
 import React from "react";
 import { Paper, Typography, Box } from "@mui/material";
-
-export interface JobDetailsProps {
-  title: string;
-  companyInfo: string;
-  responsibilities: string[];
-  rewards: string;
-  contactInfo: string;
-}
+import { JobDetailsProps } from "@/types/jobApplicationInterfaces";
 
 export default function JobDetails({
   title,

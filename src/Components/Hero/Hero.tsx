@@ -4,15 +4,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import Navbar from "@/Components/Header";
 import { Button } from "../Button/Button";
-
-export type HeroSectionProps = {
-  imageUrl: string;
-  title: string;
-  description: string;
-  buttonText?: string;
-  buttonLink?: string;
-  onButtonClick?: () => void;
-};
+import { HeroProps } from "@/types/homeInterfaces";
 
 export default function HeroSection({
   imageUrl,
@@ -21,7 +13,7 @@ export default function HeroSection({
   buttonText,
   buttonLink,
   onButtonClick,
-}: HeroSectionProps) {
+}: HeroProps) {
   const router = useRouter();
 
   const handleClick = () => {
@@ -39,7 +31,7 @@ export default function HeroSection({
         sx={{
           position: "relative",
           height: "100vh",
-          width: "98.9vw",
+          width: "100%",
           backgroundImage: `linear-gradient(303.06deg, rgba(19, 45, 70, 0) 10.58%, #132D46 69.71%), url('${imageUrl}')`,
           backgroundSize: "cover",
           backgroundPosition: "top",
@@ -50,7 +42,7 @@ export default function HeroSection({
         <Navbar />
         <Box
           sx={{
-            width: "70%",
+            width: "80%",
             display: "flex",
             height: "70vh",
             marginTop: "40px",

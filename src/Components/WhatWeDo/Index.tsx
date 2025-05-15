@@ -1,37 +1,37 @@
 "use client";
 
-import { Box, Grid, Paper, Typography } from "@mui/material";
 import React from "react";
+import {
+  Box,
+  Grid,
+  List,
+  ListItem,
+  ListItemIcon,
+  ListItemText,
+  Paper,
+  Typography,
+} from "@mui/material";
+import FiberManualRecordIcon from "@mui/icons-material/FiberManualRecord";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
+import { WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
-interface WhatWeDoProps {
-  cards?: boolean;
-  permanentRecruitment?: boolean;
-  heading?: string;
-  description?: string;
-  subHeading?: string;
-  description2?: string;
-  description3?: string; // Optional description3 property (if you need it)
-  managementPage?: boolean; // Add this line to define managementPage as optional
-}
+const Bullet = ({ size = 8 }: { size?: number }) => (
+  <ListItemIcon sx={{ minWidth: size + 4 }}>
+    <FiberManualRecordIcon sx={{ fontSize: size }} />
+  </ListItemIcon>
+);
 
-const roleCards = [
-  {
-    title: "Technical Roles",
-    description: "Engineering, construction management, project delivery",
-  },
-  {
-    title: "Commercial and Leadership Roles",
-    description: "Finance, strategy, operations, general management",
-  },
-  {
-    title: "Business-Critical and Confidential Roles",
-    description: "Executive search, senior appointments, succession placements",
-  },
-];
-
-const WhatWeDo: React.FC<WhatWeDoProps> = ({}) => {
+export default function WhatWeDoSection({
+  heading,
+  introText,
+  whoSubHeading,
+  whoHeading,
+  whoDescription,
+  listItems,
+  roleCards,
+  buttonText,
+}: WhatWeDoProps) {
   return (
     <Box
       sx={{
@@ -41,111 +41,91 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({}) => {
       }}
     >
       <Heading
-        text="WHAT WE DO"
-        textColor="#ffffff"
-        dividerColor="#ffffff"
+        text={"WHAT WE DO"}
+        textColor="#FFFFFF"
+        dividerColor="#FFFFFF"
         dividerHeight="1px"
       />
-      <Box
-        sx={{
-          display: "flex",
-          gap: "20px",
-          justifyContent: "space-between",
-          width: "100%",
-          flexWrap: "wrap", // <- optional: helps on small screens
-        }}
-      >
-        <Box sx={{ width: { xs: "100%", md: "40%" } }}>
-          <Typography variant="h3" color="#ffffff" gutterBottom>
-            We help businesses recruit with purpose — aligning people strategy
-            to commercial outcomes.
-          </Typography>
-        </Box>
-
-        <Box sx={{ width: { xs: "100%", md: "50%" } }}>
-          <Typography
-            variant="h6"
-            color="#ffffff"
-            textTransform="capitalize"
-            sx={{ mt: 3, maxWidth: 500 }}
-          >
-            At Hinton, recruitment isn&apos;t transactional. It&apos;s
-            strategic. Every hire should improve capability, deliver outcomes,
-            and move your business forward.
-          </Typography>
-
-          <Typography variant="h3" color="#ffffff" my={4}>
-            Who We Recruit
-          </Typography>
-          <Typography
-            variant="h6"
-            color="#ffffff"
-            textTransform="capitalize"
-            sx={{ mb: 4 }}
-          >
-            Our expertise covers a wide range of skill sets and leadership
-            levels.
-          </Typography>
-        </Box>
-      </Box>
-
-      <Grid container spacing={3} mb={4}>
-        {roleCards.map((role, index) => (
-          <Grid
-            item
-            xs={12}
-            md={4}
-            sx={{
-              borderRadius: "24px",
-              padding: "24px",
-              textAlign: "center",
-            }}
-            key={index}
-          >
-            <Paper
-              elevation={2}
-              sx={{
-                p: 4,
-                height: "100%",
-                borderRadius: "16px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-              }}
+      <Grid container spacing={4} alignItems="center">
+        <Grid item xs={12} md={6}>
+          {heading && (
+            <Typography variant="h2" color="#FFFF">
+              {heading}
+            </Typography>
+          )}
+          {introText && (
+            <Typography
+              variant="h6"
+              textTransform={"capitalize"}
+              color="#FFFFFF"
+              mt={4}
             >
-              <Typography
-                variant="h4"
-                fontWeight={600}
-                gutterBottom
-                color="#014225"
-              >
-                {role.title}
-              </Typography>
-              <Typography
-                variant="h6"
-                textTransform="capitalize"
-                color="#132D46"
-              >
-                {role.description}
-              </Typography>
-            </Paper>
-          </Grid>
-        ))}
-      </Grid>
+              {introText}
+            </Typography>
+          )}
+        </Grid>
 
-      <Box sx={{ display: "flex", justifyContent: "center" }}>
-        <Button
-          variantStyle="main"
-          buttonColor="#132D46"
-          buttonBgColor="transparent"
-          buttonBorderColor="#132D46"
-          onClick={() => alert("beginning")}
-        >
-          Start the conversation
-        </Button>
-      </Box>
+        <Grid item xs={12} md={heading ? 6 : 12}>
+          {whoSubHeading && (
+            <Typography variant="h6" textTransform={"capitalize"} gutterBottom color="#FFFFFF">
+              {whoSubHeading}
+            </Typography>
+          )}
+          {whoHeading && (
+            <Typography variant="h3" gutterBottom color="#FFFFFF">
+              {whoHeading}
+            </Typography>
+          )}
+          {whoDescription && (
+            <Typography variant="h6" textTransform={"capitalize"} paragraph color="#FFFFFF">
+              {whoDescription}
+            </Typography>
+          )}
+
+          {listItems && (
+            <List dense sx={{ pl: 2, borderLeft: "1px solid grey" }}>
+              {listItems.map((item, i) => (
+                <ListItem key={i} disableGutters>
+                  <Bullet size={8} />
+                  <ListItemText
+                    primary={item}
+                    primaryTypographyProps={{ color: "#FFFFFF" }}
+                  />
+                </ListItem>
+              ))}
+            </List>
+          )}
+        </Grid>
+        {roleCards && (
+            <Grid container spacing={3} mt={2} width={"100%"} mx={"auto"} textAlign={"center"}>
+              {roleCards.map((card, i) => (
+                <Grid item xs={12} md={4} key={i}>
+                  <Paper
+                    elevation={2}
+                    sx={{ p: 4, borderRadius: "16px", height: "100%" }}
+                  >
+                    <Typography variant="h4" gutterBottom color="#014225">
+                      {card.title}
+                    </Typography>
+                    <Typography variant="h6" textTransform={"capitalize"} color="#132D46">
+                      {card.description}
+                    </Typography>
+                  </Paper>
+                </Grid>
+              ))}
+            </Grid>
+          )}
+      </Grid>
+      <Box sx={{ display : "flex" , justifyContent:"center", mt: 4 }}>
+            <Button
+              variantStyle="main"
+              buttonColor="#132D46"
+              buttonBgColor="transparent"
+              buttonBorderColor="#132D46"
+            >
+              {buttonText}
+            </Button>
+          </Box>
     </Box>
   );
-};
-
-export default WhatWeDo;
+}

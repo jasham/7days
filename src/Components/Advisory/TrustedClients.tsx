@@ -3,28 +3,7 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
-
-export interface TrustedClientsProps {
-  layoutVariant: "imageLeft" | "imageCenter"; // determines layout
-  sectionBg: string;
-  bgImage?: string; // for background image if any
-  headingText: string;
-  titleText2?: string;
-  headingColor: string;
-  headingDividerColor: string;
-  dividerHeight: string;
-  titleText: string;
-  titleColor: string;
-  imageSrc: string;
-  imageAlt: string;
-  imageBorderRadius: number | string;
-  borderColor?: string;
-  descriptionText?: string;
-  listItems?: string[];
-  closingText?: string;
-  ctaText: string;
-  ctaColor: string;
-}
+import { TrustedClientsProps } from "@/types/advisoryInterfaces";
 
 const TrustedClients: React.FC<TrustedClientsProps> = ({
   layoutVariant,

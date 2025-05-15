@@ -2,20 +2,7 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
-
-export interface GrowthServiceProps {
-  heading1: string;
-  heading: string;
-  subheading: string;
-  paragraph: string;
-  imageSrc: string;
-  imageAlt: string;
-  leftButtonText: string;
-  services: { title: string; description: string }[];
-  ctaColor: string;
-  isBackground?: boolean;
-  isButton?: boolean;
-}
+import { GrowthServiceProps } from "@/types/recruitmentInterfaces";
 
 const GrowthService: React.FC<GrowthServiceProps> = ({
   heading,

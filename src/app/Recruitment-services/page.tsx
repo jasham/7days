@@ -16,22 +16,23 @@ import {
   growthServiceData,
   whyPartnerData,
   genericProcessData,
-  resultsSectionData,
+  resultSectionData,
   testimonialData,
   faqData,
   expertiseData,
+  whatWeDoData,
 } from "@/data/recruitmentData";
 
 export default function Recruitment() {
   return (
     <div>
       <HeroSection {...heroDetails} />
-      <WhatWeDo />
+      <WhatWeDo {...whatWeDoData} />
       <ExpertiseSection {...expertiseData}/>
       <GrowthService {...growthServiceData} />
       <WhyPartnerSection {...whyPartnerData} />
       <GenericProcessSection {...genericProcessData} />
-      <ResultsSection {...resultsSectionData} />
+      <ResultsSection {...resultSectionData} />
       <TestimonialSection {...testimonialData} />
       <FaqSection faqData={faqData} />
       <Insights />

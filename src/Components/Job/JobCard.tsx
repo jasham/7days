@@ -1,27 +1,9 @@
 // components/Job/JobCard.tsx
 import React from "react";
-import {
-  Paper,
-  Typography,
-  Divider,
-  Grid,
-  Button,
-  Box,
-} from "@mui/material";
-import {
-  ArrowRightAlt,
-} from "@mui/icons-material";
+import { Paper, Typography, Divider, Grid, Button, Box } from "@mui/material";
+import { ArrowRightAlt } from "@mui/icons-material";
 import Image from "next/image";
-
-export interface Job {
-  id: number;
-  title: string;
-  clientDescription: string;
-  location: string;
-  salary: string;
-  contractType: string;
-  date: string;
-}
+import { Job } from "@/types/jobBoardInterfaces";
 
 export default function JobCard({ job }: { job: Job }) {
   return (
@@ -39,10 +21,20 @@ export default function JobCard({ job }: { job: Job }) {
         {job.title}
       </Typography>
 
-      <Typography variant="h6" textTransform={"capitalize"} mb={4} color="#6F7A81">
+      <Typography
+        variant="h6"
+        textTransform={"capitalize"}
+        mb={4}
+        color="#6F7A81"
+      >
         About the Client:
       </Typography>
-      <Typography variant="h6" textTransform={"capitalize"} mb={4} color="#3E3D3D">
+      <Typography
+        variant="h6"
+        textTransform={"capitalize"}
+        mb={4}
+        color="#3E3D3D"
+      >
         {job.clientDescription}
       </Typography>
 
@@ -50,27 +42,59 @@ export default function JobCard({ job }: { job: Job }) {
 
       <Grid container spacing={2} alignItems="center">
         <Grid item xs={12} sm={4} display="flex" alignItems="center">
-          <Image src={"/MapPin.svg"} alt="Client Logo" width={32} height={32} style={{ borderRadius: "50%", marginRight: 8 }} />
-          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">{job.location}</Typography>
+          <Image
+            src={"/MapPin.svg"}
+            alt="Client Logo"
+            width={32}
+            height={32}
+            style={{ borderRadius: "50%", marginRight: 8 }}
+          />
+          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">
+            {job.location}
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={2} display="flex" alignItems="center">
-        <Image src={"/Coins.svg"} alt="Client Logo" width={32} height={32} style={{ borderRadius: "50%", marginRight: 8 }} />
-          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">{job.salary}</Typography>
+          <Image
+            src={"/Coins.svg"}
+            alt="Client Logo"
+            width={32}
+            height={32}
+            style={{ borderRadius: "50%", marginRight: 8 }}
+          />
+          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">
+            {job.salary}
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={3} display="flex" alignItems="center">
-        <Image src={"/Bag.svg"} alt="Client Logo" width={32} height={32} style={{ borderRadius: "50%", marginRight: 8 }} />
-          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">{job.contractType}</Typography>
+          <Image
+            src={"/Bag.svg"}
+            alt="Client Logo"
+            width={32}
+            height={32}
+            style={{ borderRadius: "50%", marginRight: 8 }}
+          />
+          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">
+            {job.contractType}
+          </Typography>
         </Grid>
         <Grid item xs={12} sm={3} display="flex" alignItems="center">
-        <Image src={"/Calendar.svg"} alt="Client Logo" width={32} height={32} style={{ borderRadius: "50%", marginRight: 8 }} />
-          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">{job.date}</Typography>
+          <Image
+            src={"/Calendar.svg"}
+            alt="Client Logo"
+            width={32}
+            height={32}
+            style={{ borderRadius: "50%", marginRight: 8 }}
+          />
+          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">
+            {job.date}
+          </Typography>
         </Grid>
       </Grid>
 
       <Box sx={{ mt: 2, textAlign: "left" }}>
         <Button
           endIcon={<ArrowRightAlt />}
-          sx={{ textTransform: "none", fontWeight: "normal" , color: "#014225" }}
+          sx={{ textTransform: "none", fontWeight: "normal", color: "#014225" }}
         >
           See Job Description
         </Button>
