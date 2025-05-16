@@ -1,25 +1,11 @@
 import { Box, Button, Grid, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
-interface specialExpertiseProps {
-  title?: string;
-  description?: string;
-}
+import { SpecialistExpertiseProps } from "@/types/permanentRecruitmentInterfaces";
 
-const sectors = [
-  "Property & Development",
-  "Construction",
-  "Engineering",
-  "Facilities Management",
-  "Resources",
-  "Renewables",
-  "Not For Profit",
-  "Corporate",
-  "Government",
-];
-
-const SpecialistExpertise: React.FC<specialExpertiseProps> = ({
+const SpecialistExpertise: React.FC<SpecialistExpertiseProps> = ({
   title,
   description,
+  sectors = [],
 }) => {
   return (
     <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>

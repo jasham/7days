@@ -8,11 +8,7 @@ import {
   Box,
 } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
-
-export interface FilterOption {
-  name: string;
-  count: number;
-}
+import { FilterOption } from "@/types/jobBoardInterfaces";
 
 export default function FilterSection({
   title,
@@ -27,14 +23,17 @@ export default function FilterSection({
       elevation={0}
       sx={{ mb: 2, "&:before": { display: "none" } }}
     >
-      <AccordionSummary expandIcon={<ExpandMore />} sx={{ px: 0, minHeight: 48 }}>
+      <AccordionSummary
+        expandIcon={<ExpandMore />}
+        sx={{ px: 0, minHeight: 48 }}
+      >
         <Typography variant="body1">{title}</Typography>
       </AccordionSummary>
       <AccordionDetails sx={{ p: 0 }}>
         {options.map((opt, i) => (
           <Box
             key={i}
-            sx={{ display: "flex", justifyContent: "start", gap:0.5 ,py: 0.5 }}
+            sx={{ display: "flex", justifyContent: "start", gap: 0.5, py: 0.5 }}
           >
             <Typography variant="body1">{opt.name}</Typography>
             <Typography variant="body1" color="text.secondary">

@@ -1,10 +1,19 @@
-"use client"
+"use client";
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
+import { StrategicAdviceProps } from "@/types/advisoryInterfaces";
 
-const StrategicAdvice: React.FC = () => {
+const StrategicAdvice: React.FC<StrategicAdviceProps> = ({
+  text,
+  heading,
+  paragraphs,
+  buttonText,
+  buttonColor,
+  buttonBgColor,
+  buttonBorderColor,
+}) => {
   return (
     <Box
       component="section"
@@ -16,58 +25,36 @@ const StrategicAdvice: React.FC = () => {
       }}
     >
       <Heading
-        text="What we do"
+        text={text}
         textColor="#FFFFFF"
         dividerColor="#FFFFFF"
         dividerHeight="1px"
         marginBottom="16px"
       />
-      <Box sx={{ display: "flex", justifyContent: "space-between", mb: 4 }}>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "45%",
-          }}
-        >
-          <Typography variant="h2">
-            We Deliver Strategic Advice That Unlocks Business Performance
-          </Typography>
+
+      <Box sx={{ display: "flex", justifyContent: "space-between", mb: 4, flexWrap: "wrap" }}>
+        <Box sx={{ width: { xs: "100%", md: "45%" } }}>
+          <Typography variant="h2">{heading}</Typography>
         </Box>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            flexDirection: "column",
-            width: "50%",
-          }}
-        >
-          <Typography variant="h6" textTransform={"capitalize"} sx={{ mb: 2, mt: 4 }}>
-            We help organisations solve complex business problems — not with
-            theory, but with sharp, commercially grounded advice. Our consulting
-            work is built for businesses facing moments of pressure or
-            transformation: scaling fast, entering new markets, restructuring,
-            or preparing for investment.
-          </Typography>
-          <Typography variant="h6" textTransform={"capitalize"} sx={{ mb: 4 }}>
-            We don&apos;t talk in frameworks. We get to the point — quickly —
-            and help you move forward with confidence.
-          </Typography>
+
+        <Box sx={{ width: { xs: "100%", md: "50%" }, display: "flex", flexDirection: "column", gap: 2 }}>
+          {paragraphs.map((p, idx) => (
+            <Typography key={idx} variant="h6" textTransform="capitalize">
+              {p}
+            </Typography>
+          ))}
         </Box>
       </Box>
+
       <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
         <Button
           variantStyle="main"
-          buttonColor={"#132D46"}
-          buttonBgColor="transparent"
-          buttonBorderColor={"#132D46"}
-          onClick={() => {
-            alert("begining");
-          }}
+          buttonColor={buttonColor}
+          buttonBgColor={buttonBgColor}
+          buttonBorderColor={buttonBorderColor}
+          onClick={() => alert("beginning")}
         >
-          {"Start the conversation"}
+          {buttonText}
         </Button>
       </Box>
     </Box>

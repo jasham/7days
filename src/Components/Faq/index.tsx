@@ -10,17 +10,10 @@ import {
 } from "@mui/material";
 import React from "react";
 import Heading from "../Heading/Heading";
-interface FaqItem {
-  question: string;
-  answer: string;
-}
+import { FAQ } from "@/types/recruitmentInterfaces";
 
-interface FaqProps {
-  faqData: FaqItem[];
-}
+export default function FaqSection({ faqData }: FAQ) {
 
-const FaqSection: React.FC<FaqProps> = ({ faqData }) => {
-  console.log(faqData, "faqData");
   return (
     <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }}}>
       <Heading
@@ -63,5 +56,3 @@ const FaqSection: React.FC<FaqProps> = ({ faqData }) => {
     </Box>
   );
 };
-
-export default FaqSection;

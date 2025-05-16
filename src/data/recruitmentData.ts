@@ -1,13 +1,9 @@
+import { CardProps, ExpertiseSectionProps, HeroProps, ResultSectionProps, TestimonialProps, WhyPartnerProps } from "@/types/homeInterfaces";
 import {
-    HeroProps,
-    CardProps,
     FAQ,
     GrowthServiceProps,
-    WhyPartnerSectionProps,
     GenericProcessSectionProps,
-    ResultsSectionProps,
-    TestimonialSectionProps,
-    ExpertiseSectionProps,
+    WhatWeDoProps,
   } from "@/types/recruitmentInterfaces";
   
   // --- Hero
@@ -15,8 +11,7 @@ import {
     title: "Recruitment Services Built for Impact",
     description:
       "Find and secure the right talent with recruitment services built around your business goals.",
-    action: "Begin your success story",
-    imageUrl: "/recruitmentHero.jpg",
+    imageUrl: "/Hero.jpg",
     buttonText: "Begin your success story",
   };
   
@@ -44,11 +39,11 @@ import {
       ],
     };
 
-  // --- ResultsSection
-  export const resultsSectionData: ResultsSectionProps = {
-    backgroundColor: "#014225",
+  // Result Section props
+  export const resultSectionData: ResultSectionProps = {
+    backgroundColor: "#132D46",
     headingText: "Result",
-    subheadingText: "Measured by Results. Chosen for Impact.",
+    subheadingText: "",
     topHeading: "Measured by Results. Chosen for Impact.",
     footerText:
       "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
@@ -58,7 +53,7 @@ import {
   };
   
   // --- WhyPartnerSection
-  export const whyPartnerData: WhyPartnerSectionProps = {
+  export const whyPartnerData: WhyPartnerProps = {
     headingText: "WORK WITH THE EXPERTS",
     headingColor: "#132D46",
     dividerColor: "#132D46",
@@ -143,7 +138,7 @@ import {
   };
   
   // --- TestimonialSection
-  export const testimonialData: TestimonialSectionProps = {
+  export const testimonialData: TestimonialProps = {
     heading: "What Our Clients Say",
     title: "Reviews",
     description:
@@ -226,4 +221,19 @@ import {
         { title: "Facilities Management", action: "Explore Our Expertise", description: "", image: "/expertise/expertise4.jpg" },
         { title: "Resources", action: "Explore Our Expertise", description: "", image: "/expertise/expertise5.jpg" },
       ],
+    };
+
+    export const whatWeDoData: WhatWeDoProps =   {
+      heading:
+        "We help businesses recruit with purpose — aligning people strategy to commercial outcomes.",
+      whoSubHeading:
+        "At Henton, recruitment isn’t transactional. It’s strategic. Every hire should improve capability, deliver outcomes, and move your business forward.",
+      whoHeading: "Who We Recruit",
+      whoDescription: "Our expertise covers a wide range of skill sets and leadership levels:",
+      roleCards: [
+        { title: "Technical Roles", description: "Engineering, construction management, project delivery" },
+        { title: "Commercial and Leadership Roles", description: "Finance, strategy, operations, general management" },
+        { title: "Business-Critical and Confidential Roles", description: "Executive search, senior appointments, succession placements" },
+      ],
+      buttonText: "Start the conversation",
     };

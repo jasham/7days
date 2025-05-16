@@ -4,26 +4,9 @@ import React from "react";
 import PartnerCard from "../Card/index";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
+import { WhyPartnerProps } from "@/types/homeInterfaces";
 
-export interface CardData {
-  title: string;
-  description: string;
-  icon: string;
-}
-
-interface Experts {
-  headingText?: string;
-  headingColor?: string;
-  dividerColor?: string;
-  dividerHeight?: string;
-  title: string;
-  subTitle: string;
-  cards: CardData[];
-  buttonText: string;
-  buttonColor: string;
-}
-
-const WhyPartnerSection: React.FC<Experts> = ({
+const WhyPartnerSection: React.FC<WhyPartnerProps> = ({
   headingText = "WORK WITH THE EXPERTS",
   headingColor = "#132D46",
   dividerColor = "#132D46",
@@ -33,7 +16,7 @@ const WhyPartnerSection: React.FC<Experts> = ({
   cards,
   buttonText,
   buttonColor,
-}: Experts) => {
+}: WhyPartnerProps) => {
   return (
     <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
       <Heading

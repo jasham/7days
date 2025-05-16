@@ -3,20 +3,9 @@
 import { Box, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
+import { CaseStudyHighlightProps } from "@/types/homeInterfaces";
 
-interface CaseStudyProps {
-  imageSrc: string;
-  imageAlt: string;
-  title: string;
-  description: string;
-  ctaText: string;
-  onClick?: () => void;
-  heading?: string;
-  isReverse?: boolean;
-  isBackground?: boolean;
-}
-
-const CaseStudyHighlight: React.FC<CaseStudyProps> = ({
+const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({
   imageSrc,
   imageAlt,
   title,

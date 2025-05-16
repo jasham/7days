@@ -1,13 +1,15 @@
 export interface HeroProps {
-    title: string;
-    description: string;
-    buttonText: string;
-    imageUrl: string;
+  imageUrl: string;
+  title: string;
+  description: string;
+  buttonText?: string;
+  buttonLink?: string;
+  onButtonClick?: () => void;
   }
   
   export interface CardItem {
-    score: string;
-    title: string;
+    score?: string;
+    title?: string;
     description?: string;
   }
   
@@ -45,16 +47,19 @@ export interface HeroProps {
     buttonColor: string;
   }
   
-  export interface ResultSectionProps {
-    backgroundColor: string;
-    headingText: string;
-    subheadingText: string;
-    topHeading: string;
-    footerText: string;
-    buttonText: string;
-    cardProps: CardProps;
-    onButtonClick: () => void;
-  }
+// ResultsSection
+export interface ResultSectionProps {
+  backgroundColor?: string;
+  backgroundImage?: string;
+  headingText?: string;
+  subheadingText?: string;
+  footerText?: string;
+  buttonText?: string;
+  cardProps?: CardProps;
+  onButtonClick?: () => void;
+  topHeading?: string;
+  bottomHeading?: string;
+}
   
   // Job Search
 export interface JobSearchProps {

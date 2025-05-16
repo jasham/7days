@@ -6,34 +6,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import PartnerCard from "../Card";
 import Image from "next/image";
 import { Button } from "../Button/Button";
-import Heading from "../Heading/Heading";
-
-export interface Step {
-  icon: string;
-  title: string;
-  description: string;
-  isHeadingLeft?: boolean;
-  deliverables?: Item[];
-}
-
-export interface Item {
-  title?: string;
-  description: string;
-  icon?: string;
-}
-
-interface SectionProps {
-  backgroundImage: string;
-  mainHeading: string,
-  heading: string;
-  intro: Item[];
-  steps: Step[];
-  itemsHeading: string;
-  items: Item[];
-  ctaText?: string;
-  isHeadingLeft?: boolean;
-  deliverables?: Item[];
-}
+import { GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
 
 export default function GenericProcessSection({
   backgroundImage,
@@ -46,7 +19,8 @@ export default function GenericProcessSection({
   ctaText = "Ready to Build What’s Next?",
   isHeadingLeft,
   deliverables = [],
-}: SectionProps) {
+  subHeading,
+}: GenericProcessSectionProps) {
   return (
     <Box
       sx={{
@@ -122,7 +96,7 @@ export default function GenericProcessSection({
             gutterBottom
             sx={{ width: "40%" }}
           >
-            Our Process
+            {subHeading}
           </Typography>
         </Box>
 
