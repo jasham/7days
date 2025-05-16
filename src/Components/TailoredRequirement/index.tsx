@@ -10,6 +10,7 @@ import { GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
 
 export default function GenericProcessSection({
   backgroundImage,
+  mainHeading,
   heading,
   intro,
   steps,
@@ -26,9 +27,16 @@ export default function GenericProcessSection({
         overflow: "hidden",
         color: "#fff",
         width: "100%",
-        px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }
+        px: { xs: 2, md: 10 },
+        py: { xs: 4, md: 8 },
       }}
     >
+      <Heading
+        text={mainHeading}
+        textColor="#132D46"
+        dividerColor="#132D46"
+        dividerHeight="1px"
+      />
       <Box
         sx={{
           backgroundImage: `linear-gradient(180deg, rgba(170,187,225,0.7) 0%, rgba(19,45,70,0.7) 56.73%), url('${backgroundImage}')`,
@@ -48,9 +56,7 @@ export default function GenericProcessSection({
             gap: 12,
           }}
         >
-          <Typography variant="h2">
-            {heading}
-          </Typography>
+          <Typography variant="h2" mb={4}>{heading}</Typography>
           <Box
             sx={{
               width: "60%",
@@ -151,8 +157,8 @@ export default function GenericProcessSection({
                   alt={""}
                   width={24}
                   height={24}
-                  style={{ objectFit: "contain" }}                         
-                  />
+                  style={{ objectFit: "contain" }}
+                />
                 <Typography variant="body1">{point?.title}</Typography>
               </Stack>
             ))}
@@ -162,14 +168,16 @@ export default function GenericProcessSection({
         {/* CTA */}
         <Box sx={{ display: "flex", justifyContent: "center" }}>
           <Button
-          variantStyle="main"
-          buttonColor="#ffffff"
-          buttonBgColor="transparent"
-          buttonBorderColor="#ffffff"
-          onClick={() => console.log("Redirect to Read to Build What’s Next?")}
-        >
-          {ctaText}
-        </Button>
+            variantStyle="main"
+            buttonColor="#ffffff"
+            buttonBgColor="transparent"
+            buttonBorderColor="#ffffff"
+            onClick={() =>
+              console.log("Redirect to Read to Build What’s Next?")
+            }
+          >
+            {ctaText}
+          </Button>
         </Box>
       </Box>
     </Box>

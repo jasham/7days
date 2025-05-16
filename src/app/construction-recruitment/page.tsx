@@ -6,7 +6,7 @@ import OurNetworkSection from "@/Components/Network";
 import ResultsSection from "@/Components/Results";
 import SpecialistExpertise from "@/Components/SpecialExpertise";
 import TestimonialSection from "@/Components/TeastimonialSection";
-import WhatWeDo from "@/Components/WhatWeDo/Index";
+import WhatWeDo from "@/Components/WhatWeDo/index2";
 import WhyPartnerSection from "@/Components/WhyPartnerSection";
 // herosection interface
 interface HeroProps {
@@ -28,6 +28,7 @@ interface CardProps {
 interface CardData {
   title: string;
   description: string;
+  icon: string;
 }
 interface CardList {
   myCards: CardData[];
@@ -44,19 +45,19 @@ const heroDetails: HeroProps = {
 const resultDetails: CardProps = {
   cardDetails: [
     {
-      score: "91%",
+      score: "98%",
       title: "",
-      description: "of permanent placements retained 12+ months",
+      description: "of hires are still with the business after 18 months",
     },
     {
       score: "100%",
       title: "",
-      description: "of retained assignments completed within timeframe",
+      description: "of retained searches have been completed successfully",
     },
     {
-      score: "83%",
+      score: "85%",
       title: "",
-      description: "of roles filled from the first candidate presented",
+      description: "of roles are filled from the first candidate presented",
     },
   ],
 };
@@ -86,14 +87,17 @@ const ExpertList: CardList = {
       title:
         "We don’t send options, we send the one candidate who can do the job.",
       description: "",
+      icon: "/sortlist1.png",
     },
     {
       title: "We understand what’s commercially at stake in every hire.",
       description: "",
+      icon: "/marketing1.png",
     },
     {
       title: "We show up with honesty, urgency, and results.",
       description: "",
+      icon: "/confidence1.png",
     },
   ],
 };
@@ -128,17 +132,27 @@ const faqData = [
   },
 ];
 
+const listItems = [
+  "Head Contractors, Subcontractors across keys sectors including Health, Education, Industrial",
+  "Specialist subcontractors and client side consultancies",
+  "Fitout and refurbishment firms",
+  "Client-side project and development managers",
+  "Government and private developers",
+];
+
 export default function constructionRecruitmentPage() {
   return (
     <div>
       <HeroSection {...heroDetails} />
       <WhatWeDo
-        cards={false}
-        construction={true}
-        heading="Great builds don’t stay on track by accident, it starts with who you hire."
-        description="We recruit across the full construction lifecycle — from early-stage planning and estimating through to site delivery, handover and asset performance./ Whether you're managing a multi-site pipeline, resourcing for a live project, or replacing a critical delivery lead — we act fast to secure professionals who keep schedules, margins and safety on track."
+        title="Great builds don’t stay on track by accident, it starts with who you hire."
+        description1="We recruit across the full construction lifecycle — from early-stage planning and estimating through to site delivery, handover and asset performance."
+        description2="Whether you're managing a multi-site pipeline, resourcing for a live project, or replacing a critical delivery lead — we act fast to secure professionals who keep schedules, margins and safety on track."
+        description3=""
         subHeading="Trusted by Australia's Builders:"
-        description2="We work with builders who can't afford delays — and developers who need certainty from day one. Our clients include:"
+        listItems={listItems}
+        subDescription="We work with builders who can't afford delays — and developers who need certainty from day one. Our clients include:"
+        buttonText="Start the conversation"
       />
       <SpecialistExpertise
         title="Built for Construction. Proven in Delivery."
@@ -147,13 +161,13 @@ export default function constructionRecruitmentPage() {
       <OurNetworkSection
         image="/expertImage.jpg"
         construction={true}
-        mt={-10}
-        mb={20}
+        mb={10}
         heading="Deep expertise./ Built for site realities."
         description="We don’t chase resumes, we chase results. Our construction networks are built project by project, site by site, with live intel on who’s performing, where, and why it matters."
       />
       <HowWeRecruit
         construction={true}
+        heading="Construction recruitment"
         title="How we recruit and/ why it works."
         subTitle="Great construction hiring is about more than experience, it’s
                 about risk, trust and delivery under pressure."
@@ -166,6 +180,7 @@ export default function constructionRecruitmentPage() {
         title="Why employers trust us."
         subTitle=""
         color="rgba(1, 66, 37, 0.8)"
+        buttonText="Ready to Build What’s Next?"
       />
       <ResultsSection
         cardProps={resultDetails}
@@ -174,7 +189,15 @@ export default function constructionRecruitmentPage() {
         topHeading="Where Strategy Demands Action"
         bottomHeading="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
       />
-      <TestimonialSection />
+      <TestimonialSection
+        heading="What our clients say"
+        title="Reviews"
+        description="Here’s what our clients have to say about working with us. Real experiences, real feedback."
+        quote="“The calibre of candidates has always exceeded what others have put forward.”"
+        detail="Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is personally involved in every step of the process."
+        author="Stephen Kerfoot, Director"
+        company="Kerfoot Electrics"
+      />
       <FaqSection faqData={faqData} />
       <Insights />
     </div>

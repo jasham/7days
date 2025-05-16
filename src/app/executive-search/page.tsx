@@ -22,7 +22,7 @@ const heroDetails: HeroProps = {
   description:
     "Appoint leadership that transforms outcomes, not just fills a seat.",
   buttonText: "Begin your success story",
-  imageUrl: "/Hero3.jpg",
+  imageUrl: "/executiveSearchHero.jpg",
 };
 
 interface CardItem {
@@ -38,19 +38,19 @@ interface CardProps {
 const resultDetails: CardProps = {
   cardDetails: [
     {
-      score: "91%",
+      score: "98%",
       title: "",
-      description: "of permanent placements retained 12+ months",
+      description: "of placed executives remain beyond 18 months",
     },
     {
       score: "100%",
       title: "",
-      description: "of retained assignments completed within timeframe",
+      description: "of retained searches delivered within agreed timeframes",
     },
     {
-      score: "83%",
+      score: "85%",
       title: "",
-      description: "of roles filled from the first candidate presented",
+      description: "of clients return for second or third retained assignments",
     },
   ],
 };
@@ -156,7 +156,15 @@ export default function execuitiveSearchPage() {
         topHeading="Results that matter"
         bottomHeading="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
       />
-      <TestimonialSection />
+      <TestimonialSection
+        heading="What our clients say"
+        title="Reviews"
+        description="Here’s what our clients have to say about working with us. Real experiences, real feedback."
+        quote="“Henton Consultiung are a very professional organisation”"
+        detail="They have provided us with quality staff. They take the time to understand your business needs and requirements."
+        author="Craig Dempsey, Construction Manager"
+        company="Maben Group"
+      />
       <FaqSection faqData={faqData} />
       <Insights />
     </div>

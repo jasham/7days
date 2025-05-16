@@ -1,4 +1,3 @@
-
 "use client";
 import FaqSection from "@/Components/Faq";
 import HeroSection from "@/Components/Hero/Hero";

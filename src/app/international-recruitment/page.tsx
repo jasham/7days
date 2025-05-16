@@ -8,7 +8,6 @@ import SpecialistExpertise from "@/Components/SpecialExpertise";
 import TestimonialSection from "@/Components/TeastimonialSection";
 import WhatWeDoSection from "@/Components/WhatWeDo/Index";
 import { faqData, heroDetails, howWeDeliverData, networkData, specialistExpertiseData, testimonialData, whatWeDoData } from "@/data/internationalRecruitmentData";
-// herosection interface
 
 export default function internationalRecruitmentPage() {
   return (

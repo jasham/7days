@@ -20,20 +20,19 @@ interface HeroProps {
 //hero section data
 const heroDetails: HeroProps = {
   title: "Expert Property & Development Recruitment",
-  description:
-    "Specialist talent across the full property lifecycle",
+  description: "Specialist talent across the full property lifecycle",
   buttonText: "Begin your success story",
   imageUrl: "/Hero4.jpg",
 };
 
 interface CardData {
-    title: string;
-    description: string;
-    icon: string;
-  }
-  interface CardList {
-    myCards: CardData[];
-  }
+  title: string;
+  description: string;
+  icon: string;
+}
+interface CardList {
+  myCards: CardData[];
+}
 
 interface CardItem {
   score: string;
@@ -48,43 +47,48 @@ interface CardProps {
 const resultDetails: CardProps = {
   cardDetails: [
     {
-      score: "91%",
+      score: "98%",
       title: "",
-      description: "of permanent placements retained 12+ months",
+      description: "of hires are still with the business after 18 months",
     },
     {
       score: "100%",
       title: "",
-      description: "of retained assignments completed within timeframe",
+      description: "of retained searches have been completed successfully",
     },
     {
-      score: "83%",
+      score: "85%",
       title: "",
-      description: "of roles filled from the first candidate presented",
+      description: "of roles are filled from the first candidate presented",
     },
   ],
 };
 
 const faqData = [
   {
-    question: "How do you approach confidential executive searches?",
+    question: "Do you recruit nationally or just in metro areas?",
     answer:
-      "We manage all outreach discreetly through secure channels and direct senior consultant contact — no public ads, no open-market chatter.",
+      "We recruit across Australia — from CBD-based head offices to remote regional developments. Our network covers every major city and emerging growth corridor, ensuring access to talent where and when you need it.",
   },
   {
-    question: "What’s the typical timeframe for an executive search?",
+    question: "Can you support multi-role hiring across different project stages?",
     answer:
-      "Most searches are completed in 3–6 weeks depending on complexity. We provide detailed timelines and weekly progress reports.",
+      "Yes. We run coordinated search campaigns across acquisitions, planning, delivery and asset management — aligning our approach to your project timeline and board-level milestones.",
   },
   {
-    question: "Can you advise us on board structure or succession planning?",
+    question: "What if the role is confidential or politically sensitive?",
     answer:
-      "Yes. We provide consulting support around succession, board renewal, and executive team design through our Consulting & Advisory offering.",
+      "Discretion is built into our process. We specialise in confidential executive search, particularly when changes affect investor confidence, stakeholder relations, or DA negotiations.",
   },
   {
-    question: "How do you assess executive candidates beyond the CV?",
+    question: "Do you work with both in-house teams and external advisors?",
     answer:
-      "We use structured interviews, reference triangulation, psychometric tools and behavioural assessment to evaluate decision-making, leadership style and alignment.",
+      "Absolutely. Whether you’re building an internal development team or hiring through a consultancy model, we tailor our process to fit your structure and reporting lines.",
+  },
+  {
+    question: "How do you assess cultural fit for leadership roles in property?",
+    answer:
+      "We spend time with your team upfront to understand leadership style, delivery pressure points, and stakeholder dynamics — then engage candidates through scenario-based interviews to test alignment beyond the CV.",
   },
 ];
 
@@ -96,25 +100,25 @@ const listItems = [
 ];
 
 const ExpertList: CardList = {
-    myCards: [
-      {
-        title:
-          "We don’t send options, we send the one candidate who can do the job.",
-        description: "",
-        icon: "/marketing.svg",
-      },
-      {
-        title: "We understand what’s commercially at stake in every hire.",
-        description: "",
-        icon: "/path/to/icon2.png",
-      },
-      {
-        title: "We show up with honesty, urgency, and results.",
-        description: "",
-        icon: "/path/to/icon3.png",
-      },
-    ],
-  };
+  myCards: [
+    {
+      title:
+        "We don’t send options, we send the one candidate who can do the job.",
+      description: "",
+      icon: "/sortlist1.png",
+    },
+    {
+      title: "We understand what’s commercially at stake in every hire.",
+      description: "",
+      icon: "/marketing1.png",
+    },
+    {
+      title: "We show up with honesty, urgency, and results.",
+      description: "",
+      icon: "/confidence1.png",
+    },
+  ],
+};
 
 export default function propertyRecruitmentPage() {
   return (
@@ -125,7 +129,7 @@ export default function propertyRecruitmentPage() {
         description1="We recruit high-performing professionals across the entire property development spectrum — from acquisitions and feasibility to delivery, leasing, and asset performance"
         description2="Whether you're scaling a national development pipeline or unlocking new investment potential, we deliver the right people at the right time."
         description3=""
-        subHeading="We recruit for:"
+        subHeading="Who we work with — from vision to delivery:"
         subDescription="The right partnership brings your project to life — and the right team keeps it moving. We partner with:"
         buttonText="Start the conversation"
         listItems={listItems}
@@ -144,29 +148,38 @@ export default function propertyRecruitmentPage() {
         image="/Network3.jpg"
       />
       <HowWeRecruit
-        construction={true}
+        property={true}
+        heading="Property Development recruitment"
         title="How we recruit and/ why it works."
-        subTitle="Great construction hiring is about more than experience, it’s
-                about risk, trust and delivery under pressure."
-        description="We don’t advertise and hope. We actively map the market, vet
-                delivery history, and approach proven performers — even when
-                they’re not actively looking. Every engagement includes."
-        description2="We don’t just fill roles, we build teams. Our recruitment process is designed to deliver the right people for your project, every time."
+        subTitle="We take your brief and turn it into action. Fast.
+                    Our model combines proactive search with deep sector insight. "
+        description="We don’t wait for candidates to apply, we identify hidden performers already delivering across major property portfolios, many of whom are quietly open to change. Every search includes:"
+        description2="Because we understand risk, yield, feasibility, ROI, and timeline pressure, we ask sharper questions. That means we filter faster — and you interview only the right people."
+        description3="The difference between a project that delivers and one that stalls often comes down to a single hire. And in this market, average hires cost more than vacancies."
       />
-            <WhyPartnerSection
+      <WhyPartnerSection
         cards={ExpertList.myCards}
         title="Why employers trust us."
         subTitle=""
         color="rgba(1, 66, 37, 0.8)"
+        buttonText="Ready to Build What’s Next?"
       />
       <ResultsSection
         cardProps={resultDetails}
-        backgroundImage="/executiveResult.jpg"
+        backgroundImage="/propertyResult.jpg"
         background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/results-bg.jpg')"
-        topHeading="Results that matter"
+        topHeading="Measurable outcomes"
         bottomHeading="When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome."
       />
-      <TestimonialSection />
+      <TestimonialSection
+        heading="What our clients say"
+        title="Reviews"
+        description="Here’s what our clients have to say about working with us. Real experiences, real feedback."
+        quote="“The calibre of candidates has always exceeded what others have put forward.”"
+        detail="Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is personally involved in every step of the process."
+        author="Stephen Kerfoot, Director"
+        company="Kerfoot Electrics"
+      />
       <FaqSection faqData={faqData} />
       <Insights />
     </div>

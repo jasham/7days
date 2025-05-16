@@ -6,7 +6,7 @@ import OurNetworkSection from "@/Components/Network";
 import ResultsSection from "@/Components/Results";
 import SpecialistExpertise from "@/Components/SpecialExpertise";
 import TestimonialSection from "@/Components/TeastimonialSection";
-import WhatWeDo from "@/Components/WhatWeDo/Index";
+import WhatWeDo from "@/Components/WhatWeDo/index2";
 import WhyPartnerSection from "@/Components/WhyPartnerSection";
 // herosection interface
 interface HeroProps {
@@ -87,14 +87,17 @@ const ExpertList: CardList = {
       title:
         "We don’t send options, we send the one candidate who can do the job.",
       description: "",
+      icon: "/sortlist1.png",
     },
     {
       title: "We understand what’s commercially at stake in every hire.",
       description: "",
+      icon: "/marketing1.png",
     },
     {
       title: "We show up with honesty, urgency, and results.",
       description: "",
+      icon: "/confidence1.png",
     },
   ],
 };
@@ -127,18 +130,30 @@ const faqData = [
       "We assess based on delivery outcomes, stakeholder feedback, and project performance — not just credentials.",
   },
 ];
+
+const listItems = [
+  "National and multidisciplinary design consultancies",
+  "Specialist civil, structural and MEP firms",
+  "Tier 1 and mid-tier head contractors",
+  "Client-side PM and commercial advisory groups",
+  "Government and infrastructure delivery agencies",
+  "Asset owners and operators in transport, utilities and energy",
+];
+
 export default function constructionRecruitmentPage() {
   return (
     <div>
       <HeroSection {...heroDetails} />
       <WhatWeDo
-        cards={false}
-        engineeringPage={true}
-        heading="Designs win tenders. Engineers deliver outcomes. It starts with who you hire."
-        description="We recruit high-performing engineering professionals across civil, structural, mechanical, electrical and building services disciplines./ Whether you’re designing critical infrastructure, resourcing for a live build, or replacing a technical lead mid-project, we deliver people who know how to deliver under pressure. Our candidates don’t just meet specs. They solve problems others can’t."
+        title="Designs win tenders. Engineers deliver outcomes. It starts with who you hire."
+        description1="We recruit high-performing engineering professionals across civil, structural, mechanical, electrical and building services disciplines."
+        description2="Whether you’re designing critical infrastructure, resourcing for a live build, or replacing a technical lead mid-project, we deliver people who know how to deliver under pressure. Our candidates don’t just meet specs. They solve problems others can’t."
+        description3=""
         subHeading="Trusted by Australia’s Engineering-Led Organisations:"
-        description2="We work with builders who can't afford delays — and developers who need certainty from day one. Our clients include:"
-        description3=" Whether your project is in a major city, regional hub or remote site, we find the technical talent to match."
+        listItems={listItems}
+        subDescription="We work with engineering employers who can’t afford to get it wrong. From long-term team builds to urgent delivery hires, we recruit across:"
+        subListBottom="Whether your project is in a major city, regional hub or remote site, we find the technical talent to match."
+        buttonText="Start the conversation"
       />
       <SpecialistExpertise
         title="Engineered for Results. Backed by Performance."
@@ -152,24 +167,35 @@ export default function constructionRecruitmentPage() {
       />
       <HowWeRecruit
         engineering={true}
+        heading="Engineering recruitment"
         title="How we recruit and/ why it works."
         subTitle="Great engineering hires don’t just reduce workload — they reduce risk."
         description="We don’t wait for applications. We go straight to the engineers already solving technical problems under pressure, many of whom aren’t looking, but will move for the right opportunity./We map the market, trace delivery outcomes, and approach with purpose. Every search includes:"
         description2="We act quickly and decisively because delays cost money — and bad hires cost more"
       />
       <WhyPartnerSection
-        CardList={ExpertList}
+        cards={ExpertList.myCards}
         title="Why employers trust us."
         subTitle=""
         color="rgba(1, 66, 37, 0.8)"
+        buttonText="Ready to Build What’s Next?"
       />
       <ResultsSection
-        CardProps={resultDetails}
+        cardProps={resultDetails}
         background="linear-gradient(rgba(1, 66, 37, 0.8), rgba(1, 66, 37, 0.8)), /* Overlay color */url('/engineering-results-bg.jpg')"
         topHeading="Measurable outcomes"
-        bottomHeading="Technical recruitment isn’t about filling a role,it’s about delivering a result. That’s what we do."
+        footerText="Technical recruitment isn’t about filling a role,it’s about delivering a result. That’s what we do."
+        backgroundImage="/engineeringResult.jpg"
       />
-      <TestimonialSection />
+      <TestimonialSection
+        heading="What our clients say"
+        title="Reviews"
+        description="Here’s what our clients have to say about working with us. Real experiences, real feedback."
+        quote="“The calibre of candidates has always exceeded what others have put forward.”"
+        detail="Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is personally involved in every step of the process."
+        author="Stephen Kerfoot, Director"
+        company="Kerfoot Electrics"
+      />
       <FaqSection faqData={faqData} />
       <Insights />
     </div>
