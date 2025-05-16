@@ -20,19 +20,12 @@ import {
 } from "@/data/permanentRecruitmentData";
 //result section interface
 
-const listItems = [
-  "Specialist technical roles",
-  "Commercial and operational leadership",
-  "Middle management to C-suite executives",
-  "Confidential and strategic appointments",
-];
-
 export default function permanentRecruitmentPage() {
   return (
     <div>
+      <HeroSection {...heroDetails} />
       <WhatWeDoSection {...whatWeDoData} />
       <SpecialistExpertise {...specialistExpertiseData} />
-
       <OurNetworkSection {...networkData} />
       <HowWeDeliverRecruitment {...howWeDeliverData} />
       <ResultsSection {...resultSectionData} />

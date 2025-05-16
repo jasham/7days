@@ -17,6 +17,7 @@ import {
   trustedClientsBottom,
   trustedClientsTop,
 } from "@/data/growthServiceData";
+import SolutionsSection from "@/Components/Advisory/SolutionSection";
 
 export default function HomePage() {
   return (

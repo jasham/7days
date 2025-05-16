@@ -1,14 +1,8 @@
 // prettier-ignore
 'use client';
+import { TestimonialCardProps } from "@/types/homeInterfaces";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
-
-interface TestimonialCardProps {
-  quote: string;
-  detail: string;
-  author: string;
-  company: string;
-}
 
 const TestimonialCard: React.FC<TestimonialCardProps> = ({
   quote,

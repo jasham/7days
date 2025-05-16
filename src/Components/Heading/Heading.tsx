@@ -1,13 +1,6 @@
 import React from "react";
 import { Typography, Divider } from "@mui/material";
-
-interface HeadingProps {
-  text: string;
-  textColor?: string;
-  dividerColor?: string;
-  dividerHeight?: string | number;
-  marginBottom?: string | number;
-}
+import { HeadingProps } from "@/types/homeInterfaces";
 
 const Heading: React.FC<HeadingProps> = ({
   text,

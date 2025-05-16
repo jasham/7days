@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useMemo } from "react";
-import { Box, Grid, Typography, useMediaQuery, useTheme, Container } from "@mui/material";
+import { Box, Grid, Typography, useMediaQuery, useTheme } from "@mui/material";
 import HeroSection from "@/Components/Hero/Hero";
 import SearchBar from "@/Components/SearchBar";
 import FilterSidebar from "@/Components/Job/FilterSidebar";

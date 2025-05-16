@@ -16,6 +16,7 @@ const WhyPartnerSection: React.FC<WhyPartnerProps> = ({
   cards,
   buttonText,
   buttonColor,
+  isCentered = false,
 }: WhyPartnerProps) => {
   return (
     <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
@@ -33,7 +34,7 @@ const WhyPartnerSection: React.FC<WhyPartnerProps> = ({
           flexDirection: { xs: "column", md: "row" },
           gap: 8,
           mb: 6,
-          justifyContent: "space-between",
+          justifyContent: isCentered ? "center" : "space-between",
         }}
       >
         <Typography variant="h3" color={headingColor}>

@@ -10,9 +10,9 @@ import {
 } from "@mui/material";
 import React from "react";
 import Heading from "../Heading/Heading";
-import { FAQ } from "@/types/recruitmentInterfaces";
+import { FaqSectionProps } from "@/types/recruitmentInterfaces";
 
-export default function FaqSection({ faqData }: FAQ) {
+export default function FaqSection({ faqData }: FaqSectionProps) {
 
   return (
     <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }}}>

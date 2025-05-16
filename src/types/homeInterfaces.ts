@@ -45,6 +45,7 @@ export interface HeroProps {
     cards: CardData[];
     buttonText: string;
     buttonColor: string;
+    isCentered?: boolean;
   }
   
 // ResultsSection
@@ -121,10 +122,52 @@ export interface TestimonialProps {
   company: string;
 }
 
+export interface TestimonialCardProps {
+  quote: string;
+  detail: string;
+  author: string;
+  company: string;
+}
+
 // Expertise Section & Insights (reusable)
 export interface ExpertiseSectionProps {
   headingText: string;
   title: string;
   description: string;
   expertiseList: ServiceItem[];
+}
+
+export interface PartnerCardProps {
+  icon?: string;        // path to local SVG
+  heading?: string;     // alternative to icon
+  title?: string;
+  description: string;
+  color: string;
+  isInverted?: boolean; // optional prop to invert colors
+  headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "subtitle1" | "subtitle2" | "body1" | "body2";
+  titleVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "subtitle1" | "subtitle2" | "body1" | "body2";
+  descriptionVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "subtitle1" | "subtitle2" | "body1" | "body2";
+}
+
+export interface Service {
+  title: string;
+  description: string;
+  action: string;
+  image: string;
+}
+
+export interface ImageCardProps {
+  service: Service;
+  background: string;
+  imageCard?: boolean;
+  md?: number;
+  isLeft?: boolean;
+}
+
+export interface HeadingProps {
+  text: string;
+  textColor?: string;
+  dividerColor?: string;
+  dividerHeight?: string | number;
+  marginBottom?: string | number;
 }
