@@ -1,20 +1,9 @@
 'use client';
 
+import { PartnerCardProps } from "@/types/homeInterfaces";
 import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
-
-interface PartnerCardProps {
-  icon?: string;        // path to local SVG
-  heading?: string;     // alternative to icon
-  title: string;
-  description: string;
-  color: string;
-  isInverted?: boolean; // optional prop to invert colors
-  headingVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "subtitle1" | "subtitle2" | "body1" | "body2";
-  titleVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "subtitle1" | "subtitle2" | "body1" | "body2";
-  descriptionVariant?: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "subtitle1" | "subtitle2" | "body1" | "body2";
-}
 
 const PartnerCard: React.FC<PartnerCardProps> = ({
   icon,
@@ -56,7 +45,7 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
         ) : icon ? (
           <Image
             src={icon}
-            alt={title}
+            alt={title || "default alt text"}
             width={64}
             height={64}
             style={

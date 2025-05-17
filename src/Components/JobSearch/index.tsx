@@ -4,6 +4,7 @@ import { Box, Typography } from "@mui/material";
 import CustomButton from "../Button/index";
 import SearchBar from "../SearchBar";
 import { JobSearchProps } from "@/types/homeInterfaces";
+import { Button } from "../Button/Button";
 
 export default function JobSearch({
   title,
@@ -27,7 +28,17 @@ export default function JobSearch({
           {description.map((desc, idx) => (
             <Typography key={idx} variant={idx === 0 ? "h5" : "body1"} mb={2}>{desc}</Typography>
           ))}
-          <CustomButton text={buttonText} onClick={() => alert("Starting...")} />
+          <Button
+              variantStyle="main"
+              buttonColor={"#132D46"}
+              buttonBgColor="transparent"
+              buttonBorderColor={"#132D46"}
+              onClick={() => {
+                alert("Starting");
+              }}
+            >
+              {buttonText}
+            </Button>
         </Box>
       </Box>
     </Box>

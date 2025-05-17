@@ -21,6 +21,10 @@ export interface FAQ {
   answer: string;
 }
 
+export interface FaqSectionProps {
+  faqData: FAQ[];
+}
+
 // GrowthService section
 export interface GrowthServiceProps {
   heading1: string;

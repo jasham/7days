@@ -2,21 +2,7 @@
 'use client';
 import { Box, Card, Grid, Typography } from "@mui/material";
 import { Button } from "../Button/Button";
-
-interface Service {
-  title: string;
-  description: string;
-  action: string;
-  image: string;
-}
-
-interface ImageCardProps {
-  service: Service;
-  background: string;
-  imageCard?: boolean;
-  md?: number;
-  isLeft?: boolean;
-}
+import { ImageCardProps } from "@/types/homeInterfaces";
 
 export default function ImageCard({
   service,

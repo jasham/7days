@@ -10,7 +10,7 @@ import TestimonialSection from "@/Components/TeastimonialSection";
 import WhatWeDoSection from "@/Components/WhatWeDo/Index";
 import { faqData, heroDetails, howWeDeliverData, networkData, resultSectionData, specialistExpertiseData, testimonialData, whatWeDoData } from "@/data/contractRecruitmentData";
 
-export default function permanentRecruitmentPage() {
+export default function contractRecruitmentPage() {
   return (
     <div>
       <HeroSection {...heroDetails} />
