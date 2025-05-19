@@ -7,6 +7,7 @@ const HowWeDeliverRecruitment = ({
   headingText,
   mainTitle,
   subTitle,
+  subTitle2,
   image,
   buttonText,
   features,
@@ -21,37 +22,17 @@ const HowWeDeliverRecruitment = ({
           dividerHeight="1px"
           marginBottom="16px"
         />
-        <Grid container spacing={4}>
+        <Grid container spacing={4} justifyContent="space-between">
           <Grid item xs={12} md={5}>
-            {mainTitle.split(".").map((part: string, index: number) => (
-              <Typography
-                key={index}
-                sx={{
-                  fontFamily: "Helvetica Neue",
-                  fontWeight: 700,
-                  fontSize: "48px",
-                  color: "#2E2C38",
-                  lineHeight: "100%",
-                  mb: index === 0 ? 0 : 2,
-                }}
-              >
-                {part.trim()}
-                {index !== mainTitle.split(".").length - 1 && "."}
-              </Typography>
-            ))}
+            <Typography variant="h2" sx={{ mb: 2 }}>
+              {mainTitle}
+            </Typography>
 
-            <Typography
-              sx={{
-                fontFamily: "Helvetica Neue",
-                fontWeight: 500,
-                fontSize: "24px",
-                lineHeight: "100%",
-                color: "#2E2C38",
-                mb: 2,
-                mt: 2,
-              }}
-            >
+            <Typography variant="h6" textTransform={"capitalize"} sx={{ mb: 2 }}>
               {subTitle}
+            </Typography>
+            <Typography variant="h6" textTransform={"capitalize"}>
+              {subTitle2}
             </Typography>
 
             <Box
@@ -63,6 +44,7 @@ const HowWeDeliverRecruitment = ({
                 backgroundImage: `linear-gradient(180deg, rgba(19, 45, 70, 0.48) 0%, rgba(19, 45, 70, 0.6) 100%), url(${image})`,
                 backgroundSize: "cover",
                 backgroundPosition: "center",
+                mt: 3,
               }}
             />
 
@@ -88,7 +70,7 @@ const HowWeDeliverRecruitment = ({
             </Button>
           </Grid>
 
-          <Grid item xs={12} md={7}>
+          <Grid item xs={12} md={6}>
             <Grid container spacing={3}>
               {features.map((item, index) => (
                 <Grid item xs={12} key={index}>

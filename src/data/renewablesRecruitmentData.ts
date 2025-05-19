@@ -5,65 +5,87 @@ import { HowWeRecruitProps } from "@/types/propertyRecruitmentInterface";
 import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 export const renewablesHeroDetails: HeroProps = {
-  title: "Renewables Recruitment That Builds Certainty",
+  title: "Renewables Recruitment Fuelling a Cleaner Australia",
   description:
-    "From boots-on-the-ground hires to strategic delivery roles, we find the people who get it built.",
+    "Australia’s energy future is being built now, and the right people will determine how fast we get there.",
   buttonText: "Begin your success story",
-  imageUrl: "/RenewablesHero.jpg",
+  imageUrl: "/hero/hero15.jpg",
 };
 
 export const renewablesWhatWeDoData: WhatWeDoProps = {
-    heading: "Great developments don’t deliver themselves — it starts with who you hire.",
+    heading: "We place the professionals behind Australia’s most complex renewable energy builds.",
     introText:
-      "We recruit high-performing professionals across the entire property development spectrum — from acquisitions and feasibility to delivery, leasing, and asset performance   \n\n" +
-      "Whether you're scaling a national development pipeline or unlocking new investment potential, we deliver the right people at the right time.",
-    whoSubHeading: "We recruit for:",
-    whoHeading: "The right partnership brings your project to life — and the right team keeps it moving. We partner with:",
+      "We recruit the professionals turning transition plans into operating assets. From feasibility to delivery and grid integration, we place project-ready people into roles that demand urgency, clarity, and real-world capability. \n\n Whether you're building a solar farm, delivering wind generation at scale, or accelerating battery and transmission projects — we find the people who keep momentum.",
+    whoSubHeading: "Trusted by Australia’s Energy Transition Leaders",
+    whoHeading: "We work with forward-leaning employers who don’t have time to hire twice. From scaling delivery teams to securing niche specialists, we recruit across:",
+    whoDescription:"Whether you're delivering a flagship project or expanding into new markets, we help you hire with confidence, from metro to remote.",
     listItems: [
-        "Property developers (residential, commercial, mixed-use)",
-        "Funds and institutional asset owners",
-        "Real estate advisory and consultancy groups",
-        "Government and private urban development bodies",
+        "Renewable energy developers and asset owners",
+        "EPC, EPCM and infrastructure delivery contractors",
+        "Grid and battery storage operators",
+        "Government agencies and energy regulators",
+        "Hydrogen, transition fuels and transmission innovators",
     ],
     buttonText: "Start the conversation",
   };
 
 export const renewablesSpecialistExpertiseData: SpecialistExpertiseProps = {
-  title: "Built for Renewables. Proven in Delivery.",
+  title: "Built for transition. Proven in delivery.",
   description:
-    "Permanent, contract and executive recruitment that reduces risk, unlocks productivity, and drives your projects forward.",
-  sectors: [
-    "Site Management",
-    "Project Engineering",
-    "Safety & Compliance",
-    "Commercial Leads",
-    "HSE Professionals",
-  ],
+    "Specialist recruitment across renewable energy roles, aligned to project risk, program pressure and commercial performance.",
+    sectors: [
+      "Property & Development",
+      "Construction",
+      "Engineering",
+      "Facilities Management",
+      "Resources",
+      "Renewables",
+      "Not For Profit",
+      "Corporate",
+      "Government",
+    ],
 };
 
 export const renewablesRecruitmentSections: Section[] = [
   {
-    items: [
-      "Renewables Project Directors and Managers",
-      "Property Development Executives",
-      "Engineering Specialists (Civil, Mechanical, Electrical)",
-      "Facilities and Asset Managers",
-      "Resources Industry Leadership",
-      "Renewable Energy Project Teams",
-      "NFP and Public Sector Operations Executives",
+    complexItems:[
+      {
+        title: "Project & Site Management",
+        body: "Project Managers, Construction Managers, Superintendents  and Site Engineers with experience across wind, solar, hybrid and BESS developments, from greenfield builds to live-site expansions and remote delivery.",
+      },
+      {
+        title: "Grid & Transmission Infrastructure",
+        body: "High-voltage Engineers, Grid Connection Specialists and Compliance Leads who manage substations, switching, SCADA systems and NEM dispatch across high-stakes grid environments.",
+      },
+      {
+        title: "Battery Storage, Hydrogen & Emerging Tech",
+        body: "Commissioning Engineers, Project Leads and Integration Managers delivering next-gen energy assets with complex technical interfaces and evolving regulatory landscapes.",
+      },
+      {
+        title: "Environmental, HSE & Regulatory Affairs",
+        body: "WHS Leads, Stakeholder Managers and Environmental Advisors who protect safety, planning approvals and social licence to operate — especially in regional and sensitive contexts.",
+      },
+      {
+        title: "Energy Asset Management & Commercial Operations",
+        body: "Asset Managers, Performance Engineers and Commercial Analysts focused on uptime, lifecycle value, IRR targets and investment-grade reporting for operating assets.",
+      },
+      {
+        title: "Renewables Engineering & Technical Consulting",
+        body: "Systems Designers, Technical Advisors and EPCM specialists in solar, wind and hybrid systems — covering feasibility, modelling, design and owner’s engineering functions.",
+      },
     ],
   },
 ];
 
 export const renewablesNetworkData: OurNetworkSectionProps = {
   header: "WORK WITH THE EXPERTS",
-  heading: "Deep expertise. Built for site realities.",
+  heading: "Where Net-Zero Ambition Meets Execution.",
   description:
-    "We don’t chase resumes, we chase results. Our renewables networks are built project by project, site by site, with live intel on who’s performing, where, and why it matters.",
+    "Specialist recruitment for the people building our energy future, across project delivery, grid-scale integration, and transition technology. We recruit across:",
   bottomText: "",
   image: "/expertImage.jpg",
   mt: -10,
-  mb: 20,
+  mb: 3,
   sections: renewablesRecruitmentSections,
 };
 
@@ -71,27 +93,27 @@ export const renewablesHowWeRecruitData: HowWeRecruitProps = {
   heading: "renewables recruitment",
   title: "How we recruit and why it works.",
   subTitle:
-    "Great renewables hiring is about more than experience; it’s about risk, trust and delivery under pressure.",
+    "High-performing talent in renewables aren’t responding to job ads. They're delivering on live projects. ",
   description:
-    "We don’t advertise and hope. We actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. Every engagement includes:",
+    "We map the market, profile transferable skillsets, and build trust with professionals open to the right next move. Every search includes:",
   description2:
-    "We don’t just fill roles, we build teams. Our recruitment process is designed to deliver the right people for your project, every time.",
+    "We recruit for uptime, ESG outcomes and program certainty, because in renewables, every milestone counts.",
   itemList: [
     {
       icon: "/WebNetwork.svg",
-      text: "Dedicated research & market mapping",
+      text: "Energy-sector competitor and capability mapping",
     },
     {
       icon: "/Voice.svg",
-      text: "Direct outreach to passive talent",
+      text: "Direct engagement with professionals working on live infrastructure",
     },
     {
       icon: "/todoList.svg",
-      text: "Structured assessments focused on cultural and technical alignment",
+      text: "Assessment based on planning risk, grid readiness and stakeholder outcomes",
     },
     {
       icon: "/checkPeople.svg",
-      text: "No shortlists. Just the right person, first time.",
+      text: "One best-fit candidate per role, selected for project fit and long-term alignment",
     },
   ],
 };
@@ -129,26 +151,26 @@ export const renewablesResultSectionData: ResultSectionProps = {
   cardProps: {
     cardDetails: [
       {
-        score: "91%",
+        score: "98%",
         title: "",
-        description: "of permanent placements retained 12+ months",
+        description: "of hires are still with the business after 18 months",
       },
       {
         score: "100%",
         title: "",
-        description: "of retained assignments completed within timeframe",
+        description: "of retained searches have been completed successfully",
       },
       {
-        score: "83%",
+        score: "85%",
         title: "",
-        description: "of roles filled from the first candidate presented",
+        description: "of roles are filled from the first candidate presented",
       },
     ],
   },
   backgroundImage: "/results-bg.jpg",
   topHeading: "Where Strategy Demands Action",
   bottomHeading:
-    "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+    "Renewable energy transition doesn’t happen with policy. It happens with people. We help you hire the ones who can lead the shift.",
 };
 
 export const renewablesTestimonialData: TestimonialProps = {
@@ -157,11 +179,11 @@ export const renewablesTestimonialData: TestimonialProps = {
   description:
     "Here is what our clients have to say about working with us. Real experiences, real feedback.",
   quote:
-    "The calibre of candidates has always exceeded what others have put forward.",
+    "“Exceptional results and has a great candidate pool where he maintains fantastic personal relationships.”",
   detail:
-    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-  author: "Stephen Kerfoot, Director",
-  company: "Kerfoot Electrics",
+    "Guy is professional and efficient and always delivers a high calibre of candidates within reasonable timeframes. I wouldn’t hesitate to recommend him.",
+  author: "Jessica Orifici, Senior Recruiter - ",
+  company: "KBR",
 };
 
 export const renewablesFaqData: FAQ[] = [

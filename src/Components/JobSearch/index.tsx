@@ -30,9 +30,9 @@ export default function JobSearch({
           ))}
           <Button
               variantStyle="main"
-              buttonColor={"#132D46"}
+              buttonColor={"#FFFFFF"}
               buttonBgColor="transparent"
-              buttonBorderColor={"#132D46"}
+              buttonBorderColor={"#FFFFFF"}
               onClick={() => {
                 alert("Starting");
               }}

@@ -40,6 +40,7 @@ const WhyPartnerSection: React.FC<WhyPartnerProps> = ({
         <Typography variant="h3" color={headingColor}>
           {title}
         </Typography>
+        {subTitle && (
         <Typography
           variant="h4"
           fontWeight={500}
@@ -47,7 +48,7 @@ const WhyPartnerSection: React.FC<WhyPartnerProps> = ({
           width="52%"
         >
           {subTitle}
-        </Typography>
+        </Typography> )}
       </Box>
 
       <Box

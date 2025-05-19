@@ -5,61 +5,84 @@ import { HowWeRecruitProps } from "@/types/propertyRecruitmentInterface";
 import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 export const resourceHeroDetails: HeroProps = {
-  title: "Resource Recruitment That Builds Certainty",
+  title: "Resources Recruitment That Powers Futures",
   description:
-    "From boots-on-the-ground hires to strategic delivery roles, we find the people who get it built.",
+    "We place infrastructure professionals who turn remote sites into high-performance assets.",
   buttonText: "Begin your success story",
-  imageUrl: "/ResourceHero.jpg",
+  imageUrl: "/hero/hero14.jpg",
 };
 
 export const resourceWhatWeDoData: WhatWeDoProps = {
-    heading: "Great developments don’t deliver themselves — it starts with who you hire.",
+    heading: "Well-run facilities don’t manage themselves, it starts with who you hire.",
     introText:
-      "We recruit high-performing professionals across the entire property development spectrum — from acquisitions and feasibility to delivery, leasing, and asset performance   \n\n" +
-      "Whether you're scaling a national development pipeline or unlocking new investment potential, we deliver the right people at the right time.",
-    whoSubHeading: "We recruit for:",
-    whoHeading: "The right partnership brings your project to life — and the right team keeps it moving. We partner with:",
+      "We recruit construction and project delivery talent for the resources sector, with a focus on building, not operating. \n\n From greenfield mine sites to major processing facilities, pipelines and oil and gas installations, we help EPCM contractors deliver the people who get critical infrastructure built safely and to spec.",
+    whoSubHeading: "We work with EPCM contractors and delivery partners",
+    whoHeading: "We support the contractors, consultancies and project partners who turn resource investments into built outcomes. We recruit for:",
+    whoDescription:"Whether you're managing a flagship site, a compliance-heavy portfolio or a network of ageing assets, we’ll find the right fit, fast.",
     listItems: [
-        "Property developers (residential, commercial, mixed-use)",
-        "Funds and institutional asset owners",
-        "Real estate advisory and consultancy groups",
-        "Government and private urban development bodies",
+        "EPCM contractors delivering large-scale mining and oil and gas infrastructure",
+        "Mid-tier builders and civil contractors supporting remote and high-risk projects",
+        "Engineering and project management consultancies aligned to delivery scopes",
+        "SMP, electrical and mechanical subcontractors",
+        "Shutdown and commissioning specialists",
+        "Workforce and camp services providers supporting remote delivery"
     ],
     buttonText: "Start the conversation",
   };
 
 export const resourceSpecialistExpertiseData: SpecialistExpertiseProps = {
-  title: "Built for Resource. Proven in Delivery.",
+  title: "Built for Resources. Proven on Site.",
   description:
-    "Permanent, contract and executive recruitment that reduces risk, unlocks productivity, and drives your projects forward.",
-  sectors: [
-    "Site Management",
-    "Project Engineering",
-    "Safety & Compliance",
-    "Commercial Leads",
-    "HSE Professionals",
-  ],
+    "Specialist recruitment across mining and oil and gas project roles, aligned to delivery scope, contractor interface and remote execution risk.",
+    sectors: [
+      "Property & Development",
+      "Construction",
+      "Engineering",
+      "Facilities Management",
+      "Resources",
+      "Renewables",
+      "Not For Profit",
+      "Corporate",
+      "Government",
+    ],
 };
 
 export const resourceRecruitmentSections: Section[] = [
   {
-    items: [
-      "Resource Project Directors and Managers",
-      "Property Development Executives",
-      "Engineering Specialists (Civil, Mechanical, Electrical)",
-      "Facilities and Asset Managers",
-      "Resources Industry Leadership",
-      "Renewable Energy Project Teams",
-      "NFP and Public Sector Operations Executives",
+    complexItems:[
+      {
+        title: "Project & Construction Management",
+        body: "Project Managers, Construction Managers and Site Engineers who lead large scopes under remote and high-risk conditions.",
+      },
+      {
+        title: "Shutdowns, Upgrades & Commissioning",
+        body: "Supervisors, Commissioning Engineers and Project Engineers experienced in brownfield upgrades, shutdown programs and staged handovers.",
+      },
+      {
+        title: "HSE, Risk & Compliance",
+        body: "HSE Advisors and Managers who embed safe systems of work, lead incident response, and protect compliance on complex builds.",
+      },
+      {
+        title: "Civil, Mechanical & Structural Engineering",
+        body: "Engineers with hands-on understanding of terrain risk, sequencing, modular builds and structural coordination.",
+      },
+      {
+        title: "Contract & Commercial Management",
+        body: "Contract Administrators and Commercial Managers who manage scope creep, variation risk and subcontractor performance.",
+      },
+      {
+        title: "Workforce, IR & Mobilisation",
+        body: "Site Administrators, Mobilisation Coordinators and IR Leads who keep your workforce compliant, engaged and on schedule.",
+      },
     ],
   },
 ];
 
 export const resourceNetworkData: OurNetworkSectionProps = {
   header: "WORK WITH THE EXPERTS",
-  heading: "Deep expertise. Built for site realities.",
+  heading: "Built for site. Proven in delivery.",
   description:
-    "We don’t chase resumes, we chase results. Our resource networks are built project by project, site by site, with live intel on who’s performing, where, and why it matters.",
+    "We don’t source from databases. We recruit from real projects, providing infrastructure professionals who understand what it takes to build mine and gas assets,  from pre-start to handover. We recruit across:",
   bottomText: "",
   image: "/expertImage.jpg",
   mt: -10,
@@ -71,27 +94,27 @@ export const resourceHowWeRecruitData: HowWeRecruitProps = {
   heading: "resource recruitment",
   title: "How we recruit and why it works.",
   subTitle:
-    "Great resource hiring is about more than experience; it’s about risk, trust and delivery under pressure.",
+    "Every major resources project hinges on one thing - who’s on the ground when it counts.",
   description:
-    "We don’t advertise and hope. We actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. Every engagement includes:",
+    "Every search starts with the site, the scope and the risk. We align our approach to your workfront pressure, contractor mix, and compliance environmen, not just the job title.",
   description2:
-    "We don’t just fill roles, we build teams. Our recruitment process is designed to deliver the right people for your project, every time.",
+    "We act quickly and with purpose. Because the wrong hire on a live site costs more than time.",
   itemList: [
     {
       icon: "/WebNetwork.svg",
-      text: "Dedicated research & market mapping",
+      text: "Market mapping based on location, project type and competitor activity",
     },
     {
       icon: "/Voice.svg",
-      text: "Direct outreach to passive talent",
+      text: "Direct engagement with proven performers in aligned conditions",
     },
     {
       icon: "/todoList.svg",
-      text: "Structured assessments focused on cultural and technical alignment",
+      text: "Screening based on site-readiness, constructability insight and delivery outcomes",
     },
     {
       icon: "/checkPeople.svg",
-      text: "No shortlists. Just the right person, first time.",
+      text: "The best candidate with the capability to lead or lift the project",
     },
   ],
 };
@@ -129,26 +152,26 @@ export const resourceResultSectionData: ResultSectionProps = {
   cardProps: {
     cardDetails: [
       {
-        score: "91%",
+        score: "98%",
         title: "",
-        description: "of permanent placements retained 12+ months",
+        description: "of hires are still with the business after 18 months",
       },
       {
         score: "100%",
         title: "",
-        description: "of retained assignments completed within timeframe",
+        description: "of retained searches have been completed successfully",
       },
       {
-        score: "83%",
+        score: "85%",
         title: "",
-        description: "of roles filled from the first candidate presented",
+        description: "of roles are filled from the first candidate presented",
       },
     ],
   },
   backgroundImage: "/results-bg.jpg",
   topHeading: "Where Strategy Demands Action",
   bottomHeading:
-    "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+    "Blueprints don’t build infrastructure. People do. We help you find the ones who get it done.",
 };
 
 export const resourceTestimonialData: TestimonialProps = {
@@ -157,11 +180,11 @@ export const resourceTestimonialData: TestimonialProps = {
   description:
     "Here is what our clients have to say about working with us. Real experiences, real feedback.",
   quote:
-    "The calibre of candidates has always exceeded what others have put forward.",
+    "“I have worked with Guy since 2008, across infrastructure & resource-based enterprises.”",
   detail:
-    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-  author: "Stephen Kerfoot, Director",
-  company: "Kerfoot Electrics",
+    "Guy is without question, one of the finest talent acquisition professionals I have had the pleasure of engaging with and I have no hesitation in recommending him to any party.",
+  author: "Matt Ingoe - ",
+  company: "HR Manager",
 };
 
 export const resourceFaqData: FAQ[] = [

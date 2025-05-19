@@ -5,93 +5,115 @@ import { HowWeRecruitProps } from "@/types/propertyRecruitmentInterface";
 import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 export const engineeringHeroDetails: HeroProps = {
-  title: "Engineering Recruitment That Builds Certainty",
+  title: "Engineering Recruitment That Keeps Projects Moving",
   description:
-    "From boots-on-the-ground hires to strategic delivery roles, we find the people who get it built.",
+    "From concept design to site delivery,we find engineers who make the work possible.",
   buttonText: "Begin your success story",
-  imageUrl: "/EngineeringHero.jpg",
+  imageUrl: "/hero/hero12.jpg",
 };
 
 export const engineeringWhatWeDoData: WhatWeDoProps = {
-    heading: "Great developments don’t deliver themselves — it starts with who you hire.",
+    heading: "Designs win tenders. Engineers deliver outcomes. It starts with who you hire.",
     introText:
-      "We recruit high-performing professionals across the entire property development spectrum — from acquisitions and feasibility to delivery, leasing, and asset performance   \n\n" +
-      "Whether you're scaling a national development pipeline or unlocking new investment potential, we deliver the right people at the right time.",
-    whoSubHeading: "We recruit for:",
-    whoHeading: "The right partnership brings your project to life — and the right team keeps it moving. We partner with:",
+      "We recruit high-performing engineering professionals across civil, structural, mechanical, electrical and building services disciplines. \n\n Whether you’re designing critical infrastructure, resourcing for a live build, or replacing a technical lead mid-project, we deliver people who know how to deliver under pressure. Our candidates don’t just meet specs. They solve problems others can’t.",
+    whoSubHeading: "Trusted by Australia’s Engineering-Led Organisations:",
+    whoHeading: "We work with engineering employers who can’t afford to get it wrong. From long-term team builds to urgent delivery hires, we recruit across:",
     listItems: [
-        "Property developers (residential, commercial, mixed-use)",
-        "Funds and institutional asset owners",
-        "Real estate advisory and consultancy groups",
-        "Government and private urban development bodies",
+        "National and multidisciplinary design consultancies",
+        "Specialist civil, structural and MEP firms",
+        "Tier 1 and mid-tier head contractors",
+        "Client-side PM and commercial advisory groups",
+        "Government and infrastructure delivery agencies",
+        "Asset owners and operators in transport, utilities and energy",
     ],
     buttonText: "Start the conversation",
+    // pending
   };
 
 export const engineeringSpecialistExpertiseData: SpecialistExpertiseProps = {
-  title: "Built for Engineering. Proven in Delivery.",
+  title: "Engineered for Results. Backed by Performance.",
   description:
-    "Permanent, contract and executive recruitment that reduces risk, unlocks productivity, and drives your projects forward.",
+    "Specialist recruitment across civil, structural, and services roles, aligned to project scope, stakeholder pressure, and delivery outcomes.",
   sectors: [
-    "Site Management",
-    "Project Engineering",
-    "Safety & Compliance",
-    "Commercial Leads",
-    "HSE Professionals",
+    "Property & Development",
+    "Construction",
+    "Engineering",
+    "Facilities Management",
+    "Resources",
+    "Renewables",
+    "Not For Profit",
+    "Corporate",
+    "Government",
   ],
 };
 
 export const engineeringRecruitmentSections: Section[] = [
   {
-    items: [
-      "Engineering Project Directors and Managers",
-      "Property Development Executives",
-      "Engineering Specialists (Civil, Mechanical, Electrical)",
-      "Facilities and Asset Managers",
-      "Resources Industry Leadership",
-      "Renewable Energy Project Teams",
-      "NFP and Public Sector Operations Executives",
+    complexItems:[
+      {
+        title: "Civil & Structural Engineering",
+        body: "Engineers with a deep understanding of compliance, constructability and stakeholder alignment, from concept to certification.",
+      },
+      {
+        title: "Mechanical, Electrical & Building Services",
+        body: "MEP professionals who design, coordinate and troubleshoot integrated systems, in buildings, transport hubs and essential infrastructure.",
+      },
+      {
+        title: "Infrastructure & Asset Engineering",
+        body: "Experts in long-life asset planning and delivery across roads, rail, water and utilities, often within tiered government and multi-agency frameworks.",
+      },
+      {
+        title: "Project Delivery & Engineering Leads",
+        body: "Professionals who manage delivery across disciplines, aligning scope, consultants and cost plans to project expectations.",
+      },
+      {
+        title: "Superintendents & Site Engineers",
+        body: "Engineers who keep boots on the ground aligned to schedule, subcontractor performance, and quality benchmarks.",
+      },
+      {
+        title: "Safety, Quality & Risk Engineering",
+        body: "People who protect lives, reputations and long-term outcomes, from safety-in-design through to on-site delivery and asset transition.",
+      },
     ],
   },
 ];
 
 export const engineeringNetworkData: OurNetworkSectionProps = {
   header: "WORK WITH THE EXPERTS",
-  heading: "Deep expertise. Built for site realities.",
+  heading: "Built for complexity. Hired for performance.",
   description:
-    "We don’t chase resumes, we chase results. Our engineering networks are built project by project, site by site, with live intel on who’s performing, where, and why it matters.",
+    "We don’t source from job boards We find professionals trusted to deliver under pressure, on real projects, with real consequences.",
   bottomText: "",
   image: "/expertImage.jpg",
   mt: -10,
-  mb: 20,
+  mb: 4,
   sections: engineeringRecruitmentSections,
 };
 
 export const engineeringHowWeRecruitData: HowWeRecruitProps = {
-  heading: "engineering recruitment",
+  heading: "Engineering recruitment",
   title: "How we recruit and why it works.",
   subTitle:
-    "Great engineering hiring is about more than experience; it’s about risk, trust and delivery under pressure.",
+    "Great engineering hires don’t just reduce workload — they reduce risk.",
   description:
-    "We don’t advertise and hope. We actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. Every engagement includes:",
-  description2:
-    "We don’t just fill roles, we build teams. Our recruitment process is designed to deliver the right people for your project, every time.",
+    "We don’t wait for applications. We go straight to the engineers already solving technical problems under pressure, many of whom aren’t looking, but will move for the right opportunity. \n\n We map the market, trace delivery outcomes, and approach with purpose. Every search includes:",
+  description3:"When delivery’s on the line, there’s no margin for guesswork — and no time for candidates who aren’t up to it.",
   itemList: [
     {
       icon: "/WebNetwork.svg",
-      text: "Dedicated research & market mapping",
+      text: "Technical scoping aligned to program stage, risk and role accountability",
     },
     {
       icon: "/Voice.svg",
-      text: "Direct outreach to passive talent",
+      text: "Market mapping and competitor intelligence — not just job board noise",
     },
     {
       icon: "/todoList.svg",
-      text: "Structured assessments focused on cultural and technical alignment",
+      text: "Direct outreach to passive, high-performing technical professionals",
     },
     {
       icon: "/checkPeople.svg",
-      text: "No shortlists. Just the right person, first time.",
+      text:"Structured interviews focused on delivery, not just degrees"
     },
   ],
 };
@@ -129,26 +151,26 @@ export const engineeringResultSectionData: ResultSectionProps = {
   cardProps: {
     cardDetails: [
       {
-        score: "91%",
+        score: "98%",
         title: "",
-        description: "of permanent placements retained 12+ months",
+        description: "of hires are still with the business after 18 months",
       },
       {
         score: "100%",
         title: "",
-        description: "of retained assignments completed within timeframe",
+        description: "of retained searches have been completed successfully",
       },
       {
-        score: "83%",
+        score: "85%",
         title: "",
-        description: "of roles filled from the first candidate presented",
+        description: "of roles are filled from the first candidate presented",
       },
     ],
   },
   backgroundImage: "/results-bg.jpg",
-  topHeading: "Where Strategy Demands Action",
+  topHeading: "Measurable outcomes",
   bottomHeading:
-    "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+    "Technical recruitment isn’t about filling a role,it’s about delivering a result. That’s what we do.",
 };
 
 export const engineeringTestimonialData: TestimonialProps = {
@@ -157,10 +179,10 @@ export const engineeringTestimonialData: TestimonialProps = {
   description:
     "Here is what our clients have to say about working with us. Real experiences, real feedback.",
   quote:
-    "The calibre of candidates has always exceeded what others have put forward.",
+    "“The calibre of candidates has always exceeded what others have put forward.”",
   detail:
-    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-  author: "Stephen Kerfoot, Director",
+    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is personally involved in every step of the process.",
+  author: "Stephen Kerfoot, Director - ",
   company: "Kerfoot Electrics",
 };
 

@@ -22,6 +22,7 @@ export interface HowWeDeliverRecruitmentProps {
   headingText: string;
   mainTitle: string;
   subTitle: string;
+  subTitle2?: string;
   image: string;
   buttonText: string;
   features: FeatureItem[];

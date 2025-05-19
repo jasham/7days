@@ -11,7 +11,7 @@ import {
     title: "Recruitment Services Built for Impact",
     description:
       "Find and secure the right talent with recruitment services built around your business goals.",
-    imageUrl: "/Hero.jpg",
+    imageUrl: "/hero/hero2.jpg",
     buttonText: "Begin your success story",
   };
   
@@ -41,7 +41,7 @@ import {
 
   // Result Section props
   export const resultSectionData: ResultSectionProps = {
-    backgroundColor: "#132D46",
+    backgroundColor: "#014225",
     headingText: "Result",
     subheadingText: "",
     topHeading: "Measured by Results. Chosen for Impact.",
@@ -59,25 +59,25 @@ import {
     dividerColor: "#132D46",
     dividerHeight: "1px",
     title: "How Henton Consulting Delivers Results",
-    subTitle: "Our recruitment success is built on three core foundations:",
+    subTitle: "At Henton, our recruitment success is built on three core foundations:",
     cards: [
       {
         icon: "/Precision.svg",
         title: "Precision Systems",
         description:
-          "Every recruitment campaign follows a structured, proven methodology.",
+          "Every recruitment campaign follows a structured, proven methodology. From role briefing to shortlist delivery, we align talent acquisition tightly to your business outcomes, timelines and team dynamics.",
       },
       {
         icon: "/Network.svg",
         title: "Deep Market Networks",
         description:
-          "Access passive candidates and industry leaders unavailable on the open market.",
+          "We actively maintain relationships across technical, operational and executive talent pools — not just databases. Our networks give you access to passive candidates and industry leaders who aren’t available on the open market.",
       },
       {
         icon: "/Speicific.svg",
         title: "Strategic Process",
         description:
-          "Senior advisors lead every assignment, aligning roles with your growth plans.",
+          "Every assignment is led by a senior advisor who understands your industry and growth stage. We don’t just fill vacancies — we build capability aligned to your future plans.",
       },
     ],
     buttonText: "Ready to Build What’s Next?",
@@ -96,38 +96,35 @@ import {
       {
         icon: "/Precision.svg",
         title: "Strategic Alignment",
-        description: "Define role outcomes clearly.",
+        description: "Define role outcomes, leadership traits and team fit before search begins.",
       },
       {
         icon: "/Network.svg",
         title: "Direct Sourcing",
-        description: "Targeted outreach to passive candidates.",
+        description: "Activate passive candidates through targeted outreach and industry networks.",
       },
       {
         icon: "/Speicific.svg",
         title: "Rigorous Assessment",
-        description: "Structured screening of candidates.",
+        description: "Evaluate behavioural, leadership and technical capability through structured screening.",
       },
       {
         icon: "/Speicific.svg",
         title: "Cultural fit screening",
-        description: "Stakeholder-led referencing.",
+        description: "Align values, communication style and team dynamics via stakeholder-led referencing.",
       },
     ],
-    itemsHeading: "Our work is:",
+    itemsHeading: "We deliver:",
     items: [
       {
-        title: "Shortlists delivered with pace -",
-        description: "never at the expense of quality",
+        description: "We deliver fast, focused recruitment through precision search, real-time market intelligence and deep industry alignment.",
       },
-      { title: "Market insights and real-time availability" },
-      { title: "Confidence in every hire" },
     ],
     isHeadingLeft: true,
     deliverables: [
       {
         icon: "/sortlist.svg",
-        title: "Shortlists delivered with pace – never at the expense of quality",
+        title: "Shortlists delivered with pace — never at the expense of quality",
       },
       {
         icon: "/marketing.svg",
@@ -142,12 +139,12 @@ import {
     heading: "What Our Clients Say",
     title: "Reviews",
     description:
-      "Here is what our clients have to say about working with us. Real experiences, real feedback.",
+      "Here’s what our clients have to say about working with us. Real experiences, real feedback.",
     quote:
       "I’ve had the pleasure of working with Guy Ingleby for 10 years.",
     detail:
       "I can confidently say they are one of the most effective and professional recruiters I’ve partnered with. Their deep understanding of our business, industry and commitment to finding the right cultural and technical fit have made a real impact on our team.",
-    author: "Chris Elliott, Director",
+    author: "Chris Elliott, Director - ",
     company: "Kerfoot Electrics",
   };
   
@@ -190,17 +187,18 @@ import {
       {
         title: "Permanent Recruitment",
         description:
-          "Secure long-term employees who integrate into your culture, build capability, and drive performance.",
+        "Secure long-term employees who integrate into your culture, build capability, and drive business performance over time.\n\n" +
+        "We focus on hiring professionals who don’t just fill a role — they strengthen your team.",
       },
       {
         title: "Contract Recruitment",
         description:
-          "Access flexible, project-ready talent to manage fluctuations or peak periods.",
+          "Access flexible, project-ready talent to manage fluctuations, support critical projects or cover peak periods.\n\n "+ "Our contract recruitment process ensures fast mobilisation without compromising quality.",
       },
       {
         title: "Executive Search",
         description:
-          "Identify and secure the leaders who will define your organisation’s future.",
+          "Identify and secure the leaders who will define your organisation’s future. Our executive search process is discreet, data-led and aligned with your strategic direction.",
       },
     ],
     ctaColor: "#132D46",
@@ -213,13 +211,17 @@ import {
       headingText: "Specialist Expertise",
       title: "Broad Expertise, Targeted Solutions",
       description:
-        "See how we support your industry & find the expertise you need to build what’s next.",
+        "See How We Support Your Industry & Find the Expertise You Need to Build What's Next.",
       expertiseList: [
         { title: "Property & Development", action: "Explore Our Expertise", description: "", image: "/expertise/expertise1.jpg" },
         { title: "Construction", action: "Explore Our Expertise", description: "", image: "/expertise/expertise2.jpg" },
         { title: "Engineering", action: "Explore Our Expertise", description: "", image: "/expertise/expertise3.jpg" },
         { title: "Facilities Management", action: "Explore Our Expertise", description: "", image: "/expertise/expertise4.jpg" },
         { title: "Resources", action: "Explore Our Expertise", description: "", image: "/expertise/expertise5.jpg" },
+        { title: "Renewables", action: "Explore Our Expertise", description: "", image: "/expertise/expertise6.jpg" },
+        { title: "Not-for-Profit", action: "Explore Our Expertise", description: "", image: "/expertise/expertise7.jpg" },
+        { title: "Corporate", action: "Explore Our Expertise", description: "", image: "/expertise/expertise8.jpg" },
+        { title: "Government", action: "Explore Our Expertise", description: "", image: "/expertise/expertise9.jpg" },
       ],
     };
 

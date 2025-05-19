@@ -8,7 +8,7 @@ export const heroDetails: HeroProps = {
     description:
       "Specialist talent across the full property lifecycle",
     buttonText: "Begin your success story",
-    imageUrl: "/Hero4.jpg",
+    imageUrl: "/hero/hero10.jpg",
 };
 
 export const testimonialData: TestimonialProps = {
@@ -17,10 +17,10 @@ export const testimonialData: TestimonialProps = {
     description:
       "Here is what our clients have to say about working with us. Real experiences, real feedback.",
     quote:
-      "The calibre of candidates has always exceeded what others have put forward.",
+      "“The calibre of candidates has always exceeded what others have put forward.”",
     detail:
-      "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-    author: "Stephen Kerfoot, Director",
+      "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is personally involved in every step of the process.",
+    author: "Stephen Kerfoot, Director - ",
     company: "Kerfoot Electrics",
   }
 
@@ -28,24 +28,24 @@ export const testimonialData: TestimonialProps = {
       cardProps: {
         cardDetails: [
             {
-              score: "91%",
+              score: "98%",
               title: "",
-              description: "of permanent placements retained 12+ months",
+              description: "of hires are still with the business after 18 months",
             },
             {
               score: "100%",
               title: "",
-              description: "of retained assignments completed within timeframe",
+              description: "of retained searches have been completed successfully",
             },
             {
-              score: "83%",
+              score: "85%",
               title: "",
-              description: "of roles filled from the first candidate presented",
+              description: "of roles are filled from the first candidate presented",
             },
           ],
       },
       backgroundImage:"/results-bg.jpg",
-      topHeading: "Where Strategy Demands Action",
+      topHeading: "Measurable outcomes",
       bottomHeading:
         "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
     };
@@ -72,7 +72,7 @@ export const testimonialData: TestimonialProps = {
       export const specialistExpertiseData: SpecialistExpertiseProps = {
         title: "Property-Focused Recruitment. Built for Delivery.",
         description:
-          "Deep industry knowledge, precise candidate alignment - built for long-term success in your sector.",
+          "Precision hiring across every phase of the development lifecycle — from vision to completion.",
         sectors: [
           "Property & Development",
           "Construction",
@@ -183,8 +183,6 @@ export const faqData: FAQ[] = [
         dividerColor: "#132D46",
         dividerHeight: "1px",
         title: "Why employers trust us.",
-        subTitle:
-          "",
         cards: partnerCards,
         buttonText: "Ready to Build What’s Next?",
         buttonColor: "#132D46",
@@ -193,10 +191,11 @@ export const faqData: FAQ[] = [
 
       export const howWeDeliverRecruitmentData: HowWeRecruitProps = {
         heading: "WORK WITH THE EXPERTS",
-        title:"How we recruit and/ why it works.",
-        subTitle:"Great construction hiring is about more than experience, it’s about risk, trust and delivery under pressure.",
-        description:"We don’t advertise and hope. We actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. Every engagement includes.",
-        description2:"We don’t just fill roles, we build teams. Our recruitment process is designed to deliver the right people for your project, every time.",
+        title:"How we recruit and why it works.",
+        subTitle:"We take your brief and turn it into action. Fast. Our model combines proactive search with deep sector insight.",
+        description:"We don’t wait for candidates to apply, we identify hidden performers already delivering across major property portfolios, many of whom are quietly open to change. Every search includes:",
+        description2:"Because we understand risk, yield, feasibility, ROI, and timeline pressure, we ask sharper questions. That means we filter faster — and you interview only the right people.",
+        description3:"The difference between a project that delivers and one that stalls often comes down to a single hire. And in this market, average hires cost more than vacancies.",
         itemList: [
             {
               icon: "/WebNetwork.svg",
@@ -208,7 +207,7 @@ export const faqData: FAQ[] = [
             },
             {
               icon: "/todoList.svg",
-              text: "WStructured assessments focused on cultural and technical alignment",
+              text: "Structured assessments focused on cultural and technical alignment",
             },
             {
                 icon: "/checkPeople.svg",

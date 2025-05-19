@@ -2,6 +2,7 @@
 import React from "react";
 import {
   Box,
+  Divider,
   Grid,
   List,
   ListItem,
@@ -39,41 +40,68 @@ export default function OurNetworkSection({
         dividerHeight="1px"
         marginBottom="16px"
       />
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          flexDirection: { xs: "column", md: "row" },
+          mb,
+        }}
+      >
+        {heading && (
+          <Typography variant="h3" color="#132D46" fontWeight={700} width="40%">
+            {heading}
+          </Typography>
+        )}
+        {description && (
+          <Typography
+            variant="h5"
+            color="#132D46"
+            fontWeight={500}
+            sx={{ width: "50%" }}
+          >
+            {description}
+          </Typography>
+        )}
+      </Box>
 
-      <Grid container spacing={4} alignItems="flex-start">
+      <Grid container spacing={4} alignItems="center">
         {/* Left: Heading + Image */}
         <Grid item xs={12} md={6}>
-          <Box sx={{ display: "flex", flexDirection: "column", gap: 6 }}>
-            {heading && (
-              <Typography variant="h3" color="#132D46" fontWeight={700}>
-                {heading}
-              </Typography>
-            )}
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row", // ← row, not column
+              alignItems: "center",
+              gap: 2,
+              height: "100%", // ← give it some height to stretch into
+            }}
+          >
             {image && (
               <Box
                 component="img"
                 src={image}
                 alt={heading}
-                sx={{ width: "100%", borderRadius: 2, objectFit: "cover" }}
+                sx={{
+                  maxWidth: "100%",
+                  borderRadius: 2,
+                  objectFit: "cover",
+                }}
               />
             )}
+
+            <Divider
+              orientation="vertical"
+              flexItem // ← must add this
+              sx={{ borderColor: "#AABBE1" , height:"15rem" , width:"1px" , margin:"auto 5px"}}
+            />
+
+            {/* …your other content goes here… */}
           </Box>
         </Grid>
-
         {/* Right: Description + Lists */}
         <Grid item xs={12} md={6}>
-          {description && (
-            <Typography
-              variant="h5"
-              color="#132D46"
-              fontWeight={500}
-              sx={{ mb }}
-            >
-              {description}
-            </Typography>
-          )}
-
-          <List dense sx={{ pl: 2, borderLeft: "1px solid grey" }}>
+          <List dense sx={{ pl: 2 }}>
             {sections.map((section, idx) => (
               <React.Fragment key={idx}>
                 {section.header && (
@@ -92,7 +120,14 @@ export default function OurNetworkSection({
                 {section.items?.map((text, i) => (
                   <ListItem key={i} disableGutters sx={{ py: 0.5 }}>
                     <Bullet size={8} />
-                    <ListItemText primary={text} />
+                    <ListItemText
+                      primary={text}
+                      primaryTypographyProps={{
+                        fontWeight: 500,
+                        fontSize: "18px",
+                        mb: 1,
+                      }}
+                    />
                   </ListItem>
                 ))}
 

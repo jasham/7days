@@ -5,65 +5,88 @@ import { HowWeRecruitProps } from "@/types/propertyRecruitmentInterface";
 import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 export const facilitiesManagementHeroDetails: HeroProps = {
-  title: "FacilitiesManagement Recruitment That Builds Certainty",
+  title: "Facilities Management Recruitment That Delivers",
   description:
-    "From boots-on-the-ground hires to strategic delivery roles, we find the people who get it built.",
+    "From single assets to national portfolios, we place the professionals who keep buildings safe, compliant and running smoothly.",
   buttonText: "Begin your success story",
-  imageUrl: "/FacilitiesManagementHero.jpg",
+  imageUrl: "/hero/hero13.jpg",
 };
 
 export const facilitiesManagementWhatWeDoData: WhatWeDoProps = {
-    heading: "Great developments don’t deliver themselves — it starts with who you hire.",
+    heading: "Well-run facilities don’t manage themselves, it starts with who you hire.",
     introText:
-      "We recruit high-performing professionals across the entire property development spectrum — from acquisitions and feasibility to delivery, leasing, and asset performance   \n\n" +
-      "Whether you're scaling a national development pipeline or unlocking new investment potential, we deliver the right people at the right time.",
-    whoSubHeading: "We recruit for:",
-    whoHeading: "The right partnership brings your project to life — and the right team keeps it moving. We partner with:",
+      "We recruit across every layer of Facilities Management, from essential services compliance through to multi-site operational leadership. \n\n Whether you need a hands-on Facilities Manager, a compliance lead, or a national portfolio head, we find people who protect your asset value, reduce risk and improve tenant experience. \n\n Our candidates don’t just manage buildings. They manage pressure.",
+    whoSubHeading: "Trusted by Facility Owners, Operators and Advisors",
+    whoHeading: "We work with organisations where facilities performance directly affects reputation, cost and continuity. We recruit FM professionals for:",
+    whoDescription:
+      "Whether you're managing a flagship site, a compliance-heavy portfolio or a network of ageing assets, we’ll find the right fit, fast.",
     listItems: [
-        "Property developers (residential, commercial, mixed-use)",
-        "Funds and institutional asset owners",
-        "Real estate advisory and consultancy groups",
-        "Government and private urban development bodies",
+        "Commercial property owners and asset managers",
+        "Government departments and infrastructure bodies",
+        "Aged care, healthcare and education providers",
+        "Transport hubs, airports and public precincts",
+        "Private operators and corporate occupiers",
     ],
     buttonText: "Start the conversation",
   };
 
 export const facilitiesManagementSpecialistExpertiseData: SpecialistExpertiseProps = {
-  title: "Built for FacilitiesManagement. Proven in Delivery.",
+  title: "Engineered for Results. Backed by Performance.",
   description:
-    "Permanent, contract and executive recruitment that reduces risk, unlocks productivity, and drives your projects forward.",
-  sectors: [
-    "Site Management",
-    "Project FacilitiesManagement",
-    "Safety & Compliance",
-    "Commercial Leads",
-    "HSE Professionals",
-  ],
+    "Specialist recruitment across civil, structural, and services roles, aligned to project scope, stakeholder pressure, and delivery outcomes.",
+    sectors: [
+      "Property & Development",
+      "Construction",
+      "Engineering",
+      "Facilities Management",
+      "Resources",
+      "Renewables",
+      "Not For Profit",
+      "Corporate",
+      "Government",
+    ],
 };
 
 export const facilitiesManagementRecruitmentSections: Section[] = [
   {
-    items: [
-      "FacilitiesManagement Project Directors and Managers",
-      "Property Development Executives",
-      "FacilitiesManagement Specialists (Civil, Mechanical, Electrical)",
-      "Facilities and Asset Managers",
-      "Resources Industry Leadership",
-      "Renewable Energy Project Teams",
-      "NFP and Public Sector Operations Executives",
+    complexItems:[
+      {
+        title: "Facilities & Property Management",
+        body: "Facilities Managers, Property Managers, and Precinct Managers who oversee day-to-day building operations, tenant relations, budgets and compliance.",
+      },
+      {
+        title: "Asset & Operations Management",
+        body: "Asset Managers and Operations Managers with responsibility for lifecycle planning, service contracts, and operational performance across complex assets.",
+      },
+      {
+        title: "Technical Services & Compliance",
+        body: "Technical Services Managers and Compliance Leads specialising in HVAC, fire safety, lifts, BMS, and statutory essential services obligations.",
+      },
+      {
+        title: "Maintenance & Trades Supervision",
+        body: "Maintenance Supervisors and Trades Supervisors who manage onsite works, coordinate contractors, and ensure reactive and planned maintenance delivery.",
+      },
+      {
+        title: "WHS, Risk & Governance",
+        body: "WHS Managers, Risk and Compliance Officers who drive audit-readiness, mitigate operational risk and maintain safety across regulated environments.",
+      },
+      {
+        title: "Multi-Site & National Operations",
+        body: "Portfolio Facilities Managers, National Operations Managers and Regional FM Leads who deliver consistency, cost control and risk management across distributed asset bases.",
+      },
     ],
   },
 ];
 
 export const facilitiesManagementNetworkData: OurNetworkSectionProps = {
   header: "WORK WITH THE EXPERTS",
-  heading: "Deep expertise. Built for site realities.",
+  heading: "Operational control. Compliance built in.",
   description:
-    "We don’t chase resumes, we chase results. Our facilitiesManagement networks are built project by project, site by site, with live intel on who’s performing, where, and why it matters.",
+    "We don’t source from job boards. We chase performance across real buildings, budgets and audit frameworks. We recruit across:",
   bottomText: "",
   image: "/expertImage.jpg",
   mt: -10,
-  mb: 20,
+  mb: 3,
   sections: facilitiesManagementRecruitmentSections,
 };
 
@@ -71,27 +94,26 @@ export const facilitiesManagementHowWeRecruitData: HowWeRecruitProps = {
   heading: "facilitiesManagement recruitment",
   title: "How we recruit and why it works.",
   subTitle:
-    "Great facilitiesManagement hiring is about more than experience; it’s about risk, trust and delivery under pressure.",
+    "Great Facilities Management hires don’t just maintain standards, they hold everything together.",
   description:
     "We don’t advertise and hope. We actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. Every engagement includes:",
-  description2:
-    "We don’t just fill roles, we build teams. Our recruitment process is designed to deliver the right people for your project, every time.",
+  description3:"When tenant satisfaction, cost control and contractor risk are all in play, you don’t have time to onboard the wrong person.",
   itemList: [
     {
       icon: "/WebNetwork.svg",
-      text: "Dedicated research & market mapping",
+      text: "Mapping of talent by asset class, contract structure and reporting lines",
     },
     {
       icon: "/Voice.svg",
-      text: "Direct outreach to passive talent",
+      text: "Outreach to FM professionals delivering in aligned environments",
     },
     {
       icon: "/todoList.svg",
-      text: "Structured assessments focused on cultural and technical alignment",
+      text: "Role-specific assessment across compliance, stakeholder and service metrics",
     },
     {
       icon: "/checkPeople.svg",
-      text: "No shortlists. Just the right person, first time.",
+      text: "One appointment, who can step in and deliver",
     },
   ],
 };
@@ -129,39 +151,39 @@ export const facilitiesManagementResultSectionData: ResultSectionProps = {
   cardProps: {
     cardDetails: [
       {
-        score: "91%",
+        score: "98%",
         title: "",
-        description: "of permanent placements retained 12+ months",
+        description: "of hires are still with the business after 18 months",
       },
       {
         score: "100%",
         title: "",
-        description: "of retained assignments completed within timeframe",
+        description: "of retained searches have been completed successfully",
       },
       {
-        score: "83%",
+        score: "85%",
         title: "",
-        description: "of roles filled from the first candidate presented",
+        description: "of roles are filled from the first candidate presented",
       },
     ],
   },
   backgroundImage: "/results-bg.jpg",
-  topHeading: "Where Strategy Demands Action",
+  topHeading: "Measurable outcomes",
   bottomHeading:
-    "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+    "Facilities don’t fall apart overnight, but they do without the right people holding it all together.",
 };
 
 export const facilitiesManagementTestimonialData: TestimonialProps = {
   heading: "What Our Clients Say",
   title: "Reviews",
   description:
-    "Here is what our clients have to say about working with us. Real experiences, real feedback.",
+    "Here’s what our clients have to say about working with us. Real experiences, real feedback.",
   quote:
-    "The calibre of candidates has always exceeded what others have put forward.",
+    "“The process for us and the candidates presented were exceptionally strong across all our needs.”",
   detail:
-    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-  author: "Stephen Kerfoot, Director",
-  company: "Kerfoot Electrics",
+    "Their screening process is thorough but always considerate. Their communication protocols, including feedback and de-briefing, are industry best-practice",
+  author: "Emma Clements, GM People & Culture - ",
+  company: "Transdev NSW",
 };
 
 export const facilitiesManagementFaqData: FAQ[] = [

@@ -7,23 +7,24 @@ import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 export const constructionHeroDetails: HeroProps = {
   title: "Construction Recruitment That Builds Certainty",
   description:
-    "From boots-on-the-ground hires to strategic delivery roles, we find the people who get it built.",
+    "From boots-on-the-ground hires to strategic delivery roles,we find the people who get it built.",
   buttonText: "Begin your success story",
-  imageUrl: "/ConstructionHero.jpg",
+  imageUrl: "/hero/hero11.jpg",
 };
 
 export const constructionWhatWeDoData: WhatWeDoProps = {
-    heading: "Great developments don’t deliver themselves — it starts with who you hire.",
+    heading: "Great builds don’t stay on track by accident, it starts with who you hire.",
     introText:
-      "We recruit high-performing professionals across the entire property development spectrum — from acquisitions and feasibility to delivery, leasing, and asset performance   \n\n" +
-      "Whether you're scaling a national development pipeline or unlocking new investment potential, we deliver the right people at the right time.",
-    whoSubHeading: "We recruit for:",
-    whoHeading: "The right partnership brings your project to life — and the right team keeps it moving. We partner with:",
+      "We recruit across the full construction lifecycle — from early-stage planning and estimating through to site delivery, handover and asset performance.   \n\n" +
+      "Whether you're managing a multi-site pipeline, resourcing for a live project, or replacing a critical delivery lead — we act fast to secure professionals who keep schedules, margins and safety on track.",
+    whoSubHeading: "Trusted by Australia's Builders:",
+    whoHeading: "We work with builders who can't afford delays — and developers who need certainty from day one. Our clients include:",
     listItems: [
-        "Property developers (residential, commercial, mixed-use)",
-        "Funds and institutional asset owners",
-        "Real estate advisory and consultancy groups",
-        "Government and private urban development bodies",
+        "Head Contractors, Subcontractors across keys sectors including Health, Education, Industrial",
+        "Specialist subcontractors and client side consultancies",
+        "Fitout and refurbishment firms",
+        "Client-side project and development managers",
+        "Government and private developers",
     ],
     buttonText: "Start the conversation",
   };
@@ -33,24 +34,45 @@ export const constructionSpecialistExpertiseData: SpecialistExpertiseProps = {
   description:
     "Permanent, contract and executive recruitment that reduces risk, unlocks productivity, and drives your projects forward.",
   sectors: [
-    "Site Management",
-    "Project Engineering",
-    "Safety & Compliance",
-    "Commercial Leads",
-    "HSE Professionals",
+    "Property & Development",
+    "Construction",
+    "Engineering",
+    "Facilities Management",
+    "Resources",
+    "Renewables",
+    "Not For Profit",
+    "Corporate",
+    "Government",
   ],
 };
 
 export const constructionRecruitmentSections: Section[] = [
   {
-    items: [
-      "Construction Project Directors and Managers",
-      "Property Development Executives",
-      "Engineering Specialists (Civil, Mechanical, Electrical)",
-      "Facilities and Asset Managers",
-      "Resources Industry Leadership",
-      "Renewable Energy Project Teams",
-      "NFP and Public Sector Operations Executives",
+    complexItems:[
+      {
+        title: "Site Management",
+        body: "Foremen and Site Managers who lead crews, control subcontractors, and keep timelines moving in high-pressure environments.",
+      },
+      {
+        title: "Contract Administration & Estimating",
+        body: "Professionals who scope risk, protect margins and keep costs under control across commercial and civil projects.",
+      },
+      {
+        title: "Construction Directors & Delivery Leads",
+        body: "Senior operators who oversee multi-site programs, manage client expectations and keep delivery teams aligned to outcomes.",
+      },
+      {
+        title: "HSE & Quality Management",
+        body: "Safety and compliance leads who protect lives, reputations and program continuity under regulatory scrutiny.",
+      },
+      {
+        title: "Client-Side Project & Development Management",
+        body: "Project Managers, owner’s reps and consultants who manage stakeholders, delivery risk and feasibility across complex construction programs.",
+      },
+      {
+        title: "Commercial Management",
+        body: "Contract, cost and commercial professionals who forecast, report and manage risk in alignment with delivery targets.",
+      },
     ],
   },
 ];
@@ -75,23 +97,23 @@ export const constructionHowWeRecruitData: HowWeRecruitProps = {
   description:
     "We don’t advertise and hope. We actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. Every engagement includes:",
   description2:
-    "We don’t just fill roles, we build teams. Our recruitment process is designed to deliver the right people for your project, every time.",
+    "We act quickly and decisively because delays cost money — and bad hires cost more",
   itemList: [
     {
       icon: "/WebNetwork.svg",
-      text: "Dedicated research & market mapping",
+      text: "Role scoping aligned to delivery timeline and project complexity",
     },
     {
       icon: "/Voice.svg",
-      text: "Direct outreach to passive talent",
+      text: "Direct outreach to high-performing site and commercial talent",
     },
     {
       icon: "/todoList.svg",
-      text: "Structured assessments focused on cultural and technical alignment",
+      text: "Screening based on verified project outcomes, team leadership, safety and commercial acumen",
     },
     {
       icon: "/checkPeople.svg",
-      text: "No shortlists. Just the right person, first time.",
+      text: "One appointment, not a shortlist, ready to deliver now",
     },
   ],
 };
@@ -129,24 +151,24 @@ export const constructionResultSectionData: ResultSectionProps = {
   cardProps: {
     cardDetails: [
       {
-        score: "91%",
+        score: "98%",
         title: "",
-        description: "of permanent placements retained 12+ months",
+        description: "of hires are still with the business after 18 months",
       },
       {
         score: "100%",
         title: "",
-        description: "of retained assignments completed within timeframe",
+        description: "of retained searches have been completed successfully",
       },
       {
         score: "83%",
         title: "",
-        description: "of roles filled from the first candidate presented",
+        description: "of roles are filled from the first candidate presented",
       },
     ],
   },
   backgroundImage: "/results-bg.jpg",
-  topHeading: "Where Strategy Demands Action",
+  topHeading: "Measurable outcomes",
   bottomHeading:
     "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
 };
@@ -157,10 +179,10 @@ export const constructionTestimonialData: TestimonialProps = {
   description:
     "Here is what our clients have to say about working with us. Real experiences, real feedback.",
   quote:
-    "The calibre of candidates has always exceeded what others have put forward.",
+    "“The calibre of candidates has always exceeded what others have put forward.”",
   detail:
-    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-  author: "Stephen Kerfoot, Director",
+    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is personally involved in every step of the process.",
+  author: "Stephen Kerfoot, Director - ",
   company: "Kerfoot Electrics",
 };
 

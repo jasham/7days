@@ -7,6 +7,7 @@ import PartnerCard from "../Card";
 import Image from "next/image";
 import { Button } from "../Button/Button";
 import { GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
+import Heading from "../Heading/Heading";
 
 export default function GenericProcessSection({
   backgroundImage,
@@ -126,8 +127,8 @@ export default function GenericProcessSection({
         </Box>
 
         {/* Deliverables */}
-        <Box mt={6} mb={4} sx={{ display: "flex", gap: 16 }}>
-          <Stack>
+        <Box mt={6} mb={4} sx={{ display: "flex", gap: 4 }}>
+          <Stack sx={{ width: "40%" }}>
             <Typography variant="h2" gutterBottom>
               {itemsHeading}
             </Typography>
@@ -144,7 +145,7 @@ export default function GenericProcessSection({
                 ))}
             </Typography>
           </Stack>
-          <Stack spacing={3}>
+          <Stack spacing={3} sx={{ width: "40%" }}>
             {deliverables.map((point, index) => (
               <Stack
                 direction="row"
@@ -155,8 +156,8 @@ export default function GenericProcessSection({
                 <Image
                   src={point?.icon || ""}
                   alt={""}
-                  width={24}
-                  height={24}
+                  width={36}
+                  height={36}
                   style={{ objectFit: "contain" }}
                 />
                 <Typography variant="body1">{point?.title}</Typography>
