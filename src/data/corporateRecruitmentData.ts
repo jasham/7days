@@ -5,65 +5,82 @@ import { HowWeRecruitProps } from "@/types/propertyRecruitmentInterface";
 import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 export const corporateHeroDetails: HeroProps = {
-  title: "Corporate Recruitment That Builds Certainty",
+  title: "Corporate Sector Recruitment That Delivers",
   description:
-    "From boots-on-the-ground hires to strategic delivery roles, we find the people who get it built.",
+    "When growth, change or risk is on the table,we help you hire with confidence.",
   buttonText: "Begin your success story",
-  imageUrl: "/CorporateHero.jpg",
+  imageUrl: "/hero/hero17.jpg",
 };
 
 export const corporateWhatWeDoData: WhatWeDoProps = {
-    heading: "Great developments don’t deliver themselves — it starts with who you hire.",
+    heading: "We recruit across the core corporate functions that keep organisations moving.",
     introText:
-      "We recruit high-performing professionals across the entire property development spectrum — from acquisitions and feasibility to delivery, leasing, and asset performance   \n\n" +
-      "Whether you're scaling a national development pipeline or unlocking new investment potential, we deliver the right people at the right time.",
-    whoSubHeading: "We recruit for:",
-    whoHeading: "The right partnership brings your project to life — and the right team keeps it moving. We partner with:",
+      "Whether you’re strengthening governance, scaling teams or leading transformation, we help you find the people who drive clarity, confidence and results.",
+    whoSubHeading: "Who we work with — from enterprise to scale-up:",
+    whoHeading: "The right hire drives results — and protects reputation. We partner with:",
     listItems: [
-        "Property developers (residential, commercial, mixed-use)",
-        "Funds and institutional asset owners",
-        "Real estate advisory and consultancy groups",
-        "Government and private urban development bodies",
+        "ASX-listed and privately owned businesses",
+        "PE-backed and growth-phase companies",
+        "National and multinational corporates",
+        "Not-for-profit and government-adjacent organisations",
+        "Professional and business services firms"
     ],
     buttonText: "Start the conversation",
   };
 
 export const corporateSpecialistExpertiseData: SpecialistExpertiseProps = {
-  title: "Built for Corporate. Proven in Delivery.",
+  title: "Business-Critical Roles. Commercially Aligned Hires.",
   description:
-    "Permanent, contract and executive recruitment that reduces risk, unlocks productivity, and drives your projects forward.",
-  sectors: [
-    "Site Management",
-    "Project Engineering",
-    "Safety & Compliance",
-    "Commercial Leads",
-    "HSE Professionals",
-  ],
+    "Recruitment across finance, risk, people and operations — built for long-term value.",
+    sectors: [
+      "Property & Development",
+      "Construction",
+      "Engineering",
+      "Facilities Management",
+      "Resources",
+      "Renewables",
+      "Not For Profit",
+      "Corporate",
+      "Government",
+    ],
 };
 
 export const corporateRecruitmentSections: Section[] = [
   {
-    items: [
-      "Corporate Project Directors and Managers",
-      "Property Development Executives",
-      "Engineering Specialists (Civil, Mechanical, Electrical)",
-      "Facilities and Asset Managers",
-      "Resources Industry Leadership",
-      "Renewable Energy Project Teams",
-      "NFP and Public Sector Operations Executives",
+    complexItems:[
+      {
+        title: "Finance, Risk & Compliance",
+        body: "CFOs, finance leaders, analysts and governance specialists.",
+      },
+      {
+        title: "Strategy, Transformation & Change",
+        body: "Leaders who translate business priorities into action and accountability.",
+      },
+      {
+        title: "Human Resources & People Advisory",
+        body: "People leaders who drive culture, performance and workforce alignment.",
+      },
+      {
+        title: "Operations & Commercial Management",
+        body: "Managers who streamline systems, lift efficiency and reduce risk.",
+      },
+      {
+        title: "Executive & Board Appointments",
+        body: "High-impact leaders who shape direction and deliver outcomes.",
+      },
     ],
   },
 ];
 
 export const corporateNetworkData: OurNetworkSectionProps = {
   header: "WORK WITH THE EXPERTS",
-  heading: "Deep expertise. Built for site realities.",
+  heading: "Deep expertise. Business-critical talent.",
   description:
-    "We don’t chase resumes, we chase results. Our corporate networks are built project by project, site by site, with live intel on who’s performing, where, and why it matters.",
+    "We don’t pull from static databases — we headhunt for impact. Our sector insight spans the entire property lifecycle:",
   bottomText: "",
   image: "/expertImage.jpg",
   mt: -10,
-  mb: 20,
+  mb: 3,
   sections: corporateRecruitmentSections,
 };
 
@@ -71,27 +88,27 @@ export const corporateHowWeRecruitData: HowWeRecruitProps = {
   heading: "corporate recruitment",
   title: "How we recruit and why it works.",
   subTitle:
-    "Great corporate hiring is about more than experience; it’s about risk, trust and delivery under pressure.",
+    "We don’t just fill seats — we find people who shift performance. Our searches are proactive, targeted and outcomes-led.",
   description:
-    "We don’t advertise and hope. We actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. Every engagement includes:",
+    "We understand the pressures driving corporate hiring — board scrutiny, margin pressure, restructuring, regulatory shifts. That’s why we move with focus and discretion. Every search includes:",
   description2:
-    "We don’t just fill roles, we build teams. Our recruitment process is designed to deliver the right people for your project, every time.",
+    "The difference between a successful transformation and a failed initiative often comes down to one hire. We help you get that hire right.",
   itemList: [
     {
       icon: "/WebNetwork.svg",
-      text: "Dedicated research & market mapping",
+      text: "Role definition and capability mapping",
     },
     {
       icon: "/Voice.svg",
-      text: "Direct outreach to passive talent",
+      text: "Targeted outreach to corporate professionals with proven track records",
     },
     {
       icon: "/todoList.svg",
-      text: "Structured assessments focused on cultural and technical alignment",
+      text: "Structured evaluation across commercial, operational and cultural alignment",
     },
     {
       icon: "/checkPeople.svg",
-      text: "No shortlists. Just the right person, first time.",
+      text: "One qualified candidate - the one who can deliver. Not a pile of profiles.",
     },
   ],
 };
@@ -129,24 +146,24 @@ export const corporateResultSectionData: ResultSectionProps = {
   cardProps: {
     cardDetails: [
       {
-        score: "91%",
+        score: "98%",
         title: "",
-        description: "of permanent placements retained 12+ months",
+        description: "of hires are still with the business after 18 months",
       },
       {
         score: "100%",
         title: "",
-        description: "of retained assignments completed within timeframe",
+        description: "of retained searches have been completed successfully",
       },
       {
-        score: "83%",
+        score: "85%",
         title: "",
-        description: "of roles filled from the first candidate presented",
+        description: "of roles are filled from the first candidate presented",
       },
     ],
   },
   backgroundImage: "/results-bg.jpg",
-  topHeading: "Where Strategy Demands Action",
+  topHeading: "Measurable outcomes",
   bottomHeading:
     "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
 };
@@ -155,12 +172,12 @@ export const corporateTestimonialData: TestimonialProps = {
   heading: "What Our Clients Say",
   title: "Reviews",
   description:
-    "Here is what our clients have to say about working with us. Real experiences, real feedback.",
+    "Here’s what our clients have to say about working with us. Real experiences, real feedback.",
   quote:
-    "The calibre of candidates has always exceeded what others have put forward.",
+    "“The calibre of candidates has always exceeded what others have put forward.”",
   detail:
-    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-  author: "Stephen Kerfoot, Director",
+    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is personally involved in every step of the process.",
+  author: "Stephen Kerfoot, Director -",
   company: "Kerfoot Electrics",
 };
 

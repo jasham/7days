@@ -41,7 +41,7 @@ export interface HeroProps {
     dividerColor: string;
     dividerHeight: string;
     title: string;
-    subTitle: string;
+    subTitle?: string;
     cards: CardData[];
     buttonText: string;
     buttonColor: string;

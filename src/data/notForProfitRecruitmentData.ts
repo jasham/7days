@@ -5,65 +5,88 @@ import { HowWeRecruitProps } from "@/types/propertyRecruitmentInterface";
 import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 export const notForProfitHeroDetails: HeroProps = {
-  title: "NotForProfit Recruitment That Builds Certainty",
+  title: "Not-for-Profit Recruitment That Drives Real Impact",
   description:
-    "From boots-on-the-ground hires to strategic delivery roles, we find the people who get it built.",
+    "We help purpose-led organisations find people who deliver,with care, capability and accountability.",
   buttonText: "Begin your success story",
-  imageUrl: "/NotForProfitHero.jpg",
+  imageUrl: "/hero/hero16.jpg",
 };
 
 export const notForProfitWhatWeDoData: WhatWeDoProps = {
-    heading: "Great developments don’t deliver themselves — it starts with who you hire.",
+    heading: "We place the people driving Australia’s most important social outcomes",
     introText:
-      "We recruit high-performing professionals across the entire property development spectrum — from acquisitions and feasibility to delivery, leasing, and asset performance   \n\n" +
-      "Whether you're scaling a national development pipeline or unlocking new investment potential, we deliver the right people at the right time.",
-    whoSubHeading: "We recruit for:",
-    whoHeading: "The right partnership brings your project to life — and the right team keeps it moving. We partner with:",
+      "We recruit across executive, operational and front-line roles for not-for-profits, charities and social impact organisations. \n\n Whether you're scaling a national community program or replacing a senior executive, we help you find values-aligned talent with the experience to perform — even under resource pressure.",
+    whoSubHeading: "Trusted by Australia’s For-Purpose Sector",
+    whoHeading: "We work with organisations whose missions demand more than technical capability, they require values, resilience and real-world delivery. We partner with:",
+    whoDescription:"We work nationally, supporting organisations in metro, regional and remote communities across every state.",
     listItems: [
-        "Property developers (residential, commercial, mixed-use)",
-        "Funds and institutional asset owners",
-        "Real estate advisory and consultancy groups",
-        "Government and private urban development bodies",
+        "Disability and NDIS service providers",
+        "Community health, aged care and mental health organisations",
+        "Education, employment and youth services",
+        "Foundations, charities and philanthropic entities",
+        "Social enterprises, advocacy groups and peak bodies",
+        "Property, asset and precinct owners within the NFP sector"
     ],
     buttonText: "Start the conversation",
   };
 
 export const notForProfitSpecialistExpertiseData: SpecialistExpertiseProps = {
-  title: "Built for NotForProfit. Proven in Delivery.",
+  title: "Purpose-Built Recruitment. Sector-Aligned Talent.",
   description:
-    "Permanent, contract and executive recruitment that reduces risk, unlocks productivity, and drives your projects forward.",
-  sectors: [
-    "Site Management",
-    "Project Engineering",
-    "Safety & Compliance",
-    "Commercial Leads",
-    "HSE Professionals",
-  ],
+    "Specialist hiring across frontline, operational and executive roles, aligned to compliance, complexity, and community expectations.",
+    sectors: [
+      "Property & Development",
+      "Construction",
+      "Engineering",
+      "Facilities Management",
+      "Resources",
+      "Renewables",
+      "Not For Profit",
+      "Corporate",
+      "Government",
+    ],
 };
 
 export const notForProfitRecruitmentSections: Section[] = [
   {
-    items: [
-      "NotForProfit Project Directors and Managers",
-      "Property Development Executives",
-      "Engineering Specialists (Civil, Mechanical, Electrical)",
-      "Facilities and Asset Managers",
-      "Resources Industry Leadership",
-      "Renewable Energy Project Teams",
-      "NFP and Public Sector Operations Executives",
+    complexItems:[
+      {
+        title: "Executive & Leadership Appointments",
+        body: "CEOs, COOs, CFOs, GMs and Board Members with governance, funding and social impact experience.",
+      },
+      {
+        title: "Program & Project Delivery",
+        body: "Operations Managers, Project Leads and Program Directors who execute under pressure, navigate funding milestones and meet service KPIs.",
+      },
+      {
+        title: "Disability, Aged & Community Care",
+        body: "NDIS Coordinators, Support Leads, Case Managers and Service Managers who balance compassion with compliance",
+      },
+      {
+        title: "Policy, Advocacy & Reform",
+        body: "Policy Advisors, Advocacy Leads and Social Researchers who influence at the intersection of government, community and sector need.",
+      },
+      {
+        title: "Fundraising, Philanthropy & Engagement",
+        body: "Campaign Managers, Donor Leads and Grant Writers who grow revenue and deepen community trust.",
+      },
+      {
+        title: "Property & Facilities Management",
+        body: "Development Managers, FM Leads and Asset Officers managing aged care, education, precinct and supported accommodation portfolios.",
+      },
     ],
   },
 ];
 
 export const notForProfitNetworkData: OurNetworkSectionProps = {
   header: "WORK WITH THE EXPERTS",
-  heading: "Deep expertise. Built for site realities.",
+  heading: "Purpose-Driven Talent. Ready to Make a Difference.",
   description:
-    "We don’t chase resumes, we chase results. Our notForProfit networks are built project by project, site by site, with live intel on who’s performing, where, and why it matters.",
+    "We recruit for mission-critical roles across Australia’s for-purpose sector, from front-line services to board appointments, from advocacy to asset management.",
   bottomText: "",
   image: "/expertImage.jpg",
   mt: -10,
-  mb: 20,
+  mb: 3,
   sections: notForProfitRecruitmentSections,
 };
 
@@ -71,27 +94,27 @@ export const notForProfitHowWeRecruitData: HowWeRecruitProps = {
   heading: "notForProfit recruitment",
   title: "How we recruit and why it works.",
   subTitle:
-    "Great notForProfit hiring is about more than experience; it’s about risk, trust and delivery under pressure.",
+    "Mission matters, but so does delivery. We go beyond passion to find people with the resilience, clarity and operational credibility to deliver in constrained and complex environments.",
   description:
-    "We don’t advertise and hope. We actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. Every engagement includes:",
+    "We profile mission-aligned leaders, map adjacent sectors for transferable expertise, and engage professionals ready to make a purposeful move. Every search includes:",
   description2:
-    "We don’t just fill roles, we build teams. Our recruitment process is designed to deliver the right people for your project, every time.",
+    "We understand what it takes to lead with purpose, deliver under pressure, and stay accountable to the people and communities who matter most.",
   itemList: [
     {
       icon: "/WebNetwork.svg",
-      text: "Dedicated research & market mapping",
+      text: "Sector-specific research and benchmarking",
     },
     {
       icon: "/Voice.svg",
-      text: "Direct outreach to passive talent",
+      text: "Direct outreach to high-impact, values-led talent",
     },
     {
       icon: "/todoList.svg",
-      text: "Structured assessments focused on cultural and technical alignment",
+      text: "Evaluation of cultural alignment, stakeholder sensitivity and delivery track record",
     },
     {
       icon: "/checkPeople.svg",
-      text: "No shortlists. Just the right person, first time.",
+      text: "One candidate - the right one, aligned by values and mission.",
     },
   ],
 };
@@ -129,39 +152,39 @@ export const notForProfitResultSectionData: ResultSectionProps = {
   cardProps: {
     cardDetails: [
       {
-        score: "91%",
+        score: "98%",
         title: "",
-        description: "of permanent placements retained 12+ months",
+        description: "of hires are still with the business after 18 months",
       },
       {
         score: "100%",
         title: "",
-        description: "of retained assignments completed within timeframe",
+        description: "of retained searches have been completed successfully",
       },
       {
-        score: "83%",
+        score: "85%",
         title: "",
-        description: "of roles filled from the first candidate presented",
+        description: "of roles are filled from the first candidate presented",
       },
     ],
   },
   backgroundImage: "/results-bg.jpg",
   topHeading: "Where Strategy Demands Action",
   bottomHeading:
-    "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+    "Mission is your foundation. We find you the right people make it sustainable.",
 };
 
 export const notForProfitTestimonialData: TestimonialProps = {
   heading: "What Our Clients Say",
   title: "Reviews",
   description:
-    "Here is what our clients have to say about working with us. Real experiences, real feedback.",
+    "Here’s what our clients have to say about working with us. Real experiences, real feedback.",
   quote:
-    "The calibre of candidates has always exceeded what others have put forward.",
+    "“Henton’s unique network is of particular value when looking to fill a difficult role”",
   detail:
-    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-  author: "Stephen Kerfoot, Director",
-  company: "Kerfoot Electrics",
+    "They don’t just focus on the role requirements, or job description. They pay close attention to the individual leader. They care about our success and we value their advice and support.",
+  author: "Nicola Stokes, CEO - ",
+  company: "Sydney Children's Hospital Foundation",
 };
 
 export const notForProfitFaqData: FAQ[] = [

@@ -60,11 +60,12 @@ const TrustedClients: React.FC<TrustedClientsProps> = ({
         <Box
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            justifyContent: titleText2 ? "space-between" : "center",
+            textAlign: titleText2 ? "left" : "center",
             width: "100%",
           }}
         >
-          <Typography variant="h3" width={"40%"} color={titleColor} sx={{ mb: 4 }}>
+          <Typography variant="h3" width={titleText2 ? "40%" : "100%"} color={titleColor} sx={{ mb: 4 }}>
             {titleText}
           </Typography>
           {titleText2 && <Typography variant="h5">{titleText2}</Typography>}

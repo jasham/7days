@@ -8,16 +8,16 @@ import {
 import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 export const heroDetails: HeroProps = {
-    title: "Flexible Contract Recruitment. Without the Compromise.",
+    title: "Executive Search That Shapes Your Future",
     description:
-      "Flexible recruitment that’s fast, reliable and built to perform.",
+      "Appoint leadership that transforms outcomes, not just fills a seat.",
     buttonText: "Begin your success story",
-    imageUrl: "/Hero3.jpg",
+    imageUrl: "/hero/hero9.jpg",
 };
 
 // 3️⃣ SpecialistExpertise
 export const specialistExpertiseData: SpecialistExpertiseProps = {
-  title: "Specialist Contract Recruitment for Demanding Environments",
+  title: "Sector-Specific Recruitment. Permanent Impact.",
   description:
     "Deep industry knowledge, precise candidate alignment - built for long-term success in your sector.",
   sectors: [
@@ -36,37 +36,23 @@ export const specialistExpertiseData: SpecialistExpertiseProps = {
 // 4️⃣ OurNetworkSection
 export const internationalRecruitmentSections: Section[] = [
   {
-    complexItems:[
-        {
-          title: "We help you scale with confidence during:",
-          subItems: [
-            "Major project ramp-ups",
-            "Shutdowns, upgrades and expansions",
-            "Unplanned resource gaps or leave coverage",
-            "High-volume regional or time-sensitive mobilisations",
-          ],
-        },
-        {
-          title: "Our networks span:",
-          subItems: [
-            "Site Engineers, Forepersons and WHS Advisors",
-            "Project Managers, Contract Administrators and Estimators",
-            "Technical and specialist operators",
-            "Commercial Managers and interim project leadership",
-            "White-collar project teams mobilised for 3, 6 or 12-month engagements",
-          ],
-        },
+    items:[
+        "Board Chairs and Non-Executive Directors",
+        "Industry-leading C-suite operators",
+        "Regional transformation leaders and state-based functional executives",
+        "Line-level managers and operational leaders",
+        "Emerging successors identified through succession mapping"
       ],
   },
 ];
 
 export const networkData: OurNetworkSectionProps = {
   header:"WORK WITH THE EXPERTS",
-  heading: "Trusted teams. Mobilised when it counts",
+  heading: "Strategic network advantage.",
   description:
-    "Henton supports construction, engineering, and infrastructure leaders with contract teams ready to perform — across metro, regional and remote Australia.",
+    "We’re not drawing from databases — we’re drawing from relationships. We maintain live intelligence networks across:",
   bottomText:
-    "We know who’s active, who’s proven, and who’s ready to hit the ground running.",
+    "",
   image: "/Network2.svg",
   mt: -5,
   mb: 5,
@@ -76,35 +62,36 @@ export const networkData: OurNetworkSectionProps = {
 // 5️⃣ HowWeDeliverRecruitment
 export const howWeDeliverData: HowWeDeliverRecruitmentProps = {
   headingText: "CONTRACT RECRUITMENT SERVICES",
-  mainTitle: "Our process for contract recruitment",
-  subTitle: "We deliver speed without cutting corners. Every contractor is vetted for readiness, reliability and fit — before they ever reach your team.",
+  mainTitle: "How we deliver retained executive search",
+  subTitle: "Our model is built around precision, trust and market intelligence.",
+  subTitle2: "Every search is built on five core pillars and includes:",
   image: "/contractService.jpg",
   buttonText: "Build Your Team",
   features: [
     {
-      title: "Role Brief + Compliance Needs",
+      title: "Leadership Strategy & Role Alignment",
       description:
-        "We clarify technical scope, system access, safety requirements, location coverage and WHS obligations.",
+        "We begin with a deep consultation with the CEO, board or executive leadership team to define the success profile — including commercial outcomes, leadership style, team context and cultural alignment.",
     },
     {
-      title: "Talent Pool Activation",
+      title: "Market Mapping & Competitor Intelligence",
       description:
-        "We maintain live sector-specific contractor pools, segmented by trade, project phase, clearance and availability.",
+        "We conduct in-depth research to identify competitor structures, adjacent leadership talent, succession candidates and emerging executives — across both industry and adjacent markets.",
     },
     {
-      title: "Readiness Review & Role Matching",
+      title: "Direct Search & Confidential Engagement",
       description:
-        "We assess each contractor’s experience, project exposure, and availability, and flag relevant system or site experience (e.g. Procore, Aconex, SAP) where known.",
+        "We approach pre-qualified, high-performing passive leaders through confidential, one-to-one outreach. Every conversation is discreet and led directly by senior consultants — no ads, no noise.",
     },
     {
-      title: "Reference + Performance Check",
+      title: "Executive Assessment for Impact",
       description:
-        "We reference contractors with past clients, projects and supervisors, and prioritise proven high performers.",
+        "We assess candidates using structured executive interviews, reference triangulation, optional psychometrics and behavioural profiling. We focus on adaptability, communication style, leadership maturity and stakeholder alignment.",
     },
     {
-      title: "Fast, Structured Delivery",
+      title: "Focused Delivery & Stakeholder Guidance",
       description:
-        "We deliver the right candidates based on availability, alignment and contractor readiness. Timelines are agreed upfront based on the role, location, and mobilisation needs, with clear communication at every step.",
+        "We present only the best candidate within 3–6 weeks, with a detailed profile, leadership analysis, alignment insights, and red flag alerts. We support internal decision-making with ongoing stakeholder engagement and advisory.",
     },
   ],
 };
@@ -141,26 +128,26 @@ export const testimonialData: TestimonialProps = {
     description:
       "Here is what our clients have to say about working with us. Real experiences, real feedback.",
     quote:
-      "The calibre of candidates has always exceeded what others have put forward.",
+      "“Henton Consultiung are a very professional organisation”",
     detail:
-      "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-    author: "Stephen Kerfoot, Director",
-    company: "Kerfoot Electrics",
+      "They have provided us with quality staff. They take the time to understand your business needs and requirements.",
+    author: "Craig Dempsey, Construction Manager - ",
+    company: "Maben Group",
   }
 
   export const resultSectionData: ResultSectionProps = {
     cardProps: {
       cardDetails: [
         {
-            score: "91%", description: "of permanent placements retained 12+ months",
+            score: "98%", description: "of placed executives remain beyond 18 months",
         },
         {
           score: "100%",
-          description: "of retained assignments completed within timeframe",
+          description: "of retained searches delivered within agreed timeframes",
         },
         {
-          score: "83%",
-          description: "of roles filled from the first candidate presented",
+          score: "85%",
+          description: "of clients return for second or third retained assignments",
         },
       ],
     },
@@ -171,16 +158,18 @@ export const testimonialData: TestimonialProps = {
   };
 
   export const whatWeDoData : WhatWeDoProps =   {
-    heading: "Contract recruitment keeps projects moving and teams performing when it matters most.",
+    heading: "Executive hiring is high-stakes — and the right appointment changes everything.",
     introText:
-      "When you need skilled talent fast — for a project, an unplanned gap, or a critical deadline — Henton delivers contractors who are ready to perform from day one.   \n\n" +
-      "We recruit contract professionals who meet both the technical demands of the role and the compliance requirements of your site, system or project. \n\n" +"Whether it’s one interim manager or a full site mobilisation, our process is built to reduce risk, save time, and protect operational momentum.",
+      "At Henton Consulting, we partner with boards, CEOs and senior leadership to deliver retained executive search for critical roles across Australia’s commercial, industrial, and government sectors.   \n\n" +
+      "We specialise in appointing leaders who don’t just meet the brief — they elevate the strategy, challenge thinking, and bring others with them.",
     whoSubHeading: "We recruit for:",
     whoHeading: "Our expertise covers a wide range of skill sets and leadership levels:",
     listItems: [
-        "Technical, operations and interim-management contractors",
-        "Project-based professionals across white-collar functions",
-        "Interim leaders and backfill for key personnel",
+        "Our expertise covers a wide range of skill sets and leadership levels:",
+        "Executive General Managers",
+        "Strategy, Growth and Transformation leaders",
+        "Commercial, Operational and Technical Executives",
+        "Board Directors and Governance appointments"
     ],
     buttonText: "Start the conversation",
   }

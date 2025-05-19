@@ -38,9 +38,7 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
                   mb: 2,
                 }}
               >
-                {title?.split("/")[0]}
-                <br />
-                {title?.split("/")[1]}
+                {title}
               </Typography>
 
               <Typography
@@ -64,10 +62,10 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
                   lineHeight: "140%",
                   color: "#2E2C38",
                   mb: 3,
+                  whiteSpace: "pre-line",
                 }}
               >
-                {description?.split("/")[0]}
-                {description?.split("/")[1]}
+                {description}
               </Typography>
               <Button
                 variantStyle="main"

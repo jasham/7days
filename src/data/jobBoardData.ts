@@ -2,7 +2,7 @@ import { JobBoardData } from "@/types/jobBoardInterfaces";
 
 export const jobBoardData: JobBoardData = {
   hero: {
-    imageUrl: "/Hero2.png",
+    imageUrl: "/hero/hero5.jpg",
     title: "Job Search",
     description: "Find roles that match your skills, values and career goals.",
   },

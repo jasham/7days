@@ -18,7 +18,7 @@ import { WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 const Bullet = ({ size = 8 }: { size?: number }) => (
   <ListItemIcon sx={{ minWidth: size + 4 }}>
-    <FiberManualRecordIcon sx={{ fontSize: size }} />
+    <FiberManualRecordIcon sx={{ fontSize: size , color:"#FFF"}} />
   </ListItemIcon>
 );
 
@@ -46,7 +46,7 @@ export default function WhatWeDoSection({
         dividerColor="#FFFFFF"
         dividerHeight="1px"
       />
-      <Grid container spacing={4} alignItems="center">
+      <Grid container spacing={4} alignItems="flex-end">
         <Grid item xs={12} md={6}>
           {heading && (
             <Typography variant="h2" color="#FFFF">
@@ -59,6 +59,7 @@ export default function WhatWeDoSection({
               textTransform={"capitalize"}
               color="#FFFFFF"
               mt={4}
+              sx={{ whiteSpace: "pre-line" }}
             >
               {introText}
             </Typography>
@@ -67,29 +68,29 @@ export default function WhatWeDoSection({
 
         <Grid item xs={12} md={heading ? 6 : 12}>
           {whoSubHeading && (
-            <Typography variant="h6" textTransform={"capitalize"} gutterBottom color="#FFFFFF">
+            <Typography variant="h3" gutterBottom color="#FFFFFF">
               {whoSubHeading}
             </Typography>
           )}
           {whoHeading && (
-            <Typography variant="h3" gutterBottom color="#FFFFFF">
+            <Typography variant="h6" textTransform={"capitalize"} gutterBottom color="#FFFFFF">
               {whoHeading}
             </Typography>
           )}
           {whoDescription && (
-            <Typography variant="h6" textTransform={"capitalize"} paragraph color="#FFFFFF">
+            <Typography variant="h6" textTransform={"capitalize"} color="#FFFFFF">
               {whoDescription}
             </Typography>
           )}
 
           {listItems && (
-            <List dense sx={{ pl: 2, borderLeft: "1px solid grey" }}>
+            <List dense sx={{ pl: 2, borderLeft: "1px solid white" }}>
               {listItems.map((item, i) => (
                 <ListItem key={i} disableGutters>
                   <Bullet size={8} />
                   <ListItemText
                     primary={item}
-                    primaryTypographyProps={{ color: "#FFFFFF" }}
+                    primaryTypographyProps={{ color: "#FFFFFF" , fontWeight:400 }}
                   />
                 </ListItem>
               ))}

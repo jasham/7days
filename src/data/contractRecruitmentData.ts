@@ -12,7 +12,7 @@ export const heroDetails: HeroProps = {
     description:
       "Flexible recruitment that’s fast, reliable and built to perform.",
     buttonText: "Begin your success story",
-    imageUrl: "/Hero3.jpg",
+    imageUrl: "/hero/hero8.jpg",
 };
 
 // 3️⃣ SpecialistExpertise
@@ -139,11 +139,11 @@ export const testimonialData: TestimonialProps = {
     heading: "What Our Clients Say",
     title: "Reviews",
     description:
-      "Here is what our clients have to say about working with us. Real experiences, real feedback.",
+      "Here’s what our clients have to say about working with us. Real experiences, real feedback.",
     quote:
-      "The calibre of candidates has always exceeded what others have put forward.",
+      "“Henton Consultiung always provide quality candidates”",
     detail:
-      "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
+      "They are extremely efficient with communication. I would highly recommend their services.",
     author: "Stephen Kerfoot, Director",
     company: "Kerfoot Electrics",
   }
@@ -152,15 +152,15 @@ export const testimonialData: TestimonialProps = {
     cardProps: {
       cardDetails: [
         {
-            score: "91%", description: "of permanent placements retained 12+ months",
+            score: "89%", description: "of contractors are extended beyond their initial engagement",
         },
         {
           score: "100%",
-          description: "of retained assignments completed within timeframe",
+          description: "audit pass rate across all managed contractor placements",
         },
         {
-          score: "83%",
-          description: "of roles filled from the first candidate presented",
+          score: "85%",
+          description: "of contract clients return for additional placements",
         },
       ],
     },

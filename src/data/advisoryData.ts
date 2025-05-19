@@ -7,7 +7,7 @@ import { FAQ, GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
     title: "Business Advisory for Growth, Change and Clarity",
     description:
       "Commercial, action-oriented consulting when the next move matters most.",
-    imageUrl: "/Hero2.png",
+      imageUrl: "/hero/hero3.jpg",
     buttonText: "Begin your success story",
   };
 
@@ -34,7 +34,7 @@ import { FAQ, GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
       "Firms preparing for scale, transition or acquisition",
     ],
     closingText:
-      "Our clients come to us when clarity matters — and theory isn’t enough.",
+      "Our clients come to us when clarity matters — and theory isn’t enough",
     ctaText: "Ready to Build What’s Next?",
     ctaColor: "#132D46",
   };
@@ -43,11 +43,11 @@ import { FAQ, GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
     layoutVariant: "imageCenter",
     sectionBg: "#D4E1EF66",
     bgImage: "/strategy.jpg",
-    headingText: "Where Strategy Demands Action",
+    headingText: "RESULT",
     headingColor: "#132D46",
     headingDividerColor: "#132D46",
     dividerHeight: "1px",
-    titleText: "We’re typically engaged when:",
+    titleText: "Where Strategy Demands Action",
     titleColor: "#ffffff",
     imageSrc: "/explaningProjectPoint.jpg",
     imageAlt: "Business Discussion",
@@ -73,7 +73,7 @@ import { FAQ, GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
     intro: [
       {
         description:
-          "Every engagement is led by a senior advisor with real-world leadership experience — not just a toolkit. We move fast, ask sharper questions, and focus on practical change.",
+          "Every engagement is led by a senior advisor with real-world leadership experience — not just a toolkit.",
       },
       {
         description:
@@ -109,32 +109,28 @@ import { FAQ, GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
     itemsHeading: "Our work is:",
     items: [
       {
-        title: "Evidence-based",
+        title: "",
         description:
-          "Informed by data, diagnostics and what’s really happening in your business.",
+          "Built for leaders who need clarity, fast.",
       },
       {
-        title: "Commercially grounded",
+        title: "",
         description:
-          "Anchored to your revenue, cost, investment or scale priorities.",
-      },
-      {
-        title: "Actionable",
-        description: "Designed to turn into clear steps, not theoretical slides.",
+          "Every engagement is structured to drive focus, alignment and forward momentum.",
       },
     ],
     isHeadingLeft: false,
     deliverables: [
       {
-        title: "Shortlists delivered with pace – never at the expense of quality",
+        title: "Evidence-based – Informed by data, diagnostics and what’s really happening in your business",
         icon: "/sortlist.svg",
       },
       {
-        title: "Market insights and real-time availability",
+        title: "Commercially grounded – Anchored to your revenue, cost, investment or scale priorities",
         icon: "/marketing.svg",
       },
       {
-        title: "Confidence in every hire",
+        title: "Actionable – Designed to turn into clear steps, not theoretical slides",
         icon: "/confidence.svg",
       },
     ],
@@ -162,11 +158,11 @@ import { FAQ, GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
       heading: "What Our Clients Say",
       title: "Reviews",
       description:
-        "Here is what our clients have to say about working with us. Real experiences, real feedback.",
+        "Here’s what our clients have to say about working with us. Real experiences, real feedback.",
       quote:
-        "The calibre of candidates has always exceeded what others have put forward.",
+        "I’ve had the pleasure of working with Guy Ingleby for 10 years.",
       detail:
-        "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
+        "I can confidently say they are one of the most effective and professional recruiters I’ve partnered with. Their deep understanding of our business, industry and commitment to finding the right cultural and technical fit have made a real impact on our team.",
       author: "Stephen Kerfoot, Director",
       company: "Kerfoot Electrics",
     };
@@ -193,7 +189,7 @@ import { FAQ, GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
         subtitle:
           "We work with businesses at critical points where structure, leadership and commercial direction must evolve to meet the next stage of growth. We help leaders answer questions like:",
         questions: [
-          "Is our current team structure aligned to where we're going?",
+          "Is our current team structure aligned to where we’re going?",
           "Do we have the right leadership layers — or too many?",
           "Are roles defined by outcomes, or just inherited job titles?",
           "How do we navigate a restructure without losing momentum?",

@@ -5,61 +5,82 @@ import { HowWeRecruitProps } from "@/types/propertyRecruitmentInterface";
 import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 export const governmentHeroDetails: HeroProps = {
-  title: "Government Recruitment That Builds Certainty",
+  title: "Government & Public Sector Recruitment",
   description:
-    "From boots-on-the-ground hires to strategic delivery roles, we find the people who get it built.",
+    "We help government departments deliver with the right people.",
   buttonText: "Begin your success story",
-  imageUrl: "/GovernmentHero.jpg",
+  imageUrl: "/hero/hero18.jpg",
 };
 
 export const governmentWhatWeDoData: WhatWeDoProps = {
-    heading: "Great developments don’t deliver themselves — it starts with who you hire.",
+    heading: "From short-term advisory roles to complex capital works programs, we recruit across government’s most critical delivery areas.",
     introText:
-      "We recruit high-performing professionals across the entire property development spectrum — from acquisitions and feasibility to delivery, leasing, and asset performance   \n\n" +
-      "Whether you're scaling a national development pipeline or unlocking new investment potential, we deliver the right people at the right time.",
-    whoSubHeading: "We recruit for:",
-    whoHeading: "The right partnership brings your project to life — and the right team keeps it moving. We partner with:",
+      "Our candidates understand stakeholder scrutiny, policy nuance, and the importance of visible results.Whether it’s a confidential appointment or a multi-year program, we help you make the hire that matters.",
+    whoSubHeading: "Trusted by Public Sector Employers Across NSW",
+    whoHeading: "We recruit skilled professionals and leaders for all tiers of government, local, state and federal, including:",
     listItems: [
-        "Property developers (residential, commercial, mixed-use)",
-        "Funds and institutional asset owners",
-        "Real estate advisory and consultancy groups",
-        "Government and private urban development bodies",
+        "Local councils and regional authorities",
+        "State departments and statutory agencies",
+        "Federal programs and infrastructure bodies",
+        "Government-owned corporations",
+        "Tier 1 consultancies delivering public sector projects"
     ],
     buttonText: "Start the conversation",
   };
 
 export const governmentSpecialistExpertiseData: SpecialistExpertiseProps = {
-  title: "Built for Government. Proven in Delivery.",
+  title: "Purpose-Led Recruitment. Public Sector Results.",
   description:
-    "Permanent, contract and executive recruitment that reduces risk, unlocks productivity, and drives your projects forward.",
-  sectors: [
-    "Site Management",
-    "Project Engineering",
-    "Safety & Compliance",
-    "Commercial Leads",
-    "HSE Professionals",
-  ],
+    "Deep government experience, policy-aligned delivery – built for long-term success in public service.",
+    sectors: [
+      "Property & Development",
+      "Construction",
+      "Engineering",
+      "Facilities Management",
+      "Resources",
+      "Renewables",
+      "Not For Profit",
+      "Corporate",
+      "Government",
+    ],
 };
 
 export const governmentRecruitmentSections: Section[] = [
   {
-    items: [
-      "Government Project Directors and Managers",
-      "Property Development Executives",
-      "Engineering Specialists (Civil, Mechanical, Electrical)",
-      "Facilities and Asset Managers",
-      "Resources Industry Leadership",
-      "Renewable Energy Project Teams",
-      "NFP and Public Sector Operations Executives",
+    complexItems:[
+      {
+        title: "Policy, Strategy & Reform",
+        body: "Advisors, regulatory specialists and program leads who translate government vision into action — with policy precision, compliance insight and stakeholder buy-in.",
+      },
+      {
+        title: "Program, Project & Development Management",
+        body: "Delivery leaders and project professionals who plan, manage and deliver major public initiatives across infrastructure, services and transformation.",
+      },
+      {
+        title: "Finance, Risk & Procurement",
+        body: "Officers and commercial managers who safeguard public funds, ensure probity and align procurement to policy and operational outcomes.",
+      },
+      {
+        title: "Digital, Data & Transformation",
+        body: "Specialists who lead digital delivery, unlock systems innovation and drive service modernisation at scale.",
+      },
+      {
+        title: "People, Culture & Industrial RelationsHR",
+        body: ", IR and ER professionals who manage change, align policy to workforce needs, and support performance across complex public structures.",
+      },
+      {
+        title: "Executive & SES Appointments",
+        body: "COOs, departmental leaders and board-facing executives who lead with strategic clarity, integrity and whole-of-government alignment.",
+      },
     ],
   },
 ];
 
 export const governmentNetworkData: OurNetworkSectionProps = {
   header: "WORK WITH THE EXPERTS",
-  heading: "Deep expertise. Built for site realities.",
+  heading: "Deep expertise. Public impact talent.",
   description:
-    "We don’t chase resumes, we chase results. Our government networks are built project by project, site by site, with live intel on who’s performing, where, and why it matters.",
+    "We don’t pull from panels and databases, we headhunt for public value. Our insight spans the entire machinery of government. We recruit across:",
   bottomText: "",
   image: "/expertImage.jpg",
   mt: -10,
@@ -71,27 +92,27 @@ export const governmentHowWeRecruitData: HowWeRecruitProps = {
   heading: "government recruitment",
   title: "How we recruit and why it works.",
   subTitle:
-    "Great government hiring is about more than experience; it’s about risk, trust and delivery under pressure.",
+    "Public sector hiring is different. Timelines are tight. Risk is high. Outcomes are public.",
   description:
-    "We don’t advertise and hope. We actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. Every engagement includes:",
+    "We lead every search with strategy, compliance and discretion. No job boards. No guesswork. Every engagement includes:",
   description2:
-    "We don’t just fill roles, we build teams. Our recruitment process is designed to deliver the right people for your project, every time.",
+    "We bring sharp judgement, transparent process, and urgency — because government can’t afford a misstep.",
   itemList: [
     {
       icon: "/WebNetwork.svg",
-      text: "Dedicated research & market mapping",
+      text: "Deep scoping aligned to mandate, structure and probity",
     },
     {
       icon: "/Voice.svg",
-      text: "Direct outreach to passive talent",
+      text: "Direct outreach to aligned public and private sector talent",
     },
     {
       icon: "/todoList.svg",
-      text: "Structured assessments focused on cultural and technical alignment",
+      text: "Screening based on regulatory knowledge, stakeholder fluency and delivery track record",
     },
     {
       icon: "/checkPeople.svg",
-      text: "No shortlists. Just the right person, first time.",
+      text: "One qualified person, not a list, ready to lead in a public environment",
     },
   ],
 };
@@ -129,24 +150,24 @@ export const governmentResultSectionData: ResultSectionProps = {
   cardProps: {
     cardDetails: [
       {
-        score: "91%",
+        score: "98%",
         title: "",
-        description: "of permanent placements retained 12+ months",
+        description: "of hires are still with the business after 18 months",
       },
       {
         score: "100%",
         title: "",
-        description: "of retained assignments completed within timeframe",
+        description: "of retained searches have been completed successfully",
       },
       {
-        score: "83%",
+        score: "85%",
         title: "",
-        description: "of roles filled from the first candidate presented",
+        description: "of roles are filled from the first candidate presented",
       },
     ],
   },
   backgroundImage: "/results-bg.jpg",
-  topHeading: "Where Strategy Demands Action",
+  topHeading: "Measurable outcomes",
   bottomHeading:
     "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
 };
@@ -155,12 +176,12 @@ export const governmentTestimonialData: TestimonialProps = {
   heading: "What Our Clients Say",
   title: "Reviews",
   description:
-    "Here is what our clients have to say about working with us. Real experiences, real feedback.",
+    "Here’s what our clients have to say about working with us. Real experiences, real feedback.",
   quote:
-    "The calibre of candidates has always exceeded what others have put forward.",
+    "“The calibre of candidates has always exceeded what others have put forward.”",
   detail:
-    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-  author: "Stephen Kerfoot, Director",
+    "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is personally involved in every step of the process..",
+  author: "Stephen Kerfoot, Director - ",
   company: "Kerfoot Electrics",
 };
 

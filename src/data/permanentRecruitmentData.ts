@@ -12,7 +12,7 @@ export const heroDetails: HeroProps = {
   description:
     "Hire talent who strengthen your team, align to your strategy, and stay the course.",
   buttonText: "Begin your success story",
-  imageUrl: "/Hero3.jpg",
+  imageUrl: "/hero/hero6.jpg",
 };
 
 // 3️⃣ SpecialistExpertise
@@ -37,21 +37,13 @@ export const specialistExpertiseData: SpecialistExpertiseProps = {
 export const permanentRecruitmentSections: Section[] = [
   {
     items: [
-      "Tertiary/trade qualification",
-      "Project experience $40m plus",
-      "Subcontractor management",
-      "5 years post grad experience",
-      "Worked for main contractors in Australia",
-      "Able to manage negotiations",
-      "Managed variations and claims",
-      "Procurement experience",
-      "Creation of contracts and contract close out",
-      "Cost reporting",
-      "Mentor the commercial team",
-      "Commercially astute",
-      "Strong computer skills",
-      "Above average communications skills both verbal and written",
-      "Motivated and driven along with strong presentation skills",
+      "Construction Project Directors and Managers",
+      "Property Development Executives",
+      "Engineering Specialists (Civil, Mechanical, Electrical)",
+      "Facilities and Asset Managers",
+      "Resources Industry Leadership",
+      "Renewable Energy Project Teams",
+      "NFP and Public Sector Operations Executives"
     ],
   },
 ];
@@ -137,11 +129,11 @@ export const testimonialData: TestimonialProps = {
     description:
       "Here is what our clients have to say about working with us. Real experiences, real feedback.",
     quote:
-      "The calibre of candidates has always exceeded what others have put forward.",
+      "“Henton Consultiung always provide quality candidates”",
     detail:
-      "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-    author: "Stephen Kerfoot, Director",
-    company: "Kerfoot Electrics",
+      "They are extremely efficient with communication. I would highly recommend their services.",
+    author: "Alicia Lawrence, HR Business Partner",
+    company: "-Pomeroy Pacific",
   }
 
   export const resultSectionData: ResultSectionProps = {
@@ -161,7 +153,7 @@ export const testimonialData: TestimonialProps = {
       ],
     },
     backgroundImage:"/results-bg.jpg",
-    topHeading: "Where Strategy Demands Action",
+    topHeading: "Results that matter",
     bottomHeading:
       "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
   };
@@ -170,7 +162,7 @@ export const testimonialData: TestimonialProps = {
     heading: "Permanent recruitment isn’t about CVs — it’s about capability.",
     introText:
       "At Henton Consulting, permanent recruitment is about more than filling vacancies. It’s about building capability — securing the professionals and leaders who will shape your organisation’s future.\n\n" +
-      "We deliver hard-to-source candidates from key global markets, with a focus on leadership, transformation, technical, and specialist roles across sectors.",
+      "Our approach ensures every permanent hire strengthens your team, culture, and competitive position.",
     whoSubHeading: "We recruit for:",
     whoHeading: "Our expertise covers a wide range of skill sets and leadership levels:",
     listItems: [

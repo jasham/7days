@@ -19,7 +19,7 @@ import {
     description:
       "Propel your business forward with specialised recruitment and business consulting tailored to your industry needs.",
     buttonText: "Begin your success story",
-    imageUrl: "/Hero.jpg",
+    imageUrl: "/hero/hero1.jpg",
   };
   
   // Result section data
@@ -50,20 +50,20 @@ import {
   export const partnerCards: CardData[] = [
     {
       icon: "/Expert.svg",
-      title: "Expertise that Delivers",
+      title: "Expertise That Anticipates Change",
       description:
-        "Our team brings industry-specific knowledge and hands-on experience.",
+        "Decades of real industry experience helping you stay ahead of shifting markets.",
     },
     {
       icon: "/StretegyIcon.svg",
-      title: "Strategy Meets Execution",
-      description: "We align business goals with actionable recruitment plans.",
+      title: "Strategy That Drives Results",
+      description: "Bespoke solutions that turn challenges into growth opportunities.",
     },
     {
       icon: "/PartnerShip.svg",
-      title: "True Partnership",
+      title: "Partnerships That Deliver",
       description:
-        "Long-term relationships built on trust, impact, and delivery.",
+        "95% of clients trust us again — because we deliver outcomes, not promises.",
     },
   ];
   
@@ -83,12 +83,12 @@ import {
   
   // Case study data
   export const caseStudy1Data: CaseStudyHighlightProps = {
-    imageSrc: "/caseStudy.jpg",
+    imageSrc: "/home/homeTrusted.jpg",
     imageAlt: "Construction worker",
     title:
       "How Strategic Recruitment & Consulting for a Sydney Head Contractor led to 34% Growth in 6 months.",
     description:
-      "Our approach improved operational efficiency by 30% for a leading head contractor.",
+      "Our comprehensive approach that improved operational efficiency by 30% for a leading head contractor.",
     ctaText: "See how we deliver results",
     onClick: () => console.log("Clicked"),
     isReverse: false,
@@ -111,7 +111,7 @@ import {
   export const resultSectionData: ResultSectionProps = {
     backgroundColor: "#132D46",
     headingText: "Result",
-    subheadingText: "Measured by Results. Chosen for Impact.",
+    subheadingText: "",
     topHeading: "Measured by Results. Chosen for Impact.",
     footerText:
       "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
@@ -159,27 +159,27 @@ import {
       {
         title: "Recruitment",
         description:
-          "We connect you with the industry's best permanent hires. Decisive leaders who aren't just qualified but ready to move your business forward.",
+          "We connect you with the industry’s best — permanent hires and executive leaders who aren’t just qualified, but capable of moving your business forward.",
         action: "Hire Talent",
-        image: "/recruitment.jpg",
+        image: "/home/homeRec1.jpg",
       },
       {
         title: "Consulting & Advisory",
         description:
-          "We design smart organisations. From resource planning and strategic structure to talent attraction strategies.",
+          "We design smarter organisations. From workforce planning and organisational structure to talent attraction strategies, we help you build a foundation for growth.",
         action: "Drive Performance",
-        image: "/consulting.jpg",
+        image: "/home/homeRec2.jpg",
       },
       {
         title: "Growth",
         description:
-          "We help you win. Our growth experts drive revenue opportunities and deliver measurable, competitive outcomes.",
+          "Beyond hiring and planning, we help you win. Our growth services open new markets, drive revenue opportunities, and strengthen your competitive position.",
         action: "Grow Your Business",
-        image: "/growth.jpg",
+        image: "/home/homeRec3.jpg",
       },
     ],
     footerTitle: "Individually strong. Unstoppable together.",
-    footerSubtitle: "When you combine all three, you don’t just keep up — you lead.",
+    footerSubtitle: "When you combine all three, you don't just keep up — you lead.",
     buttonText: "Begin your success story",
   };
   
@@ -204,7 +204,7 @@ import {
     quote: "The calibre of candidates has always exceeded what others have put forward.",
     detail:
       "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-    author: "Stephen Kerfoot, Director",
+    author: "Stephen Kerfoot, Director - ",
     company: "Kerfoot Electrics",
   };
   
@@ -213,12 +213,16 @@ import {
     headingText: "Specialist Expertise",
     title: "Broad Expertise, Targeted Solutions",
     description:
-      "See how we support your industry & find the expertise you need to build what’s next.",
+      "See How We Support Your Industry & Find the Expertise You Need to Build What's Next.",
     expertiseList: [
       { title: "Property & Development", action: "Explore Our Expertise", description: "", image: "/expertise/expertise1.jpg" },
       { title: "Construction", action: "Explore Our Expertise", description: "", image: "/expertise/expertise2.jpg" },
       { title: "Engineering", action: "Explore Our Expertise", description: "", image: "/expertise/expertise3.jpg" },
       { title: "Facilities Management", action: "Explore Our Expertise", description: "", image: "/expertise/expertise4.jpg" },
       { title: "Resources", action: "Explore Our Expertise", description: "", image: "/expertise/expertise5.jpg" },
+      { title: "Renewables", action: "Explore Our Expertise", description: "", image: "/expertise/expertise6.jpg" },
+      { title: "Not-for-Profit", action: "Explore Our Expertise", description: "", image: "/expertise/expertise7.jpg" },
+      { title: "Corporate", action: "Explore Our Expertise", description: "", image: "/expertise/expertise8.jpg" },
+      { title: "Government", action: "Explore Our Expertise", description: "", image: "/expertise/expertise9.jpg" },
     ],
   };

@@ -12,7 +12,7 @@ export const heroDetails: HeroProps = {
     description:
       "We help Australian organisations find skilled talent where local supply can’t keep up.",
     buttonText: "Begin your success story",
-    imageUrl: "/Hero3.jpg",
+    imageUrl: "/hero/hero7.jpg",
 };
 
 // 3️⃣ SpecialistExpertise
@@ -141,11 +141,11 @@ export const testimonialData: TestimonialProps = {
     description:
       "Here is what our clients have to say about working with us. Real experiences, real feedback.",
     quote:
-      "The calibre of candidates has always exceeded what others have put forward.",
+      "“Henton Consultiung always provide quality candidates”",
     detail:
-      "Guy assesses the needs of the client and then carefully selects potential candidates that are the right fit. He is also personally involved in every step of the process.",
-    author: "Stephen Kerfoot, Director",
-    company: "Kerfoot Electrics",
+      "They are extremely efficient with communication. I would highly recommend their services.",
+    author: "Alicia Lawrence, HR Business Partner",
+    company: "- Pomeroy Pacific",
   }
 
   export const resultSectionData: ResultSectionProps = {
