@@ -32,12 +32,14 @@ export default function GenericProcessSection({
         py: { xs: 4, md: 8 },
       }}
     >
-      <Heading
-        text={mainHeading}
-        textColor="#132D46"
-        dividerColor="#132D46"
-        dividerHeight="1px"
-      />
+      {mainHeading && (
+        <Heading
+          text={mainHeading}
+          textColor="#132D46"
+          dividerColor="#132D46"
+          dividerHeight="1px"
+        />
+      )}
       <Box
         sx={{
           backgroundImage: `linear-gradient(180deg, rgba(170,187,225,0.7) 0%, rgba(19,45,70,0.7) 56.73%), url('${backgroundImage}')`,
@@ -57,7 +59,9 @@ export default function GenericProcessSection({
             gap: 12,
           }}
         >
-          <Typography variant="h2" mb={4}>{heading}</Typography>
+          <Typography variant="h2" mb={4}>
+            {heading}
+          </Typography>
           <Box
             sx={{
               width: "60%",

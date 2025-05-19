@@ -86,6 +86,7 @@ import {
   
   // --- GenericProcessSection
   export const genericProcessData: GenericProcessSectionProps = {
+    mainHeading: "Our Process",
     backgroundImage: "/recruitmentAdvisory.jpg",
     heading: "Tailored Recruitment Processes",
     intro: [
