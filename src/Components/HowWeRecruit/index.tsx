@@ -16,67 +16,38 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
   return (
     <Box sx={{ backgroundColor: "#D4E1EF66" }}>
       <Box
-        sx={{ color: "#132D46", px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}
+        sx={{ color: "#132D46", px: { xs: 2, md: 10 }, py: { xs: 2, md: 8 } }}
       >
-        <Heading
-          text={heading}
-          textColor="#132D46"
-          dividerColor="#132D46"
-        />
-        <Box sx={{ p: 4 }}>
+        <Heading text={heading} textColor="#132D46" dividerColor="#132D46" />
+        <Box sx={{ p: { xs: 0, md: 4 } }}>
           <Grid container spacing={4}>
             {/* Left Side */}
             <Grid item xs={12} md={6}>
-              <Typography
-                sx={{
-                  fontFamily: '"Helvetica Neue", sans-serif',
-                  fontWeight: 700,
-                  fontSize: "48px",
-                  lineHeight: "100%",
-                  letterSpacing: "0%",
-                  color: "#2E2C38",
-                  mb: 2,
-                }}
-              >
+              <Typography variant="h2" color="#2E2C38">
                 {title}
               </Typography>
 
-              <Typography
-                sx={{
-                  fontFamily: '"Helvetica Neue", sans-serif',
-                  fontWeight: 500,
-                  fontSize: "24px",
-                  lineHeight: "100%",
-                  color: "#2E2C38",
-                  mb: 2,
-                }}
-              >
+              <Typography variant="h4" color="#2E2C38" sx={{ my: 3 }}>
                 {subTitle}
               </Typography>
 
-              <Typography
-                sx={{
-                  fontFamily: '"Helvetica Neue", sans-serif',
-                  fontWeight: 500,
-                  fontSize: "16px",
-                  lineHeight: "140%",
-                  color: "#2E2C38",
-                  mb: 3,
-                  whiteSpace: "pre-line",
-                }}
-              >
+              <Typography variant="body1" color="#2E2C38" sx={{ mb: 3 }}>
                 {description}
               </Typography>
               <Button
                 variantStyle="main"
-                buttonColor={"#2E2C38"}
+                buttonColor="#2E2C38"
+                buttonBorderColor="#2E2C38"
                 buttonBgColor="transparent"
-                buttonBorderColor={"#2E2C38"}
                 onClick={() => {
-                  alert("Starting");
+                  alert("begining");
+                }}
+                sx={{
+                  display: { xs: "none", md: "flex" },
+                  mt: 3,
                 }}
               >
-                Build Your Team
+                Build your team
               </Button>
             </Grid>
 
@@ -113,33 +84,29 @@ const HowWeRecruit: React.FC<HowWeRecruitProps> = ({
                     </Typography>
                   </Box>
                 ))}
-              <Typography
-                sx={{
-                  fontFamily: '"Helvetica Neue", sans-serif',
-                  fontWeight: 500,
-                  fontSize: "16px",
-                  color: "#2E2C38",
-                  mt: 2,
-                }}
-              >
+              <Typography variant="body1" color="#2E2C38" sx={{ mb: 3 }}>
                 {description2}
               </Typography>
               {description3 && (
-              <Typography
-                sx={{
-                  fontFamily: '"Helvetica Neue", sans-serif',
-                  fontWeight: 500,
-                  fontSize: "16px",
-                  color: "#2E2C38",
-                  mt: 2,
-                }}
-              >
-                {description3}
-              </Typography>)
-              }
+                <Typography variant="body1" color="#2E2C38" sx={{ mb: 3 }}>
+                  {description3}
+                </Typography>
+              )}
             </Grid>
           </Grid>
         </Box>
+        <Button
+          variantStyle="main"
+          buttonColor="#2E2C38"
+          buttonBorderColor="#2E2C38"
+          buttonBgColor="transparent"
+          onClick={() => {
+            alert("begining");
+          }}
+          sx={{ display: { xs: "flex", md: "none" }, mt: 3, width: "100%" }}
+        >
+          Build your team
+        </Button>
       </Box>
     </Box>
   );

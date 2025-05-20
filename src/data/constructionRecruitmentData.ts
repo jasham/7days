@@ -85,7 +85,7 @@ export const constructionNetworkData: OurNetworkSectionProps = {
   bottomText: "",
   image: "/expertImage.jpg",
   mt: -10,
-  mb: 20,
+  mb: 3,
   sections: constructionRecruitmentSections,
 };
 

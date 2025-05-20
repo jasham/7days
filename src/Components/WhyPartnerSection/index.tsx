@@ -32,7 +32,7 @@ const WhyPartnerSection: React.FC<WhyPartnerProps> = ({
           width: "100%",
           display: "flex",
           flexDirection: { xs: "column", md: "row" },
-          gap: 8,
+          gap: { xs: 2, md: 8 },
           mb: 6,
           justifyContent: isCentered ? "center" : "space-between",
         }}
@@ -41,14 +41,15 @@ const WhyPartnerSection: React.FC<WhyPartnerProps> = ({
           {title}
         </Typography>
         {subTitle && (
-        <Typography
-          variant="h4"
-          fontWeight={500}
-          color={headingColor}
-          width="52%"
-        >
-          {subTitle}
-        </Typography> )}
+          <Typography
+            variant="h4"
+            fontWeight={500}
+            color={headingColor}
+            sx={{ width: { xs: "100%", md: "52%" } }}
+          >
+            {subTitle}
+          </Typography>
+        )}
       </Box>
 
       <Box
@@ -78,15 +79,42 @@ const WhyPartnerSection: React.FC<WhyPartnerProps> = ({
               />
             </Box>
             {index < cards.length - 1 && (
-              <Divider
-                orientation="vertical"
-                flexItem
+              <Box
                 sx={{
-                  backgroundColor: "##AABBE1",
-                  width: "1px",
-                  mx: 2,
+                  display: "flex",
+                  flexDirection: { xs: "column", md: "row" },
+                  alignItems: "center",
                 }}
-              />
+              >
+                {/* on mobile show a horizontal divider */}
+                <Divider
+                  orientation="horizontal"
+                  flexItem
+                  sx={{
+                    display: { xs: "block", md: "none" },
+                    backgroundColor: "#AABBE1",
+                    borderWidth: "1px",
+                    width: "60%",
+                    height: "1px",
+                    my: 2,
+                    mx: "auto",
+                  }}
+                />
+
+                {/* on desktop show a vertical divider */}
+                <Divider
+                  orientation="vertical"
+                  flexItem
+                  sx={{
+                    display: { xs: "none", md: "block" },
+                    backgroundColor: "#AABBE1",
+                    borderWidth: "1px",
+                    width: "1px",
+                    height: "100%",
+                    mx: 3,
+                  }}
+                />
+              </Box>
             )}
           </Box>
         ))}

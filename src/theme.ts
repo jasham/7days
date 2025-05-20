@@ -110,4 +110,21 @@ theme = responsiveFontSizes(theme, {
   factor: 2,  // tweak to taste
 });
 
+theme.typography.h1 = {
+  ...theme.typography.h1,
+  // on desktop (lg+), keep the original 96px
+  [theme.breakpoints.up('lg')]: {
+    fontSize: '96px',
+  },
+  // on md: drop to 72px instead of whatever responsiveFontSizes would have done
+  [theme.breakpoints.between('md', 'lg')]: {
+    fontSize: '72px',
+  },
+  // on sm: 48px
+  [theme.breakpoints.down('md')]: {
+    fontSize: '48px',
+  },
+};
+
+
 export default theme;

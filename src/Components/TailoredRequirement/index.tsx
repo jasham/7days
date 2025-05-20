@@ -1,8 +1,7 @@
-// src/Components/TailoredRequirement.tsx
 "use client";
 
 import React from "react";
-import { Box, Stack, Typography } from "@mui/material";
+import { Box, Stack, Typography, Divider } from "@mui/material";
 import PartnerCard from "../Card";
 import Image from "next/image";
 import { Button } from "../Button/Button";
@@ -46,25 +45,23 @@ export default function GenericProcessSection({
           backgroundSize: "cover",
           backgroundPosition: "center",
           borderRadius: 4,
-          px: { xs: 4, md: 8 },
+          px: { xs: 2, md: 8 },
           py: { xs: 6, md: 10 },
         }}
       >
         {/* Heading & Intro */}
-        <Box
-          sx={{
-            mb: 4,
-            display: isHeadingLeft ? "flex" : "block",
-            width: "100%",
-            gap: 12,
-          }}
+        <Stack
+          direction={{ xs: "column", md: isHeadingLeft ? "row" : "column" }}
+          spacing={{ xs: 2, md: 12 }}
+          mb={4}
+          width="100%"
         >
-          <Typography variant="h2" mb={4}>
+          <Typography variant="h2">
             {heading}
           </Typography>
           <Box
             sx={{
-              width: "60%",
+              width: { xs: "100%", md: "60%" },
               display: "flex",
               flexDirection: "column",
               gap: 2,
@@ -81,7 +78,7 @@ export default function GenericProcessSection({
                 </Typography>
               ))}
           </Box>
-        </Box>
+        </Stack>
 
         {/* Work Points */}
         <Box
@@ -99,14 +96,31 @@ export default function GenericProcessSection({
             variant="h4"
             fontWeight={700}
             gutterBottom
-            sx={{ width: "40%" }}
+            sx={{ width: { xs: "100%", md: "40%" } }}
           >
             {subHeading}
           </Typography>
         </Box>
 
         {/* Steps */}
-        <Box sx={{ display: "flex", justifyContent: "space-between", mb: 6 }}>
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          divider={
+            <Divider
+              flexItem
+              sx={{
+                backgroundColor: "#FFFFFF",
+                borderWidth: "1px",
+                width: { xs: "100%", md: "2px" },
+                height: { xs: "1px", md: "auto" },
+              }}
+            />
+          }
+          spacing={2}
+          mb={6}
+          justifyContent="space-between"
+          alignItems="stretch"
+        >
           {steps.map((step, i) => (
             <Box key={i} sx={{ display: "flex", alignItems: "stretch" }}>
               <PartnerCard
@@ -116,40 +130,36 @@ export default function GenericProcessSection({
                 color="#ffffff"
                 isInverted={true}
               />
-              {i < steps.length - 1 && (
-                <Box
-                  sx={{
-                    width: "2px",
-                    height: "100%",
-                    backgroundColor: "#FFFFFF",
-                    mx: 2,
-                  }}
-                />
-              )}
             </Box>
           ))}
-        </Box>
+        </Stack>
 
         {/* Deliverables */}
-        <Box mt={6} mb={4} sx={{ display: "flex", gap: 4 }}>
-          <Stack sx={{ width: "40%" }}>
+        <Stack
+          direction={{ xs: "column", md: "row" }}
+          spacing={4}
+          mt={6}
+          mb={4}
+        >
+          <Stack sx={{ width: { xs: "100%", md: "40%" } }}>
             <Typography variant="h2" gutterBottom>
               {itemsHeading}
             </Typography>
-            <Typography variant="body1" gutterBottom>
-              {Array.isArray(items) &&
-                items.map((line, index) => (
-                  <Typography
-                    key={index}
-                    variant="body1"
-                    sx={{ maxWidth: 700, mb: 1 }}
-                  >
-                    {line?.description || ""}
-                  </Typography>
-                ))}
-            </Typography>
+            {Array.isArray(items) &&
+              items.map((line, index) => (
+                <Typography
+                  key={index}
+                  variant="body1"
+                  sx={{ maxWidth: 700, mb: 1 }}
+                >
+                  {line?.description || ""}
+                </Typography>
+              ))}
           </Stack>
-          <Stack spacing={3} sx={{ width: "40%" }}>
+          <Stack
+            spacing={3}
+            sx={{ width: { xs: "100%", md: "40%" } }}
+          >
             {deliverables.map((point, index) => (
               <Stack
                 direction="row"
@@ -168,7 +178,7 @@ export default function GenericProcessSection({
               </Stack>
             ))}
           </Stack>
-        </Box>
+        </Stack>
 
         {/* CTA */}
         <Box sx={{ display: "flex", justifyContent: "center" }}>

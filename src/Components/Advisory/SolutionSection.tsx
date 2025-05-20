@@ -1,4 +1,5 @@
 "use client";
+
 import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
@@ -39,7 +40,7 @@ const SolutionsSection: React.FC<SolutionsSectionProps> = ({
       />
 
       <Grid container spacing={4} my={4}>
-        {/* Left text column */}
+        {/* Left text column (full-width on mobile) */}
         <Grid item xs={12} md={6}>
           <Typography variant="h2" sx={{ mb: 4 }}>
             {title}
@@ -49,7 +50,22 @@ const SolutionsSection: React.FC<SolutionsSectionProps> = ({
             {subtitle}
           </Typography>
 
-          <Box component="ul" sx={{ mb: 4 }}>
+          {/* Mobile image below subtitle */}
+          <Box
+            sx={{
+              display: { xs: 'block', md: 'none' },
+              width: '100%',
+              height: 200,
+              backgroundImage: `${imageOverlay}, url('${imageUrl}')`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+              borderRadius: imageBorderRadius,
+              mb: 4,
+            }}
+          />
+
+          <Box component="ul" sx={{ mb: 4, pl: 2 }}>
             {questions.map((q, idx) => (
               <Typography
                 component="li"
@@ -77,17 +93,23 @@ const SolutionsSection: React.FC<SolutionsSectionProps> = ({
           </Button>
         </Grid>
 
-        {/* Right image column */}
-        <Grid item xs={12} md={6}>
+        {/* Right image column (hidden on mobile) */}
+        <Grid
+          item
+          xs={12}
+          md={6}
+          sx={{ display: { xs: 'none', md: 'block' } }}
+        >
           <Box
             sx={{
-              width: "100%",
-              height: "100%",
+              width: '100%',
+              height: '100%',
               backgroundImage: `${imageOverlay}, url('${imageUrl}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-              backgroundRepeat: "no-repeat",
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
               borderRadius: imageBorderRadius,
+              minHeight: 300,
             }}
           />
         </Grid>

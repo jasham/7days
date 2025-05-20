@@ -103,7 +103,7 @@ const ResultsSection: React.FC<ResultSectionProps> = ({
                     display: { xs: 'block', md: 'none' },
                     backgroundColor: '#fff',
                     borderWidth: '1px',
-                    width: '60%',
+                    width: '13rem',
                     height: '1px',
                     my: 2,
                     mx: 'auto',
@@ -119,7 +119,7 @@ const ResultsSection: React.FC<ResultSectionProps> = ({
                     backgroundColor: '#fff',
                     borderWidth: '1px',
                     width: '1px',
-                    height: '100%',
+                    height: '13rem',
                     mx: 3,
                   }}
                 />

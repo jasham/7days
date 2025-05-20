@@ -230,8 +230,8 @@ import {
       heading:
         "We help businesses recruit with purpose — aligning people strategy to commercial outcomes.",
       whoSubHeading:
-        "At Henton, recruitment isn’t transactional. It’s strategic. Every hire should improve capability, deliver outcomes, and move your business forward.",
-      whoHeading: "Who We Recruit",
+        "Who We Recruit",
+      whoHeading: "At Henton, recruitment isn’t transactional. It’s strategic. Every hire should improve capability, deliver outcomes, and move your business forward.",
       whoDescription: "Our expertise covers a wide range of skill sets and leadership levels:",
       roleCards: [
         { title: "Technical Roles", description: "Engineering, construction management, project delivery" },

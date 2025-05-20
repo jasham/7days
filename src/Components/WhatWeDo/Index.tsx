@@ -98,7 +98,7 @@ export default function WhatWeDoSection({
           )}
         </Grid>
         {roleCards && (
-            <Grid container spacing={3} mt={2} width={"100%"} mx={"auto"} textAlign={"center"}>
+            <Grid container spacing={3} mt={2} width={"90%"} mx={"auto"} textAlign={"center"}>
               {roleCards.map((card, i) => (
                 <Grid item xs={12} md={4} key={i}>
                   <Paper

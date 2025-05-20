@@ -1,6 +1,7 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
 import { HowWeDeliverRecruitmentProps } from "@/types/permanentRecruitmentInterfaces";
+import { Button } from "../Button/Button";
 
 // ✅ Use the interface in your component
 const HowWeDeliverRecruitment = ({
@@ -28,7 +29,11 @@ const HowWeDeliverRecruitment = ({
               {mainTitle}
             </Typography>
 
-            <Typography variant="h6" textTransform={"capitalize"} sx={{ mb: 2 }}>
+            <Typography
+              variant="h6"
+              textTransform={"capitalize"}
+              sx={{ mb: 2 }}
+            >
               {subTitle}
             </Typography>
             <Typography variant="h6" textTransform={"capitalize"}>
@@ -49,22 +54,14 @@ const HowWeDeliverRecruitment = ({
             />
 
             <Button
-              variant="outlined"
-              endIcon={<span style={{ fontSize: "18px" }}>→</span>}
-              sx={{
-                fontFamily: "Helvetica Neue",
-                fontWeight: 500,
-                fontSize: "16px",
-                textTransform: "none",
-                px: 2.5,
-                py: 1,
-                borderColor: "#2E2C38",
-                color: "#2E2C38",
-                "&:hover": {
-                  borderColor: "#2E2C38",
-                  backgroundColor: "#f5f5f5",
-                },
+              variantStyle="main"
+              buttonColor="#2E2C38"
+              buttonBorderColor="#2E2C38"
+              buttonBgColor="transparent"
+              onClick={() => {
+                alert("begining");
               }}
+              sx={{ display: { xs: "none", md: "flex" } }}
             >
               {buttonText}
             </Button>
@@ -74,27 +71,10 @@ const HowWeDeliverRecruitment = ({
             <Grid container spacing={3}>
               {features.map((item, index) => (
                 <Grid item xs={12} key={index}>
-                  <Typography
-                    sx={{
-                      fontFamily: "Helvetica Neue",
-                      fontWeight: 700,
-                      fontSize: "36px",
-                      lineHeight: "100%",
-                      color: "#2E2C38",
-                      mb: 1,
-                    }}
-                  >
+                  <Typography variant="h2" color="#2E2C38">
                     {item.title}
                   </Typography>
-                  <Typography
-                    sx={{
-                      fontFamily: "Helvetica Neue",
-                      fontWeight: 400,
-                      fontSize: "16px",
-                      lineHeight: "24px",
-                      color: "#2E2C38",
-                    }}
-                  >
+                  <Typography variant="body1" color="#2E2C38" mt={2}>
                     {item.description}
                   </Typography>
                 </Grid>
@@ -102,6 +82,18 @@ const HowWeDeliverRecruitment = ({
             </Grid>
           </Grid>
         </Grid>
+        <Button
+        variantStyle="main"
+        buttonColor="#2E2C38"
+        buttonBorderColor="#2E2C38"
+        buttonBgColor="transparent"
+        onClick={() => {
+          alert("begining");
+        }}
+        sx={{ display: { xs: "flex", md: "none" } , mt:3 , width:"100%"}}
+      >
+        {buttonText}
+      </Button>
       </Box>
     </Box>
   );

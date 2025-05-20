@@ -14,35 +14,17 @@ const SpecialistExpertise: React.FC<SpecialistExpertiseProps> = ({
         textColor="#132D46"
         dividerColor="#132D46"
       />
-      <Box sx={{ px: 4, py: 6, textAlign: "center" }}>
+      <Box sx={{ px: {xs:0 , md:4}, py: {xs:0 , md:6}, textAlign: "center" }}>
         {/* Top Divider and Label */}
 
         {/* Heading */}
-        <Typography
-          sx={{
-            fontFamily: "Helvetica Neue",
-            fontWeight: 700,
-            fontSize: "48px",
-            lineHeight: "100%",
-            color: "#132D46",
-            mb: 2,
-          }}
-        >
+        <Typography variant="h2" color="#132D46" mb={4}>
           {/* Sector-Specific Recruitment. Permanent Impact. */}
           {title}
         </Typography>
 
         {/* Subheading */}
-        <Typography
-          sx={{
-            fontFamily: "Helvetica Neue",
-            fontWeight: 400,
-            fontSize: "24px",
-            lineHeight: "100%",
-            color: "#132D46",
-            mb: 4,
-          }}
-        >
+        <Typography variant="h5" color="#132D46" mb={4}>
           {/* Deep industry knowledge, precise candidate alignment – built for
           long-term success in your sector. */}
           {description}

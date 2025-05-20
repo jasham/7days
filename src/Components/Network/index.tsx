@@ -49,7 +49,7 @@ export default function OurNetworkSection({
         }}
       >
         {heading && (
-          <Typography variant="h3" color="#132D46" fontWeight={700} width="40%">
+          <Typography variant="h3" color="#132D46" fontWeight={700} sx={{width:{xs:"100%", md:"40%"} , mb:{xs:2 , md:0}}}>
             {heading}
           </Typography>
         )}
@@ -58,7 +58,7 @@ export default function OurNetworkSection({
             variant="h5"
             color="#132D46"
             fontWeight={500}
-            sx={{ width: "50%" }}
+            sx={{width:{xs:"100%", md:"50%"}}}
           >
             {description}
           </Typography>
@@ -93,7 +93,7 @@ export default function OurNetworkSection({
             <Divider
               orientation="vertical"
               flexItem // ← must add this
-              sx={{ borderColor: "#AABBE1" , height:"15rem" , width:"1px" , margin:"auto 5px"}}
+              sx={{ borderColor: "#AABBE1" , height:"15rem" , width:"1px" , margin:"auto 5px" , display:{xs:"none" , md:"block"}}}
             />
 
             {/* …your other content goes here… */}

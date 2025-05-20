@@ -61,6 +61,7 @@ const GrowthService: React.FC<GrowthServiceProps> = ({
             onClick={() => {
               alert("begining");
             }}
+            sx={{ display: { xs: "none", md: "flex" } }}
           >
             {leftButtonText}
           </Button>
@@ -111,6 +112,18 @@ const GrowthService: React.FC<GrowthServiceProps> = ({
           </Box>
         </Grid>
       </Grid>
+      <Button
+        variantStyle="main"
+        buttonColor={ctaColor}
+        buttonBorderColor={ctaColor}
+        buttonBgColor="transparent"
+        onClick={() => {
+          alert("begining");
+        }}
+        sx={{ display: { xs: "flex", md: "none" } , width: "100%" } }
+      >
+        {leftButtonText}
+      </Button>
     </Box>
   );
 };

@@ -33,7 +33,7 @@ const StrategicAdvice: React.FC<StrategicAdviceProps> = ({
       />
 
       <Box sx={{ display: "flex", justifyContent: "space-between", mb: 4, flexWrap: "wrap" }}>
-        <Box sx={{ width: { xs: "100%", md: "45%" } }}>
+        <Box sx={{ width: { xs: "100%", md: "45%" } , mb: { xs: 2, md: 0 } }}>
           <Typography variant="h2">{heading}</Typography>
         </Box>
 
