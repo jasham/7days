@@ -1,5 +1,5 @@
 // src/theme.ts
-import { createTheme } from '@mui/material/styles';
+import { createTheme, responsiveFontSizes } from '@mui/material/styles';
 import { CSSProperties } from 'react';
 
 declare module '@mui/material/styles' {
@@ -20,7 +20,7 @@ declare module '@mui/material/Typography' {
   }
 }
 
-export const theme = createTheme({
+let theme = createTheme({
   typography: {
     // HEADINGS
     h1: {
@@ -102,3 +102,29 @@ export const theme = createTheme({
     },
   },
 });
+
+// This will apply sensible scaling at each breakpoint
+theme = responsiveFontSizes(theme, {
+  // optionally control which breakpoints to apply and the scaling factor:
+  breakpoints: ['xs', 'sm', 'md', 'lg'],
+  factor: 2,  // tweak to taste
+});
+
+theme.typography.h1 = {
+  ...theme.typography.h1,
+  // on desktop (lg+), keep the original 96px
+  [theme.breakpoints.up('lg')]: {
+    fontSize: '96px',
+  },
+  // on md: drop to 72px instead of whatever responsiveFontSizes would have done
+  [theme.breakpoints.between('md', 'lg')]: {
+    fontSize: '72px',
+  },
+  // on sm: 48px
+  [theme.breakpoints.down('md')]: {
+    fontSize: '48px',
+  },
+};
+
+
+export default theme;

@@ -1,59 +1,115 @@
-// prettier-ignore
+// src/components/Navbar.tsx
 'use client';
-import AppBar from "@mui/material/AppBar";
-import Box from "@mui/material/Box";
-import Button from "@mui/material/Button";
-import Toolbar from "@mui/material/Toolbar";
-import Image from "next/image";
-const Navbar = () => {
+
+import React, { useState } from 'react';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Toolbar from '@mui/material/Toolbar';
+import IconButton from '@mui/material/IconButton';
+import Drawer from '@mui/material/Drawer';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import MenuIcon from '@mui/icons-material/Menu';
+import Image from 'next/image';
+import { useTheme } from '@mui/material/styles';
+import useMediaQuery from '@mui/material/useMediaQuery';
+
+const navItems = [
+  { label: 'About', href: '/about' },
+  { label: 'Recruitment', href: '/recruitment' },
+  { label: 'Advisory & Consulting', href: '/advisory' },
+  { label: 'Resources', href: '/resources' },
+  { label: 'Contact', href: '/contact' },
+];
+
+export default function Navbar() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+  const [drawerOpen, setDrawerOpen] = useState(false);
+
+  const toggleDrawer = (open: boolean) => () => {
+    setDrawerOpen(open);
+  };
+
+  const drawerList = (
+    <Box
+      sx={{ width: 240 }}
+      role="presentation"
+      onClick={toggleDrawer(false)}
+      onKeyDown={toggleDrawer(false)}
+    >
+      <List>
+        {navItems.map(({ label, href }) => (
+          <ListItem key={label} disablePadding>
+            <ListItemButton component="a" href={href}>
+              <ListItemText primary={label} />
+            </ListItemButton>
+          </ListItem>
+        ))}
+      </List>
+    </Box>
+  );
+
   return (
     <AppBar
       position="static"
       elevation={0}
       sx={{
-        backgroundColor: "transparent",
-        boxShadow: "none",
-        marginRight: "0px",
+        backgroundColor: 'transparent',
+        boxShadow: 'none',
       }}
     >
-      <Toolbar sx={{ margin: "auto" }}>
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            width: "90vw",
-          }}
-        >
-          <Box sx={{ paddingTop: "10px" }}>
-            <Image
-              src={"/Logo.svg"}
-              alt="Client Logo"
-              width={169}
-              height={60}
-            />
-          </Box>
+      <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 2, sm: 4 } , pt:{xs:3, sm: 4}}}>
+        {/* Logo */}
+        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Image src="/Logo.svg" alt="Client Logo" width={169} height={60} />
+        </Box>
+
+        {/* Desktop nav */}
+        {!isMobile && (
           <Box
+            component="nav"
             sx={{
-              paddingTop: "10px",
+              display: 'flex',
+              gap: 4,
               fontWeight: 400,
-              display: "flex",
-              gap: "40px",
-              justifyContent: "space-between",
-              color: "white",
-              letterSpacing: "0.8em",
-              textAlign: "center",
+              color: 'white',
+              letterSpacing: '0.1em',
             }}
           >
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Recruitment</Button>
-            <Button color="inherit">Advisory & Consulting</Button>
-            <Button color="inherit">Resources</Button>
-            <Button color="inherit">Contact</Button>
+            {navItems.map(({ label, href }) => (
+              <Button key={label} color="inherit" href={href}>
+                {label}
+              </Button>
+            ))}
           </Box>
-        </Box>
+        )}
+
+        {/* Mobile hamburger */}
+        {isMobile && (
+          <>
+            <IconButton
+              edge="end"
+              color="inherit"
+              aria-label="menu"
+              onClick={toggleDrawer(true)}
+              sx={{paddingLeft: 3, paddingRight: 3}}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+              anchor="right"
+              open={drawerOpen}
+              onClose={toggleDrawer(false)}
+            >
+              {drawerList}
+            </Drawer>
+          </>
+        )}
       </Toolbar>
     </AppBar>
   );
-};
-
-export default Navbar;
+}

@@ -42,7 +42,7 @@ export default function HeroSection({
         <Navbar />
         <Box
           sx={{
-            width: "80%",
+            width: { xs: "100%", md: "80%" },
             display: "flex",
             height: "70vh",
             marginTop: "40px",

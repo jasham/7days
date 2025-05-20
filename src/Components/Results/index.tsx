@@ -88,21 +88,42 @@ const ResultsSection: React.FC<ResultSectionProps> = ({
 
               {/* Divider only between items */}
               {index < cards?.length - 1 && (
+                <Box
+                sx={{
+                  display: 'flex',
+                  flexDirection: { xs: 'column', md: 'row' },
+                  alignItems: 'center',
+                }}
+              >
+                {/* on mobile show a horizontal divider */}
                 <Divider
-                  orientation={
-                    window.innerWidth < 960 ? "horizontal" : "vertical"
-                  }
+                  orientation="horizontal"
                   flexItem
                   sx={{
-                    backgroundColor: "#ffffff",
-                    borderColor: "#ffffff",
-                    borderWidth: "1px",
-                    width: { xs: "60%", md: "1px" },
-                    height: { xs: "1px", md: "100%" },
-                    my: { xs: 2, md: 0 },
-                    mx: { xs: "auto", md: 3 },
+                    display: { xs: 'block', md: 'none' },
+                    backgroundColor: '#fff',
+                    borderWidth: '1px',
+                    width: '13rem',
+                    height: '1px',
+                    my: 2,
+                    mx: 'auto',
                   }}
                 />
+              
+                {/* on desktop show a vertical divider */}
+                <Divider
+                  orientation="vertical"
+                  flexItem
+                  sx={{
+                    display: { xs: 'none', md: 'block' },
+                    backgroundColor: '#fff',
+                    borderWidth: '1px',
+                    width: '1px',
+                    height: '13rem',
+                    mx: 3,
+                  }}
+                />
+              </Box>
               )}
             </React.Fragment>
           ))}

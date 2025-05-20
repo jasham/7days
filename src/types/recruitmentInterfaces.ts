@@ -42,6 +42,7 @@ export interface GrowthServiceProps {
 
 // GenericProcessSection
 export interface GenericProcessSectionProps {
+  mainHeading?: string;
   backgroundImage: string;
   heading: string;
   intro: Item[];

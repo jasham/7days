@@ -2,7 +2,7 @@
 
 import React from "react";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import { theme } from "@/theme";
+import theme from "@/theme";
 import type { ReactNode } from "react";
 import Footer from "@/Components/Footer/Footer";
 import "./globals.css";

@@ -32,9 +32,9 @@ const GrowthService: React.FC<GrowthServiceProps> = ({
         dividerHeight="1px"
         marginBottom="16px"
       />
-      <Grid container spacing={8} mx="auto" mt={1}>
+      <Grid container spacing={8} mx="auto" mt={1} width="100%">
         {/* Left Side */}
-        <Grid xs={12} md={5} sx={{ paddingTop: 8 }}>
+        <Grid xs={12} md={5} sx={{ pt: { xs: 2, md: 8 } }}>
           <Typography variant="h2" fontWeight={700} gutterBottom>
             {heading}
           </Typography>
@@ -61,19 +61,27 @@ const GrowthService: React.FC<GrowthServiceProps> = ({
             onClick={() => {
               alert("begining");
             }}
+            sx={{ display: { xs: "none", md: "flex" } }}
           >
             {leftButtonText}
           </Button>
         </Grid>
 
         {/* Right Side */}
-        <Grid item xs={12} md={7}>
+        <Grid
+          sx={{
+            pt: { xs: 2, md: 8 }, // theme.spacing(2)=16px on xs, spacing(8)=64px on md+
+            pl: { xs: 2, md: 8 },
+          }}
+          xs={12}
+          md={7}
+        >
           <Box
             sx={{
               height: "100%",
               display: "flex",
               flexDirection: "column",
-              width: "80%",
+              width: { xs: "100%", md: "80%" },
             }}
           >
             {services.map((service, index) => (
@@ -104,6 +112,18 @@ const GrowthService: React.FC<GrowthServiceProps> = ({
           </Box>
         </Grid>
       </Grid>
+      <Button
+        variantStyle="main"
+        buttonColor={ctaColor}
+        buttonBorderColor={ctaColor}
+        buttonBgColor="transparent"
+        onClick={() => {
+          alert("begining");
+        }}
+        sx={{ display: { xs: "flex", md: "none" } , width: "100%" } }
+      >
+        {leftButtonText}
+      </Button>
     </Box>
   );
 };

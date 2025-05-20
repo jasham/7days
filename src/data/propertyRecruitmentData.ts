@@ -125,7 +125,7 @@ export const testimonialData: TestimonialProps = {
           "We don’t pull from static databases — we headhunt for impact. Our sector insight spans the entire property lifecycle:",
         bottomText:
           "",
-        image: "/Network3.svg",
+        image: "/Network3.jpg",
         mt: -5,
         mb: 5,
         sections: propertyRecruitmentSections,
