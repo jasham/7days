@@ -12,47 +12,63 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import Image from "next/image";
 import Heading from "../Heading/Heading";
 
-const footerColumns = [
+type FooterLink = { label: string; href: string };
+
+const footerColumns: {
+  title: string;
+  links: FooterLink[];
+}[] = [
   {
     title: "Recruitment",
     links: [
-      "Contract Recruitment",
-      "Permanent Recruitment",
-      "Executive Search",
+      { label: "Contract Recruitment", href: "/contract-recruitment" },
+      { label: "Permanent Recruitment", href: "/permanent-recruitment" },
+      { label: "Executive Search",     href: "/executive-search" },
     ],
   },
   {
     title: "Services",
-    links: ["Consulting & Advisory", "Growth"],
+    links: [
+      { label: "Consulting & Advisory", href: "/advisory" },
+      { label: "Growth",                href: "/growth-service" },
+    ],
   },
   {
     title: "Expertise",
     links: [
-      "Construction",
-      "Property & Development",
-      "Engineering",
-      "Resources",
-      "Corporate & Government",
-      "Not‑For‑Profit",
+      { label: "Construction",            href: "/construction-recruitment" },
+      { label: "Property & Development",  href: "/property-recruitment" },
+      { label: "Engineering",             href: "/engineering-recruitment" },
+      { label: "Resources",               href: "/resources-recruitment" },
+      { label: "Corporate & Government",  href: "/corporate-recruitment" },
+      { label: "Not-For-Profit",          href: "/not-for-profit-recruitment" },
     ],
   },
   {
     title: "Who We Are",
-    links: ["About Us", "Our Team"],
+    links: [
+      { label: "About Us",  href: "/about-us" },
+      { label: "Our Team", href: "/our-team" },
+    ],
   },
   {
     title: "Insights",
-    links: ["Articles", "Resources"],
+    links: [
+      { label: "Articles",  href: "/articles" },
+      { label: "Resources", href: "/resources-recruitment" },
+    ],
   },
   {
     title: "Info",
-    links: ["Contact"],
+    links: [
+      { label: "Contact", href: "/contact" },
+    ],
   },
 ];
 
 export default function Footer() {
   return (
-    <Box sx={{px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }}}>
+    <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 } }}>
       {/* Top links section */}
       <Heading
         text="CONTACT"
@@ -60,15 +76,15 @@ export default function Footer() {
         dividerColor="#132D46"
         dividerHeight="1px"
       />
-      <Box>
-        <Box sx={{ paddingTop: "10px" }}>
-          <Image
-            src={"/ColorLogo.svg"}
-            alt="Client Logo"
-            width={169}
-            height={60}
-          />
-        </Box>
+
+      <Box sx={{ mt: 2 }}>
+        <Image
+          src="/ColorLogo.svg"
+          alt="Client Logo"
+          width={169}
+          height={60}
+        />
+
         <Box
           sx={{
             mt: 8,
@@ -80,20 +96,26 @@ export default function Footer() {
         >
           {footerColumns.map((col) => (
             <Grid item xs={6} sm={4} md={1} key={col.title}>
-              <Typography variant="h5" fontWeight={600} color="#132D46" sx={{ mb: 2 }}>
+              <Typography
+                variant="h5"
+                fontWeight={600}
+                color="#132D46"
+                sx={{ mb: 2 }}
+              >
                 {col.title}
               </Typography>
+
               {col.links.map((link) => (
                 <Link
-                  href="#"
-                  key={link}
-                  typography="body2"
+                  href={link.href}
+                  key={link.label}
+                  typography="body1"
                   display="block"
                   color="text.secondary"
                   underline="none"
                   sx={{ mb: 1.5 }}
                 >
-                  {link}
+                  {link.label}
                 </Link>
               ))}
             </Grid>
@@ -119,18 +141,10 @@ export default function Footer() {
             <LinkedInIcon />
           </IconButton>
           <Box sx={{ display: "flex", flexDirection: "column" }}>
-            <Typography
-              variant="caption"
-              color="text.secondary"
-              component="span"
-            >
+            <Typography variant="caption" color="text.secondary" component="span">
               PO Box 22
             </Typography>
-            <Typography
-              variant="caption"
-              color="text.secondary"
-              component="span"
-            >
+            <Typography variant="caption" color="text.secondary" component="span">
               Sylvania Southgate, NSW, 2224
             </Typography>
           </Box>

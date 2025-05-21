@@ -19,9 +19,9 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 
 const navItems = [
   { label: 'About', href: '/about' },
-  { label: 'Recruitment', href: '/recruitment' },
+  { label: 'Recruitment', href: '/permanent-recruitment' },
   { label: 'Advisory & Consulting', href: '/advisory' },
-  { label: 'Resources', href: '/resources' },
+  { label: 'Resources', href: '/resources-recruitment' },
   { label: 'Contact', href: '/contact' },
 ];
 
