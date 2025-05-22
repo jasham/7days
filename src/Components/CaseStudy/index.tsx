@@ -1,6 +1,7 @@
 "use client";
 
-import { Box, Typography } from "@mui/material";
+import React from "react";
+import { Box, Stack, Typography } from "@mui/material";
 import Heading from "../Heading/Heading";
 import { Button } from "../Button/Button";
 import { CaseStudyHighlightProps } from "@/types/homeInterfaces";
@@ -24,55 +25,57 @@ const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({
         backgroundColor: isBackground ? "#D4E1EF66" : "#ffffff",
       }}
     >
-      <Box>
+      {heading && (
+        <Heading
+          text={heading}
+          textColor="#132D46"
+          dividerColor="#132D46"
+          dividerHeight="1px"
+        />
+      )}
 
-        {heading && (
-          <Heading
-            text={heading}
-            textColor="#132D46"
-            dividerColor="#132D46"
-            dividerHeight="1px"
-          />
-        )}
+      <Stack
+        direction={{ xs: "column", md: isReverse ? "row-reverse" : "row" }}
+        spacing={4}
+        alignItems="center"
+        justifyContent="space-between"
+        sx={{ mt: 4 }}
+      >
+        {/* Image Section */}
+        <Box
+          component="img"
+          src={imageSrc}
+          alt={imageAlt}
+          sx={{
+            width: { xs: "100%", md: "50%" },
+            borderRadius: 2,
+            objectFit: "cover",
+            maxHeight: { xs: 200, md: 400 },
+          }}
+        />
 
+        {/* Text Section */}
         <Box
           sx={{
             display: "flex",
-            justifyContent: "space-between",
-            flexDirection: isReverse ? "row-reverse" : "row",
-            alignItems: "center",
+            flexDirection: "column",
             gap: 2,
+            justifyContent: "center",
+            width: { xs: "100%", md: "45%" },
+            textAlign: { xs: "center", md: "left" },
           }}
         >
-          {/* Image Section */}
-
-          <Box
-            component="img"
-            src={imageSrc}
-            alt={imageAlt}
-            sx={{
-              width: "50%",
-              borderRadius: 2,
-              objectFit: "cover",
-              maxHeight: "400px",
-            }}
-          />
-          {/* Text Section */}
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              gap: 2,
-              justifyContent: "center",
-              width: "45%",
-            }}
+          <Typography
+            variant="h3"
+            color="#132D46"
+            sx={{ fontWeight: 700 }}
           >
-            <Typography variant="h3" color="#132D46" sx={{ fontWeight: 700 }}>
-              {title}
-            </Typography>
-            <Typography variant="body1" color="#132D46">
-              {description}
-            </Typography>
+            {title}
+          </Typography>
+          <Typography variant="body1" color="#132D46">
+            {description}
+          </Typography>
+          <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>
             <Button
               variantStyle="main"
               buttonColor="#132D46"
@@ -84,7 +87,7 @@ const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({
             </Button>
           </Box>
         </Box>
-      </Box>
+      </Stack>
     </Box>
   );
 };

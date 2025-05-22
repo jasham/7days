@@ -1,31 +1,32 @@
-// prettier-ignore
+// src/Components/SearchBar.tsx
 'use client';
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import SearchIcon from "@mui/icons-material/Search";
-import { Box, Button, Divider, TextField } from "@mui/material";
-import Autocomplete from "@mui/material/Autocomplete";
-import { useState } from "react";
 
-const locations = ["New York", "London", "Sydney", "Remote"]; // You can customize this list
+import React, { useState } from 'react';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import SearchIcon from '@mui/icons-material/Search';
+import { Box, Button, Divider, TextField } from '@mui/material';
+import Autocomplete from '@mui/material/Autocomplete';
+
+const locations = ['New York', 'London', 'Sydney', 'Remote']; // Customize as needed
 
 export default function SearchBar() {
-  const [keywords, setKeywords] = useState("");
+  const [keywords, setKeywords] = useState('');
   const [location, setLocation] = useState<string | null>(null);
 
   const handleSearch = () => {
-    console.log("Searching:", { keywords, location });
+    console.log('Searching:', { keywords, location });
   };
 
   return (
     <Box
       sx={{
-        backgroundColor: "white",
-        display: "flex",
-        alignItems: "center",
+        display: 'flex',
+        alignItems: 'center',
+        width: '100%',
+        bgcolor: 'white',
         borderRadius: 1,
         boxShadow: 1,
-        overflow: "hidden",
-        width: "100%",
+        overflow: 'hidden',
         height: 56,
       }}
     >
@@ -39,7 +40,9 @@ export default function SearchBar() {
           disableUnderline: true,
           sx: { px: 2, py: 1.5 },
         }}
-        sx={{ width:"40%"}}
+        sx={{
+          flex: 1,
+        }}
       />
 
       {/* Divider between inputs */}
@@ -63,27 +66,31 @@ export default function SearchBar() {
             }}
           />
         )}
-        sx={{ width:"40%"}}
+        sx={{
+          flex: 1,
+        }}
       />
+
+      {/* Divider before button */}
+      <Divider orientation="vertical" flexItem sx={{ mx: 1 }} />
 
       {/* Search Button */}
       <Button
         onClick={handleSearch}
         sx={{
-          height: "100%",
-          width: "20%",
+          height: '100%',
+          flexBasis: '150px',
           borderRadius: 0,
-          backgroundColor: "black",
-          color: "white",
+          bgcolor: 'black',
+          color: 'white',
           px: 3,
-          py: 2,
-          "&:hover": {
-            backgroundColor: "#333",
-          },
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          '&:hover': { bgcolor: '#333' },
         }}
       >
-        Search Jobs&nbsp;
-        <SearchIcon fontSize="small" />
+        Search Jobs&nbsp;<SearchIcon fontSize="small" />
       </Button>
     </Box>
   );

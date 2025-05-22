@@ -1,10 +1,11 @@
-// prettier-ignore
+// src/Components/JobSearch.tsx
 'use client';
-import { Box, Typography } from "@mui/material";
-import CustomButton from "../Button/index";
-import SearchBar from "../SearchBar";
-import { JobSearchProps } from "@/types/homeInterfaces";
-import { Button } from "../Button/Button";
+
+import React from 'react';
+import { Box, Stack, Typography } from '@mui/material';
+import SearchBar from '../SearchBar';
+import { JobSearchProps } from '@/types/homeInterfaces';
+import { Button } from '../Button/Button';
 
 export default function JobSearch({
   title,
@@ -13,35 +14,74 @@ export default function JobSearch({
   buttonText,
 }: JobSearchProps) {
   return (
-    <Box sx={{ px: { xs: 2, md: 10 }, py: { xs: 4, md: 8 }, background: "linear-gradient(0deg, #FFFFFF 0%, #132D46 46.76%)", color: "white" }}>
-      <Box sx={{ display: "flex", justifyContent: "space-between", gap: 8 }}>
-        <Typography variant="h4" fontWeight={700} width={"25%"}>{title}</Typography>
-        <Box width={"75%"}>
+    <Box
+      sx={{
+        px: { xs: 2, md: 10 },
+        py: { xs: 4, md: 8 },
+        background: 'linear-gradient(0deg, #FFFFFF 0%, #132D46 46.76%)',
+        color: 'white',
+      }}
+    >
+      {/* Search Section */}
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        spacing={2}
+        alignItems="center"
+      >
+        <Typography
+          variant="h4"
+          fontWeight={700}
+          sx={{ width: { xs: '100%', md: '25%' }, textAlign: { xs: 'center', md: 'left' } }}
+        >
+          {title}
+        </Typography>
+        <Box sx={{ width: { xs: '100%', md: '75%' } }}>
           <SearchBar />
         </Box>
-      </Box>
-      <Box sx={{ display: "flex", justifyContent: "space-between", mt: 6 }}>
-        <Box sx={{ width: "30%" }}>
-          <Typography variant="h3" fontWeight={700}>{headline}</Typography>
+      </Stack>
+
+      {/* Headline & Description Section */}
+      <Stack
+        direction={{ xs: 'column', md: 'row' }}
+        spacing={2}
+        alignItems="flex-start"
+        sx={{ mt: 6 }}
+      >
+        <Box sx={{ width: { xs: '100%', md: '30%' } }}>
+          <Typography
+            variant="h3"
+            fontWeight={700}
+            sx={{ textAlign: { xs: 'center', md: 'left' } }}
+          >
+            {headline}
+          </Typography>
         </Box>
-        <Box sx={{ width: "45%" }}>
+        <Box sx={{ width: { xs: '100%', md: '45%' } }}>
           {description.map((desc, idx) => (
-            <Typography key={idx} variant={idx === 0 ? "h5" : "body1"} mb={2}>{desc}</Typography>
+            <Typography
+              key={idx}
+              variant={idx === 0 ? 'h5' : 'body1'}
+              mb={2}
+              sx={{ textAlign: { xs: 'center', md: 'left' } }}
+            >
+              {desc}
+            </Typography>
           ))}
-          <Button
+          <Box sx={{ display: 'flex', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+            <Button
               variantStyle="main"
-              buttonColor={"#FFFFFF"}
+              buttonColor="#FFFFFF"
               buttonBgColor="transparent"
-              buttonBorderColor={"#FFFFFF"}
+              buttonBorderColor="#FFFFFF"
               onClick={() => {
-                alert("Starting");
+                alert('Starting');
               }}
             >
               {buttonText}
             </Button>
+          </Box>
         </Box>
-      </Box>
+      </Stack>
     </Box>
   );
 }
-
