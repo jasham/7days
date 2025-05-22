@@ -26,7 +26,6 @@ export default function OurNetworkSection({
   description,
   bottomText,
   image,
-  mt,
   mb,
   sections,
   header,

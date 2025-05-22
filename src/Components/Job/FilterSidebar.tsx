@@ -1,7 +1,8 @@
 // components/Job/FilterSidebar.tsx
 import React from "react";
 import { Paper, Typography, Divider } from "@mui/material";
-import FilterSection, { FilterOption } from "./FilterSection";
+import FilterSection from "./FilterSection";
+import { FilterOption } from "@/types/jobBoardInterfaces";
 
 export default function FilterSidebar({
   categoryOptions,
