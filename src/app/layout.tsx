@@ -14,15 +14,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
-      <head>
-        {/* meta tags, fonts, etc. */}
-        {/* Inject the Vercel Toolbar only in preview/production */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(){var s=document.createElement("script");s.src="https://vercel.com/toolbar/script.js";s.defer=true;document.head.appendChild(s);})();`,
-          }}
-        />
-      </head>
+      <head>{/* meta tags, fonts, etc. */}</head>
       <body>
         <ThemeProvider theme={theme}>
           <CssBaseline />

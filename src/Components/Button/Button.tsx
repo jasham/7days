@@ -16,6 +16,8 @@ export interface CustomButtonProps extends ButtonProps {
   buttonBgColor?: string;
   /** overrides the border color when outlined */
   buttonBorderColor?: string;
+
+  isIcon?: boolean;
 }
 
 const StyledButton = styled(MuiButton, {
@@ -34,11 +36,27 @@ const StyledButton = styled(MuiButton, {
     buttonBgColor,
     buttonBorderColor,
   }) => {
-    const primary = buttonColor ?? "#028ccb";
-    const bg =
-      buttonBgColor ?? (variantStyle === "search" ? "#025a2d" : "transparent");
-    const border = buttonBorderColor ?? primary;
+    const primary = (buttonColor ?? "#132d46").toLowerCase();
+    const bg = (
+      buttonBgColor ?? (variantStyle === "search" ? "#025a2d" : "transparent")
+    ).toLowerCase();
+    const border = (buttonBorderColor ?? primary).toLowerCase();
     const radius = 4;
+
+    const isWhite = buttonColor === "#ffffff" && buttonColor === "#ffffff";
+
+    const hoverStyles = {
+      backgroundColor: isWhite ? "#ffffff" : "#132d46",
+      color: isWhite ? "#132d46" : "#ffffff",
+      borderColor: isWhite ? "#ffffff" : "#132d46",
+      opacity: 0.85,
+    };
+
+    const commonStyles = {
+      borderRadius: radius,
+      transition: "all 0.3s ease",
+      "&:hover": hoverStyles,
+    };
 
     switch (variantStyle) {
       case "search":
@@ -47,9 +65,10 @@ const StyledButton = styled(MuiButton, {
           width: "fit-content",
           backgroundColor: bg,
           color: "#fff",
-          borderRadius: radius,
           padding: "8px 16px",
           minWidth: "auto",
+          cursor:"pointer",
+          ...commonStyles,
         };
 
       case "blog":
@@ -59,8 +78,9 @@ const StyledButton = styled(MuiButton, {
           backgroundColor: bg,
           color: primary,
           border: `1px solid ${border}`,
-          borderRadius: radius,
           padding: "6px 12px",
+          cursor:"pointer",
+          ...commonStyles,
         };
 
       case "text":
@@ -71,6 +91,7 @@ const StyledButton = styled(MuiButton, {
           color: primary,
           padding: 0,
           minWidth: "auto",
+          cursor:"pointer",
         };
 
       case "main":
@@ -81,8 +102,9 @@ const StyledButton = styled(MuiButton, {
           backgroundColor: bg,
           color: primary,
           border: `1px solid ${border}`,
-          borderRadius: radius,
           padding: "10px 20px",
+          cursor:"pointer",
+          ...commonStyles,
         };
     }
   }
@@ -96,16 +118,17 @@ export const Button: React.FC<CustomButtonProps> = ({
   children,
   startIcon,
   endIcon,
+  isIcon= true,
   ...props
 }) => {
   // defaults for icons
   const iconProps = { startIcon, endIcon };
-  if (variantStyle === "search") {
-    iconProps.startIcon = startIcon ?? <SearchIcon />;
-  } else {
-    iconProps.endIcon = endIcon ?? (
-      <ArrowForwardIcon style={{ fontSize: 16 }} />
-    );
+  if (isIcon == true) {
+    if (variantStyle === "search") {
+      iconProps.startIcon = startIcon ?? <SearchIcon />;
+    } else {
+      iconProps.endIcon = endIcon ?? <ArrowForwardIcon style={{ fontSize: 16 }} />;
+    }
   }
 
   return (

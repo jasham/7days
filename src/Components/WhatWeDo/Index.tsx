@@ -56,7 +56,7 @@ export default function WhatWeDoSection({
           {introText && (
             <Typography
               variant="h6"
-              textTransform={"capitalize"}
+              
               color="#FFFFFF"
               mt={4}
               sx={{ whiteSpace: "pre-line" }}
@@ -73,12 +73,12 @@ export default function WhatWeDoSection({
             </Typography>
           )}
           {whoHeading && (
-            <Typography variant="h6" textTransform={"capitalize"} gutterBottom color="#FFFFFF">
+            <Typography variant="h6"  gutterBottom color="#FFFFFF">
               {whoHeading}
             </Typography>
           )}
           {whoDescription && (
-            <Typography variant="h6" textTransform={"capitalize"} color="#FFFFFF">
+            <Typography variant="h6"  color="#FFFFFF">
               {whoDescription}
             </Typography>
           )}
@@ -108,7 +108,7 @@ export default function WhatWeDoSection({
                     <Typography variant="h4" gutterBottom color="#014225">
                       {card.title}
                     </Typography>
-                    <Typography variant="h6" textTransform={"capitalize"} color="#132D46">
+                    <Typography variant="h6"  color="#132D46">
                       {card.description}
                     </Typography>
                   </Paper>

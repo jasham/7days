@@ -23,7 +23,7 @@ export default function JobCard({ job }: { job: Job }) {
 
       <Typography
         variant="h6"
-        textTransform={"capitalize"}
+        
         mb={4}
         color="#6F7A81"
       >
@@ -31,7 +31,7 @@ export default function JobCard({ job }: { job: Job }) {
       </Typography>
       <Typography
         variant="h6"
-        textTransform={"capitalize"}
+        
         mb={4}
         color="#3E3D3D"
       >
@@ -49,7 +49,7 @@ export default function JobCard({ job }: { job: Job }) {
             height={32}
             style={{ borderRadius: "50%", marginRight: 8 }}
           />
-          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">
+          <Typography variant="h6"  color="#3E3D3D">
             {job.location}
           </Typography>
         </Grid>
@@ -61,7 +61,7 @@ export default function JobCard({ job }: { job: Job }) {
             height={32}
             style={{ borderRadius: "50%", marginRight: 8 }}
           />
-          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">
+          <Typography variant="h6"  color="#3E3D3D">
             {job.salary}
           </Typography>
         </Grid>
@@ -73,7 +73,7 @@ export default function JobCard({ job }: { job: Job }) {
             height={32}
             style={{ borderRadius: "50%", marginRight: 8 }}
           />
-          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">
+          <Typography variant="h6"  color="#3E3D3D">
             {job.contractType}
           </Typography>
         </Grid>
@@ -85,7 +85,7 @@ export default function JobCard({ job }: { job: Job }) {
             height={32}
             style={{ borderRadius: "50%", marginRight: 8 }}
           />
-          <Typography variant="h6" textTransform={"capitalize"} color="#3E3D3D">
+          <Typography variant="h6"  color="#3E3D3D">
             {job.date}
           </Typography>
         </Grid>

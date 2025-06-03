@@ -25,7 +25,7 @@ const SpecialistExpertise: React.FC<SpecialistExpertiseProps> = ({
 
         {/* Subheading */}
         <Typography variant="h5" color="#132D46" mb={4}>
-          {/* Deep industry knowledge, precise candidate alignment – built for
+          {/* Deep industry knowledge, precise candidate alignment , built for
           long-term success in your sector. */}
           {description}
         </Typography>

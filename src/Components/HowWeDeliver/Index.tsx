@@ -31,12 +31,12 @@ const HowWeDeliverRecruitment = ({
 
             <Typography
               variant="h6"
-              textTransform={"capitalize"}
+              
               sx={{ mb: 2 }}
             >
               {subTitle}
             </Typography>
-            <Typography variant="h6" textTransform={"capitalize"}>
+            <Typography variant="h6" >
               {subTitle2}
             </Typography>
 

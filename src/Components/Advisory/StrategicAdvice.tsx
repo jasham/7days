@@ -32,31 +32,47 @@ const StrategicAdvice: React.FC<StrategicAdviceProps> = ({
         marginBottom="16px"
       />
 
-      <Box sx={{ display: "flex", justifyContent: "space-between", mb: 4, flexWrap: "wrap" }}>
-        <Box sx={{ width: { xs: "100%", md: "45%" } , mb: { xs: 2, md: 0 } }}>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          mb: 4,
+          flexWrap: "wrap",
+        }}
+      >
+        <Box sx={{ width: { xs: "100%", md: "45%" }, mb: { xs: 2, md: 0 } }}>
           <Typography variant="h2">{heading}</Typography>
         </Box>
 
-        <Box sx={{ width: { xs: "100%", md: "50%" }, display: "flex", flexDirection: "column", gap: 2 }}>
+        <Box
+          sx={{
+            width: { xs: "100%", md: "50%" },
+            display: "flex",
+            flexDirection: "column",
+            gap: 2,
+          }}
+        >
           {paragraphs.map((p, idx) => (
-            <Typography key={idx} variant="h6" textTransform="capitalize">
+            <Typography key={idx} variant="h6" >
               {p}
             </Typography>
           ))}
         </Box>
       </Box>
 
-      <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
-        <Button
-          variantStyle="main"
-          buttonColor={buttonColor}
-          buttonBgColor={buttonBgColor}
-          buttonBorderColor={buttonBorderColor}
-          onClick={() => alert("beginning")}
-        >
-          {buttonText}
-        </Button>
-      </Box>
+      {buttonText && (
+        <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+          <Button
+            variantStyle="main"
+            buttonColor={buttonColor}
+            buttonBgColor={buttonBgColor}
+            buttonBorderColor={buttonBorderColor}
+            onClick={() => alert("beginning")}
+          >
+            {buttonText}
+          </Button>
+        </Box>
+      )}
     </Box>
   );
 };

@@ -24,10 +24,10 @@
     text: string;
     heading: string;
     paragraphs: string[];
-    buttonText: string;
-    buttonColor: string;
-    buttonBgColor: string;
-    buttonBorderColor: string;
+    buttonText?: string;
+    buttonColor?: string;
+    buttonBgColor?: string;
+    buttonBorderColor?: string;
   }  
 
   // Advisory / SolutionsSection props

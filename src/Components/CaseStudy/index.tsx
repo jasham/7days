@@ -16,6 +16,7 @@ const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({
   heading,
   isReverse = false,
   isBackground = false,
+  titleDescription,
 }) => {
   return (
     <Box
@@ -72,7 +73,16 @@ const CaseStudyHighlight: React.FC<CaseStudyHighlightProps> = ({
           >
             {title}
           </Typography>
-          <Typography variant="body1" color="#132D46">
+          { titleDescription && (
+            <Typography
+            variant="h4"
+            color="#132D46"
+            sx={{ fontWeight: 400 }}
+          >
+            {titleDescription}
+          </Typography>
+          )}
+          <Typography variant="body1" color="#132D46" sx={{whiteSpace: 'pre-line'}}>
             {description}
           </Typography>
           <Box sx={{ display: "flex", justifyContent: { xs: "center", md: "flex-start" } }}>

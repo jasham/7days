@@ -1,7 +1,7 @@
 export interface HeroProps {
   imageUrl: string;
   title: string;
-  description: string;
+  description?: string;
   buttonText?: string;
   buttonLink?: string;
   onButtonClick?: () => void;
@@ -33,6 +33,7 @@ export interface HeroProps {
     onClick: () => void;
     isReverse: boolean;
     isBackground?: boolean;
+    titleDescription?: string;
   }
   
   export interface WhyPartnerProps {

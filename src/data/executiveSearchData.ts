@@ -91,7 +91,7 @@ export const howWeDeliverData: HowWeDeliverRecruitmentProps = {
     {
       title: "Focused Delivery & Stakeholder Guidance",
       description:
-        "We present only the best candidate within 3–6 weeks, with a detailed profile, leadership analysis, alignment insights, and red flag alerts. We support internal decision-making with ongoing stakeholder engagement and advisory.",
+        "We present only the best candidate within 3,6 weeks, with a detailed profile, leadership analysis, alignment insights, and red flag alerts. We support internal decision-making with ongoing stakeholder engagement and advisory.",
     },
   ],
 };

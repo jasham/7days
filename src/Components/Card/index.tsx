@@ -41,7 +41,7 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
         }}
       >
         {heading ? (
-          <Typography variant={headingVariant} textTransform="capitalize">{heading}</Typography>
+          <Typography variant={headingVariant} >{heading}</Typography>
         ) : icon ? (
           <Image
             src={icon}
@@ -60,11 +60,11 @@ const PartnerCard: React.FC<PartnerCardProps> = ({
         ) : null}
       </Box>
 
-      <Typography variant={titleVariant} fontWeight="bold" gutterBottom color={color} textTransform="capitalize">
+      <Typography variant={titleVariant} fontWeight="bold" gutterBottom color={color} >
         {title}
       </Typography>
 
-      <Typography variant={descriptionVariant} textTransform="capitalize">
+      <Typography variant={descriptionVariant} >
         {description}
       </Typography>
     </Box>

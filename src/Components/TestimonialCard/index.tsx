@@ -24,7 +24,7 @@ const TestimonialCard: React.FC<TestimonialCardProps> = ({
           <Typography variant="h2">{quote}</Typography>
         </Box>
 
-        <Typography variant="h6" textTransform={"capitalize"} mb={2}>
+        <Typography variant="h6"  mb={2}>
           {detail}
         </Typography>
 

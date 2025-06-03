@@ -104,7 +104,7 @@ const TrustedClients: React.FC<TrustedClientsProps> = ({
                         <Typography
                           component="li"
                           variant="h6"
-                          textTransform={"capitalize"}
+                          
                           sx={{ mb: 1, listStyleType: "disc", ml: 2 }}
                           key={item}
                         >
@@ -116,7 +116,7 @@ const TrustedClients: React.FC<TrustedClientsProps> = ({
                   {closingText && layoutVariant === "imageLeft" && (
                     <Typography
                       variant="h6"
-                      textTransform={"capitalize"}
+                      
                       sx={{ mb: 4 }}
                     >
                       {closingText}
@@ -138,7 +138,7 @@ const TrustedClients: React.FC<TrustedClientsProps> = ({
           {closingText && layoutVariant === "imageCenter" && (
             <Typography
               variant="h6"
-              textTransform={"capitalize"}
+              
               sx={{ mb: 4 }}
             >
               {closingText}

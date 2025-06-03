@@ -31,7 +31,7 @@ export const governmentWhatWeDoData: WhatWeDoProps = {
 export const governmentSpecialistExpertiseData: SpecialistExpertiseProps = {
   title: "Purpose-Led Recruitment. Public Sector Results.",
   description:
-    "Deep government experience, policy-aligned delivery – built for long-term success in public service.",
+    "Deep government experience, policy-aligned delivery , built for long-term success in public service.",
     sectors: [
       "Property & Development",
       "Construction",

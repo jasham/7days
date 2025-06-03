@@ -19,7 +19,7 @@ export const heroDetails: HeroProps = {
 export const specialistExpertiseData: SpecialistExpertiseProps = {
   title: "Sector-Specific Recruitment. Permanent Impact.",
   description:
-    "Deep industry knowledge, precise candidate alignment – built for long-term success in your sector.",
+    "Deep industry knowledge, precise candidate alignment , built for long-term success in your sector.",
   sectors: [
     "Property & Development",
     "Construction",
@@ -92,7 +92,7 @@ export const howWeDeliverData: HowWeDeliverRecruitmentProps = {
     {
       title: "Focused Delivery",
       description:
-        "We don’t create shortlists, we present only the best candidate in 7–10 business days, complete with summary profile, capability analysis and leadership fit scoring.",
+        "We don’t create shortlists, we present only the best candidate in 7,10 business days, complete with summary profile, capability analysis and leadership fit scoring.",
     },
   ],
 };

@@ -122,15 +122,15 @@ import { FAQ, GenericProcessSectionProps } from "@/types/recruitmentInterfaces";
     isHeadingLeft: false,
     deliverables: [
       {
-        title: "Evidence-based – Informed by data, diagnostics and what’s really happening in your business",
+        title: "Evidence-based , Informed by data, diagnostics and what’s really happening in your business",
         icon: "/sortlist.svg",
       },
       {
-        title: "Commercially grounded – Anchored to your revenue, cost, investment or scale priorities",
+        title: "Commercially grounded , Anchored to your revenue, cost, investment or scale priorities",
         icon: "/marketing.svg",
       },
       {
-        title: "Actionable – Designed to turn into clear steps, not theoretical slides",
+        title: "Actionable , Designed to turn into clear steps, not theoretical slides",
         icon: "/confidence.svg",
       },
     ],

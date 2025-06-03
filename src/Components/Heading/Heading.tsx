@@ -12,7 +12,7 @@ const Heading: React.FC<HeadingProps> = ({
   return (
     <div>
       <Typography variant="h6" color={textColor}>
-        {text}
+        {text.charAt(0).toUpperCase() + text.slice(1).toLowerCase()}
       </Typography>
       <Divider
         sx={{

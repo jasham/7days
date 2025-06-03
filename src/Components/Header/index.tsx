@@ -4,7 +4,6 @@
 import React, { useState } from 'react';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Toolbar from '@mui/material/Toolbar';
 import IconButton from '@mui/material/IconButton';
 import Drawer from '@mui/material/Drawer';
@@ -16,13 +15,15 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Image from 'next/image';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import { Button } from '../Button/Button';
 
 const navItems = [
-  { label: 'About', href: '/about' },
+  { label: 'About', href: '/about-us' },
+  { label: 'Jobs' , href: '/job-board'},
   { label: 'Recruitment', href: '/permanent-recruitment' },
   { label: 'Advisory & Consulting', href: '/advisory' },
   { label: 'Resources', href: '/resources-recruitment' },
-  { label: 'Contact', href: '/contact' },
+  { label: 'Contact Us', href: '/contact' },
 ];
 
 export default function Navbar() {
@@ -58,13 +59,19 @@ export default function Navbar() {
       position="static"
       elevation={0}
       sx={{
-        backgroundColor: 'transparent',
-        boxShadow: 'none',
+        backgroundColor: "transparent",
+        boxShadow: "none",
       }}
     >
-      <Toolbar sx={{ justifyContent: 'space-between', px: { xs: 2, sm: 4 } , pt:{xs:3, sm: 4}}}>
+      <Toolbar
+        sx={{
+          justifyContent: "space-between",
+          pt: { xs: 3, sm: 4 },
+          px: { xs: 2, md: 10 },
+        }}
+      >
         {/* Logo */}
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
+        <Box sx={{ display: "flex", alignItems: "center" }}>
           <Image src="/Logo.svg" alt="Client Logo" width={169} height={60} />
         </Box>
 
@@ -73,15 +80,24 @@ export default function Navbar() {
           <Box
             component="nav"
             sx={{
-              display: 'flex',
-              gap: 4,
+              display: "flex",
+              gap: 6,
               fontWeight: 400,
-              color: 'white',
-              letterSpacing: '0.1em',
+              color: "white",
+              letterSpacing: "0.1em",
             }}
           >
             {navItems.map(({ label, href }) => (
-              <Button key={label} color="inherit" href={href}>
+              <Button
+                key={label}
+                href={href}
+                variantStyle="text"
+                buttonColor={"#ffffff"}
+                sx={{
+                  fontSize:"16px"
+                }}
+                isIcon={false}
+              >
                 {label}
               </Button>
             ))}
@@ -96,7 +112,7 @@ export default function Navbar() {
               color="inherit"
               aria-label="menu"
               onClick={toggleDrawer(true)}
-              sx={{paddingLeft: 3, paddingRight: 3}}
+              sx={{ paddingLeft: 3, paddingRight: 3 }}
             >
               <MenuIcon />
             </IconButton>

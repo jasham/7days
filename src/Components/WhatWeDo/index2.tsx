@@ -53,7 +53,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
           <Typography
             variant="h6"
             color="#ffffff"
-            textTransform="capitalize"
+            
             sx={{ mt: 3, maxWidth: 500 }}
           >
             {description1}
@@ -62,7 +62,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
           <Typography
             variant="h6"
             color="#ffffff"
-            textTransform="capitalize"
+            
             sx={{ mt: 3, maxWidth: 500 }}
           >
             {description2}
@@ -71,7 +71,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
           <Typography
             variant="h6"
             color="#ffffff"
-            textTransform="capitalize"
+            
             sx={{ mt: 3, maxWidth: 500 }}
           >
             {description3}
@@ -105,7 +105,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
             <Typography
               variant="h6"
               color="#ffffff"
-              textTransform="capitalize"
+              
               sx={{ mt: 3, mb: 3, maxWidth: 500 }}
             >
               {subDescription}
@@ -117,7 +117,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
                   key={index}
                   component="li"
                   variant="h6"
-                  textTransform={"capitalize"}
+                  
                   sx={{ mb: 2, listStyleType: "disc" }}
                 >
                   {item}
@@ -128,7 +128,7 @@ const WhatWeDo: React.FC<WhatWeDoProps> = ({
             <Typography
               variant="h6"
               color="#ffffff"
-              textTransform="capitalize"
+              
               sx={{ mt: 3, mb: 3, maxWidth: 500 }}
             >
               {subListBottom}
