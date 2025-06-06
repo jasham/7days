@@ -45,7 +45,7 @@ export const internationalRecruitmentSections: Section[] = [
 export const networkData: OurNetworkSectionProps = {
   header: "Work with the experts",
   heading: "Strategic network advantage.",
-  description: "We’re not drawing from databases — we’re drawing from relationships. we maintain live intelligence networks across:",
+  description: "We’re not drawing from databases , we’re drawing from relationships. we maintain live intelligence networks across:",
   bottomText: "",
   image: "/Network2.svg",
   mt: -5,
@@ -63,15 +63,15 @@ export const howWeDeliverData: HowWeDeliverRecruitmentProps = {
   features: [
     {
       title: "Leadership strategy & role alignment",
-      description: "We begin with a deep consultation with the ceo, board or executive leadership team to define the success profile — including commercial outcomes, leadership style, team context and cultural alignment.",
+      description: "We begin with a deep consultation with the ceo, board or executive leadership team to define the success profile , including commercial outcomes, leadership style, team context and cultural alignment.",
     },
     {
       title: "Market mapping & competitor intelligence",
-      description: "We conduct in-depth research to identify competitor structures, adjacent leadership talent, succession candidates and emerging executives — across both industry and adjacent markets.",
+      description: "We conduct in-depth research to identify competitor structures, adjacent leadership talent, succession candidates and emerging executives , across both industry and adjacent markets.",
     },
     {
       title: "Direct search & confidential engagement",
-      description: "We approach pre-qualified, high-performing passive leaders through confidential, one-to-one outreach. every conversation is discreet and led directly by senior consultants — no ads, no noise.",
+      description: "We approach pre-qualified, high-performing passive leaders through confidential, one-to-one outreach. every conversation is discreet and led directly by senior consultants , no ads, no noise.",
     },
     {
       title: "Executive assessment for impact",
@@ -87,7 +87,7 @@ export const howWeDeliverData: HowWeDeliverRecruitmentProps = {
 export const faqData: FAQ[] = [
   {
     question: "What makes your permanent recruitment different from other agencies?",
-    answer: "We don’t rely just on job ads. we use direct search, tap into passive candidate networks, and focus on long-term value — not just short-term placement. we use a 360 approach to sourcing.",
+    answer: "We don’t rely just on job ads. we use direct search, tap into passive candidate networks, and focus on long-term value , not just short-term placement. we use a 360 approach to sourcing.",
   },
   {
     question: "How do you ensure the candidate is the right long-term fit?",
@@ -99,7 +99,7 @@ export const faqData: FAQ[] = [
   },
   {
     question: "We’ve had problems with retention. how can you help?",
-    answer: "We design every brief to focus on fit, expectations and growth alignment — and support post-placement success through regular check-ins. we can also help through our consulting and advisory services to work out where the retention issues are.",
+    answer: "We design every brief to focus on fit, expectations and growth alignment , and support post-placement success through regular check-ins. we can also help through our consulting and advisory services to work out where the retention issues are.",
   },
 ];
 
@@ -132,12 +132,12 @@ export const resultSectionData: ResultSectionProps = {
   },
   backgroundImage: "/results-bg.jpg",
   topHeading: "Where strategy demands action",
-  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal , it’s the outcome.",
 };
 
 export const whatWeDoData: WhatWeDoProps = {
-  heading: "Executive hiring is high-stakes — and the right appointment changes everything.",
-  introText: "At henton consulting, we partner with boards, ceos and senior leadership to deliver retained executive search for critical roles across australia’s commercial, industrial, and government sectors. \n\n we specialise in appointing leaders who don’t just meet the brief — they elevate the strategy, challenge thinking, and bring others with them.",
+  heading: "Executive hiring is high-stakes , and the right appointment changes everything.",
+  introText: "At henton consulting, we partner with boards, ceos and senior leadership to deliver retained executive search for critical roles across australia’s commercial, industrial, and government sectors. \n\n we specialise in appointing leaders who don’t just meet the brief , they elevate the strategy, challenge thinking, and bring others with them.",
   whoSubHeading: "We recruit for:",
   whoHeading: "Our expertise covers a wide range of skill sets and leadership levels:",
   listItems: [

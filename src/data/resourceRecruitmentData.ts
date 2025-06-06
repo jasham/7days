@@ -178,7 +178,7 @@ export const resourceTestimonialData: TestimonialProps = {
 export const resourceFaqData: FAQ[] = [
   {
     question: "Do you recruit for both site and office-based resource roles?",
-    answer: "Yes — from site managers and engineers to project directors, commercial leads and hse professionals.",
+    answer: "Yes , from site managers and engineers to project directors, commercial leads and hse professionals.",
   },
   {
     question: "Can you help with contract-based or temporary hires?",
@@ -186,14 +186,14 @@ export const resourceFaqData: FAQ[] = [
   },
   {
     question: "Do you work nationally?",
-    answer: "Yes — we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
+    answer: "Yes , we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
   },
   {
     question: "Can you manage sensitive or confidential assignments?",
-    answer: "Yes — we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
+    answer: "Yes , we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
   },
   {
     question: "How do you test delivery competence, not just qualifications?",
-    answer: "We interview based on real project performance, safety records, and leadership behaviours — not just cvs.",
+    answer: "We interview based on real project performance, safety records, and leadership behaviours , not just cvs.",
   },
 ];

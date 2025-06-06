@@ -87,9 +87,9 @@ export const engineeringNetworkData: OurNetworkSectionProps = {
 export const engineeringHowWeRecruitData: HowWeRecruitProps = {
   heading: "Engineering recruitment",
   title: "How we recruit and why it works.",
-  subTitle: "Great engineering hires don’t just reduce workload — they reduce risk.",
+  subTitle: "Great engineering hires don’t just reduce workload , they reduce risk.",
   description: "We don’t wait for applications. we go straight to the engineers already solving technical problems under pressure, many of whom aren’t looking, but will move for the right opportunity. \n\n we map the market, trace delivery outcomes, and approach with purpose. every search includes:",
-  description3: "When delivery’s on the line, there’s no margin for guesswork — and no time for candidates who aren’t up to it.",
+  description3: "When delivery’s on the line, there’s no margin for guesswork , and no time for candidates who aren’t up to it.",
   itemList: [
     {
       icon: "/WebNetwork.svg",
@@ -97,7 +97,7 @@ export const engineeringHowWeRecruitData: HowWeRecruitProps = {
     },
     {
       icon: "/Voice.svg",
-      text: "Market mapping and competitor intelligence — not just job board noise",
+      text: "Market mapping and competitor intelligence , not just job board noise",
     },
     {
       icon: "/todoList.svg",
@@ -177,7 +177,7 @@ export const engineeringTestimonialData: TestimonialProps = {
 export const engineeringFaqData: FAQ[] = [
   {
     question: "Do you recruit for both site and office-based engineering roles?",
-    answer: "Yes — from site managers and engineers to project directors, commercial leads and hse professionals.",
+    answer: "Yes , from site managers and engineers to project directors, commercial leads and hse professionals.",
   },
   {
     question: "Can you help with contract-based or temporary hires?",
@@ -185,14 +185,14 @@ export const engineeringFaqData: FAQ[] = [
   },
   {
     question: "Do you work nationally?",
-    answer: "Yes — we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
+    answer: "Yes , we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
   },
   {
     question: "Can you manage sensitive or confidential assignments?",
-    answer: "Yes — we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
+    answer: "Yes , we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
   },
   {
     question: "How do you test delivery competence, not just qualifications?",
-    answer: "We interview based on real project performance, safety records, and leadership behaviours — not just cvs.",
+    answer: "We interview based on real project performance, safety records, and leadership behaviours , not just cvs.",
   },
 ];

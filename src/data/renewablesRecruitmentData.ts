@@ -14,7 +14,7 @@ export const renewablesHeroDetails: HeroProps = {
 export const renewablesWhatWeDoData: WhatWeDoProps = {
   heading: "We place the professionals behind Australia’s most complex renewable energy builds.",
   introText:
-    "We recruit the professionals turning transition plans into operating assets. From feasibility to delivery and grid integration, we place project-ready people into roles that demand urgency, clarity, and real-world capability. \n\n Whether you're building a solar farm, delivering wind generation at scale, or accelerating battery and transmission projects — we find the people who keep momentum.",
+    "We recruit the professionals turning transition plans into operating assets. From feasibility to delivery and grid integration, we place project-ready people into roles that demand urgency, clarity, and real-world capability. \n\n Whether you're building a solar farm, delivering wind generation at scale, or accelerating battery and transmission projects , we find the people who keep momentum.",
   whoSubHeading: "Trusted by Australia’s energy transition leaders",
   whoHeading: "We work with forward-leaning employers who don’t have time to hire twice. From scaling delivery teams to securing niche specialists, we recruit across:",
   whoDescription: "Whether you're delivering a flagship project or expanding into new markets, we help you hire with confidence, from metro to remote.",
@@ -62,7 +62,7 @@ export const renewablesRecruitmentSections: Section[] = [
       },
       {
         title: "Environmental, HSE & regulatory affairs",
-        body: "WHS leads, stakeholder managers and environmental advisors who protect safety, planning approvals and social licence to operate — especially in regional and sensitive contexts.",
+        body: "WHS leads, stakeholder managers and environmental advisors who protect safety, planning approvals and social licence to operate , especially in regional and sensitive contexts.",
       },
       {
         title: "Energy asset management & commercial operations",
@@ -70,7 +70,7 @@ export const renewablesRecruitmentSections: Section[] = [
       },
       {
         title: "Renewables engineering & technical consulting",
-        body: "Systems designers, technical advisors and EPCM specialists in solar, wind and hybrid systems — covering feasibility, modelling, design and owner’s engineering functions.",
+        body: "Systems designers, technical advisors and EPCM specialists in solar, wind and hybrid systems , covering feasibility, modelling, design and owner’s engineering functions.",
       },
     ],
   },
@@ -189,7 +189,7 @@ export const renewablesFaqData: FAQ[] = [
   {
     question: "Do you recruit for both site and office-based renewables roles?",
     answer:
-      "Yes — from site managers and engineers to project directors, commercial leads and HSE professionals.",
+      "Yes , from site managers and engineers to project directors, commercial leads and HSE professionals.",
   },
   {
     question: "Can you help with contract-based or temporary hires?",
@@ -199,16 +199,16 @@ export const renewablesFaqData: FAQ[] = [
   {
     question: "Do you work nationally?",
     answer:
-      "Yes — we recruit across Australia including urban infill, regional builds and remote infrastructure projects.",
+      "Yes , we recruit across Australia including urban infill, regional builds and remote infrastructure projects.",
   },
   {
     question: "Can you manage sensitive or confidential assignments?",
     answer:
-      "Yes — we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
+      "Yes , we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
   },
   {
     question: "How do you test delivery competence, not just qualifications?",
     answer:
-      "We interview based on real project performance, safety records, and leadership behaviours — not just CVs.",
+      "We interview based on real project performance, safety records, and leadership behaviours , not just CVs.",
   },
 ];

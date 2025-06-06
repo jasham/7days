@@ -13,8 +13,8 @@ export const corporateHeroDetails: HeroProps = {
 export const corporateWhatWeDoData: WhatWeDoProps = {
   heading: "We recruit across the core corporate functions that keep organisations moving.",
   introText: "Whether you’re strengthening governance, scaling teams or leading transformation, we help you find the people who drive clarity, confidence and results.",
-  whoSubHeading: "Who we work with — from enterprise to scale-up:",
-  whoHeading: "The right hire drives results — and protects reputation. we partner with:",
+  whoSubHeading: "Who we work with , from enterprise to scale-up:",
+  whoHeading: "The right hire drives results , and protects reputation. we partner with:",
   listItems: [
     "ASX-listed and privately owned businesses",
     "Pe-backed and growth-phase companies",
@@ -27,7 +27,7 @@ export const corporateWhatWeDoData: WhatWeDoProps = {
 
 export const corporateSpecialistExpertiseData: SpecialistExpertiseProps = {
   title: "Business-critical roles. commercially aligned hires.",
-  description: "Recruitment across finance, risk, people and operations — built for long-term value.",
+  description: "Recruitment across finance, risk, people and operations , built for long-term value.",
   sectors: [
     "Property & development",
     "Construction",
@@ -71,7 +71,7 @@ export const corporateRecruitmentSections: Section[] = [
 export const corporateNetworkData: OurNetworkSectionProps = {
   header: "Work with the experts",
   heading: "Deep expertise. business-critical talent.",
-  description: "We don’t pull from static databases — we headhunt for impact. our sector insight spans the entire property lifecycle:",
+  description: "We don’t pull from static databases , we headhunt for impact. our sector insight spans the entire property lifecycle:",
   bottomText: "",
   image: "/expertImage.jpg",
   mt: -10,
@@ -82,8 +82,8 @@ export const corporateNetworkData: OurNetworkSectionProps = {
 export const corporateHowWeRecruitData: HowWeRecruitProps = {
   heading: "Corporate recruitment",
   title: "How we recruit and why it works.",
-  subTitle: "We don’t just fill seats — we find people who shift performance. our searches are proactive, targeted and outcomes-led.",
-  description: "We understand the pressures driving corporate hiring — board scrutiny, margin pressure, restructuring, regulatory shifts. that’s why we move with focus and discretion. every search includes:",
+  subTitle: "We don’t just fill seats , we find people who shift performance. our searches are proactive, targeted and outcomes-led.",
+  description: "We understand the pressures driving corporate hiring , board scrutiny, margin pressure, restructuring, regulatory shifts. that’s why we move with focus and discretion. every search includes:",
   description2: "The difference between a successful transformation and a failed initiative often comes down to one hire. we help you get that hire right.",
   itemList: [
     {
@@ -156,7 +156,7 @@ export const corporateResultSectionData: ResultSectionProps = {
   },
   backgroundImage: "/results-bg.jpg",
   topHeading: "Measurable outcomes",
-  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal , it’s the outcome.",
 };
 
 export const corporateTestimonialData: TestimonialProps = {
@@ -172,7 +172,7 @@ export const corporateTestimonialData: TestimonialProps = {
 export const corporateFaqData: FAQ[] = [
   {
     question: "Do you recruit for both site and office-based corporate roles?",
-    answer: "Yes — from site managers and engineers to project directors, commercial leads and hse professionals.",
+    answer: "Yes , from site managers and engineers to project directors, commercial leads and hse professionals.",
   },
   {
     question: "Can you help with contract-based or temporary hires?",
@@ -180,14 +180,14 @@ export const corporateFaqData: FAQ[] = [
   },
   {
     question: "Do you work nationally?",
-    answer: "Yes — we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
+    answer: "Yes , we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
   },
   {
     question: "Can you manage sensitive or confidential assignments?",
-    answer: "Yes — we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
+    answer: "Yes , we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
   },
   {
     question: "How do you test delivery competence, not just qualifications?",
-    answer: "We interview based on real project performance, safety records, and leadership behaviours — not just cvs.",
+    answer: "We interview based on real project performance, safety records, and leadership behaviours , not just cvs.",
   },
 ];

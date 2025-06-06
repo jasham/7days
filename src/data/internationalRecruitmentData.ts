@@ -37,7 +37,7 @@ export const internationalRecruitmentSections: Section[] = [
     complexItems: [
       {
         title: "Aged care & community services",
-        body: "Personal care workers, enrolled nurses, disability support workers and care coordinators — sourced at scale for residential, community and home care programs.",
+        body: "Personal care workers, enrolled nurses, disability support workers and care coordinators , sourced at scale for residential, community and home care programs.",
       },
       {
         title: "Engineering & construction support",
@@ -105,7 +105,7 @@ export const howWeDeliverData: HowWeDeliverRecruitmentProps = {
 export const faqData: FAQ[] = [
   {
     question: "What makes your permanent recruitment different from other agencies?",
-    answer: "We don’t rely just on job ads. We use direct search, tap into passive candidate networks, and focus on long-term value — not just short-term placement. We use a 360 approach to sourcing.",
+    answer: "We don’t rely just on job ads. We use direct search, tap into passive candidate networks, and focus on long-term value , not just short-term placement. We use a 360 approach to sourcing.",
   },
   {
     question: "How do you ensure the candidate is the right long-term fit?",
@@ -117,7 +117,7 @@ export const faqData: FAQ[] = [
   },
   {
     question: "We’ve had problems with retention. How can you help?",
-    answer: "We design every brief to focus on fit, expectations and growth alignment — and support post-placement success through regular check-ins. We can also help through our consulting and advisory services to work out where the retention issues are.",
+    answer: "We design every brief to focus on fit, expectations and growth alignment , and support post-placement success through regular check-ins. We can also help through our consulting and advisory services to work out where the retention issues are.",
   },
 ];
 
@@ -150,7 +150,7 @@ export const resultSectionData: ResultSectionProps = {
   },
   backgroundImage: "/results-bg.jpg",
   topHeading: "Where strategy demands action",
-  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal , it’s the outcome.",
 };
 
 export const whatWeDoData: WhatWeDoProps = {

@@ -19,7 +19,7 @@ const questions = [
   },
   {
     title: "Execution Support",
-    body: "We partner with internal teams or bring in the right resources to activate change — across marketing, sales or operational delivery.",
+    body: "We partner with internal teams or bring in the right resources to activate change , across marketing, sales or operational delivery.",
   },
 ];
 
@@ -49,7 +49,7 @@ const GrowthSection: React.FC = () => {
           </Typography>
           <Typography variant="h5" fontWeight={500} sx={{ mb: 4 }}>
             We bring structure, speed and market intelligence to every
-            engagement — with support from planning to execution. Every growth
+            engagement , with support from planning to execution. Every growth
             strategy engagement includes:
           </Typography>
           <Box component="ul" sx={{ mb: 4 }}>

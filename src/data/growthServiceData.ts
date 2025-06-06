@@ -19,7 +19,7 @@ export const strategicAdviceData: StrategicAdviceProps = {
   text: "What we do",
   heading: "We turn opportunity into strategy, and strategy into action",
   paragraphs: [
-    "We work with founders, CEOs and leadership teams to shape growth plans that match market realities, commercial capability and internal resources. Whether you’re entering a new sector, reworking your sales approach, or repositioning for scale, we help you define a strategy that performs — then support you through implementation.",
+    "We work with founders, CEOs and leadership teams to shape growth plans that match market realities, commercial capability and internal resources. Whether you’re entering a new sector, reworking your sales approach, or repositioning for scale, we help you define a strategy that performs , then support you through implementation.",
   ],
   buttonText: "Start the conversation",
   buttonColor: "#132D46",
@@ -37,14 +37,14 @@ export const solutionsSectionData: SolutionsSectionProps = {
     "We work with businesses at critical points where structure, leadership and commercial direction must evolve to meet the next stage of growth. We help leaders answer questions like:",
   questions: [
     "Is our current team structure aligned to where we're going?",
-    "Do we have the right leadership layers — or too many?",
+    "Do we have the right leadership layers , or too many?",
     "Are roles defined by outcomes, or just inherited job titles?",
     "How do we navigate a restructure without losing momentum?",
     "Where are our capability gaps, and how do we close them fast?",
     "What's stopping our teams from delivering more with less?",
   ],
   description:
-    "These are strategic problems — not HR issues. We help you unpack them, refocus your structure, and make decisions that hold up under investor scrutiny, board pressure and business complexity.",
+    "These are strategic problems , not HR issues. We help you unpack them, refocus your structure, and make decisions that hold up under investor scrutiny, board pressure and business complexity.",
   buttonText: "Build your team",
   buttonColor: "#132D46",
   buttonBgColor: "transparent",
@@ -84,7 +84,7 @@ export const advisoryFaq: FAQ[] = [
 export const growthServiceData: GrowthServiceProps = {
   heading1: "Growth services",
   heading: "Strategic growth. Commercial focus.",
-  subheading: "Specialist services tailored to your sector, size and stage — with execution built in.",
+  subheading: "Specialist services tailored to your sector, size and stage , with execution built in.",
   paragraph: "We deliver:",
   imageSrc: "/womenPresenting.jpg",
   imageAlt: "Planning meeting",
@@ -138,7 +138,7 @@ export const trustedClientsTop: TrustedClientsProps = {
     "Government-aligned and service organisations expanding into new regions or funded programs",
     "Corporate services and operational businesses needing tighter sales and market alignment",
   ],
-  closingText: "From targeted expansion to full commercial repositioning — we help sector-specific businesses grow with strategy, structure and speed.",
+  closingText: "From targeted expansion to full commercial repositioning , we help sector-specific businesses grow with strategy, structure and speed.",
   ctaText: "Ready to build what’s next?",
   ctaColor: "#132D46",
 };

@@ -42,16 +42,16 @@ export const resultSectionData: ResultSectionProps = {
   },
   backgroundImage: "/results-bg.jpg",
   topHeading: "Measurable outcomes",
-  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal , it’s the outcome.",
 };
 
 export const whatWeDoData: WhatWeDoProps = {
-  heading: "Great developments don’t deliver themselves — it starts with who you hire.",
+  heading: "Great developments don’t deliver themselves , it starts with who you hire.",
   introText:
-    "We recruit high-performing professionals across the entire property development spectrum — from acquisitions and feasibility to delivery, leasing, and asset performance. \n\n" +
+    "We recruit high-performing professionals across the entire property development spectrum , from acquisitions and feasibility to delivery, leasing, and asset performance. \n\n" +
     "Whether you're scaling a national development pipeline or unlocking new investment potential, we deliver the right people at the right time.",
   whoSubHeading: "We recruit for:",
-  whoHeading: "The right partnership brings your project to life — and the right team keeps it moving. We partner with:",
+  whoHeading: "The right partnership brings your project to life , and the right team keeps it moving. We partner with:",
   listItems: [
     "Property developers (residential, commercial, mixed-use)",
     "Funds and institutional asset owners",
@@ -63,7 +63,7 @@ export const whatWeDoData: WhatWeDoProps = {
 
 export const specialistExpertiseData: SpecialistExpertiseProps = {
   title: "Property-focused recruitment. Built for delivery.",
-  description: "Precision hiring across every phase of the development lifecycle — from vision to completion.",
+  description: "Precision hiring across every phase of the development lifecycle , from vision to completion.",
   sectors: [
     "Property & development",
     "Construction",
@@ -86,7 +86,7 @@ export const propertyRecruitmentSections: Section[] = [
       },
       {
         title: "Project & construction management",
-        body: "Proven operators who keep delivery on track — managing timeline pressure and contractor risk.",
+        body: "Proven operators who keep delivery on track , managing timeline pressure and contractor risk.",
       },
       {
         title: "Asset management",
@@ -111,7 +111,7 @@ export const propertyRecruitmentSections: Section[] = [
 export const networkData: OurNetworkSectionProps = {
   header: "Work with the experts",
   heading: "Deep expertise. Precise delivery.",
-  description: "We don’t pull from static databases — we headhunt for impact. Our sector insight spans the entire property lifecycle:",
+  description: "We don’t pull from static databases , we headhunt for impact. Our sector insight spans the entire property lifecycle:",
   bottomText: "",
   image: "/Network3.jpg",
   mt: -5,
@@ -122,7 +122,7 @@ export const networkData: OurNetworkSectionProps = {
 export const faqData: FAQ[] = [
   {
     question: "What makes your permanent recruitment different from other agencies?",
-    answer: "We don’t rely just on job ads. We use direct search, tap into passive candidate networks, and focus on long-term value — not just short-term placement. We use a 360 approach to sourcing.",
+    answer: "We don’t rely just on job ads. We use direct search, tap into passive candidate networks, and focus on long-term value , not just short-term placement. We use a 360 approach to sourcing.",
   },
   {
     question: "How do you ensure the candidate is the right long-term fit?",
@@ -134,7 +134,7 @@ export const faqData: FAQ[] = [
   },
   {
     question: "We’ve had problems with retention. How can you help?",
-    answer: "We design every brief to focus on fit, expectations and growth alignment — and support post-placement success through regular check-ins. We can also help through our consulting and advisory services to work out where the retention issues are.",
+    answer: "We design every brief to focus on fit, expectations and growth alignment , and support post-placement success through regular check-ins. We can also help through our consulting and advisory services to work out where the retention issues are.",
   },
 ];
 
@@ -173,7 +173,7 @@ export const howWeDeliverRecruitmentData: HowWeRecruitProps = {
   title: "How we recruit and why it works.",
   subTitle: "We take your brief and turn it into action. Fast. Our model combines proactive search with deep sector insight.",
   description: "We don’t wait for candidates to apply, we identify hidden performers already delivering across major property portfolios, many of whom are quietly open to change. Every search includes:",
-  description2: "Because we understand risk, yield, feasibility, ROI, and timeline pressure, we ask sharper questions. That means we filter faster — and you interview only the right people.",
+  description2: "Because we understand risk, yield, feasibility, ROI, and timeline pressure, we ask sharper questions. That means we filter faster , and you interview only the right people.",
   description3: "The difference between a project that delivers and one that stalls often comes down to a single hire. And in this market, average hires cost more than vacancies.",
   itemList: [
     {

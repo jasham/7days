@@ -46,7 +46,7 @@ export const governmentRecruitmentSections: Section[] = [
     complexItems: [
       {
         title: "Policy, strategy & reform",
-        body: "Advisors, regulatory specialists and program leads who translate government vision into action — with policy precision, compliance insight and stakeholder buy-in.",
+        body: "Advisors, regulatory specialists and program leads who translate government vision into action , with policy precision, compliance insight and stakeholder buy-in.",
       },
       {
         title: "Program, project & development management",
@@ -88,7 +88,7 @@ export const governmentHowWeRecruitData: HowWeRecruitProps = {
   title: "How we recruit and why it works.",
   subTitle: "Public sector hiring is different. timelines are tight. risk is high. outcomes are public.",
   description: "We lead every search with strategy, compliance and discretion. no job boards. no guesswork. every engagement includes:",
-  description2: "We bring sharp judgement, transparent process, and urgency — because government can’t afford a misstep.",
+  description2: "We bring sharp judgement, transparent process, and urgency , because government can’t afford a misstep.",
   itemList: [
     {
       icon: "/WebNetwork.svg",
@@ -160,7 +160,7 @@ export const governmentResultSectionData: ResultSectionProps = {
   },
   backgroundImage: "/results-bg.jpg",
   topHeading: "Measurable outcomes",
-  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal , it’s the outcome.",
 };
 
 export const governmentTestimonialData: TestimonialProps = {
@@ -176,7 +176,7 @@ export const governmentTestimonialData: TestimonialProps = {
 export const governmentFaqData: FAQ[] = [
   {
     question: "Do you recruit for both site and office-based government roles?",
-    answer: "Yes — from site managers and engineers to project directors, commercial leads and hse professionals.",
+    answer: "Yes , from site managers and engineers to project directors, commercial leads and hse professionals.",
   },
   {
     question: "Can you help with contract-based or temporary hires?",
@@ -184,14 +184,14 @@ export const governmentFaqData: FAQ[] = [
   },
   {
     question: "Do you work nationally?",
-    answer: "Yes — we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
+    answer: "Yes , we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
   },
   {
     question: "Can you manage sensitive or confidential assignments?",
-    answer: "Yes — we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
+    answer: "Yes , we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
   },
   {
     question: "How do you test delivery competence, not just qualifications?",
-    answer: "We interview based on real project performance, safety records, and leadership behaviours — not just cvs.",
+    answer: "We interview based on real project performance, safety records, and leadership behaviours , not just cvs.",
   },
 ];

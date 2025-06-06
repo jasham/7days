@@ -31,7 +31,7 @@ export const trustedClientsTop: TrustedClientsProps = {
     "For-purpose and government-adjacent organisations",
     "Firms preparing for scale, transition or acquisition",
   ],
-  closingText: "Our clients come to us when clarity matters — and theory isn’t enough",
+  closingText: "Our clients come to us when clarity matters , and theory isn’t enough",
   ctaText: "Ready to build what’s next?",
   ctaColor: "#132D46",
 };
@@ -56,9 +56,9 @@ export const trustedClientsBottom: TrustedClientsProps = {
     "Headcount has grown without clarity on role definition or accountability",
     "M&a or investment activity is on the horizon and capability gaps must be addressed",
     "A restructure or realignment is necessary, but internal teams are too close to see clearly",
-    "A project is failing — and no one is sure whether it’s a people, process or leadership issue",
+    "A project is failing , and no one is sure whether it’s a people, process or leadership issue",
   ],
-  closingText: "Our clients come to us when clarity matters — and theory isn’t enough.",
+  closingText: "Our clients come to us when clarity matters , and theory isn’t enough.",
   ctaText: "Ready to build what’s next?",
   ctaColor: "#ffffff",
 };
@@ -68,7 +68,7 @@ export const advisoryProcess: GenericProcessSectionProps = {
   heading: "Our approach",
   intro: [
     {
-      description: "Every engagement is led by a senior advisor with real-world leadership experience — not just a toolkit.",
+      description: "Every engagement is led by a senior advisor with real-world leadership experience , not just a toolkit.",
     },
     {
       description: "We move fast, ask sharper questions, and focus on practical change.",
@@ -153,8 +153,8 @@ export const strategicAdviceData: StrategicAdviceProps = {
   text: "What we do",
   heading: "We deliver strategic advice that unlocks business performance",
   paragraphs: [
-    "We help organisations solve complex business problems — not with theory, but with sharp, commercially grounded advice. our consulting work is built for businesses facing moments of pressure or transformation: scaling fast, entering new markets, restructuring, or preparing for investment.",
-    "We don’t talk in frameworks. we get to the point — quickly — and help you move forward with confidence.",
+    "We help organisations solve complex business problems , not with theory, but with sharp, commercially grounded advice. our consulting work is built for businesses facing moments of pressure or transformation: scaling fast, entering new markets, restructuring, or preparing for investment.",
+    "We don’t talk in frameworks. we get to the point , quickly , and help you move forward with confidence.",
   ],
   buttonText: "Start the conversation",
   buttonColor: "#132D46",
@@ -171,13 +171,13 @@ export const solutionsSectionData: SolutionsSectionProps = {
   subtitle: "We work with businesses at critical points where structure, leadership and commercial direction must evolve to meet the next stage of growth. we help leaders answer questions like:",
   questions: [
     "Is our current team structure aligned to where we’re going?",
-    "Do we have the right leadership layers — or too many?",
+    "Do we have the right leadership layers , or too many?",
     "Are roles defined by outcomes, or just inherited job titles?",
     "How do we navigate a restructure without losing momentum?",
     "Where are our capability gaps, and how do we close them fast?",
     "What's stopping our teams from delivering more with less?",
   ],
-  description: "These are strategic problems — not hr issues. we help you unpack them, refocus your structure, and make decisions that hold up under investor scrutiny, board pressure and business complexity.",
+  description: "These are strategic problems , not hr issues. we help you unpack them, refocus your structure, and make decisions that hold up under investor scrutiny, board pressure and business complexity.",
   buttonText: "Build your team",
   buttonColor: "#132D46",
   buttonBgColor: "transparent",

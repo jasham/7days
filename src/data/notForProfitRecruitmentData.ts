@@ -14,7 +14,7 @@ export const notForProfitHeroDetails: HeroProps = {
 export const notForProfitWhatWeDoData: WhatWeDoProps = {
   heading: "We place the people driving Australia’s most important social outcomes",
   introText:
-    "We recruit across executive, operational and front-line roles for not-for-profits, charities and social impact organisations. \n\n Whether you're scaling a national community program or replacing a senior executive, we help you find values-aligned talent with the experience to perform — even under resource pressure.",
+    "We recruit across executive, operational and front-line roles for not-for-profits, charities and social impact organisations. \n\n Whether you're scaling a national community program or replacing a senior executive, we help you find values-aligned talent with the experience to perform , even under resource pressure.",
   whoSubHeading: "Trusted by Australia’s for-purpose sector",
   whoHeading: "We work with organisations whose missions demand more than technical capability, they require values, resilience and real-world delivery. We partner with:",
   whoDescription: "We work nationally, supporting organisations in metro, regional and remote communities across every state.",
@@ -190,7 +190,7 @@ export const notForProfitFaqData: FAQ[] = [
   {
     question: "Do you recruit for both site and office-based not for profit roles?",
     answer:
-      "Yes — from site managers and engineers to project directors, commercial leads and HSE professionals.",
+      "Yes , from site managers and engineers to project directors, commercial leads and HSE professionals.",
   },
   {
     question: "Can you help with contract-based or temporary hires?",
@@ -200,16 +200,16 @@ export const notForProfitFaqData: FAQ[] = [
   {
     question: "Do you work nationally?",
     answer:
-      "Yes — we recruit across Australia including urban infill, regional builds and remote infrastructure projects.",
+      "Yes , we recruit across Australia including urban infill, regional builds and remote infrastructure projects.",
   },
   {
     question: "Can you manage sensitive or confidential assignments?",
     answer:
-      "Yes — we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
+      "Yes , we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
   },
   {
     question: "How do you test delivery competence, not just qualifications?",
     answer:
-      "We interview based on real project performance, safety records, and leadership behaviours — not just CVs.",
+      "We interview based on real project performance, safety records, and leadership behaviours , not just CVs.",
   },
 ];

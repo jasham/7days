@@ -88,7 +88,7 @@ export const facilitiesManagementHowWeRecruitData: HowWeRecruitProps = {
   heading: "Facilities management recruitment",
   title: "How we recruit and why it works.",
   subTitle: "Great facilities management hires don’t just maintain standards, they hold everything together.",
-  description: "We don’t advertise and hope. we actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. every engagement includes:",
+  description: "We don’t advertise and hope. we actively map the market, vet delivery history, and approach proven performers , even when they’re not actively looking. every engagement includes:",
   description3: "When tenant satisfaction, cost control and contractor risk are all in play, you don’t have time to onboard the wrong person.",
   itemList: [
     {
@@ -177,7 +177,7 @@ export const facilitiesManagementTestimonialData: TestimonialProps = {
 export const facilitiesManagementFaqData: FAQ[] = [
   {
     question: "Do you recruit for both site and office-based facilities management roles?",
-    answer: "Yes — from site managers and engineers to project directors, commercial leads and hse professionals.",
+    answer: "Yes , from site managers and engineers to project directors, commercial leads and hse professionals.",
   },
   {
     question: "Can you help with contract-based or temporary hires?",
@@ -185,14 +185,14 @@ export const facilitiesManagementFaqData: FAQ[] = [
   },
   {
     question: "Do you work nationally?",
-    answer: "Yes — we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
+    answer: "Yes , we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
   },
   {
     question: "Can you manage sensitive or confidential assignments?",
-    answer: "Yes — we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
+    answer: "Yes , we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
   },
   {
     question: "How do you test delivery competence, not just qualifications?",
-    answer: "We interview based on real project performance, safety records, and leadership behaviours — not just cvs.",
+    answer: "We interview based on real project performance, safety records, and leadership behaviours , not just cvs.",
   },
 ];

@@ -11,7 +11,7 @@ const ResultsSection: React.FC<ResultSectionProps> = ({
   backgroundImage,
   headingText = "Results",
   topHeading,
-  footerText = "When expertise, trust, and speed come together, growth isn't a goal — it's the outcome.",
+  footerText = "When expertise, trust, and speed come together, growth isn't a goal , it's the outcome.",
   buttonText = "Ready to Build What's Next?",
   cardProps,
   onButtonClick = () => alert("clicked"),

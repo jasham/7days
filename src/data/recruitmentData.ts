@@ -41,7 +41,7 @@ export const resultSectionData: ResultSectionProps = {
   headingText: "Result",
   subheadingText: "",
   topHeading: "Measured by results. Chosen for impact.",
-  footerText: "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+  footerText: "When expertise, trust, and speed come together, growth isn’t a goal , it’s the outcome.",
   buttonText: "Ready to build what’s next?",
   cardProps: resultDetails,
   onButtonClick: () => console.log("Redirect to Ready to Build What’s Next?"),
@@ -64,12 +64,12 @@ export const whyPartnerData: WhyPartnerProps = {
     {
       icon: "/Network.svg",
       title: "Deep market networks",
-      description: "We actively maintain relationships across technical, operational and executive talent pools — not just databases. Our networks give you access to passive candidates and industry leaders who aren’t available on the open market.",
+      description: "We actively maintain relationships across technical, operational and executive talent pools , not just databases. Our networks give you access to passive candidates and industry leaders who aren’t available on the open market.",
     },
     {
       icon: "/Speicific.svg",
       title: "Strategic process",
-      description: "Every assignment is led by a senior advisor who understands your industry and growth stage. We don’t just fill vacancies — we build capability aligned to your future plans.",
+      description: "Every assignment is led by a senior advisor who understands your industry and growth stage. We don’t just fill vacancies , we build capability aligned to your future plans.",
     },
   ],
   buttonText: "Ready to build what’s next?",
@@ -117,7 +117,7 @@ export const genericProcessData: GenericProcessSectionProps = {
   deliverables: [
     {
       icon: "/sortlist.svg",
-      title: "Shortlists delivered with pace — never at the expense of quality",
+      title: "Shortlists delivered with pace , never at the expense of quality",
     },
     {
       icon: "/marketing.svg",
@@ -162,7 +162,7 @@ export const faqData: FAQ[] = [
 export const growthServiceData: GrowthServiceProps = {
   heading1: "Recruitment services",
   heading: "Tailored recruitment processes",
-  subheading: "At Henton, we deliver three core recruitment solutions — each aligned to your operational needs, timelines and long-term growth.",
+  subheading: "At Henton, we deliver three core recruitment solutions , each aligned to your operational needs, timelines and long-term growth.",
   paragraph: "We deliver:",
   imageSrc: "/recruitmentService.jpg",
   imageAlt: "Planning meeting",
@@ -170,7 +170,7 @@ export const growthServiceData: GrowthServiceProps = {
   services: [
     {
       title: "Permanent recruitment",
-      description: "Secure long-term employees who integrate into your culture, build capability, and drive business performance over time.\n\nWe focus on hiring professionals who don’t just fill a role — they strengthen your team.",
+      description: "Secure long-term employees who integrate into your culture, build capability, and drive business performance over time.\n\nWe focus on hiring professionals who don’t just fill a role , they strengthen your team.",
     },
     {
       title: "Contract recruitment",
@@ -205,7 +205,7 @@ export const expertiseData: ExpertiseSectionProps = {
 };
 
 export const whatWeDoData: WhatWeDoProps = {
-  heading: "We help businesses recruit with purpose — aligning people strategy to commercial outcomes.",
+  heading: "We help businesses recruit with purpose , aligning people strategy to commercial outcomes.",
   whoSubHeading: "Who we recruit",
   whoHeading: "At Henton, recruitment isn’t transactional. It’s strategic. Every hire should improve capability, deliver outcomes, and move your business forward.",
   whoDescription: "Our expertise covers a wide range of skill sets and leadership levels:",

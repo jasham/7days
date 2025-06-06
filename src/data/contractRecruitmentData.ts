@@ -59,7 +59,7 @@ export const internationalRecruitmentSections: Section[] = [
 export const networkData: OurNetworkSectionProps = {
   header: "Work with the experts",
   heading: "Trusted teams. mobilised when it counts",
-  description: "Henton supports construction, engineering, and infrastructure leaders with contract teams ready to perform — across metro, regional and remote australia.",
+  description: "Henton supports construction, engineering, and infrastructure leaders with contract teams ready to perform , across metro, regional and remote australia.",
   bottomText: "We know who’s active, who’s proven, and who’s ready to hit the ground running.",
   image: "/Network2.svg",
   mt: -5,
@@ -70,7 +70,7 @@ export const networkData: OurNetworkSectionProps = {
 export const howWeDeliverData: HowWeDeliverRecruitmentProps = {
   headingText: "Contract recruitment services",
   mainTitle: "Our process for contract recruitment",
-  subTitle: "We deliver speed without cutting corners. every contractor is vetted for readiness, reliability and fit — before they ever reach your team.",
+  subTitle: "We deliver speed without cutting corners. every contractor is vetted for readiness, reliability and fit , before they ever reach your team.",
   image: "/contractService.jpg",
   buttonText: "Build your team",
   features: [
@@ -100,7 +100,7 @@ export const howWeDeliverData: HowWeDeliverRecruitmentProps = {
 export const faqData: FAQ[] = [
   {
     question: "What makes your permanent recruitment different from other agencies?",
-    answer: "We don’t rely just on job ads. we use direct search, tap into passive candidate networks, and focus on long-term value — not just short-term placement. we use a 360 approach to sourcing.",
+    answer: "We don’t rely just on job ads. we use direct search, tap into passive candidate networks, and focus on long-term value , not just short-term placement. we use a 360 approach to sourcing.",
   },
   {
     question: "How do you ensure the candidate is the right long-term fit?",
@@ -112,7 +112,7 @@ export const faqData: FAQ[] = [
   },
   {
     question: "We’ve had problems with retention. how can you help?",
-    answer: "We design every brief to focus on fit, expectations and growth alignment — and support post-placement success through regular check-ins. we can also help through our consulting and advisory services to work out where the retention issues are.",
+    answer: "We design every brief to focus on fit, expectations and growth alignment , and support post-placement success through regular check-ins. we can also help through our consulting and advisory services to work out where the retention issues are.",
   },
 ];
 
@@ -145,12 +145,12 @@ export const resultSectionData: ResultSectionProps = {
   },
   backgroundImage: "/results-bg.jpg",
   topHeading: "Where strategy demands action",
-  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal , it’s the outcome.",
 };
 
 export const whatWeDoData: WhatWeDoProps = {
   heading: "Contract recruitment keeps projects moving and teams performing when it matters most.",
-  introText: "When you need skilled talent fast — for a project, an unplanned gap, or a critical deadline — henton delivers contractors who are ready to perform from day one. \n\n we recruit contract professionals who meet both the technical demands of the role and the compliance requirements of your site, system or project. \n\n whether it’s one interim manager or a full site mobilisation, our process is built to reduce risk, save time, and protect operational momentum.",
+  introText: "When you need skilled talent fast , for a project, an unplanned gap, or a critical deadline , henton delivers contractors who are ready to perform from day one. \n\n we recruit contract professionals who meet both the technical demands of the role and the compliance requirements of your site, system or project. \n\n whether it’s one interim manager or a full site mobilisation, our process is built to reduce risk, save time, and protect operational momentum.",
   whoSubHeading: "We recruit for:",
   whoHeading: "Our expertise covers a wide range of skill sets and leadership levels:",
   listItems: [

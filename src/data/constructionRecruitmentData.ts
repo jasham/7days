@@ -12,9 +12,9 @@ export const constructionHeroDetails: HeroProps = {
 
 export const constructionWhatWeDoData: WhatWeDoProps = {
   heading: "Great builds don’t stay on track by accident, it starts with who you hire.",
-  introText: "We recruit across the full construction lifecycle — from early-stage planning and estimating through to site delivery, handover and asset performance. \n\n whether you're managing a multi-site pipeline, resourcing for a live project, or replacing a critical delivery lead — we act fast to secure professionals who keep schedules, margins and safety on track.",
+  introText: "We recruit across the full construction lifecycle , from early-stage planning and estimating through to site delivery, handover and asset performance. \n\n whether you're managing a multi-site pipeline, resourcing for a live project, or replacing a critical delivery lead , we act fast to secure professionals who keep schedules, margins and safety on track.",
   whoSubHeading: "Trusted by australia's builders:",
-  whoHeading: "We work with builders who can't afford delays — and developers who need certainty from day one. our clients include:",
+  whoHeading: "We work with builders who can't afford delays , and developers who need certainty from day one. our clients include:",
   listItems: [
     "Head contractors, subcontractors across keys sectors including health, education, industrial",
     "Specialist subcontractors and client side consultancies",
@@ -87,8 +87,8 @@ export const constructionHowWeRecruitData: HowWeRecruitProps = {
   heading: "Construction recruitment",
   title: "How we recruit and why it works.",
   subTitle: "Great construction hiring is about more than experience; it’s about risk, trust and delivery under pressure.",
-  description: "We don’t advertise and hope. we actively map the market, vet delivery history, and approach proven performers — even when they’re not actively looking. every engagement includes:",
-  description2: "We act quickly and decisively because delays cost money — and bad hires cost more",
+  description: "We don’t advertise and hope. we actively map the market, vet delivery history, and approach proven performers , even when they’re not actively looking. every engagement includes:",
+  description2: "We act quickly and decisively because delays cost money , and bad hires cost more",
   itemList: [
     {
       icon: "/WebNetwork.svg",
@@ -160,7 +160,7 @@ export const constructionResultSectionData: ResultSectionProps = {
   },
   backgroundImage: "/results-bg.jpg",
   topHeading: "Measurable outcomes",
-  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal , it’s the outcome.",
 };
 
 export const constructionTestimonialData: TestimonialProps = {
@@ -176,7 +176,7 @@ export const constructionTestimonialData: TestimonialProps = {
 export const constructionFaqData: FAQ[] = [
   {
     question: "Do you recruit for both site and office-based construction roles?",
-    answer: "Yes — from site managers and engineers to project directors, commercial leads and hse professionals.",
+    answer: "Yes , from site managers and engineers to project directors, commercial leads and hse professionals.",
   },
   {
     question: "Can you help with contract-based or temporary hires?",
@@ -184,14 +184,14 @@ export const constructionFaqData: FAQ[] = [
   },
   {
     question: "Do you work nationally?",
-    answer: "Yes — we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
+    answer: "Yes , we recruit across australia including urban infill, regional builds and remote infrastructure projects.",
   },
   {
     question: "Can you manage sensitive or confidential assignments?",
-    answer: "Yes — we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
+    answer: "Yes , we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
   },
   {
     question: "How do you test delivery competence, not just qualifications?",
-    answer: "We interview based on real project performance, safety records, and leadership behaviours — not just cvs.",
+    answer: "We interview based on real project performance, safety records, and leadership behaviours , not just cvs.",
   },
 ];

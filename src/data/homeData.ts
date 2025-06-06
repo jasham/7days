@@ -35,13 +35,13 @@ export const resultDetails: CardProps = {
       score: "95%",
       title: "Client retention rate",
       description:
-        "Our clients trust us to deliver — and 95% return to partner with henton again for future recruitment and strategic needs.",
+        "Our clients trust us to deliver , and 95% return to partner with henton again for future recruitment and strategic needs.",
     },
     {
       score: "98%",
       title: "Of roles filled within 30 days",
       description:
-        "Our efficient, targeted recruitment process ensures critical roles are placed faster — without compromising on quality.",
+        "Our efficient, targeted recruitment process ensures critical roles are placed faster , without compromising on quality.",
     },
   ],
 };
@@ -63,7 +63,7 @@ export const partnerCards: CardData[] = [
     icon: "/PartnerShip.svg",
     title: "Partnerships that deliver",
     description:
-      "95% of clients trust us again — because we deliver outcomes, not promises.",
+      "95% of clients trust us again , because we deliver outcomes, not promises.",
   },
 ];
 
@@ -114,7 +114,7 @@ export const resultSectionData: ResultSectionProps = {
   subheadingText: "",
   topHeading: "Measured by results. Chosen for impact.",
   footerText:
-    "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+    "When expertise, trust, and speed come together, growth isn’t a goal , it’s the outcome.",
   buttonText: "Ready to build what’s next?",
   cardProps: resultDetails,
   onButtonClick: () => console.log("Redirect to ready to build what’s next?"),
@@ -126,7 +126,7 @@ export const jobSearchData: JobSearchProps = {
   description: [
     "Henton consulting is a specialist recruitment and advisory firm helping businesses across property, construction, engineering, resources, corporate, government and not-for-profit sectors build stronger teams, smarter structures, and sustained growth.",
     "With over 20 years’ experience, we deliver permanent recruitment, executive search, strategic workforce consulting, and business development services tailored to your industry’s demands.",
-    "Organisations trust us because we combine market expertise with a results-driven approach — finding the right people, designing the right strategies, and opening the right opportunities to move businesses forward.",
+    "Organisations trust us because we combine market expertise with a results-driven approach , finding the right people, designing the right strategies, and opening the right opportunities to move businesses forward.",
   ],
   buttonText: "Start the conversation",
 };
@@ -154,12 +154,12 @@ export const servicesSectionData: ServicesSectionProps = {
   headingText: "Solutions that build businesses",
   title: "Recruitment. Consulting. Growth.",
   subtitle:
-    "From building your team to designing your strategy and driving growth, we deliver the expertise to take your business further — faster.",
+    "From building your team to designing your strategy and driving growth, we deliver the expertise to take your business further , faster.",
   services: [
     {
       title: "Recruitment",
       description:
-        "We connect you with the industry’s best — permanent hires and executive leaders who aren’t just qualified, but capable of moving your business forward.",
+        "We connect you with the industry’s best , permanent hires and executive leaders who aren’t just qualified, but capable of moving your business forward.",
       action: "Hire talent",
       image: "/home/homeRec1.jpg",
     },
@@ -179,7 +179,7 @@ export const servicesSectionData: ServicesSectionProps = {
     },
   ],
   footerTitle: "Individually strong. Unstoppable together.",
-  footerSubtitle: "When you combine all three, you don't just keep up — you lead.",
+  footerSubtitle: "When you combine all three, you don't just keep up , you lead.",
   buttonText: "Begin your success story",
 };
 

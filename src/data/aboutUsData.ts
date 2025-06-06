@@ -33,7 +33,7 @@ export const ourJourneyData: OurJourneyProps = {
     {
       title: "Recruitment",
       description:
-        "We connect you with the industry’s best — permanent hires and executive leaders who aren’t just qualified, but capable of moving your business forward.",
+        "We connect you with the industry’s best , permanent hires and executive leaders who aren’t just qualified, but capable of moving your business forward.",
       action: "Hire talent",
       image: "/home/homeRec1.jpg",
     },
