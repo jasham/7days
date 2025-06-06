@@ -8,8 +8,10 @@ import FilterSidebar from "@/Components/Job/FilterSidebar";
 import { JobList } from "@/Components/Job/JobList";
 import { jobBoardData } from "@/data/jobBoardData";
 
+// console.log
 export default function JobBoardPage() {
-  const { hero, jobs, categoryOptions, locationOptions, workTypeOptions } = jobBoardData;
+  const { hero, jobs, categoryOptions, locationOptions, workTypeOptions } =
+    jobBoardData;
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -31,25 +33,31 @@ export default function JobBoardPage() {
           color: "#fff",
         }}
       >
-          <Box display="flex" flexDirection={{ xs: "column", md: "row" }} alignItems="center" mb={6} gap={4}>
-            <Typography variant="h4" fontWeight={700} flex="1">
-              Search Jobs. Build Your Future.
-            </Typography>
-            <Box flex="2">
-              <SearchBar />
-            </Box>
+        <Box
+          display="flex"
+          flexDirection={{ xs: "column", md: "row" }}
+          alignItems="center"
+          mb={6}
+          gap={4}
+        >
+          <Typography variant="h4" fontWeight={700} flex="1">
+            Search Jobs. Build Your Future.
+          </Typography>
+          <Box flex="2">
+            <SearchBar />
           </Box>
+        </Box>
 
-          <Grid container spacing={3}>
-            {!isMobile && (
-              <Grid item xs={12} md={3}>
-                <FilterSidebar {...filters} />
-              </Grid>
-            )}
-            <Grid item xs={12} md={isMobile ? 12 : 9}>
-              <JobList jobs={jobs} />
+        <Grid container spacing={3}>
+          {!isMobile && (
+            <Grid item xs={12} md={3}>
+              <FilterSidebar {...filters} />
             </Grid>
+          )}
+          <Grid item xs={12} md={isMobile ? 12 : 9}>
+            <JobList jobs={jobs} />
           </Grid>
+        </Grid>
       </Box>
     </>
   );
