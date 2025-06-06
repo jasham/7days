@@ -3,7 +3,6 @@ import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
 import ImageCard from "../ImageCard";
 import Heading from "../Heading/Heading";
-import { Button } from "../Button/Button";
 import { OurJourneyProps } from "@/types/aboutUsInterface";
 
 const OurJourney: React.FC<OurJourneyProps> = ({

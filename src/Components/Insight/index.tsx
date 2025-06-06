@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Typography, List, ListItem, ListItemText } from "@mui/material";
+import { Box, Typography, List, ListItem, ListItemText, TypographyProps } from "@mui/material";
 
-const headings = [
+const headings: { variant: TypographyProps["variant"]; text: string }[] = [
   { variant: "h2", text: "This Is An H2" },
   { variant: "h3", text: "This Is An H3" },
   { variant: "h4", text: "This Is An H4" },
@@ -25,7 +25,7 @@ const InsightTypographyPage: React.FC = () => {
 
       {headings.map((heading, idx) => (
         <Box key={idx} sx={{ mb: 4 }}>
-          <Typography variant={heading.variant as any} sx={{ mb: 2 }}>
+          <Typography variant={heading.variant} sx={{ mb: 2 }}>
             {heading.text}
           </Typography>
           <Typography variant="body1" paragraph>
