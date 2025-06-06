@@ -60,7 +60,7 @@ const footerColumns: { title: string; links: FooterLink[] }[] = [
   },
   {
     title: 'Info',
-    links: [{ label: 'Contact', href: '/contact' }],
+    links: [{ label: 'Contact', href: '/contact-us' }],
   },
 ];
 

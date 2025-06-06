@@ -16,6 +16,7 @@ import Image from 'next/image';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import { Button } from '../Button/Button';
+import Link from 'next/link';
 
 const navItems = [
   { label: 'About', href: '/about-us' },
@@ -23,7 +24,7 @@ const navItems = [
   { label: 'Recruitment', href: '/permanent-recruitment' },
   { label: 'Advisory & Consulting', href: '/advisory' },
   { label: 'Resources', href: '/resources-recruitment' },
-  { label: 'Contact Us', href: '/contact' },
+  { label: 'Contact Us', href: '/contact-us' },
 ];
 
 export default function Navbar() {
@@ -71,9 +72,14 @@ export default function Navbar() {
         }}
       >
         {/* Logo */}
-        <Box sx={{ display: "flex", alignItems: "center" }}>
-          <Image src="/Logo.svg" alt="Client Logo" width={169} height={60} />
-        </Box>
+        <Link href="/" passHref legacyBehavior>
+          <Box
+            sx={{ display: "flex", alignItems: "center", cursor: "pointer" }}
+            component="a"
+          >
+            <Image src="/Logo.svg" alt="Client Logo" width={169} height={60} />
+          </Box>
+        </Link>
 
         {/* Desktop nav */}
         {!isMobile && (
@@ -94,7 +100,7 @@ export default function Navbar() {
                 variantStyle="text"
                 buttonColor={"#ffffff"}
                 sx={{
-                  fontSize:"16px"
+                  fontSize: "16px",
                 }}
                 isIcon={false}
               >

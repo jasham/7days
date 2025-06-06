@@ -1,11 +1,10 @@
-// data/renewablesRecruitmentData.ts
 import { HeroProps, ResultSectionProps, TestimonialProps, WhyPartnerProps } from "@/types/homeInterfaces";
 import { OurNetworkSectionProps, Section, SpecialistExpertiseProps } from "@/types/permanentRecruitmentInterfaces";
 import { HowWeRecruitProps } from "@/types/propertyRecruitmentInterface";
 import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 export const renewablesHeroDetails: HeroProps = {
-  title: "Renewables Recruitment Fuelling a Cleaner Australia",
+  title: "Renewables recruitment fuelling a cleaner Australia",
   description:
     "Australia’s energy future is being built now, and the right people will determine how fast we get there.",
   buttonText: "Begin your success story",
@@ -13,73 +12,73 @@ export const renewablesHeroDetails: HeroProps = {
 };
 
 export const renewablesWhatWeDoData: WhatWeDoProps = {
-    heading: "We place the professionals behind Australia’s most complex renewable energy builds.",
-    introText:
-      "We recruit the professionals turning transition plans into operating assets. From feasibility to delivery and grid integration, we place project-ready people into roles that demand urgency, clarity, and real-world capability. \n\n Whether you're building a solar farm, delivering wind generation at scale, or accelerating battery and transmission projects — we find the people who keep momentum.",
-    whoSubHeading: "Trusted by Australia’s Energy Transition Leaders",
-    whoHeading: "We work with forward-leaning employers who don’t have time to hire twice. From scaling delivery teams to securing niche specialists, we recruit across:",
-    whoDescription:"Whether you're delivering a flagship project or expanding into new markets, we help you hire with confidence, from metro to remote.",
-    listItems: [
-        "Renewable energy developers and asset owners",
-        "EPC, EPCM and infrastructure delivery contractors",
-        "Grid and battery storage operators",
-        "Government agencies and energy regulators",
-        "Hydrogen, transition fuels and transmission innovators",
-    ],
-    buttonText: "Start the conversation",
-  };
+  heading: "We place the professionals behind Australia’s most complex renewable energy builds.",
+  introText:
+    "We recruit the professionals turning transition plans into operating assets. From feasibility to delivery and grid integration, we place project-ready people into roles that demand urgency, clarity, and real-world capability. \n\n Whether you're building a solar farm, delivering wind generation at scale, or accelerating battery and transmission projects — we find the people who keep momentum.",
+  whoSubHeading: "Trusted by Australia’s energy transition leaders",
+  whoHeading: "We work with forward-leaning employers who don’t have time to hire twice. From scaling delivery teams to securing niche specialists, we recruit across:",
+  whoDescription: "Whether you're delivering a flagship project or expanding into new markets, we help you hire with confidence, from metro to remote.",
+  listItems: [
+    "Renewable energy developers and asset owners",
+    "EPC, EPCM and infrastructure delivery contractors",
+    "Grid and battery storage operators",
+    "Government agencies and energy regulators",
+    "Hydrogen, transition fuels and transmission innovators",
+  ],
+  buttonText: "Start the conversation",
+};
 
 export const renewablesSpecialistExpertiseData: SpecialistExpertiseProps = {
   title: "Built for transition. Proven in delivery.",
   description:
     "Specialist recruitment across renewable energy roles, aligned to project risk, program pressure and commercial performance.",
-    sectors: [
-      "Property & Development",
-      "Construction",
-      "Engineering",
-      "Facilities Management",
-      "Resources",
-      "Renewables",
-      "Not For Profit",
-      "Corporate",
-      "Government",
-    ],
+  sectors: [
+    "Property & development",
+    "Construction",
+    "Engineering",
+    "Facilities management",
+    "Resources",
+    "Renewables",
+    "Not for profit",
+    "Corporate",
+    "Government",
+  ],
 };
 
 export const renewablesRecruitmentSections: Section[] = [
   {
-    complexItems:[
+    complexItems: [
       {
-        title: "Project & Site Management",
-        body: "Project Managers, Construction Managers, Superintendents  and Site Engineers with experience across wind, solar, hybrid and BESS developments, from greenfield builds to live-site expansions and remote delivery.",
+        title: "Project & site management",
+        body: "Project managers, construction managers, superintendents and site engineers with experience across wind, solar, hybrid and BESS developments, from greenfield builds to live-site expansions and remote delivery.",
       },
       {
-        title: "Grid & Transmission Infrastructure",
-        body: "High-voltage Engineers, Grid Connection Specialists and Compliance Leads who manage substations, switching, SCADA systems and NEM dispatch across high-stakes grid environments.",
+        title: "Grid & transmission infrastructure",
+        body: "High-voltage engineers, grid connection specialists and compliance leads who manage substations, switching, SCADA systems and NEM dispatch across high-stakes grid environments.",
       },
       {
-        title: "Battery Storage, Hydrogen & Emerging Tech",
-        body: "Commissioning Engineers, Project Leads and Integration Managers delivering next-gen energy assets with complex technical interfaces and evolving regulatory landscapes.",
+        title: "Battery storage, hydrogen & emerging tech",
+        body: "Commissioning engineers, project leads and integration managers delivering next-gen energy assets with complex technical interfaces and evolving regulatory landscapes.",
       },
       {
-        title: "Environmental, HSE & Regulatory Affairs",
-        body: "WHS Leads, Stakeholder Managers and Environmental Advisors who protect safety, planning approvals and social licence to operate — especially in regional and sensitive contexts.",
+        title: "Environmental, HSE & regulatory affairs",
+        body: "WHS leads, stakeholder managers and environmental advisors who protect safety, planning approvals and social licence to operate — especially in regional and sensitive contexts.",
       },
       {
-        title: "Energy Asset Management & Commercial Operations",
-        body: "Asset Managers, Performance Engineers and Commercial Analysts focused on uptime, lifecycle value, IRR targets and investment-grade reporting for operating assets.",
+        title: "Energy asset management & commercial operations",
+        body: "Asset managers, performance engineers and commercial analysts focused on uptime, lifecycle value, IRR targets and investment-grade reporting for operating assets.",
       },
       {
-        title: "Renewables Engineering & Technical Consulting",
-        body: "Systems Designers, Technical Advisors and EPCM specialists in solar, wind and hybrid systems — covering feasibility, modelling, design and owner’s engineering functions.",
+        title: "Renewables engineering & technical consulting",
+        body: "Systems designers, technical advisors and EPCM specialists in solar, wind and hybrid systems — covering feasibility, modelling, design and owner’s engineering functions.",
       },
     ],
   },
 ];
 
 export const renewablesNetworkData: OurNetworkSectionProps = {
-  header: "WORK WITH THE EXPERTS",
-  heading: "Where Net-Zero Ambition Meets Execution.",
+  header: "Work with the experts",
+  heading: "Where net-zero ambition meets execution.",
   description:
     "Specialist recruitment for the people building our energy future, across project delivery, grid-scale integration, and transition technology. We recruit across:",
   bottomText: "",
@@ -90,10 +89,10 @@ export const renewablesNetworkData: OurNetworkSectionProps = {
 };
 
 export const renewablesHowWeRecruitData: HowWeRecruitProps = {
-  heading: "renewables recruitment",
+  heading: "Renewables recruitment",
   title: "How we recruit and why it works.",
   subTitle:
-    "High-performing talent in renewables aren’t responding to job ads. They're delivering on live projects. ",
+    "High-performing talent in renewables aren’t responding to job ads. They're delivering on live projects.",
   description:
     "We map the market, profile transferable skillsets, and build trust with professionals open to the right next move. Every search includes:",
   description2:
@@ -119,7 +118,7 @@ export const renewablesHowWeRecruitData: HowWeRecruitProps = {
 };
 
 export const renewablesWhyPartnerSectionData: WhyPartnerProps = {
-  headingText: "WORK WITH THE EXPERTS",
+  headingText: "Work with the experts",
   headingColor: "#132D46",
   dividerColor: "#132D46",
   dividerHeight: "1px",
@@ -142,7 +141,7 @@ export const renewablesWhyPartnerSectionData: WhyPartnerProps = {
       icon: "/Thunder.svg",
     },
   ],
-  buttonText: "Ready to Build What’s Next?",
+  buttonText: "Ready to build what’s next?",
   buttonColor: "#132D46",
   isCentered: true,
 };
@@ -153,28 +152,28 @@ export const renewablesResultSectionData: ResultSectionProps = {
       {
         score: "98%",
         title: "",
-        description: "of hires are still with the business after 18 months",
+        description: "Of hires are still with the business after 18 months",
       },
       {
         score: "100%",
         title: "",
-        description: "of retained searches have been completed successfully",
+        description: "Of retained searches have been completed successfully",
       },
       {
         score: "85%",
         title: "",
-        description: "of roles are filled from the first candidate presented",
+        description: "Of roles are filled from the first candidate presented",
       },
     ],
   },
   backgroundImage: "/results-bg.jpg",
-  topHeading: "Where Strategy Demands Action",
+  topHeading: "Where strategy demands action",
   bottomHeading:
     "Renewable energy transition doesn’t happen with policy. It happens with people. We help you hire the ones who can lead the shift.",
 };
 
 export const renewablesTestimonialData: TestimonialProps = {
-  heading: "What Our Clients Say",
+  heading: "What our clients say",
   title: "Reviews",
   description:
     "Here is what our clients have to say about working with us. Real experiences, real feedback.",
@@ -182,33 +181,33 @@ export const renewablesTestimonialData: TestimonialProps = {
     "“Exceptional results and has a great candidate pool where he maintains fantastic personal relationships.”",
   detail:
     "Guy is professional and efficient and always delivers a high calibre of candidates within reasonable timeframes. I wouldn’t hesitate to recommend him.",
-  author: "Jessica Orifici, Senior Recruiter - ",
+  author: "Jessica Orifici, Senior recruiter - ",
   company: "KBR",
 };
 
 export const renewablesFaqData: FAQ[] = [
   {
-    question: "Do You Recruit For Both Site And Office-Based Renewables Roles?",
+    question: "Do you recruit for both site and office-based renewables roles?",
     answer:
-      "Yes — From Site Managers And Engineers To Project Directors, Commercial Leads And HSE Professionals.",
+      "Yes — from site managers and engineers to project directors, commercial leads and HSE professionals.",
   },
   {
-    question: "Can You Help With Contract-Based Or Temporary Hires?",
+    question: "Can you help with contract-based or temporary hires?",
     answer:
       "Absolutely. We place both permanent and contract professionals aligned to project scope, stage and delivery risk.",
   },
   {
-    question: "Do You Work Nationally?",
+    question: "Do you work nationally?",
     answer:
-      "Yes — We recruit across Australia including urban infill, regional builds and remote infrastructure projects.",
+      "Yes — we recruit across Australia including urban infill, regional builds and remote infrastructure projects.",
   },
   {
-    question: "Can You Manage Sensitive Or Confidential Assignments?",
+    question: "Can you manage sensitive or confidential assignments?",
     answer:
-      "Yes — We handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
+      "Yes — we handle confidential search assignments with discretion, urgency and total alignment to risk controls.",
   },
   {
-    question: "How Do You Test Delivery Competence, Not Just Qualifications?",
+    question: "How do you test delivery competence, not just qualifications?",
     answer:
       "We interview based on real project performance, safety records, and leadership behaviours — not just CVs.",
   },

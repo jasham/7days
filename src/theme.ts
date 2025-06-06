@@ -64,7 +64,6 @@ let theme = createTheme({
       fontSize: '18px',
       lineHeight: 1.5,
       letterSpacing: '-4%',
-      textTransform: 'uppercase',
     },
 
     // BODY

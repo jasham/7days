@@ -3,13 +3,13 @@ import { JobDetailsProps } from "@/types/jobApplicationInterfaces";
 
 export const jobAppHero: HeroProps = {
   imageUrl: "/Hero2.png",
-  title: "Job Search",
+  title: "Job search",
   description:
     "Find and secure the right talent with recruitment services built around your business goals.",
 };
 
 export const jobDetailsData: JobDetailsProps = {
-  title: "Senior Contracts Administrator - Education to $210K",
+  title: "Senior contracts administrator - education to $210k",
   companyInfo:
     "Established over 35 years ago our client is an accredited, award winning building and development company who has delivered individual projects in excess of $200m. Working across commercial, residential, industrial, and education they focus on building collaborative relationships with their clients, employees and sub contractors. This focus has seen them deliver projects successfully for their clients on time and within budget.",
   responsibilities: [
@@ -17,7 +17,7 @@ export const jobDetailsData: JobDetailsProps = {
     "Project experience $40m plus",
     "Subcontractor management",
     "5 years post grad experience",
-    "Worked for main contractors in Australia",
+    "Worked for main contractors in australia",
     "Able to manage negotiations",
     "Managed variations and claims",
     "Procurement experience",

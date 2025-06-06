@@ -1,6 +1,6 @@
 import { HeroProps, ResultSectionProps, TestimonialProps } from "@/types/homeInterfaces";
 import {
-    HowWeDeliverRecruitmentProps,
+  HowWeDeliverRecruitmentProps,
   OurNetworkSectionProps,
   Section,
   SpecialistExpertiseProps,
@@ -8,179 +8,155 @@ import {
 import { FAQ, WhatWeDoProps } from "@/types/recruitmentInterfaces";
 
 export const heroDetails: HeroProps = {
-    title: "Flexible Contract Recruitment. Without the Compromise.",
-    description:
-      "Flexible recruitment that’s fast, reliable and built to perform.",
-    buttonText: "Begin your success story",
-    imageUrl: "/hero/hero8.jpg",
+  title: "Flexible contract recruitment. without the compromise.",
+  description: "Flexible recruitment that’s fast, reliable and built to perform.",
+  buttonText: "Begin your success story",
+  imageUrl: "/hero/hero8.jpg",
 };
 
-// 3️⃣ SpecialistExpertise
 export const specialistExpertiseData: SpecialistExpertiseProps = {
-  title: "Specialist Contract Recruitment for Demanding Environments",
-  description:
-    "Deep industry knowledge, precise candidate alignment - built for long-term success in your sector.",
+  title: "Specialist contract recruitment for demanding environments",
+  description: "Deep industry knowledge, precise candidate alignment - built for long-term success in your sector.",
   sectors: [
-    "Property & Development",
+    "Property & development",
     "Construction",
     "Engineering",
-    "Facilities Management",
+    "Facilities management",
     "Resources",
     "Renewables",
-    "Not For Profit",
+    "Not for profit",
     "Corporate",
     "Government",
   ],
 };
 
-// 4️⃣ OurNetworkSection
 export const internationalRecruitmentSections: Section[] = [
   {
-    complexItems:[
-        {
-          title: "We help you scale with confidence during:",
-          subItems: [
-            "Major project ramp-ups",
-            "Shutdowns, upgrades and expansions",
-            "Unplanned resource gaps or leave coverage",
-            "High-volume regional or time-sensitive mobilisations",
-          ],
-        },
-        {
-          title: "Our networks span:",
-          subItems: [
-            "Site Engineers, Forepersons and WHS Advisors",
-            "Project Managers, Contract Administrators and Estimators",
-            "Technical and specialist operators",
-            "Commercial Managers and interim project leadership",
-            "White-collar project teams mobilised for 3, 6 or 12-month engagements",
-          ],
-        },
-      ],
+    complexItems: [
+      {
+        title: "We help you scale with confidence during:",
+        subItems: [
+          "Major project ramp-ups",
+          "Shutdowns, upgrades and expansions",
+          "Unplanned resource gaps or leave coverage",
+          "High-volume regional or time-sensitive mobilisations",
+        ],
+      },
+      {
+        title: "Our networks span:",
+        subItems: [
+          "Site engineers, forepersons and whs advisors",
+          "Project managers, contract administrators and estimators",
+          "Technical and specialist operators",
+          "Commercial managers and interim project leadership",
+          "White-collar project teams mobilised for 3, 6 or 12-month engagements",
+        ],
+      },
+    ],
   },
 ];
 
 export const networkData: OurNetworkSectionProps = {
-  header:"WORK WITH THE EXPERTS",
-  heading: "Trusted teams. Mobilised when it counts",
-  description:
-    "Henton supports construction, engineering, and infrastructure leaders with contract teams ready to perform — across metro, regional and remote Australia.",
-  bottomText:
-    "We know who’s active, who’s proven, and who’s ready to hit the ground running.",
+  header: "Work with the experts",
+  heading: "Trusted teams. mobilised when it counts",
+  description: "Henton supports construction, engineering, and infrastructure leaders with contract teams ready to perform — across metro, regional and remote australia.",
+  bottomText: "We know who’s active, who’s proven, and who’s ready to hit the ground running.",
   image: "/Network2.svg",
   mt: -5,
   mb: 5,
   sections: internationalRecruitmentSections,
 };
 
-// 5️⃣ HowWeDeliverRecruitment
 export const howWeDeliverData: HowWeDeliverRecruitmentProps = {
-  headingText: "CONTRACT RECRUITMENT SERVICES",
+  headingText: "Contract recruitment services",
   mainTitle: "Our process for contract recruitment",
-  subTitle: "We deliver speed without cutting corners. Every contractor is vetted for readiness, reliability and fit — before they ever reach your team.",
+  subTitle: "We deliver speed without cutting corners. every contractor is vetted for readiness, reliability and fit — before they ever reach your team.",
   image: "/contractService.jpg",
-  buttonText: "Build Your Team",
+  buttonText: "Build your team",
   features: [
     {
-      title: "Role Brief + Compliance Needs",
-      description:
-        "We clarify technical scope, system access, safety requirements, location coverage and WHS obligations.",
+      title: "Role brief + compliance needs",
+      description: "We clarify technical scope, system access, safety requirements, location coverage and whs obligations.",
     },
     {
-      title: "Talent Pool Activation",
-      description:
-        "We maintain live sector-specific contractor pools, segmented by trade, project phase, clearance and availability.",
+      title: "Talent pool activation",
+      description: "We maintain live sector-specific contractor pools, segmented by trade, project phase, clearance and availability.",
     },
     {
-      title: "Readiness Review & Role Matching",
-      description:
-        "We assess each contractor’s experience, project exposure, and availability, and flag relevant system or site experience (e.g. Procore, Aconex, SAP) where known.",
+      title: "Readiness review & role matching",
+      description: "We assess each contractor’s experience, project exposure, and availability, and flag relevant system or site experience (e.g. procore, aconex, sap) where known.",
     },
     {
-      title: "Reference + Performance Check",
-      description:
-        "We reference contractors with past clients, projects and supervisors, and prioritise proven high performers.",
+      title: "Reference + performance check",
+      description: "We reference contractors with past clients, projects and supervisors, and prioritise proven high performers.",
     },
     {
-      title: "Fast, Structured Delivery",
-      description:
-        "We deliver the right candidates based on availability, alignment and contractor readiness. Timelines are agreed upfront based on the role, location, and mobilisation needs, with clear communication at every step.",
+      title: "Fast, structured delivery",
+      description: "We deliver the right candidates based on availability, alignment and contractor readiness. timelines are agreed upfront based on the role, location, and mobilisation needs, with clear communication at every step.",
     },
   ],
 };
 
-// 7️⃣ FAQ
 export const faqData: FAQ[] = [
   {
-    question:
-      "What Makes Your Permanent Recruitment Different From Other Agencies?",
-    answer:
-      "We Don’t Rely Just On Job Ads. We Use Direct Search, Tap Into Passive Candidate Networks, And Focus On Long-Term Value — Not Just Short-Term Placement. We Use A 360 Approach To Sourcing.",
+    question: "What makes your permanent recruitment different from other agencies?",
+    answer: "We don’t rely just on job ads. we use direct search, tap into passive candidate networks, and focus on long-term value — not just short-term placement. we use a 360 approach to sourcing.",
   },
   {
-    question: "How Do You Ensure The Candidate Is The Right Long-Term Fit?",
-    answer:
-      "We Take Time To Understand Your Team, Culture, Goals And Leadership Style. Our Shortlist Only Includes Candidates Who Match On Values, Capability And Growth Potential.",
+    question: "How do you ensure the candidate is the right long-term fit?",
+    answer: "We take time to understand your team, culture, goals and leadership style. our shortlist only includes candidates who match on values, capability and growth potential.",
   },
   {
-    question: "Can You Help Us With Confidential Or Sensitive Roles?",
-    answer:
-      "Absolutely. We’ve Managed Hundreds Of Off-Market Searches For Middle And Senior Leadership, Restructure Scenarios And Board-Level Hires.",
+    question: "Can you help us with confidential or sensitive roles?",
+    answer: "Absolutely. we’ve managed hundreds of off-market searches for middle and senior leadership, restructure scenarios and board-level hires.",
   },
   {
-    question: "We’ve Had Problems With Retention. How Can You Help?",
-    answer:
-      "We Design Every Brief To Focus On Fit, Expectations And Growth Alignment — And Support Post-Placement Success Through Regular Check-Ins. We Can Also Help Through Our Consulting And Advisory Services To Work Out Where The Retention Issues Are.",
+    question: "We’ve had problems with retention. how can you help?",
+    answer: "We design every brief to focus on fit, expectations and growth alignment — and support post-placement success through regular check-ins. we can also help through our consulting and advisory services to work out where the retention issues are.",
   },
 ];
 
-
 export const testimonialData: TestimonialProps = {
-    heading: "What Our Clients Say",
-    title: "Reviews",
-    description:
-      "Here’s what our clients have to say about working with us. Real experiences, real feedback.",
-    quote:
-      "“Henton Consultiung always provide quality candidates”",
-    detail:
-      "They are extremely efficient with communication. I would highly recommend their services.",
-    author: "Stephen Kerfoot, Director",
-    company: "Kerfoot Electrics",
-  }
+  heading: "What our clients say",
+  title: "Reviews",
+  description: "Here’s what our clients have to say about working with us. real experiences, real feedback.",
+  quote: "“Henton consulting always provide quality candidates”",
+  detail: "They are extremely efficient with communication. i would highly recommend their services.",
+  author: "Stephen kerfoot, director",
+  company: "Kerfoot electrics",
+};
 
-  export const resultSectionData: ResultSectionProps = {
-    cardProps: {
-      cardDetails: [
-        {
-            score: "89%", description: "of contractors are extended beyond their initial engagement",
-        },
-        {
-          score: "100%",
-          description: "audit pass rate across all managed contractor placements",
-        },
-        {
-          score: "85%",
-          description: "of contract clients return for additional placements",
-        },
-      ],
-    },
-    backgroundImage:"/results-bg.jpg",
-    topHeading: "Where Strategy Demands Action",
-    bottomHeading:
-      "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
-  };
-
-  export const whatWeDoData : WhatWeDoProps =   {
-    heading: "Contract recruitment keeps projects moving and teams performing when it matters most.",
-    introText:
-      "When you need skilled talent fast — for a project, an unplanned gap, or a critical deadline — Henton delivers contractors who are ready to perform from day one.   \n\n" +
-      "We recruit contract professionals who meet both the technical demands of the role and the compliance requirements of your site, system or project. \n\n" +"Whether it’s one interim manager or a full site mobilisation, our process is built to reduce risk, save time, and protect operational momentum.",
-    whoSubHeading: "We recruit for:",
-    whoHeading: "Our expertise covers a wide range of skill sets and leadership levels:",
-    listItems: [
-        "Technical, operations and interim-management contractors",
-        "Project-based professionals across white-collar functions",
-        "Interim leaders and backfill for key personnel",
+export const resultSectionData: ResultSectionProps = {
+  cardProps: {
+    cardDetails: [
+      {
+        score: "89%",
+        description: "Of contractors are extended beyond their initial engagement",
+      },
+      {
+        score: "100%",
+        description: "Audit pass rate across all managed contractor placements",
+      },
+      {
+        score: "85%",
+        description: "Of contract clients return for additional placements",
+      },
     ],
-    buttonText: "Start the conversation",
-  }
+  },
+  backgroundImage: "/results-bg.jpg",
+  topHeading: "Where strategy demands action",
+  bottomHeading: "When expertise, trust, and speed come together, growth isn’t a goal — it’s the outcome.",
+};
+
+export const whatWeDoData: WhatWeDoProps = {
+  heading: "Contract recruitment keeps projects moving and teams performing when it matters most.",
+  introText: "When you need skilled talent fast — for a project, an unplanned gap, or a critical deadline — henton delivers contractors who are ready to perform from day one. \n\n we recruit contract professionals who meet both the technical demands of the role and the compliance requirements of your site, system or project. \n\n whether it’s one interim manager or a full site mobilisation, our process is built to reduce risk, save time, and protect operational momentum.",
+  whoSubHeading: "We recruit for:",
+  whoHeading: "Our expertise covers a wide range of skill sets and leadership levels:",
+  listItems: [
+    "Technical, operations and interim-management contractors",
+    "Project-based professionals across white-collar functions",
+    "Interim leaders and backfill for key personnel",
+  ],
+  buttonText: "Start the conversation",
+};
