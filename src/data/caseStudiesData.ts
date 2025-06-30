@@ -14,7 +14,7 @@ export const strategicAdviceData: StrategicAdviceProps = {
   text: "What we do",
   heading: "Real outcomes. trusted partnerships. sector-specific impact.",
   paragraphs: [
-    "At henton consulting, we don’t just talk about results, we deliver them.",
+    "At Henton Consulting, we don’t just talk about results, we deliver them.",
     "Our case studies showcase the work we do with leaders across property, construction, engineering, resources, government and not-for-profit. each project is different, but every outcome is built on capability, alignment, and follow-through.",
     "Whether it’s solving workforce gaps, building high-performing teams, or delivering strategic advice during critical periods of growth or change , this is how we help our clients move forward."
   ],
