@@ -179,7 +179,7 @@ export const notForProfitTestimonialData: TestimonialProps = {
   description:
     "Here’s what our clients have to say about working with us. Real experiences, real feedback.",
   quote:
-    "Henton’s unique network is of particular value when looking to fill a difficult role",
+    "Henton Consulting’s unique network is of particular value when looking to fill a difficult role",
   detail:
     "They don’t just focus on the role requirements, or job description. They pay close attention to the individual leader. They care about our success and we value their advice and support.",
   author: "Nicola Stokes, CEO - ",
