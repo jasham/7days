@@ -66,7 +66,7 @@ export const internationalRecruitmentSections: Section[] = [
 export const networkData: OurNetworkSectionProps = {
   header: "Work with the experts",
   heading: "Our global network. Your advantage.",
-  description: "Unlike generalist recruiters, henton operates inside industry ecosystems. We maintain deep sector connections across:",
+  description: "Unlike generalist recruiters, Henton Consulting operates inside industry ecosystems. We maintain deep sector connections across:",
   bottomText: "Our ability to activate trusted networks gives you an edge, bringing candidates to the table who would never respond to traditional ads.",
   image: "/InternationalNetwork.svg",
   mt: -5,
@@ -125,7 +125,7 @@ export const testimonialData: TestimonialProps = {
   heading: "What our clients say",
   title: "Reviews",
   description: "Here is what our clients have to say about working with us. Real experiences, real feedback.",
-  quote: "Henton consultiung always provide quality candidates",
+  quote: "Henton Consultiung always provide quality candidates",
   detail: "They are extremely efficient with communication. I would highly recommend their services.",
   author: "Alicia Lawrence, hr business partner",
   company: "Pomeroy pacific",
