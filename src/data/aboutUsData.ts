@@ -5,7 +5,7 @@ import { FAQ } from "@/types/recruitmentInterfaces";
 
 export const heroDetails: HeroProps = {
   title: "About us",
-  description: "From trusted recruitment to strategic growth partner, this is Henton consulting.",
+  description: "From trusted recruitment to strategic growth partner, this is Henton Consulting.",
   imageUrl: "/hero/hero23.jpg",
   buttonText: "Begin your success story",
 };
@@ -14,8 +14,8 @@ export const strategicAdviceData: StrategicAdviceProps = {
   text: "Insight",
   heading: "Built on reputation. evolved for what’s next.",
   paragraphs: [
-    "Henton consulting is a specialist recruitment and advisory firm built on 20 years of real-world industry knowledge. originally founded in 2004 as howard recruitment by the late paul howard, the business was created to provide professional, honest recruitment services to australia’s built environment sectors, and quickly became a trusted name in talent delivery.",
-    "Today, under the leadership of director guy ingleby, Henton consulting brings that same ethos to a broader, more complex set of challenges; helping organisations not just hire, but grow, restructure, enter new markets and make confident commercial decisions.",
+    "Henton Consulting is a specialist recruitment and advisory firm built on 20 years of real-world industry knowledge. originally founded in 2004 as howard recruitment by the late paul howard, the business was created to provide professional, honest recruitment services to australia’s built environment sectors, and quickly became a trusted name in talent delivery.",
+    "Today, under the leadership of director guy ingleby, Henton Consulting brings that same ethos to a broader, more complex set of challenges; helping organisations not just hire, but grow, restructure, enter new markets and make confident commercial decisions.",
   ],
 };
 
