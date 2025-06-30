@@ -107,7 +107,7 @@ export const testimonialData: TestimonialProps = {
   heading: "What our clients say",
   title: "Reviews",
   description: "Here is what our clients have to say about working with us. real experiences, real feedback.",
-  quote: "“Henton consulting are a very professional organisation”",
+  quote: "“Henton Consulting are a very professional organisation”",
   detail: "They have provided us with quality staff. they take the time to understand your business needs and requirements.",
   author: "Craig dempsey, construction manager - ",
   company: "Maben group",
@@ -137,7 +137,7 @@ export const resultSectionData: ResultSectionProps = {
 
 export const whatWeDoData: WhatWeDoProps = {
   heading: "Executive hiring is high-stakes , and the right appointment changes everything.",
-  introText: "At henton consulting, we partner with boards, ceos and senior leadership to deliver retained executive search for critical roles across australia’s commercial, industrial, and government sectors. \n\n we specialise in appointing leaders who don’t just meet the brief , they elevate the strategy, challenge thinking, and bring others with them.",
+  introText: "At Henton Consulting, we partner with boards, ceos and senior leadership to deliver retained executive search for critical roles across australia’s commercial, industrial, and government sectors. \n\n we specialise in appointing leaders who don’t just meet the brief , they elevate the strategy, challenge thinking, and bring others with them.",
   whoSubHeading: "We recruit for:",
   whoHeading: "Our expertise covers a wide range of skill sets and leadership levels:",
   listItems: [
