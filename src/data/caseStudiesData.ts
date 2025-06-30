@@ -58,11 +58,11 @@ export const impactSectionData: ImpactSectionProps = {
   caseStudies: [
     {
       title: "Powering project delivery at kbr group",
-      description: "How henton consulting delivered senior operational hires to support large-scale infrastructure projects.",
+      description: "How Henton Consulting delivered senior operational hires to support large-scale infrastructure projects.",
     },
     {
       title: "Powering project delivery at kbr group",
-      description: "How henton consulting delivered senior operational hires to support large-scale infrastructure projects.",
+      description: "How Henton Consultingg delivered senior operational hires to support large-scale infrastructure projects.",
     },
   ],
   buttonLabel: "Ready to build what’s next?",
