@@ -93,7 +93,7 @@ export const advisoryProcess: GenericProcessSectionProps = {
     {
       icon: "/Speicific.svg",
       title: "Delivery",
-      description: "We help you act, via instant teams or seamless handover to henton.",
+      description: "We help you act, via instant teams or seamless handover to Henton Consulting.",
     },
   ],
   itemsHeading: "Our work is:",
