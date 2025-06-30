@@ -59,7 +59,7 @@ export const internationalRecruitmentSections: Section[] = [
 export const networkData: OurNetworkSectionProps = {
   header: "Work with the experts",
   heading: "Trusted teams. mobilised when it counts",
-  description: "Henton supports construction, engineering, and infrastructure leaders with contract teams ready to perform , across metro, regional and remote australia.",
+  description: "Henton Consulting supports construction, engineering, and infrastructure leaders with contract teams ready to perform , across metro, regional and remote australia.",
   bottomText: "We know who’s active, who’s proven, and who’s ready to hit the ground running.",
   image: "/Network2.svg",
   mt: -5,
