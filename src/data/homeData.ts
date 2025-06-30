@@ -35,7 +35,7 @@ export const resultDetails: CardProps = {
       score: "95%",
       title: "Client retention rate",
       description:
-        "Our clients trust us to deliver , and 95% return to partner with henton again for future recruitment and strategic needs.",
+        "Our clients trust us to deliver , and 95% return to partner with Henton Consulting again for future recruitment and strategic needs.",
     },
     {
       score: "98%",
