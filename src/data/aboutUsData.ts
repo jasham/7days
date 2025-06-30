@@ -59,7 +59,7 @@ export const aboutUsCaseStudyData: CaseStudyHighlightProps = {
   imageSrc: "/consulting.jpg",
   imageAlt: "Construction worker",
   title: "Where strategy, structure & hiring come together",
-  titleDescription: "Henton consulting was built to solve the problems that matter most to ",
+  titleDescription: "Henton Consulting was built to solve the problems that matter most to ",
   description:
     "We don’t operate on a transactional model. we’re built for strategic moments - the point where hiring, structure and business direction collide. that’s where we do our best work. \n \n we’ve intentionally expanded beyond recruitment because most growth bottlenecks aren’t solved by one hire. they need sharper thinking, faster alignment and a partner who knows how businesses move, and stall, from the inside. that’s our edge. \n \n we’re not in your industry. we’re inside your business, when clarity counts.",
   ctaText: "Build your team",
