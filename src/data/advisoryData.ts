@@ -143,7 +143,7 @@ export const testimonialData: TestimonialProps = {
   heading: "What our clients say",
   title: "Reviews",
   description: "Here’s what our clients have to say about working with us. real experiences, real feedback.",
-  quote: "I’ve had the pleasure of working with guy ingleby for 10 years.",
+  quote: "I’ve had the pleasure of working with Guy Ingleby for 10 years.",
   detail: "I can confidently say they are one of the most effective and professional recruiters i’ve partnered with. their deep understanding of our business, industry and commitment to finding the right cultural and technical fit have made a real impact on our team.",
   author: "Stephen kerfoot, director",
   company: "Kerfoot electrics",
