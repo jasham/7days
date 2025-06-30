@@ -120,7 +120,7 @@ export const testimonialData: TestimonialProps = {
   heading: "What our clients say",
   title: "Reviews",
   description: "Here’s what our clients have to say about working with us. real experiences, real feedback.",
-  quote: "“Henton consulting always provide quality candidates”",
+  quote: "“Henton Consulting always provide quality candidates”",
   detail: "They are extremely efficient with communication. i would highly recommend their services.",
   author: "Stephen kerfoot, director",
   company: "Kerfoot electrics",
@@ -150,7 +150,7 @@ export const resultSectionData: ResultSectionProps = {
 
 export const whatWeDoData: WhatWeDoProps = {
   heading: "Contract recruitment keeps projects moving and teams performing when it matters most.",
-  introText: "When you need skilled talent fast , for a project, an unplanned gap, or a critical deadline , henton delivers contractors who are ready to perform from day one. \n\n we recruit contract professionals who meet both the technical demands of the role and the compliance requirements of your site, system or project. \n\n whether it’s one interim manager or a full site mobilisation, our process is built to reduce risk, save time, and protect operational momentum.",
+  introText: "When you need skilled talent fast , for a project, an unplanned gap, or a critical deadline , Henton Consulting delivers contractors who are ready to perform from day one. \n\n we recruit contract professionals who meet both the technical demands of the role and the compliance requirements of your site, system or project. \n\n whether it’s one interim manager or a full site mobilisation, our process is built to reduce risk, save time, and protect operational momentum.",
   whoSubHeading: "We recruit for:",
   whoHeading: "Our expertise covers a wide range of skill sets and leadership levels:",
   listItems: [
