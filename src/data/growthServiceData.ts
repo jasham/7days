@@ -151,7 +151,7 @@ export const trustedClientsBottom: TrustedClientsProps = {
   headingColor: "#132D46",
   headingDividerColor: "#132D46",
   dividerHeight: "1px",
-  titleText: "Why businesses choose henton",
+  titleText: "Why businesses choose Henton Consulting",
   titleColor: "#ffffff",
   imageSrc: "/explaningProjectPoint.jpg",
   imageAlt: "Business discussion",
