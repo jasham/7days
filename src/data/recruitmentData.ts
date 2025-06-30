@@ -54,7 +54,7 @@ export const whyPartnerData: WhyPartnerProps = {
   dividerColor: "#132D46",
   dividerHeight: "1px",
   title: "How Henton Consulting delivers results",
-  subTitle: "At Henton, our recruitment success is built on three core foundations:",
+  subTitle: "At Henton Consulting, our recruitment success is built on three core foundations:",
   cards: [
     {
       icon: "/Precision.svg",
@@ -162,7 +162,7 @@ export const faqData: FAQ[] = [
 export const growthServiceData: GrowthServiceProps = {
   heading1: "Recruitment services",
   heading: "Tailored recruitment processes",
-  subheading: "At Henton, we deliver three core recruitment solutions , each aligned to your operational needs, timelines and long-term growth.",
+  subheading: "At Henton Consulting, we deliver three core recruitment solutions , each aligned to your operational needs, timelines and long-term growth.",
   paragraph: "We deliver:",
   imageSrc: "/recruitmentService.jpg",
   imageAlt: "Planning meeting",
@@ -207,7 +207,7 @@ export const expertiseData: ExpertiseSectionProps = {
 export const whatWeDoData: WhatWeDoProps = {
   heading: "We help businesses recruit with purpose , aligning people strategy to commercial outcomes.",
   whoSubHeading: "Who we recruit",
-  whoHeading: "At Henton, recruitment isn’t transactional. It’s strategic. Every hire should improve capability, deliver outcomes, and move your business forward.",
+  whoHeading: "At Henton Consulting, recruitment isn’t transactional. It’s strategic. Every hire should improve capability, deliver outcomes, and move your business forward.",
   whoDescription: "Our expertise covers a wide range of skill sets and leadership levels:",
   roleCards: [
     { title: "Technical roles", description: "Engineering, construction management, project delivery" },
