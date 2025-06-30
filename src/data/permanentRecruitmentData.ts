@@ -49,7 +49,7 @@ export const permanentRecruitmentSections: Section[] = [
 export const networkData: OurNetworkSectionProps = {
   header: "Work with the experts",
   heading: "Our network advantage",
-  description: "Unlike generalist recruiters, henton operates inside industry ecosystems. we maintain deep sector connections across:",
+  description: "Unlike generalist recruiters, Henton Consulting operates inside industry ecosystems. we maintain deep sector connections across:",
   bottomText: "Our ability to activate trusted networks gives you an edge, bringing candidates to the table who would never respond to traditional ads.",
   image: "/Network2.svg",
   mt: -5,
@@ -112,7 +112,7 @@ export const testimonialData: TestimonialProps = {
   heading: "What our clients say",
   title: "Reviews",
   description: "Here is what our clients have to say about working with us. real experiences, real feedback.",
-  quote: "“Henton consulting always provide quality candidates”",
+  quote: "“Henton Consulting always provide quality candidates”",
   detail: "They are extremely efficient with communication. i would highly recommend their services.",
   author: "Alicia lawrence, hr business partner",
   company: "-pomeroy pacific",
@@ -142,7 +142,7 @@ export const resultSectionData: ResultSectionProps = {
 export const whatWeDoData: WhatWeDoProps = {
   heading: "Permanent recruitment isn’t about CVs , it’s about capability.",
   introText:
-    "At henton consulting, permanent recruitment is about more than filling vacancies. it’s about building capability , securing the professionals and leaders who will shape your organisation’s future.\n\n" +
+    "At Henton Consulting, permanent recruitment is about more than filling vacancies. it’s about building capability , securing the professionals and leaders who will shape your organisation’s future.\n\n" +
     "Our approach ensures every permanent hire strengthens your team, culture, and competitive position.",
   whoSubHeading: "We recruit for:",
   whoHeading: "Our expertise covers a wide range of skill sets and leadership levels:",
