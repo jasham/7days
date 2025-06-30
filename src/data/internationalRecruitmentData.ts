@@ -156,7 +156,7 @@ export const resultSectionData: ResultSectionProps = {
 export const whatWeDoData: WhatWeDoProps = {
   heading: "When talent is global, your recruitment needs to be smarter.",
   introText:
-    "Accessing top talent shouldn’t stop at the border. At henton consulting, we help organisations in australia connect with exceptional international professionals, individuals who bring rare capabilities, global outlooks, and proven impact.\n\n" +
+    "Accessing top talent shouldn’t stop at the border. At Henton Consulting, we help organisations in australia connect with exceptional international professionals, individuals who bring rare capabilities, global outlooks, and proven impact.\n\n" +
     "We deliver hard-to-source candidates from key global markets, with a focus on leadership, transformation, technical, and specialist roles across sectors.",
   whoSubHeading: "Who we work with:",
   whoHeading: "The world’s best don’t always live next door. We work with:",
